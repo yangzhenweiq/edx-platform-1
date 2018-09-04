@@ -56,17 +56,21 @@ class SubmitCompletionTestCase(CompletionSetUpMixin, TestCase):
         self.set_up_completion()
 
     def test_changed_value(self):
-        with self.assertNumQueries(7):
+        with self.assertNumQueries(11):
             # Queries:
             #   1 * get
             #   1 * update
             #   2 * savepoints
+            #   1 * check User exists
+            #   1 * check BlockCompletion exists
+            #   1 * create StaleCompletion
             #   Aggregation:
             #     signal handler:
             #       1 * Get user by ID for debug log
             #     async task:
-            #       1 * check for outdated aggregators
-            #       1 * get user by username (celery cannot send db objects)
+            #       1 * Get StaleCompletion
+            #       1 * Get user by username (celery cannot send db objects)
+            #       1 * Delete StaleCompletion
             completion, isnew = models.BlockCompletion.objects.submit_completion(
                 user=self.user,
                 course_key=self.block_key.course_key,
@@ -93,15 +97,17 @@ class SubmitCompletionTestCase(CompletionSetUpMixin, TestCase):
 
     def test_new_user(self):
         newuser = UserFactory()
-        with self.assertNumQueries(6):
+        with self.assertNumQueries(11):
             # Queries:
-            #   1 * get
-            #   1 * update
-            #   2 * savepoints
+            #   1 * get BlockCompletion
+            #   1 * insert BlockCompletion
+            #   1 * insert StaleCompletion
+            #   4 * savepoints
             #   Aggregation:
             #     async task:
-            #       1 * check for outdated aggregators
-            #       1 * get user by username (celery cannot send db objects)
+            #       1 * get StaleCompletion
+            #       2 * get user by username (celery cannot send db objects)
+            #       1 * delete StaleCompletion
             _, isnew = models.BlockCompletion.objects.submit_completion(
                 user=newuser,
                 course_key=self.block_key.course_key,
@@ -113,15 +119,17 @@ class SubmitCompletionTestCase(CompletionSetUpMixin, TestCase):
 
     def test_new_block(self):
         newblock = UsageKey.from_string(u'block-v1:edx+test+run+type@video+block@puppers')
-        with self.assertNumQueries(6):
+        with self.assertNumQueries(10):
             # Queries:
             #   1 * get
-            #   1 * update
-            #   2 * savepoints
+            #   1 * insert BlockCompletion
+            #   1 * insert StaleCompletion
+            #   4 * savepoints
             #   Aggregation:
             #     async task:
-            #       1 * check for outdated aggregators
+            #       1 * get StaleCompletion
             #       1 * get user by username (celery cannot send db objects)
+            #       1 * delete StaleCompletion
             _, isnew = models.BlockCompletion.objects.submit_completion(
                 user=self.user,
                 course_key=newblock.course_key,
