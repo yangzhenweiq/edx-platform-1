@@ -325,6 +325,46 @@ class CoursewarePage(CoursePage, CompletionOnViewMixin):
         bookmarks_page = BookmarksPage(self.browser, self.course_id)
         bookmarks_page.visit()
 
+    @property
+    def is_word_cloud_rendered(self):
+        """
+        Check for word cloud fields presence
+        """
+        return self.q(css='.input-cloud').present
+
+    def input_word_cloud(self):
+        """
+        Fill the word cloud fields
+        """
+        self.wait_for_element_visibility('.input-cloud', "Word cloud fields are visible")
+        fields = self.q(css='.input-cloud').results
+        total_fields = len(fields)
+        css = '.input_cloud_section  label:nth-child({}) .input-cloud'
+        for index in range(1, total_fields + 1):
+            self.q(css=css.format(index)).fill('text' + str(index))
+
+    def save_word_cloud(self):
+        """
+        Click save button
+        """
+        self.q(css='.save').click()
+        self.wait_for_ajax()
+
+    @property
+    def word_cloud_answer_list(self):
+        """
+        Get saved words
+        Returns:
+            list: Return empty when no answer words are present
+            list: Return populated when answer words are present
+        """
+
+        self.wait_for_element_presence('.your_words', "Answer list is present")
+        if self.q(css='.your_words strong').present:
+            return self.q(css='.your_words strong').text
+        else:
+            return self.q(css='.your_words').text[0]
+
 
 class CoursewareSequentialTabPage(CoursePage):
     """
