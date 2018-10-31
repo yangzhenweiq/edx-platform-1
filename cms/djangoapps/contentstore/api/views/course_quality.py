@@ -1,7 +1,7 @@
 # pylint: disable=missing-docstring
 import logging
-import numpy as np
 import time
+import numpy as np
 from scipy import stats
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
