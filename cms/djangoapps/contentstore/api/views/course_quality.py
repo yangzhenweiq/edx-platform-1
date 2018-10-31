@@ -1,6 +1,7 @@
 # pylint: disable=missing-docstring
 import logging
 import numpy as np
+import time
 from scipy import stats
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
@@ -86,26 +87,56 @@ class CourseQualityView(DeveloperErrorViewMixin, GenericAPIView):
         store = modulestore()
         with store.bulk_operations(course_key):
             course = store.get_course(course_key, depth=self._required_course_depth(request, all_requested))
+            # Added for EDUCATOR-3660
+            course_key_harward = True if course_key == 'course-v1:HarvardX+SW12.1x+2016' else False
 
             response = dict(
                 is_self_paced=course.self_paced,
             )
             if get_bool_param(request, 'sections', all_requested):
-                response.update(
-                    sections=self._sections_quality(course)
-                )
+                if course_key_harward:
+                    start_time = time.time()
+                    response.update(
+                        sections=self._sections_quality(course)
+                    )
+                    log.info('[%s] completed in [%f]', 'sections quality', (time.time() - start_time))
+                else:
+                    response.update(
+                        sections=self._sections_quality(course)
+                    )
             if get_bool_param(request, 'subsections', all_requested):
-                response.update(
-                    subsections=self._subsections_quality(course, request)
-                )
+                if course_key_harward:
+                    start_time = time.time()
+                    response.update(
+                        subsections=self._subsections_quality(course, request)
+                    )
+                    log.info('[%s] completed in [%f]', 'subsections quality', (time.time() - start_time))
+                else:
+                    response.update(
+                        subsections=self._subsections_quality(course, request)
+                    )
             if get_bool_param(request, 'units', all_requested):
-                response.update(
-                    units=self._units_quality(course, request)
-                )
+                if course_key_harward:
+                    start_time = time.time()
+                    response.update(
+                        units=self._units_quality(course, request)
+                    )
+                    log.info('[%s] completed in [%f]', 'units quality', (time.time() - start_time))
+                else:
+                    response.update(
+                        units=self._units_quality(course, request)
+                    )
             if get_bool_param(request, 'videos', all_requested):
-                response.update(
-                    videos=self._videos_quality(course)
-                )
+                if course_key_harward:
+                    start_time = time.time()
+                    response.update(
+                        videos=self._videos_quality(course)
+                    )
+                    log.info('[%s] completed in [%f]', 'units quality', (time.time() - start_time))
+                else:
+                    response.update(
+                        videos=self._videos_quality(course)
+                    )
 
         return Response(response)
 
