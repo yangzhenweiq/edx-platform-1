@@ -1047,4 +1047,10 @@ urlpatterns += [
     url(r'', include('csrf.urls')),
 ]
 
+# Membership
+if settings.FEATURES.get('ENABLE_MEMBERSHIP_INTEGRATION', False):
+    urlpatterns += [
+        url(r'', include('membership.urls')),
+    ]
+
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.LMS))
