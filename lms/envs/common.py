@@ -395,8 +395,12 @@ FEATURES = {
     # Whether to display the account deletion section the account settings page
     'ENABLE_ACCOUNT_DELETION': True,
 
-    # Whether to enable membership
+    # eliteu apps
+    # Whether to enable membership 
     'ENABLE_MEMBERSHIP_INTEGRATION': False,
+
+    # Whether to enable payments
+    'ENABLE_PAYMENTS_INTEGRATION': False,
 }
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
@@ -431,6 +435,7 @@ PROJECT_ROOT = path(__file__).abspath().dirname().dirname()  # /edx-platform/lms
 REPO_ROOT = PROJECT_ROOT.dirname()
 COMMON_ROOT = REPO_ROOT / "common"
 MEMBERSHIP_ROOT = REPO_ROOT / "../edx-membership"
+PAYMENTS_ROOT = REPO_ROOT / "../eliteu-payments"
 OPENEDX_ROOT = REPO_ROOT / "openedx"
 ENV_ROOT = REPO_ROOT.dirname()  # virtualenv dir /edx-platform is in
 COURSES_ROOT = ENV_ROOT / "data"
@@ -443,6 +448,7 @@ sys.path.append(REPO_ROOT)
 sys.path.append(PROJECT_ROOT / 'djangoapps')
 sys.path.append(COMMON_ROOT / 'djangoapps')
 sys.path.append(MEMBERSHIP_ROOT)
+sys.path.append(PAYMENTS_ROOT)
 
 # For Node.js
 

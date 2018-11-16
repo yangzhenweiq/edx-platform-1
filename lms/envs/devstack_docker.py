@@ -41,6 +41,8 @@ FEATURES.update({
     'SHOW_HEADER_LANGUAGE_SELECTOR': True,
     'ENABLE_ENTERPRISE_INTEGRATION': False,
     'ENABLE_COMBINED_LOGIN_REGISTRATION': True,
+    'ENABLE_MEMBERSHIP_INTEGRATION': True,
+    'ENABLE_PAYMENTS_INTEGRATION': True,
 })
 
 ENABLE_MKTG_SITE = os.environ.get('ENABLE_MARKETING_SITE', False)
@@ -79,3 +81,5 @@ COURSE_CATALOG_API_URL = 'http://edx.devstack.discovery:18381/api/v1/'
 # Uncomment the lines below if you'd like to see SQL statements in your devstack LMS log.
 # LOGGING['handlers']['console']['level'] = 'DEBUG'
 # LOGGING['loggers']['django.db.backends'] = {'handlers': ['console'], 'level': 'DEBUG', 'propagate': False}
+if FEATURES.get('ENABLE_MEMBERSHIP_INTEGRATION', False):
+    INSTALLED_APPS.append('membership')
