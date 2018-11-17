@@ -811,6 +811,13 @@ def student_dashboard(request):
             enr for enr in course_enrollments if entitlement.enrollment_course_run.course_id != enr.course_id
         ]
 
+    # eliteu membership
+    vip_course_price = {}
+    if settings.FEATURES.get('ENABLE_MEMBERSHIP_INTEGRATION', False):
+        from membership.models import VIPCoursePrice
+        vip_course_price = VIPCoursePrice.get_vip_course_price_data()
+
+
     context = {
         'urls': urls,
         'programs_data': programs_data,
@@ -861,6 +868,7 @@ def student_dashboard(request):
         'empty_dashboard_message': empty_dashboard_message,
         'recovery_email_message': recovery_email_message,
         'recovery_email_activation_message': recovery_email_activation_message,
+        'vip_course_price': vip_course_price,
     }
 
     if ecommerce_service.is_enabled(request.user):
