@@ -83,3 +83,5 @@ COURSE_CATALOG_API_URL = 'http://edx.devstack.discovery:18381/api/v1/'
 # LOGGING['loggers']['django.db.backends'] = {'handlers': ['console'], 'level': 'DEBUG', 'propagate': False}
 if FEATURES.get('ENABLE_MEMBERSHIP_INTEGRATION', False):
     INSTALLED_APPS.append('membership')
+    REST_FRAMEWORK.update({'EXCEPTION_HANDLER': 'membership.utils.customer_exception_handler'})
+
