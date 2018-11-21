@@ -8,7 +8,8 @@ from django.template.loader import render_to_string
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_control
 from django.views.decorators.csrf import ensure_csrf_cookie
-from opaque_keys.edx.keys import CourseKey
+from django.conf import settings
+from opaque_keys.edx.keys import CourseKey, UsageKey
 from web_fragments.fragment import Fragment
 
 from course_modes.models import get_cosmetic_verified_display_price
