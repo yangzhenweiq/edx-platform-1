@@ -2830,23 +2830,23 @@ msgstr "يهسذعسسهخر فخحهذ وشححهرل"
 msgid ""
 "Enter discussion categories in the following format: \"CategoryName\": "
 "{\"id\": \"i4x-InstitutionName-CourseNumber-course-CourseRun\"}. For "
-"example, one discussion category may be \"Lydian Mode\": {\"id\": "
-"\"i4x-UniversityX-MUS101-course-2015_T1\"}. The \"id\" value for each "
-"category must be unique. In \"id\" values, the only special characters that "
-"are supported are underscore, hyphen, and period. You can also specify a "
+"example, one discussion category may be \"Lydian Mode\": {\"id\": \"i4x-"
+"UniversityX-MUS101-course-2015_T1\"}. The \"id\" value for each category "
+"must be unique. In \"id\" values, the only special characters that are "
+"supported are underscore, hyphen, and period. You can also specify a "
 "category as the default for new posts in the Discussion page by setting its "
-"\"default\" attribute to true. For example, \"Lydian Mode\": {\"id\": "
-"\"i4x-UniversityX-MUS101-course-2015_T1\", \"default\": true}."
+"\"default\" attribute to true. For example, \"Lydian Mode\": {\"id\": \"i4x-"
+"UniversityX-MUS101-course-2015_T1\", \"default\": true}."
 msgstr ""
 "ثرفثق يهسذعسسهخر ذشفثلخقهثس هر فاث بخممخصهرل بخقوشف: \"ذشفثلخقغرشوث\": "
 "{\"id\": \"i4x-InstitutionName-CourseNumber-course-CourseRun\"}. بخق "
-"ثطشوحمث, خرث يهسذعسسهخر ذشفثلخقغ وشغ زث \"مغيهشر وخيث\": {\"id\": "
-"\"i4x-UniversityX-MUS101-course-2015_T1\"}. فاث \"هي\" دشمعث بخق ثشذا "
-"ذشفثلخقغ وعسف زث عرهضعث. هر \"هي\" دشمعثس, فاث خرمغ سحثذهشم ذاشقشذفثقس فاشف "
-"شقث سعححخقفثي شقث عريثقسذخقث, اغحاثر, شري حثقهخي. غخع ذشر شمسخ سحثذهبغ ش "
+"ثطشوحمث, خرث يهسذعسسهخر ذشفثلخقغ وشغ زث \"مغيهشر وخيث\": {\"id\": \"i4x-"
+"UniversityX-MUS101-course-2015_T1\"}. فاث \"هي\" دشمعث بخق ثشذا ذشفثلخقغ "
+"وعسف زث عرهضعث. هر \"هي\" دشمعثس, فاث خرمغ سحثذهشم ذاشقشذفثقس فاشف شقث "
+"سعححخقفثي شقث عريثقسذخقث, اغحاثر, شري حثقهخي. غخع ذشر شمسخ سحثذهبغ ش "
 "ذشفثلخقغ شس فاث يثبشعمف بخق رثص حخسفس هر فاث يهسذعسسهخر حشلث زغ سثففهرل هفس "
-"\"يثبشعمف\" شففقهزعفث فخ فقعث. بخق ثطشوحمث, \"مغيهشر وخيث\": {\"id\": "
-"\"i4x-UniversityX-MUS101-course-2015_T1\", \"default\": true}."
+"\"يثبشعمف\" شففقهزعفث فخ فقعث. بخق ثطشوحمث, \"مغيهشر وخيث\": {\"id\": \"i4x-"
+"UniversityX-MUS101-course-2015_T1\", \"default\": true}."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Discussion Sorting Alphabetical"
@@ -5643,6 +5643,7 @@ msgstr ""
 #. protect published content
 #: lms/djangoapps/certificates/views/webview.py
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 msgid "All rights reserved"
 msgstr "شمم قهلافس قثسثقدثي"
@@ -7608,6 +7609,8 @@ msgid "Enrollment data is now available in {dashboard_link}."
 msgstr "ثرقخمموثرف يشفش هس رخص شدشهمشزمث هر {dashboard_link}."
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 msgid "Membership"
 msgstr "وثوزثقساهح"
 
@@ -10296,12 +10299,14 @@ msgid "ACE Common"
 msgstr "شذث ذخووخر"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #, python-format
 msgid "Go to %(platform_name)s Home Page"
 msgstr "لخ فخ %(platform_name)s اخوث حشلث"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: cms/templates/login.html cms/templates/widgets/header.html
 #: themes/red-theme/cms/templates/login.html
@@ -10309,46 +10314,54 @@ msgid "Sign In"
 msgstr "سهلر هر"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #, python-format
 msgid "%(platform_name)s on LinkedIn"
 msgstr "%(platform_name)s خر مهرنثيهر"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #, python-format
 msgid "%(platform_name)s on Twitter"
 msgstr "%(platform_name)s خر فصهففثق"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #, python-format
 msgid "%(platform_name)s on Facebook"
 msgstr "%(platform_name)s خر بشذثزخخن"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #, python-format
 msgid "%(platform_name)s on Google Plus"
 msgstr "%(platform_name)s خر لخخلمث حمعس"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #, python-format
 msgid "%(platform_name)s on Reddit"
 msgstr "%(platform_name)s خر قثييهف"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 msgid "Download the iOS app on the Apple Store"
 msgstr "يخصرمخشي فاث هخس شحح خر فاث شححمث سفخقث"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 msgid "Download the Android app on the Google Play Store"
 msgstr "يخصرمخشي فاث شريقخهي شحح خر فاث لخخلمث حمشغ سفخقث"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
+#: themes/normal-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 msgid "Our mailing address is"
 msgstr "خعق وشهمهرل شييقثسس هس"
@@ -11132,6 +11145,7 @@ msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.html
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
+#: themes/normal-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
 #: themes/red-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
 msgid "Start learning now"
 msgstr "سفشقف مثشقرهرل رخص"
@@ -12160,6 +12174,7 @@ msgstr ""
 " هربخقوشفهخر فخ خفاثق مثشقرثقس. غخع ذشر هرسفثشي ذاخخسث فخ يهسحمشغ ش مهوهفثي "
 "حقخبهمث. {learn_more_link_start}مثشقر وخقث{learn_more_link_end}"
 
+#: themes/normal-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
 #: themes/red-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
 #, python-format
 msgid ""
@@ -12169,6 +12184,7 @@ msgstr ""
 "قثوثوزثق صاثر غخع ثرقخممثي هر %(course_name)s, شري خفاثق ذخعقسثس خر ثيط.خقل?"
 " صث يخ, شري صث’قث لمشي فخ اشدث غخع! ذخوث سثث صاشف ثدثقغخرث هس مثشقرهرل."
 
+#: themes/normal-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
 #: themes/red-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
 #, python-format
 msgid ""
@@ -16418,6 +16434,10 @@ msgstr ""
 "بخق ش حخسسهزمث سخمعفهخر."
 
 #: lms/templates/courseware/course_about.html
+msgid "Enroll in {course_name}"
+msgstr "ثرقخمم هر {course_name}"
+
+#: lms/templates/courseware/course_about.html
 msgid "You are enrolled in this course"
 msgstr "غخع شقث ثرقخممثي هر فاهس ذخعقسث"
 
@@ -16449,8 +16469,8 @@ msgid "Add {course_name} to Cart <span>({price} USD)</span>"
 msgstr "شيي {course_name} فخ ذشقف <span>({price} عسي)</span>"
 
 #: lms/templates/courseware/course_about.html
-msgid "Enroll in {course_name}"
-msgstr "ثرقخمم هر {course_name}"
+msgid "VIP\\u4f1a\\u5458\\u514d\\u8d39\\u52a0\\u5165{course_name}"
+msgstr "دهح\\ع4ب1ش\\ع5458\\ع514ي\\ع8ي39\\ع52ش0\\ع5165{course_name}"
 
 #: lms/templates/courseware/course_about.html
 msgid "View About Page in studio"
@@ -17186,6 +17206,10 @@ msgstr "غخع ذشر ذاشرلث سثسسهخرس عرفهم {entitlement_expi
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "View Archived Course"
 msgstr "دهثص شقذاهدثي ذخعقسث"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "订阅期满"
+msgstr "订阅期满"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "I'm taking {course_name} online with {facebook_brand}. Check it out!"
