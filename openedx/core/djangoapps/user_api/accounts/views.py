@@ -5,6 +5,7 @@ For additional information and historical context, see:
 https://openedx.atlassian.net/wiki/display/TNL/User+API
 """
 import datetime
+import random
 import logging
 from functools import wraps
 
@@ -59,6 +60,8 @@ from student.models import (
     get_retired_username_by_username,
     is_username_retired
 )
+from util.validate_help import ValidateDataForEducation
+from util.sms_utils import send_short_message_by_linkgroup
 from ..errors import AccountUpdateError, AccountValidationError, UserNotAuthorized, UserNotFound
 from ..models import (
     RetirementState,
@@ -97,6 +100,7 @@ def request_requires_username(function):
     Requires that a ``username`` key containing a truthy value exists in
     the ``request.data`` attribute of the decorated function.
     """
+
     @wraps(function)
     def wrapper(self, request):  # pylint: disable=missing-docstring
         username = request.data.get('username', None)
@@ -106,6 +110,7 @@ def request_requires_username(function):
                 data={'message': text_type('The user was not specified.')}
             )
         return function(self, request)
+
     return wrapper
 
 
@@ -320,7 +325,7 @@ class AccountDeactivationView(APIView):
     Account deactivation viewset. Currently only supports POST requests.
     Only admins can deactivate accounts.
     """
-    authentication_classes = (JwtAuthentication, )
+    authentication_classes = (JwtAuthentication,)
     permission_classes = (permissions.IsAuthenticated, CanDeactivateUser)
 
     def post(self, request, username):
@@ -331,6 +336,45 @@ class AccountDeactivationView(APIView):
         """
         _set_unusable_password(User.objects.get(username=username))
         return Response(get_account_settings(request, [username])[0])
+
+
+class AccountRetireMailingsView(APIView):
+    """
+    Part of the retirement API, accepts POSTs to unsubscribe a user
+    from all EXTERNAL email lists (ex: Sailthru). LMS email subscriptions
+    are handled in the LMS retirement endpoints.
+    """
+    authentication_classes = (JwtAuthentication,)
+    permission_classes = (permissions.IsAuthenticated, CanRetireUser)
+
+    def post(self, request):
+        """
+        POST /api/user/v1/accounts/{username}/retire_mailings/
+
+        Fires the USER_RETIRE_THIRD_PARTY_MAILINGS signal, currently the
+        only receiver is email_marketing to force opt-out the user from
+        externally managed email lists.
+        """
+        username = request.data['username']
+
+        try:
+            retirement = UserRetirementStatus.get_retirement_for_retirement_action(username)
+
+            with transaction.atomic():
+                # This signal allows lms' email_marketing and other 3rd party email
+                # providers to unsubscribe the user
+                USER_RETIRE_THIRD_PARTY_MAILINGS.send(
+                    sender=self.__class__,
+                    email=retirement.original_email,
+                    new_email=retirement.retired_email,
+                    user=retirement.user
+                )
+
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except UserRetirementStatus.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        except Exception as exc:  # pylint: disable=broad-except
+            return Response(text_type(exc), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class DeactivateLogoutView(APIView):
@@ -366,8 +410,8 @@ class DeactivateLogoutView(APIView):
     -  Log the user out
     - Create a row in the retirement table for that user
     """
-    authentication_classes = (SessionAuthentication, JwtAuthentication, )
-    permission_classes = (permissions.IsAuthenticated, )
+    authentication_classes = (SessionAuthentication, JwtAuthentication,)
+    permission_classes = (permissions.IsAuthenticated,)
 
     def post(self, request):
         """
@@ -467,13 +511,62 @@ class DeactivateLogoutView(APIView):
         raise AuthFailedError(_('Email or password is incorrect.'))
 
 
-def _set_unusable_password(user):
-    """
-    Helper method for the shared functionality of setting a user's
-    password to the unusable password, thus deactivating the account.
-    """
-    user.set_unusable_password()
-    user.save()
+class PhoneBindingViewSet(ViewSet):
+    # authentication_classes = (
+    #     OAuth2AuthenticationAllowInactiveUser, SessionAuthenticationAllowInactiveUser, JwtAuthentication
+    # )
+    # permission_classes = (permissions.IsAuthenticated,)
+
+    verify_code_key = 'phone_binding_verifycode_{username}_{name}'
+    verify_code_timeout = 10 * 60
+
+    def get(self, request):
+        phone = request.data['phone']
+        try:
+            language_version = str(request.session._session['_language'])
+            if not language_version:
+                language_version = "zh-cn"
+        except Exception as e:
+            language_version = "zh-cn"
+        self.send_mobile_code(request.user.username, phone, language_version)
+        return Response({'username': request.user.username})
+
+    def post(self, request):
+        if self.verify_code(request):
+            return Response({'username': request.user.username})
+
+    def send_mobile_code(self, username, mobile, language='en'):
+        '''
+        发送手机验证码通知
+        '''
+        if not (mobile and ValidateDataForEducation().is_mobile(mobile)):
+            raise self.LiveException(_(u"Please check mobile number format;"))
+
+        code = self.set_verify_code({'username': username, 'name': mobile})
+        if language == 'en':
+            user_msg = 'Your Verification Code for signing up is {}, expiring in 10 minutes. In case of information leakage, please do not disclose your verification code.'.format(
+                code)
+        else:
+            user_msg = '验证码{}，用于登录校验，10分钟内有效。请勿将验证码泄露，谨防被盗。'.format(code)
+        status, msg = send_short_message_by_linkgroup(mobile, user_msg, '', channel=1)
+        return status, msg
+
+    def set_verify_code(self, key):
+        '''
+        设置验证码
+        '''
+        code_key = self.verify_code_key.format(**key)
+        code = cache.get(code_key) or random.randint(100000, 999999)  # 6位验证码
+        cache.set(code_key, str(code), self.verify_code_timeout)
+
+    def verify_code(self, request):
+        try:
+            code = request.data['code']
+            phone = request.data['phone']
+            code_key = self.verify_code_key.format({'username': request.user.username, 'name': phone})
+            return cache.get(code_key) == code
+        except Exception as e:
+            return False
 
 
 class AccountRetirementPartnerReportView(ViewSet):
@@ -949,7 +1042,7 @@ class AccountRetirementView(ViewSet):
     def retire_sapsf_data_transmission(user):
         for ent_user in EnterpriseCustomerUser.objects.filter(user_id=user.id):
             for enrollment in EnterpriseCourseEnrollment.objects.filter(
-                enterprise_customer_user=ent_user
+                    enterprise_customer_user=ent_user
             ):
                 audits = SapSuccessFactorsLearnerDataTransmissionAudit.objects.filter(
                     enterprise_course_enrollment_id=enrollment.id
@@ -960,7 +1053,7 @@ class AccountRetirementView(ViewSet):
     def retire_degreed_data_transmission(user):
         for ent_user in EnterpriseCustomerUser.objects.filter(user_id=user.id):
             for enrollment in EnterpriseCourseEnrollment.objects.filter(
-                enterprise_customer_user=ent_user
+                    enterprise_customer_user=ent_user
             ):
                 audits = DegreedLearnerDataTransmissionAudit.objects.filter(
                     enterprise_course_enrollment_id=enrollment.id
