@@ -271,3 +271,22 @@ def is_enterprise_learner(user):
         (bool): True if given user is an enterprise learner.
     """
     return EnterpriseCustomerUser.objects.filter(user_id=user.id).exists()
+
+
+def remind_users_to_bind_phones(request):
+    """
+    The purpose of this function is to determine if the user is bound to the phone.
+    If the user does not bind the phone, the user is prompted to bind the phone (frequency once a day).
+    """
+    try:
+        if not request.user.profile.phone:
+            from datetime import datetime
+            if request.session.get('Phone_binding_reminder','') != datetime.now().date():
+                request.session['Phone_binding_reminder'] = datetime.now().date()
+                return True
+            else:
+                return False
+        else:
+            return True
+    except Exception as err:
+        return False
