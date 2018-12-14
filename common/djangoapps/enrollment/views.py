@@ -7,6 +7,10 @@ import logging
 
 from course_modes.models import CourseMode
 from django.core.exceptions import ObjectDoesNotExist, ValidationError
+from django.conf import settings
+from django.db import transaction
+from django.contrib.auth import get_user_model
+from django.core.exceptions import ObjectDoesNotExist
 from django.utils.decorators import method_decorator
 from edx_rest_framework_extensions.auth.jwt.authentication import JwtAuthentication
 from edx_rest_framework_extensions.auth.session.authentication import SessionAuthenticationAllowInactiveUser
@@ -46,6 +50,8 @@ from student.auth import user_has_role
 from student.models import CourseEnrollment, User
 from student.roles import CourseStaffRole, GlobalStaff
 from util.disable_rate_limit import can_disable_rate_limit
+
+from membership.models import VIPCourseEnrollment, VIPInfo, VIPCoursePrice
 
 log = logging.getLogger(__name__)
 REQUIRED_ATTRIBUTES = {
@@ -688,7 +694,8 @@ class EnrollmentListView(APIView, ApiKeyPermissionMixIn):
             # other users, do not let them deduce the existence of an enrollment.
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-        if mode not in (CourseMode.AUDIT, CourseMode.HONOR, None) and not has_api_key_permissions:
+        can_vip_enroll = VIPCourseEnrollment.can_vip_enroll(request.user, course_id)
+        if mode not in (CourseMode.AUDIT, CourseMode.HONOR, None) and not has_api_key_permissions and not can_vip_enroll:
             return Response(
                 status=status.HTTP_403_FORBIDDEN,
                 data={
@@ -792,6 +799,9 @@ class EnrollmentListView(APIView, ApiKeyPermissionMixIn):
                     is_active=is_active,
                     enrollment_attributes=enrollment_attributes
                 )
+
+            if can_vip_enroll:
+                VIPCourseEnrollment.enroll(user, course_id)
 
             cohort_name = request.data.get('cohort')
             if cohort_name is not None:
