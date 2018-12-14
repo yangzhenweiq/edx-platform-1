@@ -52,8 +52,8 @@ var phoneDialog = function(){
                 },
                 error: function(error){
                 console.log(error)
-                $('.error-text').addClass('active');
-                $('.error-text').html(error.responseText);
+                $('.errot-text').addClass('active');
+                $('.errot-text').html(error.responseText);
                 }
             });
             }
