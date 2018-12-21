@@ -43,6 +43,7 @@ FEATURES.update({
     'ENABLE_COMBINED_LOGIN_REGISTRATION': True,
     'ENABLE_MEMBERSHIP_INTEGRATION': True,
     'ENABLE_PAYMENTS_INTEGRATION': True,
+    'ENABLE_PROFESSORS': True,
 })
 
 ENABLE_MKTG_SITE = os.environ.get('ENABLE_MARKETING_SITE', False)
@@ -85,3 +86,6 @@ if FEATURES.get('ENABLE_MEMBERSHIP_INTEGRATION', False):
     INSTALLED_APPS.append('membership')
     REST_FRAMEWORK.update({'EXCEPTION_HANDLER': 'membership.utils.customer_exception_handler'})
 
+######################## Professors ###########################
+if FEATURES.get('ENABLE_PROFESSORS'):
+    INSTALLED_APPS.append('professors')
