@@ -15,6 +15,7 @@ from openedx.core.djangoapps.plugins import plugin_settings, constants as plugin
 from django.core.urlresolvers import reverse_lazy
 
 from .common import *
+from .eliteu import *
 
 from openedx.core.lib.derived import derive_settings  # pylint: disable=wrong-import-order
 from openedx.core.lib.logsettings import get_logger_config  # pylint: disable=wrong-import-order
