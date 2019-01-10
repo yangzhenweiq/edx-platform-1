@@ -9,21 +9,18 @@
 
 @charset 'utf-8';
 @import './variables';
-@import 'certificates';
 @import './page/base';
 @import './page/iconfont';
 
 @import './page/header';
 @import './page/footer';
 
-@import './page/login';
-@import './page/home';
-@import './page/search';
-@import './page/dashboard';
-@import './page/profile';
-@import './page/account_setting';
+
+
+
+
+
 @import './page/validate';
-@import './page/verify.scss';
 @import './page/professor';
 
 @import './course/course';
@@ -44,3 +41,14 @@
 @import './footer/join_us';
 @import './footer/user_agreement';
 @import './footer/manual';
+@import './page/verify';
+
+
+
+
+
+
+
+
+
+>>>>>>> fix bugs
