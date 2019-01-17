@@ -50,7 +50,8 @@ $icon-width: 18px;
 .fa-exclamation-circle:before,
 .account-activation.success.aa-icon .message-copy::before,
 .fa-camera:before,
-.account-activation.info.aa-icon .message-copy::before
+.account-activation.info.aa-icon .message-copy::before,
+.fa-asterisk:before
 {
   content: '';
   display: inline-block;
@@ -258,15 +259,11 @@ $icon-width: 18px;
 .fa-exclamation-circle:before{
   background-position: calcP(1, 5)
 }
-.fa-camera:before{
-  background-position: calcP(10, 3)
 .account-activation.success.aa-icon .message-copy::before{
   background-position: calcP(4, 5);
   padding: 0;
   margin-top: 3px;
 }
-<<<<<<< HEAD
-=======
 .account-activation.info.aa-icon .message-copy::before{
   background-position: calcP(4, 5);
   padding: 0;
@@ -275,7 +272,9 @@ $icon-width: 18px;
 .fa-camera:before{
   background-position: calcP(10, 3)
 }
->>>>>>> 此账号已激活，提示框样式
+.fa-asterisk:before{
+  background-position: calcP(7, 5)
+}
 
 // 2. 课程详情页的新icon
 // http://0.0.0.0:18000/courses/course-v1:edX+E2E-101+course/about
