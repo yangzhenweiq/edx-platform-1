@@ -876,8 +876,6 @@ class RegistrationFormFactory(object):
             user_agreement_url = marketing_link("USER_AGREEMENT")
             disclaimer_url = marketing_link("DISCLAIMER")
 
-            By creating an account, you agree to abide by EliteMBA's User Agreement, Disclaimer and Private Policy
-
             label = Text(_(
                 u"By creating an account, you agree \
                   to abide by EliteMBA's \
