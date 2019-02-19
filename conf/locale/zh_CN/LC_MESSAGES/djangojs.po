@@ -2050,7 +2050,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 msgid "Explanation"
-msgstr "解释"
+msgstr "解析"
 
 #: common/lib/xmodule/xmodule/js/src/sequence/display.js
 msgid ""
