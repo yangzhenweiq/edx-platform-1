@@ -506,8 +506,7 @@ def i18n_push():
             'green',
             "Please checking your code after update and replace."
         )
-    print msg
-
+        
     con = raw_input("Are you want to replace all sources in transifex (y/n)? ")
     if con.lower() == 'y':
         sh("tx push -s -t -l zh_CN")
