@@ -33,6 +33,8 @@ urlpatterns = [
         r'^account_recovery_confirm/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)/$',
         views.account_recovery_confirm_wrapper,
         name='account_recovery_confirm',
+    ),    
+    url(
         r'^password_reset_change/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)/$',
         views.password_reset_change_wrapper,
         name='password_reset_change',
@@ -40,12 +42,13 @@ urlpatterns = [
 
     url(r'^course_run/{}/refund_status$'.format(settings.COURSE_ID_PATTERN),
         views.course_run_refund_status,
-        name="course_run_refund_status"),
+        name="course_run_refund_status",
+    ),
 
     url(
         r'^activate_secondary_email/(?P<key>[^/]*)$',
         views.activate_secondary_email,
-        name='activate_secondary_email'
+        name='activate_secondary_email',
     ),
 
 ]
