@@ -30,7 +30,6 @@ from openedx.core.djangoapps.util.user_messages import PageLevelMessages
 from openedx.core.djangolib.markup import HTML, Text
 from student.models import (
     LoginFailures,
-    PasswordHistory,
     UserProfile,
 )
 from student.views import send_reactivation_email_for_user
