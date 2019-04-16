@@ -443,7 +443,7 @@ COURSE_MESSAGE_ALERT_DURATION_IN_DAYS = 14
 PROJECT_ROOT = path(__file__).abspath().dirname().dirname()  # /edx-platform/lms
 REPO_ROOT = PROJECT_ROOT.dirname()
 COMMON_ROOT = REPO_ROOT / "common"
-MEMBERSHIP_ROOT = REPO_ROOT / "../edx-membership"
+# MEMBERSHIP_ROOT = REPO_ROOT / "../edx-membership"
 PAYMENTS_ROOT = REPO_ROOT / "../eliteu-payments"
 OPENEDX_ROOT = REPO_ROOT / "openedx"
 ENV_ROOT = REPO_ROOT.dirname()  # virtualenv dir /edx-platform is in
@@ -456,7 +456,7 @@ DATA_DIR = COURSES_ROOT
 sys.path.append(REPO_ROOT)
 sys.path.append(PROJECT_ROOT / 'djangoapps')
 sys.path.append(COMMON_ROOT / 'djangoapps')
-sys.path.append(MEMBERSHIP_ROOT)
+# sys.path.append(MEMBERSHIP_ROOT)
 sys.path.append(PAYMENTS_ROOT)
 
 # For Node.js
@@ -557,7 +557,7 @@ MAKO_TEMPLATE_DIRS_BASE = [
     COMMON_ROOT / 'templates',
     COMMON_ROOT / 'lib' / 'capa' / 'capa' / 'templates',
     COMMON_ROOT / 'djangoapps' / 'pipeline_mako' / 'templates',
-    MEMBERSHIP_ROOT / 'membership' / 'templates',
+    # MEMBERSHIP_ROOT / 'membership' / 'templates',
     OPENEDX_ROOT / 'core' / 'djangoapps' / 'cors_csrf' / 'templates',
     OPENEDX_ROOT / 'core' / 'djangoapps' / 'dark_lang' / 'templates',
     OPENEDX_ROOT / 'core' / 'lib' / 'license' / 'templates',
@@ -627,7 +627,7 @@ TEMPLATES = [
             COMMON_ROOT / 'lib' / 'capa' / 'capa' / 'templates',
             COMMON_ROOT / 'djangoapps' / 'pipeline_mako' / 'templates',
             COMMON_ROOT / 'static',  # required to statically include common Underscore templates
-            MEMBERSHIP_ROOT / 'membership' / 'templates',
+            # MEMBERSHIP_ROOT / 'membership' / 'templates',
         ],
         # Options specific to this backend.
         'OPTIONS': {
@@ -979,7 +979,7 @@ STATICFILES_DIRS = [
     COMMON_ROOT / "static",
     PROJECT_ROOT / "static",
     NODE_MODULES_ROOT / "@edx",
-    MEMBERSHIP_ROOT / "membership" / "static",
+    # MEMBERSHIP_ROOT / "membership" / "static",
 ]
 
 FAVICON_PATH = 'images/favicon.ico'
