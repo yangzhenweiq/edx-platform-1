@@ -29,8 +29,8 @@
             edxSupportUrl,
             extendedProfileFields,
             displayAccountDeletion,
-            isSecondaryEmailFeatureEnabled
-            currency,
+            isSecondaryEmailFeatureEnabled,
+            currency
         ) {
             var $accountSettingsElement, userAccountModel, userPreferencesModel, aboutSectionsData,
                 accountsSectionData, ordersSectionData, accountSettingsView, showAccountSettingsPage,
