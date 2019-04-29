@@ -1,0 +1,359 @@
+# -*- coding: utf-8 -*-
+import sys
+import logging
+import json
+import os
+from path import Path as path
+
+from django.utils.translation import ugettext_lazy as _
+
+from .common import (FEATURES, REPO_ROOT, OAUTH2_PROVIDER, MAKO_TEMPLATE_DIRS_BASE, TEMPLATES, STATICFILES_DIRS)
+
+PLATFORM_NAME = _('EliteMBA')
+
+FEATURES.update({
+    # enable unicode username
+    'ENABLE_UNICODE_USERNAME': True,
+
+    'ENABLE_MKTG_SITE': True,
+    # eliteu apps
+    # Whether to enable membership
+    'ENABLE_MEMBERSHIP_INTEGRATION': False,
+
+    # Whether to enable payments
+    'ENABLE_PAYMENTS_INTEGRATION': False,
+
+    # Whether to enable course unenroll
+    'ENABLE_COURSE_UNENROLL': False,
+
+    # Whether to enable elite courses sort
+    'ENABLE_COURSE_SORTING_BY_START_DATE_DESC': False
+
+})
+
+MEMBERSHIP_ROOT = REPO_ROOT / "../edx-membership"
+PAYMENTS_ROOT = REPO_ROOT / "../eliteu-payments"
+
+sys.path.append(MEMBERSHIP_ROOT)
+sys.path.append(PAYMENTS_ROOT)
+
+OAUTH2_PROVIDER.update({
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 60 * 60 * 24 * 365,
+})
+
+# Mako templating
+import tempfile
+
+MAKO_MODULE_DIR = os.path.join(tempfile.gettempdir(), 'mako_lms')
+MAKO_TEMPLATE_DIRS_BASE.append(
+    MEMBERSHIP_ROOT / 'membership' / 'templates',
+)
+TEMPLATES['DIRS'].append(
+    MEMBERSHIP_ROOT / 'membership' / 'templates',
+)
+
+USERNAME_REGEX_PARTIAL = r'[\u4e00-\u9fa5\w .@_+-]+'
+
+STATICFILES_DIRS.append(
+    MEMBERSHIP_ROOT / "membership" / "static",
+)
+
+LANGUAGES = [
+    ('en', u'English'),
+    ('rtl', u'Right-to-Left Test Language'),
+    ('eo', u'Dummy Language (Esperanto)'),  # Dummy languaged used for testing
+    ('fake2', u'Fake translations'),        # Another dummy language for testing (not pushed to prod)
+
+    # ('am', u'አማርኛ'),  # Amharic
+    # ('ar', u'العربية'),  # Arabic
+    # ('az', u'azərbaycanca'),  # Azerbaijani
+    # ('bg-bg', u'български (България)'),  # Bulgarian (Bulgaria)
+    # ('bn-bd', u'বাংলা (বাংলাদেশ)'),  # Bengali (Bangladesh)
+    # ('bn-in', u'বাংলা (ভারত)'),  # Bengali (India)
+    # ('bs', u'bosanski'),  # Bosnian
+    # ('ca', u'Català'),  # Catalan
+    # ('ca@valencia', u'Català (València)'),  # Catalan (Valencia)
+    # ('cs', u'Čeština'),  # Czech
+    # ('cy', u'Cymraeg'),  # Welsh
+    # ('da', u'dansk'),  # Danish
+    # ('de-de', u'Deutsch (Deutschland)'),  # German (Germany)
+    # ('el', u'Ελληνικά'),  # Greek
+    # ('en-uk', u'English (United Kingdom)'),  # English (United Kingdom)
+    # ('en@lolcat', u'LOLCAT English'),  # LOLCAT English
+    # ('en@pirate', u'Pirate English'),  # Pirate English
+    # ('es-419', u'Español (Latinoamérica)'),  # Spanish (Latin America)
+    # ('es-ar', u'Español (Argentina)'),  # Spanish (Argentina)
+    # ('es-ec', u'Español (Ecuador)'),  # Spanish (Ecuador)
+    # ('es-es', u'Español (España)'),  # Spanish (Spain)
+    # ('es-mx', u'Español (México)'),  # Spanish (Mexico)
+    # ('es-pe', u'Español (Perú)'),  # Spanish (Peru)
+    # ('et-ee', u'Eesti (Eesti)'),  # Estonian (Estonia)
+    # ('eu-es', u'euskara (Espainia)'),  # Basque (Spain)
+    # ('fa', u'فارسی'),  # Persian
+    # ('fa-ir', u'فارسی (ایران)'),  # Persian (Iran)
+    # ('fi-fi', u'Suomi (Suomi)'),  # Finnish (Finland)
+    # ('fil', u'Filipino'),  # Filipino
+    # ('fr', u'Français'),  # French
+    # ('gl', u'Galego'),  # Galician
+    # ('gu', u'ગુજરાતી'),  # Gujarati
+    # ('he', u'עברית'),  # Hebrew
+    # ('hi', u'हिन्दी'),  # Hindi
+    # ('hr', u'hrvatski'),  # Croatian
+    # ('hu', u'magyar'),  # Hungarian
+    # ('hy-am', u'Հայերեն (Հայաստան)'),  # Armenian (Armenia)
+    # ('id', u'Bahasa Indonesia'),  # Indonesian
+    # ('it-it', u'Italiano (Italia)'),  # Italian (Italy)
+    # ('ja-jp', u'日本語 (日本)'),  # Japanese (Japan)
+    # ('kk-kz', u'қазақ тілі (Қазақстан)'),  # Kazakh (Kazakhstan)
+    # ('km-kh', u'ភាសាខ្មែរ (កម្ពុជា)'),  # Khmer (Cambodia)
+    # ('kn', u'ಕನ್ನಡ'),  # Kannada
+    # ('ko-kr', u'한국어 (대한민국)'),  # Korean (Korea)
+    # ('lt-lt', u'Lietuvių (Lietuva)'),  # Lithuanian (Lithuania)
+    # ('ml', u'മലയാളം'),  # Malayalam
+    # ('mn', u'Монгол хэл'),  # Mongolian
+    # ('mr', u'मराठी'),  # Marathi
+    # ('ms', u'Bahasa Melayu'),  # Malay
+    # ('nb', u'Norsk bokmål'),  # Norwegian Bokmål
+    # ('ne', u'नेपाली'),  # Nepali
+    # ('nl-nl', u'Nederlands (Nederland)'),  # Dutch (Netherlands)
+    # ('or', u'ଓଡ଼ିଆ'),  # Oriya
+    # ('pl', u'Polski'),  # Polish
+    # ('pt-br', u'Português (Brasil)'),  # Portuguese (Brazil)
+    # ('pt-pt', u'Português (Portugal)'),  # Portuguese (Portugal)
+    # ('ro', u'română'),  # Romanian
+    # ('ru', u'Русский'),  # Russian
+    # ('si', u'සිංහල'),  # Sinhala
+    # ('sk', u'Slovenčina'),  # Slovak
+    # ('sl', u'Slovenščina'),  # Slovenian
+    # ('sq', u'shqip'),  # Albanian
+    # ('sr', u'Српски'),  # Serbian
+    # ('sv', u'svenska'),  # Swedish
+    # ('sw', u'Kiswahili'),  # Swahili
+    # ('ta', u'தமிழ்'),  # Tamil
+    # ('te', u'తెలుగు'),  # Telugu
+    # ('th', u'ไทย'),  # Thai
+    # ('tr-tr', u'Türkçe (Türkiye)'),  # Turkish (Turkey)
+    # ('uk', u'Українська'),  # Ukranian
+    # ('ur', u'اردو'),  # Urdu
+    # ('vi', u'Tiếng Việt'),  # Vietnamese
+    # ('uz', u'Ўзбек'),  # Uzbek
+    ('zh-cn', u'中文 (简体)'),  # Chinese (China)
+    # ('zh-hk', u'中文 (香港)'),  # Chinese (Hong Kong)
+    # ('zh-tw', u'中文 (台灣)'),  # Chinese (Taiwan)
+]
+
+########################## CERTIFICATE NAME ########################
+CERT_NAME_SHORT = _("Certificate")
+CERT_NAME_LONG = _("Certificate of Achievement")
+
+#### PASSWORD POLICY SETTINGS #####
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        "NAME": "util.password_policy_validators.UserAttributeSimilarityValidator",
+    },
+    {
+        "NAME": "util.password_policy_validators.MinimumLengthValidator",
+        "OPTIONS": {
+            "min_length": 6
+        }
+    },
+    {
+        "NAME": "util.password_policy_validators.MaximumLengthValidator",
+        "OPTIONS": {
+            "max_length": 75
+        }
+    },
+]
+
+# Country code overrides
+# Used by django-countries
+COUNTRIES_OVERRIDE = {
+    # Taiwan is specifically not translated to avoid it being translated as "Taiwan (Province of China)"
+    # "TW": "Taiwan",
+    'XK': _('Kosovo'),
+}
+
+############################ WECHAT_APP_PAY #########################
+WECHAT_APP_PAY_INFO = {
+    "basic_info": {
+        "APPID": "",
+        "APPSECRET": "",
+        "MCHID": "",
+        "KEY": "",
+        "ACCESS_TOKEN": ""
+    },
+    "other_info": {
+        "BUY_COURSES_SUCCESS_TEMPLATE_ID": "",
+        "BUY_COURSES_SUCCESS_HREF_URL": "",
+        "COIN_SUCCESS_TEMPLATE_ID": "",
+        "COIN_SUCCESS_HREF_URL": "",
+        "SERVICE_TEL": "",
+        "NOTIFY_URL": "",
+        "JS_API_CALL_URL": "",
+        "SSLCERT_PATH": "",
+        "SSLKEY_PATH": ""
+    }
+}
+
+ ############################ WECHAT_PAY #########################
+WECHAT_PAY_INFO = {
+    "basic_info": {
+        "APPID": "",
+        "APPSECRET": "",
+        "MCHID": "",
+        "KEY": "",
+        "ACCESS_TOKEN": ""
+    },
+    "other_info": {
+        "BUY_COURSES_SUCCESS_TEMPLATE_ID": "",
+        "BUY_COURSES_SUCCESS_HREF_URL": "",
+        "COIN_SUCCESS_TEMPLATE_ID": "",
+        "COIN_SUCCESS_HREF_URL": "",
+        "SERVICE_TEL": "",
+        "NOTIFY_URL": "",
+        "JS_API_CALL_URL": "",
+        "SSLCERT_PATH": "",
+        "SSLKEY_PATH": ""
+    }
+}
+
+ ############################ WECHAT H5 PAY #########################
+WECHAT_H5_PAY_INFO = {
+    "basic_info":{
+        "APPID": "",
+        "APPSECRET": "",
+        "MCHID": "",
+        "KEY": "",
+        "ACCESS_TOKEN": ""
+    },
+    "other_info":{
+        "SERVICE_TEL": "",
+        "NOTIFY_URL": "",
+        "JS_API_CALL_URL": "",
+        "SSLCERT_PATH": "",
+        "SSLKEY_PATH": "",
+        "SPBILL_CREATE_IP": ""
+    }
+}
+
+ ############################ ALIPAY_INFO #########################
+ALIPAY_APP_INFO = {
+    "basic_info":{
+        "APP_ID": "",
+        "APP_PRIVATE_KEY": "",
+        "ALIPAY_RSA_PUBLIC_KEY": ""
+    },
+    "other_info":{
+        "SIGN_TYPE": "",
+        "NOTIFY_URL": ""
+    }
+}
+
+ ############################ ALIPAY_INFO #########################
+ALIPAY_INFO = {
+    'basic_info': {
+        "KEY": "",
+        "PARTNER": "",
+        "SELLER_EMAIL": ""
+    },
+    'other_info': {
+        "INPUT_CHARSET": "",
+        "INPUT_DIRECT_CHARSET": "",
+        "SIGN_TYPE": "",
+        "RETURN_URL": "",
+        "NOTIFY_URL": "",
+        "REFUND_NOTIFY_URL": "",
+        "SHOW_URL": "",
+        "ERROR_NOTIFY_URL": "",
+        "TRANSPORT": "",
+        "DEFAULT_BANK": "",
+        "IT_B_PAY": "",
+        "REFUND_URL": ""
+    }
+}
+
+
+ ############################ eliteu envs #########################
+
+
+from .common import ENV_ROOT, FEATURES, INSTALLED_APPS, MIDDLEWARE_CLASSES
+
+log = logging.getLogger(__name__)
+
+
+# SERVICE_VARIANT specifies name of the variant used, which decides what JSON
+# configuration files are read during startup.
+SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
+
+# CONFIG_ROOT specifies the directory where the JSON configuration
+# files are expected to be found. If not specified, use the project
+# directory.
+CONFIG_ROOT = path(os.environ.get('CONFIG_ROOT', ENV_ROOT))
+
+# CONFIG_PREFIX specifies the prefix of the JSON configuration files,
+# based on the service variant. If no variant is use, don't use a
+# prefix.
+CONFIG_PREFIX = SERVICE_VARIANT + "." if SERVICE_VARIANT else ""
+
+
+with open(CONFIG_ROOT / CONFIG_PREFIX + "env.json") as env_file:
+    ENV_TOKENS = json.load(env_file)
+
+with open(CONFIG_ROOT / CONFIG_PREFIX + "auth.json") as auth_file:
+    AUTH_TOKENS = json.load(auth_file)
+
+ENV_FEATURES = ENV_TOKENS.get('FEATURES', {})
+for feature, value in ENV_FEATURES.items():
+    FEATURES[feature] = value
+
+# Apple In-app purchase
+APPLE_VERIFY_RECEIPT_IS_SANDBOX = ENV_TOKENS.get('APPLE_VERIFY_RECEIPT_IS_SANDBOX', '')
+APPLE_VERIFY_RECEIPT_URL = ENV_TOKENS.get('APPLE_VERIFY_RECEIPT_URL', '')
+APPLE_VERIFY_RECEIPT_SANDBOX_URL = ENV_TOKENS.get('APPLE_VERIFY_RECEIPT_SANDBOX_URL', '')
+APPLE_IN_APP_PRODUCT_ID = AUTH_TOKENS.get('APPLE_IN_APP_PRODUCT_ID', {})
+
+# verify student
+SHOW_VERIFY_STUDENT_SUPPORT = FEATURES.get('SHOW_VERIFY_STUDENT_SUPPORT', True)
+
+# Sentry
+try:
+    SENTRY_DSN_FRONTEND = ENV_FEATURES.get('SENTRY_DSN_FRONTEND', '')
+    import sentry_sdk
+    from sentry_sdk.integrations.django import DjangoIntegration
+    sentry_dsn_backend = ENV_FEATURES.get('SENTRY_DSN_BACKEND', '')
+    if sentry_dsn_backend:
+        sentry_sdk.init(
+            dsn=sentry_dsn_backend,
+            integrations=[DjangoIntegration()]
+        )
+        log.info("Sentry Start Up Success")
+except ImportError:
+    log.info("Sentry Module Import Error")
+
+# CourseSearch
+SEARCH_SORT = ENV_TOKENS.get('SEARCH_SORT', None)
+
+# App Version
+MOBILE_APP_USER_AGENT_REGEXES = ENV_TOKENS.get('MOBILE_APP_USER_AGENT_REGEXES', None)
+
+# Baidu Bridge
+BAIDU_BRIDGE_URL = ENV_TOKENS.get('BAIDU_BRIDGE_URL', '')
+
+# elitemba
+import imp
+HMM_ENABLED = ENV_FEATURES.get('HMM_ENABLED', False)
+try:
+    if HMM_ENABLED:
+        fp, elitemba_path, desc = imp.find_module('elitemba')
+        INSTALLED_APPS.append('elitemba')
+        MIDDLEWARE_CLASSES.append('elitemba.middleware.ElitembaDataMiddleware')
+        HMM_CONFIGS = ENV_FEATURES.get('HMM_CONFIGS', {
+            'HOST': 'https://openapi.myhbp.org.cn',
+            'APP_ID': '',
+            'SOURCE_ID': '',
+            'LHOST': 'https://myhbp.org.cn',
+        })
+except ImportError:
+    HMM_ENABLED = False
+    print "Warnning: missing package 'elitemba'"
+
