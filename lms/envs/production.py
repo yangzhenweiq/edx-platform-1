@@ -26,8 +26,7 @@ import dateutil
 from path import Path as path
 from xmodule.modulestore.modulestore_settings import convert_module_store_setting_if_needed
 
-from .common import *
-from .eliteu import *
+from .eliteu_common import *
 from openedx.core.lib.derived import derive_settings  # pylint: disable=wrong-import-order
 from openedx.core.lib.logsettings import get_logger_config  # pylint: disable=wrong-import-order
 
@@ -112,7 +111,6 @@ STATIC_ROOT_BASE = ENV_TOKENS.get('STATIC_ROOT_BASE', None)
 if STATIC_ROOT_BASE:
     STATIC_ROOT = path(STATIC_ROOT_BASE)
     WEBPACK_LOADER['DEFAULT']['STATS_FILE'] = STATIC_ROOT / "webpack-stats.json"
-
 
 # STATIC_URL_BASE specifies the base url to use for static files
 STATIC_URL_BASE = ENV_TOKENS.get('STATIC_URL_BASE', None)
@@ -392,6 +390,7 @@ if FEATURES.get('AUTH_USE_CAS'):
     CAS_ATTRIBUTE_CALLBACK = ENV_TOKENS.get('CAS_ATTRIBUTE_CALLBACK', None)
     if CAS_ATTRIBUTE_CALLBACK:
         import importlib
+
         CAS_USER_DETAILS_RESOLVER = getattr(
             importlib.import_module(CAS_ATTRIBUTE_CALLBACK['module']),
             CAS_ATTRIBUTE_CALLBACK['function']
@@ -457,7 +456,6 @@ if FEATURES.get('ENABLE_CORS_HEADERS') or FEATURES.get('ENABLE_CROSS_DOMAIN_CSRF
     # needs to be on a domain that matches the cookie domain, otherwise
     # the client won't be able to read the cookie.
     CROSS_DOMAIN_CSRF_COOKIE_DOMAIN = ENV_TOKENS.get('CROSS_DOMAIN_CSRF_COOKIE_DOMAIN')
-
 
 # Field overrides. To use the IDDE feature, add
 # 'courseware.student_field_overrides.IndividualStudentOverrideProvider'.
@@ -762,7 +760,6 @@ DEFAULT_MOBILE_AVAILABLE = ENV_TOKENS.get(
     DEFAULT_MOBILE_AVAILABLE
 )
 
-
 # Enrollment API Cache Timeout
 ENROLLMENT_COURSE_DETAILS_CACHE_TIMEOUT = ENV_TOKENS.get('ENROLLMENT_COURSE_DETAILS_CACHE_TIMEOUT', 60)
 
@@ -781,9 +778,9 @@ PDF_RECEIPT_COBRAND_LOGO_HEIGHT_MM = ENV_TOKENS.get(
 )
 
 if FEATURES.get('ENABLE_COURSEWARE_SEARCH') or \
-   FEATURES.get('ENABLE_DASHBOARD_SEARCH') or \
-   FEATURES.get('ENABLE_COURSE_DISCOVERY') or \
-   FEATURES.get('ENABLE_TEAMS'):
+        FEATURES.get('ENABLE_DASHBOARD_SEARCH') or \
+        FEATURES.get('ENABLE_COURSE_DISCOVERY') or \
+        FEATURES.get('ENABLE_TEAMS'):
     # Use ElasticSearch as the search engine herein
     SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 
@@ -926,7 +923,6 @@ AFFILIATE_COOKIE_NAME = ENV_TOKENS.get('AFFILIATE_COOKIE_NAME', AFFILIATE_COOKIE
 ############## Settings for LMS Context Sensitive Help ##############
 
 HELP_TOKENS_BOOKS = ENV_TOKENS.get('HELP_TOKENS_BOOKS', HELP_TOKENS_BOOKS)
-
 
 ############## OPEN EDX ENTERPRISE SERVICE CONFIGURATION ######################
 # The Open edX Enterprise service is currently hosted via the LMS container/process.
@@ -1094,29 +1090,11 @@ COURSE_ENROLLMENT_MODES = ENV_TOKENS.get('COURSE_ENROLLMENT_MODES', COURSE_ENROL
 ############################### Plugin Settings ###############################
 
 # This is at the bottom because it is going to load more settings after base settings are loaded
-from openedx.core.djangoapps.plugins import plugin_settings, constants as plugin_constants  # pylint: disable=wrong-import-order, wrong-import-position
+from openedx.core.djangoapps.plugins import plugin_settings, \
+    constants as plugin_constants  # pylint: disable=wrong-import-order, wrong-import-position
+
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_constants.SettingsType.AWS)
 
 ########################## Derive Any Derived Settings  #######################
 
 derive_settings(__name__)
-
-# Payment
-ALIPAY_INFO = AUTH_TOKENS.get('ALIPAY_INFO', ALIPAY_INFO)
-ALIPAY_APP_INFO = AUTH_TOKENS.get('ALIPAY_APP_INFO', ALIPAY_APP_INFO)
-WECHAT_PAY_INFO = AUTH_TOKENS.get('WECHAT_PAY_INFO', WECHAT_PAY_INFO)
-WECHAT_APP_PAY_INFO = AUTH_TOKENS.get('WECHAT_APP_PAY_INFO', WECHAT_APP_PAY_INFO)
-WECHAT_H5_PAY_INFO = AUTH_TOKENS.get('WECHAT_H5_PAY_INFO', WECHAT_H5_PAY_INFO)
-# Aliyun oss
-ALIYUN_OSS = AUTH_TOKENS.get('ALIYUN_OSS', {})
-
-OSS_ACCESS_KEY_ID = ALIYUN_OSS.get("OSS_ACCESS_KEY_ID", "")
-OSS_ACCESS_KEY_SECRET = ALIYUN_OSS.get("OSS_ACCESS_KEY_SECRET", "")
-OSS_ENDPOINT = ALIYUN_OSS.get("OSS_ENDPOINT", "")
-OSS_BUCKET_NAME = ALIYUN_OSS.get("OSS_BUCKET_NAME", "")
-
-#for SMS
-SMS_API = AUTH_TOKENS.get('SMS_API','')
-SMS_API_BY_LINKGROUP = AUTH_TOKENS.get('SMS_API_BY_LINKGROUP','')
-SMS_API_URL = ENV_TOKENS.get('SMS_API_URL','')
-SMS_API_URL_BY_LINKGROUP = ENV_TOKENS.get('SMS_API_URL_BY_LINKGROUP','')

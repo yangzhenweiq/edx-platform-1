@@ -48,7 +48,7 @@ from lms.djangoapps.lms_xblock.mixin import LmsBlockMixin
 
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
-PLATFORM_NAME = _('EliteMBA')
+PLATFORM_NAME = _('Your Platform Name Here')
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
 
@@ -145,9 +145,6 @@ FEATURES = {
     # Staff Debug tool.
     'ENABLE_STUDENT_HISTORY_VIEW': True,
 
-    #enable unicode username
-    'ENABLE_UNICODE_USERNAME':True,
-
     # Provide a UI to allow users to submit feedback from the LMS (left-hand help modal)
     'ENABLE_FEEDBACK_SUBMISSION': False,
 
@@ -235,7 +232,7 @@ FEATURES = {
     'ENABLE_THIRD_PARTY_AUTH': False,
 
     # Toggle to enable alternate urls for marketing links
-    'ENABLE_MKTG_SITE': True,
+    'ENABLE_MKTG_SITE': False,
 
     # Prevent concurrent logins per user
     'PREVENT_CONCURRENT_LOGINS': True,
@@ -395,19 +392,6 @@ FEATURES = {
 
     # Whether to display the account deletion section the account settings page
     'ENABLE_ACCOUNT_DELETION': True,
-
-    # eliteu apps
-    # Whether to enable membership
-    'ENABLE_MEMBERSHIP_INTEGRATION': False,
-
-    # Whether to enable payments
-    'ENABLE_PAYMENTS_INTEGRATION': False,
-
-    # Whether to enable course unenroll
-    'ENABLE_COURSE_UNENROLL': False,
-
-    # Whether to enable elite courses sort
-    'ENABLE_COURSE_SORTING_BY_START_DATE_DESC': False
 }
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
@@ -441,8 +425,6 @@ COURSE_MESSAGE_ALERT_DURATION_IN_DAYS = 14
 PROJECT_ROOT = path(__file__).abspath().dirname().dirname()  # /edx-platform/lms
 REPO_ROOT = PROJECT_ROOT.dirname()
 COMMON_ROOT = REPO_ROOT / "common"
-MEMBERSHIP_ROOT = REPO_ROOT / "../edx-membership"
-PAYMENTS_ROOT = REPO_ROOT / "../eliteu-payments"
 OPENEDX_ROOT = REPO_ROOT / "openedx"
 ENV_ROOT = REPO_ROOT.dirname()  # virtualenv dir /edx-platform is in
 COURSES_ROOT = ENV_ROOT / "data"
@@ -454,8 +436,6 @@ DATA_DIR = COURSES_ROOT
 sys.path.append(REPO_ROOT)
 sys.path.append(PROJECT_ROOT / 'djangoapps')
 sys.path.append(COMMON_ROOT / 'djangoapps')
-sys.path.append(MEMBERSHIP_ROOT)
-sys.path.append(PAYMENTS_ROOT)
 
 # For Node.js
 
@@ -521,7 +501,6 @@ OAUTH2_DEFAULT_SCOPES = {
 }
 
 OAUTH2_PROVIDER = {
-    'ACCESS_TOKEN_EXPIRE_SECONDS': 60 * 60 * 24 * 365,
     'OAUTH2_VALIDATOR_CLASS': 'openedx.core.djangoapps.oauth_dispatch.dot_overrides.validators.EdxOAuth2Validator',
     # 3 months and then we expire refresh tokens using edx_clear_expired_tokens (length is mobile app driven)
     'REFRESH_TOKEN_EXPIRE_SECONDS': 7776000,
@@ -555,7 +534,6 @@ MAKO_TEMPLATE_DIRS_BASE = [
     COMMON_ROOT / 'templates',
     COMMON_ROOT / 'lib' / 'capa' / 'capa' / 'templates',
     COMMON_ROOT / 'djangoapps' / 'pipeline_mako' / 'templates',
-    MEMBERSHIP_ROOT / 'membership' / 'templates',
     OPENEDX_ROOT / 'core' / 'djangoapps' / 'cors_csrf' / 'templates',
     OPENEDX_ROOT / 'core' / 'djangoapps' / 'dark_lang' / 'templates',
     OPENEDX_ROOT / 'core' / 'lib' / 'license' / 'templates',
@@ -625,7 +603,6 @@ TEMPLATES = [
             COMMON_ROOT / 'lib' / 'capa' / 'capa' / 'templates',
             COMMON_ROOT / 'djangoapps' / 'pipeline_mako' / 'templates',
             COMMON_ROOT / 'static',  # required to statically include common Underscore templates
-            MEMBERSHIP_ROOT / 'membership' / 'templates',
         ],
         # Options specific to this backend.
         'OPTIONS': {
@@ -727,7 +704,7 @@ USAGE_ID_PATTERN = r'(?P<usage_id>(?:i4x://?[^/]+/[^/]+/[^/]+/[^@]+(?:@[^/]+)?)|
 # The space is required for space-dependent languages like Arabic and Farsi.
 # However, backward compatibility with Ficus older releases is still maintained (space is still not valid)
 # in the AccountCreationForm and the user_api through the ENABLE_UNICODE_USERNAME feature flag.
-USERNAME_REGEX_PARTIAL = r'[\u4e00-\u9fa5\w .@_+-]+'
+USERNAME_REGEX_PARTIAL = r'[\w .@_+-]+'
 USERNAME_PATTERN = r'(?P<username>{regex})'.format(regex=USERNAME_REGEX_PARTIAL)
 
 
@@ -977,7 +954,6 @@ STATICFILES_DIRS = [
     COMMON_ROOT / "static",
     PROJECT_ROOT / "static",
     NODE_MODULES_ROOT / "@edx",
-    MEMBERSHIP_ROOT / "membership" / "static",
 ]
 
 FAVICON_PATH = 'images/favicon.ico'
@@ -1002,82 +978,82 @@ LANGUAGES = [
     ('eo', u'Dummy Language (Esperanto)'),  # Dummy languaged used for testing
     ('fake2', u'Fake translations'),        # Another dummy language for testing (not pushed to prod)
 
-    # ('am', u'አማርኛ'),  # Amharic
-    # ('ar', u'العربية'),  # Arabic
-    # ('az', u'azərbaycanca'),  # Azerbaijani
-    # ('bg-bg', u'български (България)'),  # Bulgarian (Bulgaria)
-    # ('bn-bd', u'বাংলা (বাংলাদেশ)'),  # Bengali (Bangladesh)
-    # ('bn-in', u'বাংলা (ভারত)'),  # Bengali (India)
-    # ('bs', u'bosanski'),  # Bosnian
-    # ('ca', u'Català'),  # Catalan
-    # ('ca@valencia', u'Català (València)'),  # Catalan (Valencia)
-    # ('cs', u'Čeština'),  # Czech
-    # ('cy', u'Cymraeg'),  # Welsh
-    # ('da', u'dansk'),  # Danish
-    # ('de-de', u'Deutsch (Deutschland)'),  # German (Germany)
-    # ('el', u'Ελληνικά'),  # Greek
-    # ('en-uk', u'English (United Kingdom)'),  # English (United Kingdom)
-    # ('en@lolcat', u'LOLCAT English'),  # LOLCAT English
-    # ('en@pirate', u'Pirate English'),  # Pirate English
-    # ('es-419', u'Español (Latinoamérica)'),  # Spanish (Latin America)
-    # ('es-ar', u'Español (Argentina)'),  # Spanish (Argentina)
-    # ('es-ec', u'Español (Ecuador)'),  # Spanish (Ecuador)
-    # ('es-es', u'Español (España)'),  # Spanish (Spain)
-    # ('es-mx', u'Español (México)'),  # Spanish (Mexico)
-    # ('es-pe', u'Español (Perú)'),  # Spanish (Peru)
-    # ('et-ee', u'Eesti (Eesti)'),  # Estonian (Estonia)
-    # ('eu-es', u'euskara (Espainia)'),  # Basque (Spain)
-    # ('fa', u'فارسی'),  # Persian
-    # ('fa-ir', u'فارسی (ایران)'),  # Persian (Iran)
-    # ('fi-fi', u'Suomi (Suomi)'),  # Finnish (Finland)
-    # ('fil', u'Filipino'),  # Filipino
-    # ('fr', u'Français'),  # French
-    # ('gl', u'Galego'),  # Galician
-    # ('gu', u'ગુજરાતી'),  # Gujarati
-    # ('he', u'עברית'),  # Hebrew
-    # ('hi', u'हिन्दी'),  # Hindi
-    # ('hr', u'hrvatski'),  # Croatian
-    # ('hu', u'magyar'),  # Hungarian
-    # ('hy-am', u'Հայերեն (Հայաստան)'),  # Armenian (Armenia)
-    # ('id', u'Bahasa Indonesia'),  # Indonesian
-    # ('it-it', u'Italiano (Italia)'),  # Italian (Italy)
-    # ('ja-jp', u'日本語 (日本)'),  # Japanese (Japan)
-    # ('kk-kz', u'қазақ тілі (Қазақстан)'),  # Kazakh (Kazakhstan)
-    # ('km-kh', u'ភាសាខ្មែរ (កម្ពុជា)'),  # Khmer (Cambodia)
-    # ('kn', u'ಕನ್ನಡ'),  # Kannada
-    # ('ko-kr', u'한국어 (대한민국)'),  # Korean (Korea)
-    # ('lt-lt', u'Lietuvių (Lietuva)'),  # Lithuanian (Lithuania)
-    # ('ml', u'മലയാളം'),  # Malayalam
-    # ('mn', u'Монгол хэл'),  # Mongolian
-    # ('mr', u'मराठी'),  # Marathi
-    # ('ms', u'Bahasa Melayu'),  # Malay
-    # ('nb', u'Norsk bokmål'),  # Norwegian Bokmål
-    # ('ne', u'नेपाली'),  # Nepali
-    # ('nl-nl', u'Nederlands (Nederland)'),  # Dutch (Netherlands)
-    # ('or', u'ଓଡ଼ିଆ'),  # Oriya
-    # ('pl', u'Polski'),  # Polish
-    # ('pt-br', u'Português (Brasil)'),  # Portuguese (Brazil)
-    # ('pt-pt', u'Português (Portugal)'),  # Portuguese (Portugal)
-    # ('ro', u'română'),  # Romanian
-    # ('ru', u'Русский'),  # Russian
-    # ('si', u'සිංහල'),  # Sinhala
-    # ('sk', u'Slovenčina'),  # Slovak
-    # ('sl', u'Slovenščina'),  # Slovenian
-    # ('sq', u'shqip'),  # Albanian
-    # ('sr', u'Српски'),  # Serbian
-    # ('sv', u'svenska'),  # Swedish
-    # ('sw', u'Kiswahili'),  # Swahili
-    # ('ta', u'தமிழ்'),  # Tamil
-    # ('te', u'తెలుగు'),  # Telugu
-    # ('th', u'ไทย'),  # Thai
-    # ('tr-tr', u'Türkçe (Türkiye)'),  # Turkish (Turkey)
-    # ('uk', u'Українська'),  # Ukranian
-    # ('ur', u'اردو'),  # Urdu
-    # ('vi', u'Tiếng Việt'),  # Vietnamese
-    # ('uz', u'Ўзбек'),  # Uzbek
+    ('am', u'አማርኛ'),  # Amharic
+    ('ar', u'العربية'),  # Arabic
+    ('az', u'azərbaycanca'),  # Azerbaijani
+    ('bg-bg', u'български (България)'),  # Bulgarian (Bulgaria)
+    ('bn-bd', u'বাংলা (বাংলাদেশ)'),  # Bengali (Bangladesh)
+    ('bn-in', u'বাংলা (ভারত)'),  # Bengali (India)
+    ('bs', u'bosanski'),  # Bosnian
+    ('ca', u'Català'),  # Catalan
+    ('ca@valencia', u'Català (València)'),  # Catalan (Valencia)
+    ('cs', u'Čeština'),  # Czech
+    ('cy', u'Cymraeg'),  # Welsh
+    ('da', u'dansk'),  # Danish
+    ('de-de', u'Deutsch (Deutschland)'),  # German (Germany)
+    ('el', u'Ελληνικά'),  # Greek
+    ('en-uk', u'English (United Kingdom)'),  # English (United Kingdom)
+    ('en@lolcat', u'LOLCAT English'),  # LOLCAT English
+    ('en@pirate', u'Pirate English'),  # Pirate English
+    ('es-419', u'Español (Latinoamérica)'),  # Spanish (Latin America)
+    ('es-ar', u'Español (Argentina)'),  # Spanish (Argentina)
+    ('es-ec', u'Español (Ecuador)'),  # Spanish (Ecuador)
+    ('es-es', u'Español (España)'),  # Spanish (Spain)
+    ('es-mx', u'Español (México)'),  # Spanish (Mexico)
+    ('es-pe', u'Español (Perú)'),  # Spanish (Peru)
+    ('et-ee', u'Eesti (Eesti)'),  # Estonian (Estonia)
+    ('eu-es', u'euskara (Espainia)'),  # Basque (Spain)
+    ('fa', u'فارسی'),  # Persian
+    ('fa-ir', u'فارسی (ایران)'),  # Persian (Iran)
+    ('fi-fi', u'Suomi (Suomi)'),  # Finnish (Finland)
+    ('fil', u'Filipino'),  # Filipino
+    ('fr', u'Français'),  # French
+    ('gl', u'Galego'),  # Galician
+    ('gu', u'ગુજરાતી'),  # Gujarati
+    ('he', u'עברית'),  # Hebrew
+    ('hi', u'हिन्दी'),  # Hindi
+    ('hr', u'hrvatski'),  # Croatian
+    ('hu', u'magyar'),  # Hungarian
+    ('hy-am', u'Հայերեն (Հայաստան)'),  # Armenian (Armenia)
+    ('id', u'Bahasa Indonesia'),  # Indonesian
+    ('it-it', u'Italiano (Italia)'),  # Italian (Italy)
+    ('ja-jp', u'日本語 (日本)'),  # Japanese (Japan)
+    ('kk-kz', u'қазақ тілі (Қазақстан)'),  # Kazakh (Kazakhstan)
+    ('km-kh', u'ភាសាខ្មែរ (កម្ពុជា)'),  # Khmer (Cambodia)
+    ('kn', u'ಕನ್ನಡ'),  # Kannada
+    ('ko-kr', u'한국어 (대한민국)'),  # Korean (Korea)
+    ('lt-lt', u'Lietuvių (Lietuva)'),  # Lithuanian (Lithuania)
+    ('ml', u'മലയാളം'),  # Malayalam
+    ('mn', u'Монгол хэл'),  # Mongolian
+    ('mr', u'मराठी'),  # Marathi
+    ('ms', u'Bahasa Melayu'),  # Malay
+    ('nb', u'Norsk bokmål'),  # Norwegian Bokmål
+    ('ne', u'नेपाली'),  # Nepali
+    ('nl-nl', u'Nederlands (Nederland)'),  # Dutch (Netherlands)
+    ('or', u'ଓଡ଼ିଆ'),  # Oriya
+    ('pl', u'Polski'),  # Polish
+    ('pt-br', u'Português (Brasil)'),  # Portuguese (Brazil)
+    ('pt-pt', u'Português (Portugal)'),  # Portuguese (Portugal)
+    ('ro', u'română'),  # Romanian
+    ('ru', u'Русский'),  # Russian
+    ('si', u'සිංහල'),  # Sinhala
+    ('sk', u'Slovenčina'),  # Slovak
+    ('sl', u'Slovenščina'),  # Slovenian
+    ('sq', u'shqip'),  # Albanian
+    ('sr', u'Српски'),  # Serbian
+    ('sv', u'svenska'),  # Swedish
+    ('sw', u'Kiswahili'),  # Swahili
+    ('ta', u'தமிழ்'),  # Tamil
+    ('te', u'తెలుగు'),  # Telugu
+    ('th', u'ไทย'),  # Thai
+    ('tr-tr', u'Türkçe (Türkiye)'),  # Turkish (Turkey)
+    ('uk', u'Українська'),  # Ukranian
+    ('ur', u'اردو'),  # Urdu
+    ('vi', u'Tiếng Việt'),  # Vietnamese
+    ('uz', u'Ўзбек'),  # Uzbek
     ('zh-cn', u'中文 (简体)'),  # Chinese (China)
-    # ('zh-hk', u'中文 (香港)'),  # Chinese (Hong Kong)
-    # ('zh-tw', u'中文 (台灣)'),  # Chinese (Taiwan)
+    ('zh-hk', u'中文 (香港)'),  # Chinese (Hong Kong)
+    ('zh-tw', u'中文 (台灣)'),  # Chinese (Taiwan)
 ]
 
 LANGUAGE_DICT = dict(LANGUAGES)
@@ -2588,8 +2564,8 @@ REGISTRATION_FIELD_ORDER = [
 REGISTRATION_EMAIL_PATTERNS_ALLOWED = None
 
 ########################## CERTIFICATE NAME ########################
-CERT_NAME_SHORT = _("Certificate")
-CERT_NAME_LONG = _("Certificate of Achievement")
+CERT_NAME_SHORT = "Certificate"
+CERT_NAME_LONG = "Certificate of Achievement"
 
 #################### OpenBadges Settings #######################
 
@@ -2628,12 +2604,12 @@ POLICY_CHANGE_TASK_RATE_LIMIT = '300/h'
 #### PASSWORD POLICY SETTINGS #####
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "util.password_policy_validators.UserAttributeSimilarityValidator",
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
         "NAME": "util.password_policy_validators.MinimumLengthValidator",
         "OPTIONS": {
-            "min_length": 6
+            "min_length": 2
         }
     },
     {
@@ -2697,192 +2673,192 @@ VIDEO_TRANSCRIPTS_SETTINGS = dict(
 # Note that this is used as the set of choices to the `code` field of the
 # `LanguageProficiency` model.
 ALL_LANGUAGES = [
-    # [u"aa", u"Afar"],
-    # [u"ab", u"Abkhazian"],
-    # [u"af", u"Afrikaans"],
-    # [u"ak", u"Akan"],
-    # [u"sq", u"Albanian"],
-    # [u"am", u"Amharic"],
-    # [u"ar", u"Arabic"],
-    # [u"an", u"Aragonese"],
-    # [u"hy", u"Armenian"],
-    # [u"as", u"Assamese"],
-    # [u"av", u"Avaric"],
-    # [u"ae", u"Avestan"],
-    # [u"ay", u"Aymara"],
-    # [u"az", u"Azerbaijani"],
-    # [u"ba", u"Bashkir"],
-    # [u"bm", u"Bambara"],
-    # [u"eu", u"Basque"],
-    # [u"be", u"Belarusian"],
-    # [u"bn", u"Bengali"],
-    # [u"bh", u"Bihari languages"],
-    # [u"bi", u"Bislama"],
-    # [u"bs", u"Bosnian"],
-    # [u"br", u"Breton"],
-    # [u"bg", u"Bulgarian"],
-    # [u"my", u"Burmese"],
-    # [u"ca", u"Catalan"],
-    # [u"ch", u"Chamorro"],
-    # [u"ce", u"Chechen"],
+    [u"aa", u"Afar"],
+    [u"ab", u"Abkhazian"],
+    [u"af", u"Afrikaans"],
+    [u"ak", u"Akan"],
+    [u"sq", u"Albanian"],
+    [u"am", u"Amharic"],
+    [u"ar", u"Arabic"],
+    [u"an", u"Aragonese"],
+    [u"hy", u"Armenian"],
+    [u"as", u"Assamese"],
+    [u"av", u"Avaric"],
+    [u"ae", u"Avestan"],
+    [u"ay", u"Aymara"],
+    [u"az", u"Azerbaijani"],
+    [u"ba", u"Bashkir"],
+    [u"bm", u"Bambara"],
+    [u"eu", u"Basque"],
+    [u"be", u"Belarusian"],
+    [u"bn", u"Bengali"],
+    [u"bh", u"Bihari languages"],
+    [u"bi", u"Bislama"],
+    [u"bs", u"Bosnian"],
+    [u"br", u"Breton"],
+    [u"bg", u"Bulgarian"],
+    [u"my", u"Burmese"],
+    [u"ca", u"Catalan"],
+    [u"ch", u"Chamorro"],
+    [u"ce", u"Chechen"],
     [u"zh", u"Chinese"],
-    # [u"zh_HANS", u"Simplified Chinese"],
-    # [u"zh_HANT", u"Traditional Chinese"],
-    # [u"cu", u"Church Slavic"],
-    # [u"cv", u"Chuvash"],
-    # [u"kw", u"Cornish"],
-    # [u"co", u"Corsican"],
-    # [u"cr", u"Cree"],
-    # [u"cs", u"Czech"],
-    # [u"da", u"Danish"],
-    # [u"dv", u"Divehi"],
-    # [u"nl", u"Dutch"],
-    # [u"dz", u"Dzongkha"],
+    [u"zh_HANS", u"Simplified Chinese"],
+    [u"zh_HANT", u"Traditional Chinese"],
+    [u"cu", u"Church Slavic"],
+    [u"cv", u"Chuvash"],
+    [u"kw", u"Cornish"],
+    [u"co", u"Corsican"],
+    [u"cr", u"Cree"],
+    [u"cs", u"Czech"],
+    [u"da", u"Danish"],
+    [u"dv", u"Divehi"],
+    [u"nl", u"Dutch"],
+    [u"dz", u"Dzongkha"],
     [u"en", u"English"],
-    # [u"eo", u"Esperanto"],
-    # [u"et", u"Estonian"],
-    # [u"ee", u"Ewe"],
-    # [u"fo", u"Faroese"],
-    # [u"fj", u"Fijian"],
-    # [u"fi", u"Finnish"],
-    # [u"fr", u"French"],
-    # [u"fy", u"Western Frisian"],
-    # [u"ff", u"Fulah"],
-    # [u"ka", u"Georgian"],
-    # [u"de", u"German"],
-    # [u"gd", u"Gaelic"],
-    # [u"ga", u"Irish"],
-    # [u"gl", u"Galician"],
-    # [u"gv", u"Manx"],
-    # [u"el", u"Greek"],
-    # [u"gn", u"Guarani"],
-    # [u"gu", u"Gujarati"],
-    # [u"ht", u"Haitian"],
-    # [u"ha", u"Hausa"],
-    # [u"he", u"Hebrew"],
-    # [u"hz", u"Herero"],
-    # [u"hi", u"Hindi"],
-    # [u"ho", u"Hiri Motu"],
-    # [u"hr", u"Croatian"],
-    # [u"hu", u"Hungarian"],
-    # [u"ig", u"Igbo"],
-    # [u"is", u"Icelandic"],
-    # [u"io", u"Ido"],
-    # [u"ii", u"Sichuan Yi"],
-    # [u"iu", u"Inuktitut"],
-    # [u"ie", u"Interlingue"],
-    # [u"ia", u"Interlingua"],
-    # [u"id", u"Indonesian"],
-    # [u"ik", u"Inupiaq"],
-    # [u"it", u"Italian"],
-    # [u"jv", u"Javanese"],
-    # [u"ja", u"Japanese"],
-    # [u"kl", u"Kalaallisut"],
-    # [u"kn", u"Kannada"],
-    # [u"ks", u"Kashmiri"],
-    # [u"kr", u"Kanuri"],
-    # [u"kk", u"Kazakh"],
-    # [u"km", u"Central Khmer"],
-    # [u"ki", u"Kikuyu"],
-    # [u"rw", u"Kinyarwanda"],
-    # [u"ky", u"Kirghiz"],
-    # [u"kv", u"Komi"],
-    # [u"kg", u"Kongo"],
-    # [u"ko", u"Korean"],
-    # [u"kj", u"Kuanyama"],
-    # [u"ku", u"Kurdish"],
-    # [u"lo", u"Lao"],
-    # [u"la", u"Latin"],
-    # [u"lv", u"Latvian"],
-    # [u"li", u"Limburgan"],
-    # [u"ln", u"Lingala"],
-    # [u"lt", u"Lithuanian"],
-    # [u"lb", u"Luxembourgish"],
-    # [u"lu", u"Luba-Katanga"],
-    # [u"lg", u"Ganda"],
-    # [u"mk", u"Macedonian"],
-    # [u"mh", u"Marshallese"],
-    # [u"ml", u"Malayalam"],
-    # [u"mi", u"Maori"],
-    # [u"mr", u"Marathi"],
-    # [u"ms", u"Malay"],
-    # [u"mg", u"Malagasy"],
-    # [u"mt", u"Maltese"],
-    # [u"mn", u"Mongolian"],
-    # [u"na", u"Nauru"],
-    # [u"nv", u"Navajo"],
-    # [u"nr", u"Ndebele, South"],
-    # [u"nd", u"Ndebele, North"],
-    # [u"ng", u"Ndonga"],
-    # [u"ne", u"Nepali"],
-    # [u"nn", u"Norwegian Nynorsk"],
-    # [u"nb", u"Bokmål, Norwegian"],
-    # [u"no", u"Norwegian"],
-    # [u"ny", u"Chichewa"],
-    # [u"oc", u"Occitan"],
-    # [u"oj", u"Ojibwa"],
-    # [u"or", u"Oriya"],
-    # [u"om", u"Oromo"],
-    # [u"os", u"Ossetian"],
-    # [u"pa", u"Panjabi"],
-    # [u"fa", u"Persian"],
-    # [u"pi", u"Pali"],
-    # [u"pl", u"Polish"],
-    # [u"pt", u"Portuguese"],
-    # [u"ps", u"Pushto"],
-    # [u"qu", u"Quechua"],
-    # [u"rm", u"Romansh"],
-    # [u"ro", u"Romanian"],
-    # [u"rn", u"Rundi"],
-    # [u"ru", u"Russian"],
-    # [u"sg", u"Sango"],
-    # [u"sa", u"Sanskrit"],
-    # [u"si", u"Sinhala"],
-    # [u"sk", u"Slovak"],
-    # [u"sl", u"Slovenian"],
-    # [u"se", u"Northern Sami"],
-    # [u"sm", u"Samoan"],
-    # [u"sn", u"Shona"],
-    # [u"sd", u"Sindhi"],
-    # [u"so", u"Somali"],
-    # [u"st", u"Sotho, Southern"],
-    # [u"es", u"Spanish"],
-    # [u"sc", u"Sardinian"],
-    # [u"sr", u"Serbian"],
-    # [u"ss", u"Swati"],
-    # [u"su", u"Sundanese"],
-    # [u"sw", u"Swahili"],
-    # [u"sv", u"Swedish"],
-    # [u"ty", u"Tahitian"],
-    # [u"ta", u"Tamil"],
-    # [u"tt", u"Tatar"],
-    # [u"te", u"Telugu"],
-    # [u"tg", u"Tajik"],
-    # [u"tl", u"Tagalog"],
-    # [u"th", u"Thai"],
-    # [u"bo", u"Tibetan"],
-    # [u"ti", u"Tigrinya"],
-    # [u"to", u"Tonga (Tonga Islands)"],
-    # [u"tn", u"Tswana"],
-    # [u"ts", u"Tsonga"],
-    # [u"tk", u"Turkmen"],
-    # [u"tr", u"Turkish"],
-    # [u"tw", u"Twi"],
-    # [u"ug", u"Uighur"],
-    # [u"uk", u"Ukrainian"],
-    # [u"ur", u"Urdu"],
-    # [u"uz", u"Uzbek"],
-    # [u"ve", u"Venda"],
-    # [u"vi", u"Vietnamese"],
-    # [u"vo", u"Volapük"],
-    # [u"cy", u"Welsh"],
-    # [u"wa", u"Walloon"],
-    # [u"wo", u"Wolof"],
-    # [u"xh", u"Xhosa"],
-    # [u"yi", u"Yiddish"],
-    # [u"yo", u"Yoruba"],
-    # [u"za", u"Zhuang"],
-    # [u"zu", u"Zulu"]
+    [u"eo", u"Esperanto"],
+    [u"et", u"Estonian"],
+    [u"ee", u"Ewe"],
+    [u"fo", u"Faroese"],
+    [u"fj", u"Fijian"],
+    [u"fi", u"Finnish"],
+    [u"fr", u"French"],
+    [u"fy", u"Western Frisian"],
+    [u"ff", u"Fulah"],
+    [u"ka", u"Georgian"],
+    [u"de", u"German"],
+    [u"gd", u"Gaelic"],
+    [u"ga", u"Irish"],
+    [u"gl", u"Galician"],
+    [u"gv", u"Manx"],
+    [u"el", u"Greek"],
+    [u"gn", u"Guarani"],
+    [u"gu", u"Gujarati"],
+    [u"ht", u"Haitian"],
+    [u"ha", u"Hausa"],
+    [u"he", u"Hebrew"],
+    [u"hz", u"Herero"],
+    [u"hi", u"Hindi"],
+    [u"ho", u"Hiri Motu"],
+    [u"hr", u"Croatian"],
+    [u"hu", u"Hungarian"],
+    [u"ig", u"Igbo"],
+    [u"is", u"Icelandic"],
+    [u"io", u"Ido"],
+    [u"ii", u"Sichuan Yi"],
+    [u"iu", u"Inuktitut"],
+    [u"ie", u"Interlingue"],
+    [u"ia", u"Interlingua"],
+    [u"id", u"Indonesian"],
+    [u"ik", u"Inupiaq"],
+    [u"it", u"Italian"],
+    [u"jv", u"Javanese"],
+    [u"ja", u"Japanese"],
+    [u"kl", u"Kalaallisut"],
+    [u"kn", u"Kannada"],
+    [u"ks", u"Kashmiri"],
+    [u"kr", u"Kanuri"],
+    [u"kk", u"Kazakh"],
+    [u"km", u"Central Khmer"],
+    [u"ki", u"Kikuyu"],
+    [u"rw", u"Kinyarwanda"],
+    [u"ky", u"Kirghiz"],
+    [u"kv", u"Komi"],
+    [u"kg", u"Kongo"],
+    [u"ko", u"Korean"],
+    [u"kj", u"Kuanyama"],
+    [u"ku", u"Kurdish"],
+    [u"lo", u"Lao"],
+    [u"la", u"Latin"],
+    [u"lv", u"Latvian"],
+    [u"li", u"Limburgan"],
+    [u"ln", u"Lingala"],
+    [u"lt", u"Lithuanian"],
+    [u"lb", u"Luxembourgish"],
+    [u"lu", u"Luba-Katanga"],
+    [u"lg", u"Ganda"],
+    [u"mk", u"Macedonian"],
+    [u"mh", u"Marshallese"],
+    [u"ml", u"Malayalam"],
+    [u"mi", u"Maori"],
+    [u"mr", u"Marathi"],
+    [u"ms", u"Malay"],
+    [u"mg", u"Malagasy"],
+    [u"mt", u"Maltese"],
+    [u"mn", u"Mongolian"],
+    [u"na", u"Nauru"],
+    [u"nv", u"Navajo"],
+    [u"nr", u"Ndebele, South"],
+    [u"nd", u"Ndebele, North"],
+    [u"ng", u"Ndonga"],
+    [u"ne", u"Nepali"],
+    [u"nn", u"Norwegian Nynorsk"],
+    [u"nb", u"Bokmål, Norwegian"],
+    [u"no", u"Norwegian"],
+    [u"ny", u"Chichewa"],
+    [u"oc", u"Occitan"],
+    [u"oj", u"Ojibwa"],
+    [u"or", u"Oriya"],
+    [u"om", u"Oromo"],
+    [u"os", u"Ossetian"],
+    [u"pa", u"Panjabi"],
+    [u"fa", u"Persian"],
+    [u"pi", u"Pali"],
+    [u"pl", u"Polish"],
+    [u"pt", u"Portuguese"],
+    [u"ps", u"Pushto"],
+    [u"qu", u"Quechua"],
+    [u"rm", u"Romansh"],
+    [u"ro", u"Romanian"],
+    [u"rn", u"Rundi"],
+    [u"ru", u"Russian"],
+    [u"sg", u"Sango"],
+    [u"sa", u"Sanskrit"],
+    [u"si", u"Sinhala"],
+    [u"sk", u"Slovak"],
+    [u"sl", u"Slovenian"],
+    [u"se", u"Northern Sami"],
+    [u"sm", u"Samoan"],
+    [u"sn", u"Shona"],
+    [u"sd", u"Sindhi"],
+    [u"so", u"Somali"],
+    [u"st", u"Sotho, Southern"],
+    [u"es", u"Spanish"],
+    [u"sc", u"Sardinian"],
+    [u"sr", u"Serbian"],
+    [u"ss", u"Swati"],
+    [u"su", u"Sundanese"],
+    [u"sw", u"Swahili"],
+    [u"sv", u"Swedish"],
+    [u"ty", u"Tahitian"],
+    [u"ta", u"Tamil"],
+    [u"tt", u"Tatar"],
+    [u"te", u"Telugu"],
+    [u"tg", u"Tajik"],
+    [u"tl", u"Tagalog"],
+    [u"th", u"Thai"],
+    [u"bo", u"Tibetan"],
+    [u"ti", u"Tigrinya"],
+    [u"to", u"Tonga (Tonga Islands)"],
+    [u"tn", u"Tswana"],
+    [u"ts", u"Tsonga"],
+    [u"tk", u"Turkmen"],
+    [u"tr", u"Turkish"],
+    [u"tw", u"Twi"],
+    [u"ug", u"Uighur"],
+    [u"uk", u"Ukrainian"],
+    [u"ur", u"Urdu"],
+    [u"uz", u"Uzbek"],
+    [u"ve", u"Venda"],
+    [u"vi", u"Vietnamese"],
+    [u"vo", u"Volapük"],
+    [u"cy", u"Welsh"],
+    [u"wa", u"Walloon"],
+    [u"wo", u"Wolof"],
+    [u"xh", u"Xhosa"],
+    [u"yi", u"Yiddish"],
+    [u"yo", u"Yoruba"],
+    [u"za", u"Zhuang"],
+    [u"zu", u"Zulu"]
 ]
 
 
@@ -2959,7 +2935,7 @@ INVOICE_PAYMENT_INSTRUCTIONS = "This is where you can\nput directions on how peo
 # Used by django-countries
 COUNTRIES_OVERRIDE = {
     # Taiwan is specifically not translated to avoid it being translated as "Taiwan (Province of China)"
-    # "TW": "Taiwan",
+    "TW": "Taiwan",
     'XK': _('Kosovo'),
 }
 
@@ -3054,7 +3030,6 @@ ACCOUNT_VISIBILITY_CONFIGURATION = {
         "account_privacy",
         "accomplishments_shared",
         "extended_profile",
-        "phone",
     ]
 }
 
@@ -3523,103 +3498,3 @@ USER_STATE_BATCH_SIZE = 5000
 from openedx.core.djangoapps.plugins import plugin_apps, plugin_settings, constants as plugin_constants
 INSTALLED_APPS.extend(plugin_apps.get_apps(plugin_constants.ProjectType.LMS))
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_constants.SettingsType.COMMON)
-
-############################ WECHAT_APP_PAY #########################
-WECHAT_APP_PAY_INFO = {
-    "basic_info": {
-        "APPID": "",
-        "APPSECRET": "",
-        "MCHID": "",
-        "KEY": "",
-        "ACCESS_TOKEN": ""
-    },
-    "other_info": {
-        "BUY_COURSES_SUCCESS_TEMPLATE_ID": "",
-        "BUY_COURSES_SUCCESS_HREF_URL": "",
-        "COIN_SUCCESS_TEMPLATE_ID": "",
-        "COIN_SUCCESS_HREF_URL": "",
-        "SERVICE_TEL": "",
-        "NOTIFY_URL": "",
-        "JS_API_CALL_URL": "",
-        "SSLCERT_PATH": "",
-        "SSLKEY_PATH": ""
-    }
-}
-
-############################ WECHAT_PAY #########################
-WECHAT_PAY_INFO = {
-    "basic_info": {
-        "APPID": "",
-        "APPSECRET": "",
-        "MCHID": "",
-        "KEY": "",
-        "ACCESS_TOKEN": ""
-    },
-    "other_info": {
-        "BUY_COURSES_SUCCESS_TEMPLATE_ID": "",
-        "BUY_COURSES_SUCCESS_HREF_URL": "",
-        "COIN_SUCCESS_TEMPLATE_ID": "",
-        "COIN_SUCCESS_HREF_URL": "",
-        "SERVICE_TEL": "",
-        "NOTIFY_URL": "",
-        "JS_API_CALL_URL": "",
-        "SSLCERT_PATH": "",
-        "SSLKEY_PATH": ""
-    }
-}
-
-############################ WECHAT H5 PAY #########################
-WECHAT_H5_PAY_INFO = {
-    "basic_info":{
-        "APPID": "",
-        "APPSECRET": "",
-        "MCHID": "",
-        "KEY": "",
-        "ACCESS_TOKEN": ""
-    },
-    "other_info":{
-        "SERVICE_TEL": "",
-        "NOTIFY_URL": "",
-        "JS_API_CALL_URL": "",
-        "SSLCERT_PATH": "",
-        "SSLKEY_PATH": "",
-        "SPBILL_CREATE_IP": ""
-    }
-}
-
-############################ ALIPAY_INFO #########################
-ALIPAY_APP_INFO = {
-    "basic_info":{
-        "APP_ID": "",
-        "APP_PRIVATE_KEY": "",
-        "ALIPAY_RSA_PUBLIC_KEY": ""
-    },
-    "other_info":{
-        "SIGN_TYPE": "",
-        "NOTIFY_URL": ""
-    }
-}
-
-############################ ALIPAY_INFO #########################
-ALIPAY_INFO = {
-    'basic_info': {
-        "KEY": "",
-        "PARTNER": "",
-        "SELLER_EMAIL": ""
-    },
-    'other_info': {
-        "INPUT_CHARSET": "",
-        "INPUT_DIRECT_CHARSET": "",
-        "SIGN_TYPE": "",
-        "RETURN_URL": "",
-        "NOTIFY_URL": "",
-        "REFUND_NOTIFY_URL": "",
-        "SHOW_URL": "",
-        "ERROR_NOTIFY_URL": "",
-        "TRANSPORT": "",
-        "DEFAULT_BANK": "",
-        "IT_B_PAY": "",
-        "REFUND_URL": ""
-    }
-}
-

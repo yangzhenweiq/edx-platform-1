@@ -7,7 +7,8 @@ from path import Path as path
 
 from django.utils.translation import ugettext_lazy as _
 
-from .common import (FEATURES, REPO_ROOT, OAUTH2_PROVIDER, MAKO_TEMPLATE_DIRS_BASE, TEMPLATES, STATICFILES_DIRS)
+from .common import *
+from .common import _make_mako_template_dirs
 
 PLATFORM_NAME = _('EliteMBA')
 
@@ -48,9 +49,71 @@ MAKO_MODULE_DIR = os.path.join(tempfile.gettempdir(), 'mako_lms')
 MAKO_TEMPLATE_DIRS_BASE.append(
     MEMBERSHIP_ROOT / 'membership' / 'templates',
 )
-TEMPLATES['DIRS'].append(
-    MEMBERSHIP_ROOT / 'membership' / 'templates',
-)
+
+###############################################################################################
+# Django templating
+TEMPLATES = [
+    {
+        'NAME': 'django',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # Don't look for template source files inside installed applications.
+        'APP_DIRS': False,
+        # Instead, look for template source files in these dirs.
+        'DIRS': [
+            PROJECT_ROOT / "templates",
+            COMMON_ROOT / 'templates',
+            COMMON_ROOT / 'lib' / 'capa' / 'capa' / 'templates',
+            COMMON_ROOT / 'djangoapps' / 'pipeline_mako' / 'templates',
+            COMMON_ROOT / 'static',  # required to statically include common Underscore templates
+            MEMBERSHIP_ROOT / 'membership' / 'templates',
+        ],
+        # Options specific to this backend.
+        'OPTIONS': {
+            'loaders': [
+                # We have to use mako-aware template loaders to be able to include
+                # mako templates inside django templates (such as main_django.html).
+                'openedx.core.djangoapps.theming.template_loaders.ThemeTemplateLoader',
+                'edxmako.makoloader.MakoFilesystemLoader',
+                'edxmako.makoloader.MakoAppDirectoriesLoader',
+            ],
+            'context_processors': CONTEXT_PROCESSORS,
+            # Change 'debug' in your environment settings files - not here.
+            'debug': False
+        }
+    },
+    {
+        'NAME': 'mako',
+        'BACKEND': 'edxmako.backend.Mako',
+        # Don't look for template source files inside installed applications.
+        'APP_DIRS': False,
+        # Instead, look for template source files in these dirs.
+        'DIRS': _make_mako_template_dirs,
+        # Options specific to this backend.
+        'OPTIONS': {
+            'context_processors': CONTEXT_PROCESSORS,
+            # Change 'debug' in your environment settings files - not here.
+            'debug': False,
+        }
+    },
+]
+derived_collection_entry('TEMPLATES', 1, 'DIRS')
+DEFAULT_TEMPLATE_ENGINE = TEMPLATES[0]
+DEFAULT_TEMPLATE_ENGINE_DIRS = DEFAULT_TEMPLATE_ENGINE['DIRS'][:]
+
+
+def _add_microsite_dirs_to_default_template_engine(settings):
+    """
+    Derives the final DEFAULT_TEMPLATE_ENGINE['DIRS'] setting from other settings.
+    """
+    if settings.FEATURES.get('USE_MICROSITES', False) and getattr(settings, "MICROSITE_CONFIGURATION", False):
+        DEFAULT_TEMPLATE_ENGINE_DIRS.append(settings.MICROSITE_ROOT_DIR)
+    return DEFAULT_TEMPLATE_ENGINE_DIRS
+
+
+DEFAULT_TEMPLATE_ENGINE['DIRS'] = _add_microsite_dirs_to_default_template_engine
+derived_collection_entry('DEFAULT_TEMPLATE_ENGINE', 'DIRS')
+
+###############################################################################################
 
 USERNAME_REGEX_PARTIAL = r'[\u4e00-\u9fa5\w .@_+-]+'
 
@@ -62,7 +125,7 @@ LANGUAGES = [
     ('en', u'English'),
     ('rtl', u'Right-to-Left Test Language'),
     ('eo', u'Dummy Language (Esperanto)'),  # Dummy languaged used for testing
-    ('fake2', u'Fake translations'),        # Another dummy language for testing (not pushed to prod)
+    ('fake2', u'Fake translations'),  # Another dummy language for testing (not pushed to prod)
 
     # ('am', u'አማርኛ'),  # Amharic
     # ('ar', u'العربية'),  # Arabic
@@ -195,7 +258,7 @@ WECHAT_APP_PAY_INFO = {
     }
 }
 
- ############################ WECHAT_PAY #########################
+############################ WECHAT_PAY #########################
 WECHAT_PAY_INFO = {
     "basic_info": {
         "APPID": "",
@@ -217,16 +280,16 @@ WECHAT_PAY_INFO = {
     }
 }
 
- ############################ WECHAT H5 PAY #########################
+############################ WECHAT H5 PAY #########################
 WECHAT_H5_PAY_INFO = {
-    "basic_info":{
+    "basic_info": {
         "APPID": "",
         "APPSECRET": "",
         "MCHID": "",
         "KEY": "",
         "ACCESS_TOKEN": ""
     },
-    "other_info":{
+    "other_info": {
         "SERVICE_TEL": "",
         "NOTIFY_URL": "",
         "JS_API_CALL_URL": "",
@@ -236,20 +299,20 @@ WECHAT_H5_PAY_INFO = {
     }
 }
 
- ############################ ALIPAY_INFO #########################
+############################ ALIPAY_INFO #########################
 ALIPAY_APP_INFO = {
-    "basic_info":{
+    "basic_info": {
         "APP_ID": "",
         "APP_PRIVATE_KEY": "",
         "ALIPAY_RSA_PUBLIC_KEY": ""
     },
-    "other_info":{
+    "other_info": {
         "SIGN_TYPE": "",
         "NOTIFY_URL": ""
     }
 }
 
- ############################ ALIPAY_INFO #########################
+############################ ALIPAY_INFO #########################
 ALIPAY_INFO = {
     'basic_info': {
         "KEY": "",
@@ -272,14 +335,60 @@ ALIPAY_INFO = {
     }
 }
 
+ACCOUNT_VISIBILITY_CONFIGURATION = {
+    # Default visibility level for accounts without a specified value
+    # The value is one of: 'all_users', 'private'
+    "default_visibility": "all_users",
 
- ############################ eliteu envs #########################
+    # The list of all fields that can be shared with other users
+    "shareable_fields": [
+        'username',
+        'profile_image',
+        'country',
+        'time_zone',
+        'date_joined',
+        'language_proficiencies',
+        'bio',
+        'social_links',
+        'account_privacy',
+        # Not an actual field, but used to signal whether badges should be public.
+        'accomplishments_shared',
+    ],
 
+    # The list of account fields that are always public
+    "public_fields": [
+        'username',
+        'profile_image',
+        'account_privacy',
+    ],
 
-from .common import ENV_ROOT, FEATURES, INSTALLED_APPS, MIDDLEWARE_CLASSES
+    # The list of account fields that are visible only to staff and users viewing their own profiles
+    "admin_fields": [
+        "username",
+        "email",
+        "is_active",
+        "bio",
+        "country",
+        "date_joined",
+        "profile_image",
+        "language_proficiencies",
+        "social_links",
+        "name",
+        "gender",
+        "goals",
+        "year_of_birth",
+        "level_of_education",
+        "mailing_address",
+        "requires_parental_consent",
+        "account_privacy",
+        "accomplishments_shared",
+        "extended_profile",
+        "phone",
+    ]
+}
+############################ eliteu envs #########################
 
 log = logging.getLogger(__name__)
-
 
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.
@@ -294,7 +403,6 @@ CONFIG_ROOT = path(os.environ.get('CONFIG_ROOT', ENV_ROOT))
 # based on the service variant. If no variant is use, don't use a
 # prefix.
 CONFIG_PREFIX = SERVICE_VARIANT + "." if SERVICE_VARIANT else ""
-
 
 with open(CONFIG_ROOT / CONFIG_PREFIX + "env.json") as env_file:
     ENV_TOKENS = json.load(env_file)
@@ -320,6 +428,7 @@ try:
     SENTRY_DSN_FRONTEND = ENV_FEATURES.get('SENTRY_DSN_FRONTEND', '')
     import sentry_sdk
     from sentry_sdk.integrations.django import DjangoIntegration
+
     sentry_dsn_backend = ENV_FEATURES.get('SENTRY_DSN_BACKEND', '')
     if sentry_dsn_backend:
         sentry_sdk.init(
@@ -341,6 +450,7 @@ BAIDU_BRIDGE_URL = ENV_TOKENS.get('BAIDU_BRIDGE_URL', '')
 
 # elitemba
 import imp
+
 HMM_ENABLED = ENV_FEATURES.get('HMM_ENABLED', False)
 try:
     if HMM_ENABLED:
@@ -356,4 +466,3 @@ try:
 except ImportError:
     HMM_ENABLED = False
     print "Warnning: missing package 'elitemba'"
-

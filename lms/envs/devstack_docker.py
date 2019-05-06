@@ -40,9 +40,6 @@ FEATURES.update({
     'SHOW_HEADER_LANGUAGE_SELECTOR': True,
     'ENABLE_ENTERPRISE_INTEGRATION': False,
     'ENABLE_COMBINED_LOGIN_REGISTRATION': True,
-    'ENABLE_MEMBERSHIP_INTEGRATION': True,
-    'ENABLE_PAYMENTS_INTEGRATION': True,
-    'ENABLE_PROFESSORS': True,
 })
 
 ENABLE_MKTG_SITE = os.environ.get('ENABLE_MARKETING_SITE', False)
@@ -77,17 +74,3 @@ MKTG_URLS = {
 CREDENTIALS_SERVICE_USERNAME = 'credentials_worker'
 
 COURSE_CATALOG_API_URL = 'http://edx.devstack.discovery:18381/api/v1/'
-
-if FEATURES.get('ENABLE_MEMBERSHIP_INTEGRATION', False):
-    INSTALLED_APPS.append('membership')
-    REST_FRAMEWORK.update({'EXCEPTION_HANDLER': 'membership.utils.customer_exception_handler'})
-
-######################## Professors ###########################
-if FEATURES.get('ENABLE_PROFESSORS'):
-    INSTALLED_APPS.append('professors')
-
-############################ WEIXINAPPID_AND_WEIXINAPPSECRET #########################
-WEIXINAPPID = ''
-WEIXINAPPSECRET = ''
-WEIXINAPPID = ENV_TOKENS.get('WEIXINAPPID', WEIXINAPPID)
-WEIXINAPPSECRET = ENV_TOKENS.get('WEIXINAPPSECRET', WEIXINAPPSECRET)
