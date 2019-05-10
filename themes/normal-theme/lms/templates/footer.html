@@ -18,7 +18,7 @@ binding = remind_users_to_bind_phones(request)
   <div class="footer-content clearfix">
     <div class="footer-app">
       <img class="logo" src="${static.url('images/logo.png')}" />
-      <p class="slogan">${_(u"Learn to Change·Change to Improve")}</p>
+      <p class="slogan">${_(u"Learn to Change · Change to Improve")}</p>
       <div class="footer-btn">
         <i class="footer-icon">
           <svg viewBox="64 64 896 896" class="" width="1em" height="1em" aria-hidden="true">
@@ -67,7 +67,7 @@ binding = remind_users_to_bind_phones(request)
         <h3>${_(u"Terms Description")}</h3>
         <ul>
           <li><a href="${reverse('user_agreement')}">${_(u"User Agreement")}</a></li>
-          <li><a href="${reverse('privacy_policy')}">${_(u"Privacy Policy")}</a></li>
+          <li><a href="${reverse('privacy')}">${_(u"Privacy Policy")}</a></li>
           <li><a href="${reverse('disclaimer')}">${_(u"Disclaimer")}</a></li>
         </ul>
       </div>
@@ -75,7 +75,7 @@ binding = remind_users_to_bind_phones(request)
       <div class="footer-list">
         <h3>${_(u"Partners")}</h3>
         <ul>
-          <li><a href="https://study.163.com/provider/1024795882/index.htm?_trace_c_p_k2_=494e8df7049f4426bf94a0e1fe587c12" target="_blank">${_(u"Cloud classroom of Netease")}</a></li>
+          <li><a href="https://study.163.com/provider/1024795882/index.htm?_trace_c_p_k2_=494e8df7049f4426bf94a0e1fe587c12" target="_blank">${_(u"NetEase Study")}</a></li>
           <!--<li><a href="https://eliteu.ke.qq.com/#tab=1&category=-1">${_(u"Tencent Classroom")}</a></li>-->
         </ul>
       </div>
@@ -87,15 +87,15 @@ binding = remind_users_to_bind_phones(request)
       <div>${_(u"Scan WeChat QR Code")}<br />${_(u"to find out more")}</div>
     </div>
   </div>
-  <div class="footer-text">© ${datetime.now(pytz.timezone(settings.TIME_ZONE)).year} ${_(u"Guangdong Elite International Education & Technology Co., Ltd.    All Rights Reserved")} <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备13044168号-5</a></div>
+  <div class="footer-text">© ${datetime.now(pytz.timezone(settings.TIME_ZONE)).year} ${_(u"Guangdong Elite International Education & Technology Co., Ltd.    All Rights Reserved")} <a href="${settings.ELITE_FILING_WEBSITE}" target="_blank">${_(settings.ELITE_CASE_NUMBER)}</a></div>
 </div>
 <div class="phone-dialog" style="display:none;">
   <div class="dialog-mask">
     <div class="dialog-container">
-      <div class="dialog-title">${_(u"bind your account to your cellphone number")}</div>
-      <div class="row phone-number clearfix"><span class="phone-code">+86</span><input class="phone-input-box" type="text" placeholder="${_('Please enter the phone number')}" /></div>
+      <div class="dialog-title">${_(u"Bind Your Account to Your Mobile Number")}</div>
+      <div class="row phone-number clearfix"><span class="phone-code">+86</span><input class="phone-input-box" type="text" placeholder="${_('Mobile number')}" /></div>
       <div class="row clearfix">
-        <input class="qrcode-input-box" type="text" /><span class="get-qrcode-btn">${_(u"get verification code")}</span>
+        <input class="qrcode-input-box" type="text" /><span class="get-qrcode-btn">${_(u"Verify")}</span>
       </div>
       <div class="error-text">${_(u"incorrect cellphone number format")}</div>
       <div class="submit-btn">${_(u"Submit")}</div>
@@ -108,7 +108,7 @@ binding = remind_users_to_bind_phones(request)
   <div class="mesassge-mask">
     <div class="meassage-container">
       <div class="message-title">${_(u"Reminder")}</div>
-      <p class="message-content">${_(u"To meet the requirements of national policies and regulations of using a real legal name，please bind your account to your cellphone number before proceeding.")}</p>
+      <p class="message-content">${_(u"To meet the requirements of national policies and regulations of using a real legal name, please bind your account to your cellphone number before proceeding.")}</p>
       <div class="meassage-op">
         <span class="binding-btn">${_(u"Bind Mobile")}</span> <a class="more" target="_blank" href="http://www.cac.gov.cn/2017-08/25/c_1121541842.htm">${_(u"Learn More")}</a>
       </div>

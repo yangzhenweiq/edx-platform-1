@@ -73,6 +73,7 @@
     line-height: 1.8;
     font-weight: normal;
     color: $font;
+    margin: 0;
   }
 }
 
@@ -304,6 +305,7 @@
       display: inline-block;
       margin-bottom: 0;
       font-weight: normal;
+      line-height: 1.8;
     }
     .message-copy::before{
       margin-top: 0;
@@ -316,6 +318,9 @@
 
 .wrapper-messages-primary .message.message-upsell .action-upgrade .action-upgrade-icon{
   display: none;
+}
+.wrapper-messages-primary .message.message-status .message-copy{
+  line-height: 1.8;
 }
 @media screen and (max-width: 992px){
   .dashboard .main-container{
@@ -330,7 +335,7 @@
     padding: 10px 20px;
   }
 }
-@media screen and (max-width: 568px){
+@media screen and (max-width: 767px){
   .wrapper-messages-primary .message.message-status .verification-cta .btn{
     display: none;
   }

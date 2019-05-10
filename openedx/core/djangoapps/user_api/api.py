@@ -134,7 +134,7 @@ def get_login_session_form(request):
 
     # Translators: This label appears above a field on the login form
     # meant to hold the user's email address.
-    email_label = pgettext("Register and Login", u"E-mail or mobile phone number")
+    email_label = pgettext("Register and Login", u"Email or Phone Number")
 
     # Translators: This example email address is used as a placeholder in
     # a field on the login form meant to hold the user's email address.
@@ -481,7 +481,7 @@ class RegistrationFormFactory(object):
         """
         # Translators: This label appears above a dropdown menu on the registration
         # form used to select the user's highest completed level of education.
-        education_level_label = _(u"Highest level of education completed")
+        education_level_label = _(u"Highest Level of Education Completed")
         error_msg = accounts.REQUIRED_FIELD_LEVEL_OF_EDUCATION_MSG
 
         # The labels are marked for translation in UserProfile model definition.
@@ -529,7 +529,7 @@ class RegistrationFormFactory(object):
         """
         # Translators: This label appears above a dropdown menu on the registration
         # form used to select the user's year of birth.
-        yob_label = _(u"Year of birth")
+        yob_label = _(u"Year of Birth")
 
         options = [(unicode(year), unicode(year)) for year in UserProfile.VALID_YEARS]
         form_desc.add_field(

@@ -334,6 +334,17 @@ textarea, form#wiki_revision .CodeMirror, input[type="text"]{
   #id_owner_username{
     vertical-align: inherit;
   }
+  #div_id_locked, #div_id_recursive{
+    .controls{
+      display: flex;
+    }
+    input[type="checkbox"]{
+      margin-top: 2px;
+    }
+    .help-block{
+      margin-left: 10px;
+    }
+  }
 }
 
 
@@ -346,4 +357,17 @@ textarea, form#wiki_revision .CodeMirror, input[type="text"]{
   font-size: 14px;
   color: $font;
   margin: 0 20px 20px;
+}
+
+
+// wiki article list
+.wiki-wrapper .pagination{
+  width: 100%;
+  ul{
+    text-align: center;
+  }
+  li{
+    display: inline-block;
+    padding: 0 10px;
+  }
 }
