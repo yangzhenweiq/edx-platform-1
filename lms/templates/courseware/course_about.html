@@ -112,6 +112,8 @@ from six import string_types
 
   <%block name="course_about_header">
   <header class="course-profile">
+    <input type="hidden" id="is_vip" value="${is_vip}"/>
+    <input type="hidden" id="vip_expire_at" value="${vip_expire_at}"/>
     <div class="intro-inner-wrapper">
       <div class="table">
       <section class="intro">
@@ -125,17 +127,48 @@ from six import string_types
 
         <div class="main-cta">
         %if user.is_authenticated and registered:
+          %if not is_vip and is_subscribe_course and not generated_certifate:
+            <% 
+              if ecommerce_checkout:
+                reg_href = ecommerce_checkout_link
+              else:
+                reg_href="#"
+              if professional_mode:
+                href_class = "add-to-cart"
+              else:
+                href_class = "register"
+            %>
+            <a href="#" class="${href_class}" data-is-subscribe-pay="${is_subscribe_pay}">
+              %if registration_price > 0:
+                  ${_("Enroll {price}").format(price=course_price)}
+              %else:
+                  ${pgettext("Free Enroll Course", "Enroll")}
+              %endif
+            </a>
+            <div id="register_error"></div>
+          %else:
+            %if show_courseware_link:
+              <a href="${course_target}">
+            %endif
+
+            <span class="register disabled">${_("You are enrolled in this course")}</span>
+          
+            %if show_courseware_link:
+              <strong>${_("View Course")}</strong>
+              </a>
+            %endif
+          %endif
+        %elif generated_certifate:
           %if show_courseware_link:
             <a href="${course_target}">
           %endif
 
           <span class="register disabled">${_("You are enrolled in this course")}</span>
-
+          
           %if show_courseware_link:
             <strong>${_("View Course")}</strong>
             </a>
           %endif
-
         %elif in_cart:
           <span class="add-to-cart">
             ${Text(_('This course is in your <a href="{cart_link}">cart</a>.')).format(cart_link=cart_link)}
@@ -165,11 +198,16 @@ from six import string_types
               reg_element_id = ""
           %>
           <a href="${reg_href}" class="add-to-cart" id="${reg_element_id}">
-            ${Text(_("Add {course_name} to Cart {start_span}({price} USD){end_span}")).format(
-                course_name=course.display_number_with_default,
-                start_span=HTML("<span>"),
-                end_span=HTML("</span>"),
-                price=course_price)}
+
+            <!--${Text(_("Add {course_name} to Cart {start_span}({price} USD){end_span}")).format(-->
+                <!--course_name=course.display_number_with_default,-->
+                <!--start_span=HTML("<span>"),-->
+                <!--end_span=HTML("</span>"),-->
+                <!--price=course_price)}-->
+
+            ${_("Add {course_name} to Cart <span>({price} {currency_code})</span>")\
+              .format(course_name=course.display_number_with_default, price=course_price, currency_code=currency_code)}
+
           </a>
           <div id="register_error"></div>
         %elif allow_anonymous:
@@ -179,20 +217,43 @@ from six import string_types
             </a>
           %endif
         %else:
-          <% 
-            if ecommerce_checkout:
-              reg_href = ecommerce_checkout_link
-            else:
+          %if is_vip and not is_subscribe_pay:
+            <%
               reg_href="#"
-            if professional_mode:
-              href_class = "add-to-cart"
-            else:
               href_class = "register"
+
           %>
-          <a href="${reg_href}" class="${href_class}">
-            ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default)}
-          </a>
-          <div id="register_error"></div>
+          <!--<a href="${reg_href}" class="${href_class}">-->
+            <!--${_("Enroll in {course_name}").format(course_name=course.display_number_with_default)}-->
+          <!--</a>-->
+          <!--<div id="register_error"></div>-->
+
+            %>
+            <a href="${reg_href}" class="${href_class}" data-is-subscribe-pay="${is_subscribe_pay}">
+              ${_("Free Enrollment for VIP")}
+            </a>
+          %else:
+            <%
+              if ecommerce_checkout:
+                reg_href = ecommerce_checkout_link
+              else:
+                reg_href="#"
+              if professional_mode:
+                href_class = "add-to-cart"
+              else:
+                href_class = "register"
+            %>
+            <a href="#" class="${href_class}" data-is-subscribe-pay="${is_subscribe_pay}">
+              %if registration_price > 0:
+                  ${_("Enroll {price}").format(price=course_price)}
+              %else:
+                  ${pgettext("Free Enroll Course", "Enroll")}
+              %endif
+            </a>
+            <div id="register_error"></div>
+          %endif
+
+
         %endif
         </div>
 
@@ -253,7 +314,15 @@ from six import string_types
                   <%
                      course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                   %>
-                  <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}"></span>
+
+                  <!--<span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}"></span>-->
+
+                  <span class="important-dates-item-text start-date localized_datetime"
+                        data-format="shortDate"
+                        data-language="${LANGUAGE_CODE}"
+                        data-datetime="${course_date_string}">
+                  </span>
+
               % endif
             </li>
           % endif
@@ -273,7 +342,15 @@ from six import string_types
                     <%
                         course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                     %>
-                    <span class="important-dates-item-text final-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}"></span>
+
+                    <!--<span class="important-dates-item-text final-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}"></span>-->
+
+                    <span class="important-dates-item-text final-date localized_datetime"
+                          data-format="shortDate"
+                          data-language="${LANGUAGE_CODE}"
+                          data-datetime="${course_date_string}">
+                    </span>
+
                   % endif
             </li>
             % endif
@@ -373,3 +450,22 @@ from six import string_types
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
     DateUtilFactory.transform(iterationKey=".localized_datetime");
 </%static:require_module_async>
+
+<script>
+  $('.add-to-cart').click(function(){
+    $.ajax({
+      type: 'get',
+      url: '/api/v1/vip/info',
+      success: function(res){
+        if (res.code == -1) {
+          window.location.href = "${reverse('register_user')}";
+        } else if (res.data.status) {
+          $("#class_enroll_form").submit();
+          event.preventDefault();
+        } else {
+          window.location.href = "${ecommerce_checkout_link}";
+        }
+      }
+    })
+  });
+</script>

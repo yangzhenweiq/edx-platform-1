@@ -1,0 +1,51 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_(u"Professors List")}</%block>
+
+<div class="professor-banner">
+    <div>
+        <h2>${_(u"Purpose of Education")}</h2>
+        <p>${_(u"Education is not a hard-won knowledge instillation, but an inspiration for the free development potential of learners. Wisdom is the ability to use knowledge. Elite Education not only spreads knowledge, but also focuses on the cultivation of wisdom.")}</p>
+        <p>${_(u"We hope to pass on the successful business management experience and wisdom at home and abroad to more people who are not satisfited with the status quo and actively seek change.")}</p>
+        <p>${_(u"We sincerely invite all elite professors, scholars and experts who have been deeply involved in business management disciplines to develop more outstanding business talents by transforming intangible wisdom into a collectible course.")}</p>
+    </div>
+</div>
+<div id="professor-list"></div>
+<script>
+    $.ajax({
+        url: '/api/v1/professors/',
+        method: 'GET',
+        data: {
+            page_size: 1000,
+        },
+        success: function(res){
+            var list = res.results;
+            var elem = '';
+            for ( var i = 0; i < list.length; i++ ){
+                elem = elem + '<div class="professor-block" onclick="goToPage(' + list[i].id + ')"><img src="' + list[i].avatar + '" /><div class="professor-name">' + list[i].name + '</div><div>' + list[i].description + '</div><a>' + "${_('More')}" + '<span class="fa-my fa-my-arrow"></span></a></div>';
+            }
+            document.getElementById('professor-list').innerHTML = elem;
+        }
+    });
+
+    // 兼容app，查看教授详情url后加?device=ios/android
+    var getQueryString = function(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+        var r = window.location.search.substr(1).match(reg); 
+        if (r != null) return unescape(r[2]); return null; 
+    }
+    var device = getQueryString('device');
+
+    function goToPage(id){
+        if (!device){
+          window.location.href = "/professors/" + id;
+        } else if (device == 'ios') {
+          window.location.href = "/professors/" + id + "?device=ios";
+        } else {
+          window.location.href = "/professors/" + id + "?device=android";
+        }
+        
+    }
+</script>

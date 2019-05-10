@@ -69,6 +69,8 @@ handler500 = static_template_view_views.render_500
 urlpatterns = [
     url(r'^$', branding_views.index, name='root'),   # Main marketing page, or redirect to courseware
 
+    url(r'^all_courses$', branding_views.index, name='all_courses'),
+
     url(r'', include('student.urls')),
     # TODO: Move lms specific student views out of common code
     url(r'^dashboard/?$', student_views.student_dashboard, name='dashboard'),
@@ -1047,4 +1049,28 @@ urlpatterns += [
     url(r'', include('csrf.urls')),
 ]
 
+# Membership
+if settings.FEATURES.get('ENABLE_MEMBERSHIP_INTEGRATION', False):
+    urlpatterns += [
+        url(r'', include('membership.urls')),
+    ]
+
+# payments
+if settings.FEATURES.get('ENABLE_PAYMENTS_INTEGRATION', False):
+    urlpatterns += [
+        url(r'', include('payments.urls')),
+    ]
+
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.LMS))
+
+# professors
+if settings.FEATURES.get('ENABLE_PROFESSORS'):
+    urlpatterns += [
+        url(r'', include('professors.urls')),
+    ]
+
+if settings.HMM_ENABLED:
+    urlpatterns += [
+        url(r'^elitemba/', include('elitemba.urls', namespace='elitemba')),
+    ]
+

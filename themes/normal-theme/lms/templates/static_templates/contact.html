@@ -1,0 +1,56 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_(u"Contact Us")}</%block>
+<style>
+.window-wrap .content-wrapper{
+    padding: 0;
+    padding-bottom: 10px;
+}
+</style>
+<div class="eliteu-contact">
+    <div class="eliteu-contact-img"></div>
+</div>
+
+<div class="contact-dec">
+
+    <ul>
+        <li class="first">
+            <div><strong>${_(u"Elite Education")}</strong></div>
+            <p>${_(u"Address: Room 1005, CITIC Plaza, No. 233 Tianhe North Road, Tianhe District, Guangzhou, China")}</p>
+            <p>${_(u"Telephone: 400-931-8118 (Monday to Friday at 9:00-18:00)")}</p>
+        </li>
+        <li class="first">
+            <div><strong>${_(u"Course Cooperation")}</strong></div>
+            <p><a href="mailto:course@elitemba.cn">course@elitemba.cn</a></p>
+            <p>${_(u"Contact: Mr. Chen")} 15521304260</p>
+        </li>
+        <li>
+            <div><strong style="position:relative; top:2px">${_(u"Human Resources and Recruitment")}</strong></div>
+            <p><a href="mailto:hr@elitemba.cn">hr@elitemba.cn</a></p>
+        </li>
+        <li>
+            <div><strong>${_(u"Feedback and Technical Support")}</strong></div>
+            <p><a href="mailto:support@elitemba.cn">support@elitemba.cn</a></p>
+        </li>
+        <li>
+            <div><strong>${_(u"Media Communication")}</strong></div>
+            <p><a href="mailto:media@elitemba.cn">media@elitemba.cn</a></p>
+        </li>
+        <li>
+            <div><strong>${_(u"Business Cooperation")}</strong></div>
+            <p><a href="mailto:partner@elitemba.cn">partner@elitemba.cn</a></p>
+        </li>
+        <li>
+            <div><strong>${_(u"Enterprise Procurement")}</strong></div>
+            <p><a href="mailto:corporate@elitemba.cn">corporate@elitemba.cn</a></p>
+            <p>${_(u"Contact: Ms. Liao")} 13928968545</p>
+        </li>
+        <li>
+            <div><strong>${_(u"System Bugs")}</strong></div>
+            <p><a href="mailto:bug@elitemba.cn">bug@elitemba.cn</a></p>
+        </li>
+    </ul>
+    
+</div>
