@@ -147,6 +147,7 @@ from lms.envs.common import (
     _make_mako_template_dirs,
     _make_locale_paths,
 )
+from lms.envs.eliteu_common import *
 from path import Path as path
 from django.core.urlresolvers import reverse_lazy
 
