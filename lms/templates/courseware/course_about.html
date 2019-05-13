@@ -199,12 +199,6 @@ from six import string_types
           %>
           <a href="${reg_href}" class="add-to-cart" id="${reg_element_id}">
 
-            <!--${Text(_("Add {course_name} to Cart {start_span}({price} USD){end_span}")).format(-->
-                <!--course_name=course.display_number_with_default,-->
-                <!--start_span=HTML("<span>"),-->
-                <!--end_span=HTML("</span>"),-->
-                <!--price=course_price)}-->
-
             ${_("Add {course_name} to Cart <span>({price} {currency_code})</span>")\
               .format(course_name=course.display_number_with_default, price=course_price, currency_code=currency_code)}
 
@@ -222,13 +216,9 @@ from six import string_types
               reg_href="#"
               href_class = "register"
 
-          %>
-          <!--<a href="${reg_href}" class="${href_class}">-->
-            <!--${_("Enroll in {course_name}").format(course_name=course.display_number_with_default)}-->
-          <!--</a>-->
-          <!--<div id="register_error"></div>-->
-
             %>
+
+
             <a href="${reg_href}" class="${href_class}" data-is-subscribe-pay="${is_subscribe_pay}">
               ${_("Free Enrollment for VIP")}
             </a>

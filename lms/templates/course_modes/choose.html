@@ -168,7 +168,7 @@ from openedx.core.djangolib.markup import HTML, Text
                                                         <li class="action action-select">
                                                             <input type="hidden" name="contribution" value="${min_price}" />
 
-                                                            % if content_gating_enabled or course_duration_limit_enabled::
+                                                            % if content_gating_enabled or course_duration_limit_enabled:
                                                                 <input type="submit" name="verified_mode" value="${_('Pursue the Verified Track')} (${currency_symbol}${min_price} ${currency_code})" />
 
                                                             % else:

@@ -9,6 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from .common import *
 from .common import _make_mako_template_dirs
+from .eliteu import *
 
 PLATFORM_NAME = _('EliteMBA')
 
