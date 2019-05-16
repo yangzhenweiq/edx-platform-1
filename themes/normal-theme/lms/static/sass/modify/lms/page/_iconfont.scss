@@ -54,6 +54,9 @@ $icon-width: 18px;
 .account-activation.info.aa-icon .message-copy::before,
 .fa-asterisk:before,
 .fa-refresh:before,
+.fa-work-time,
+.fa-effort-time,
+.fa-catalog,
 .paragon__alert-dismissible .paragon__close:before
 {
   content: '';
@@ -85,6 +88,19 @@ $icon-width: 18px;
 .fa-info-circle:before{
   background-position: calcP(7, 2);
 }
+
+.fa-work-time{
+  background-position: calcP(10, 2);
+  transform: scale(1.2);
+}
+.fa-effort-time{
+  background-position: calcP(6, 2);
+}
+.fa-catalog{
+  background-position: calcP(7, 1);
+}
+
+
 .problem .fa-info-circle:before{
   background-position: calcP(14, 7);
 }
