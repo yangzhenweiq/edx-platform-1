@@ -76,6 +76,12 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
     min_hours_effort_per_week = program['min_hours_effort_per_week']
     max_hours_effort_per_week = program['max_hours_effort_per_week']
   %>
+
+
+   <!-- <div class="program-video-box" style="display: none;">
+                <video id="player-container-id" width="400" height="230" preload="auto" playsinline webkit-playinline></video>
+              </div> -->
+
   <div id="program-details-hero">
     <div class="main-banner"
       style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${banner_image});background-size: 100%;">
@@ -130,16 +136,49 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
               % endif
             </div>
           </div>
-          <div class=" my-video">
-            % if video_url:
+          
+          % if video_url:
+          <!-- video player-->
+          <link href="${static.url('normal-theme/css/imgcache-qq-tcplayer.css')}" rel="stylesheet">
+          <script src="${static.url('js/imgcache-qq-tcplayer-min.js')}"></script>
+          <div class="my-video">
             <div id="program_video">
-              <button type="button" class="btn" aria-label="${_('Play')}" onclick="playVideo('${video_url}')">
+              <button type="button" class="btn" aria-label="${_('Play')}" data-video-id="5285890781810641099" onclick="showVideo(this)">
                 <span class="icon fa fa-4x fa-play-circle" aria-hidden="true"></span>
               </button>
-              <iframe class="align-middle" title="${_('YouTube Video')}" src="" frameborder="0" allowfullscreen style="display:none;"></iframe>
+              <div class="program-video-box" style="display: none;">
+                <video id="player-container-id" width="400" height="230" preload="auto" playsinline webkit-playinline></video>
+              </div>
+              <!-- <iframe class="align-middle" title="${_('YouTube Video')}" src="" frameborder="0" allowfullscreen style="display:none;"></iframe> -->
             </div>
-            % endif
+            <script>
+              var appID = "1251349076";
+              var aboutVideoID = "5285890781810641099";
+              var player;
+              function showVideo(e){
+                var videoID = e.getAttribute('data-video-id');
+                  if (player){
+                    player.loadVideoByID({
+                      fileID: videoID,
+                      appID: appID,
+                      autoplay: true,
+                    });
+                  } else {
+                    player = TCPlayer("player-container-id", {
+                      fileID: videoID,
+                      appID: appID,
+                      autoplay: true,
+                    });
+                  }
+                  $("#program_video .btn").css('display','none');
+                  $(" .program-video-box").css('display','flex');
+                  $(".vjs-spacer ").html('')
+              }
+
+            </script>
           </div>
+          % endif
+          
         </div>
       </div>
     </div>
@@ -744,3 +783,4 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
   </div>
   % endif
 </div> -->
+
