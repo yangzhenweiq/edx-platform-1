@@ -396,7 +396,9 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             <div class="row course">
               <div class="course-image">
                 % if course_img:
-                  <img alt="" src="${course_img['src']}" alt=""/>
+                  <a href="${course_about_url}">
+                    <img alt="" src="${course_img['src']}" alt=""/>
+                  </a>
                 % endif
               </div>
               <div class="course-right">
