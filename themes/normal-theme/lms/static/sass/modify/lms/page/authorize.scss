@@ -1,0 +1,31 @@
+.authorization-confirmation{
+    .cancelAuthorize-btn{
+        @extend %btn-my-white;
+        background-color: #ffffff !important;
+        background-image: inherit !important;
+        color: #4788c7 !important;
+        border-radius: 2px !important;
+        border: solid 1px #346ca3 !important;
+        font-size: 16px !important;
+        margin-right: 12px;
+    }
+    .sureAuthorize-btn{
+        @extend %btn-my-primary;
+        border-radius: 2px !important;
+        border: solid 1px #346ca3 !important;
+        background-image: inherit !important;
+        font-size: 16px !important;
+    }
+    .ulDot{
+        list-style: none;
+        counter-reset: count;
+    }
+    li{
+        &:before {
+            content: "• ";
+            color:#4788c7;
+            font-size: 20px;
+         }
+    }
+}
+
