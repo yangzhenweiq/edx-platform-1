@@ -10,9 +10,9 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 
 <%inherit file="../main.html"/>
-
-<%block name="bodyclass">oauth2</%block>
 <%block name="title"><title>${_(u"Authorize")} | ${_(u"EliteMBA")}</title></%block>
+<%block name="bodyclass">oauth2</%block>
+
 <%block name="body">
 <div class="authorization-confirmation">
   % if not error:
