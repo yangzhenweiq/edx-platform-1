@@ -671,7 +671,35 @@
             }
           }
         }
-        
+
+        .js-course-certificates{
+          box-sizing: border-box;
+          padding: 20px 15px;
+          background-color: #ffffff;
+          box-shadow: 0px 0px 3px  #b6dcfe;
+          border-radius: 3px;
+          margin-bottom:20px;
+          .course-list-heading{
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            margin-top: 0px;       
+            border-bottom: 1px solid #e6e9ed;
+            font-size: 16px;
+            color: #414141;
+          }
+          .certificate-list{
+            margin:0px;
+            padding:0px;
+            .certificate{
+              align-items: center;
+              .certificate-link{
+                font-size: 16px;
+                color: #4788c7;
+                font-weight: normal;
+              }
+            }
+          }
+        }
       }
     }
     .program-details-header{
