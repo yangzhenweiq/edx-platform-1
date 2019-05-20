@@ -12,7 +12,7 @@
     min-height: 308px;
     .row{
       position: relative;
-
+      padding-top: 3%;
       .my-video{
         position: absolute;
         top: 30%;
@@ -88,8 +88,11 @@
           margin: 0px;
           .program-overview{
             width: 100%;
+            .section{
+              margin-bottom:40px;
+            }
             .section_title{
-              font-size: 16px;
+              font-size: 14px;
             }
             p{
               color: $font;
@@ -146,10 +149,11 @@
         .course-right{
           flex: 2;
           margin-left: 20px;
+          position: relative;
           .desc-content{
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
             overflow: hidden;
             margin: 15px 0px;
             font-size: 14px;
@@ -159,7 +163,9 @@
           div:nth-child(3){
             display: flex;
             justify-content: space-between;
-            
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
             div{
               color: $font;
               font-size: 14px;
@@ -184,7 +190,7 @@
     }
 
     .desc-right{
-      width: 33%;
+      width: 32%;
       box-sizing: border-box;
       padding: 15px;
       background-color: #ffffff;
@@ -199,7 +205,7 @@
         align-items: center;
         padding: 12px 0px;
         .icon-title{
-          width: 45%;
+          width: 35%;
           display: flex;
           align-items: center;
           span:nth-child(2){
@@ -245,6 +251,7 @@
 }
 
 @media screen and (max-width:770px){
+
   #program-details-hero{
     .program-branner{
       width: 96%;
@@ -333,6 +340,24 @@
 
 
 @media screen and (max-width:500px){
+
+  //详情页
+  #program-details-hero{
+    .my-program-content{
+      .tab-content{
+        .course{
+          .course-right{
+            div:nth-child(3){
+              display: flex;
+              justify-content: space-between;
+              position: relative;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
   #program-details-hero{
     .my-program-content{
       .tab-content{
@@ -359,13 +384,24 @@
 // 我的列表
 
 .program-list-wrapper{
+  padding:0px;
+  width: 1200px;
+  max-width: 1200px;
+  .program-cards-container{
+    width: 66%;
+  }
+  .sidebar{
+    width:30%;
+  }
   .program-card{
     box-shadow: 0px 0px 2px  #b6dcfe;
     border-radius: 3px;
     border: none;
-    margin-top: 20px;
+    margin-top: 25px;
+    width: 47%;
   }
   .text-section{
+    min-height: 154px;
     .hd-3{
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -373,6 +409,7 @@
       overflow: hidden;
       line-height: inherit;
       font-size: 16px;
+      min-height:0;
     }
     .grid-container{
       position: relative;
@@ -390,6 +427,13 @@
   }
   .status-text{
     margin-bottom: 20px;
+    .number-circle{
+      line-height: 20px;
+      margin-bottom: 7px;
+    }
+    .enrolled{
+      background: #57aa01;
+    }
   }
   .banner-image-container{
     img{
@@ -401,7 +445,7 @@
       box-shadow: 0px 0px 2px 0px #b6dcfe;
       border-radius: 3px;
       border:none;
-      margin-top: 20px;
+      margin-top: 25px;
       .advertise-message{
         font-size: 16px;
         color: $primary;
@@ -417,7 +461,7 @@
         justify-content: center;
         span:nth-child(2){
           font-size: 14px;
-          font-weight: normal;
+          font-weight: bold;
         }
       }
       .fa-search:before{
@@ -437,15 +481,51 @@
 
 @media screen and (max-width:1025px){
   .program-list-wrapper{
+    width: 100%;
+    margin: auto;
+    // .sidebar{
+    //   width:96%;
+    //   margin: 20px 2%;
+    // }
+  }
+}
+
+@media screen and (max-width:769px){
+  .program-list-wrapper{
+    width: 100%;
+    margin: auto;
+    .program-cards-container{
+      width: 100%;
+      // .program-card{
+      //   width: 45%;
+      // }
+    }
     .sidebar{
-      width:96%;
-      margin: 20px 2%;
+      width:98%;
     }
   }
 }
 
 
 
+@media screen and (max-width:500px){
+  .program-list-wrapper{
+    width: 100%;
+    margin: auto;
+    .program-cards-container{
+      width: 100%;
+      .program-card{
+        width: 100%;
+      }
+    }
+    .sidebar{
+      width:96%;
+    }
+  }
+}
+
+
+// 进度页
 
 .program-details-wrapper .program-course-card .course-details .course-title .course-title-link, .program-details-wrapper .program-course-card .course-details .course-title .course-title-link:visited{
   color:$primary;
@@ -456,13 +536,14 @@
 .program-details-wrapper .course-list > div:nth-of-type(even){
   background-color:#fff;
 }
-// 进度页
 // @media screen and (min-width: 768px){
   .main-container{
     .program-details-wrapper{
       width: 1200px;
       margin: 0 auto;
-      
+      .program-course-card {
+        padding:13px 26px;
+      }
       .program-details-content{
         padding: 0px;
         width: 65.2%;
@@ -507,7 +588,7 @@
             }
 
             .course-list-heading{
-              margin-bottom: 40px;
+              margin-bottom: 30px;
               margin-top: 0px;
               padding-bottom: 10px;
               border-bottom: 1px solid #e6e9ed;
@@ -593,10 +674,35 @@
             border-radius: 3px;
             margin-bottom:20px;
             .motivating-section{
+              margin-left:26px;
+
               .motivating-heading{
                 color: $primary;
                 font-size: 16px;
                 font-weight: normal;
+              }
+            }
+            .program-course-card{
+              .course-details{
+                .course-title {
+                  font-weight: normal;
+                }
+                .course-actions{
+                  margin-top: -45px;
+                }
+                .run-period{
+                  color:#656D78;
+                }
+              }
+              .course-certificate{
+                .card-msg{
+                  font-weight: normal;
+                  color:#656D78;
+                }
+                .fa-check-circle {
+                  color: #57aa01;
+                  margin-left: 10px;
+                }
               }
             }
           }
@@ -647,6 +753,9 @@
           .complete{
             color: $primary;
           }
+          .label{
+            color: $primary;
+          }
         }
 
 
@@ -674,11 +783,13 @@
 
         .js-course-certificates{
           box-sizing: border-box;
-          padding: 20px 15px;
           background-color: #ffffff;
           box-shadow: 0px 0px 3px  #b6dcfe;
           border-radius: 3px;
           margin-bottom:20px;
+          .certificate-container{
+            margin: 20px 15px;
+          }
           .course-list-heading{
             padding-bottom: 15px;
             margin-bottom: 20px;
@@ -686,6 +797,7 @@
             border-bottom: 1px solid #e6e9ed;
             font-size: 16px;
             color: #414141;
+            padding-top:20px;
           }
           .certificate-list{
             margin:0px;
@@ -705,9 +817,14 @@
     .program-details-header{
       width: 1200px;
       margin: 20px auto;
-
+      padding: 17px 25px 80px;
       .professional.certificate{
         display:block;
+      }
+      .program-details-icon{
+        svg {
+          fill:$primary;
+        }
       }
       
       .heading{
@@ -795,6 +912,9 @@
                       text-decoration:none;
                       font-size:16px;
                     }
+                  }
+                  .course-text{
+                    color: #656D78;
                   }
                 }
                 .course-actions{

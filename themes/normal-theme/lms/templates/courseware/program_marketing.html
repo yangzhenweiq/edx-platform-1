@@ -7,6 +7,8 @@ from datetime import datetime
 
 from django.urls import reverse
 from django.utils.translation import ugettext as _
+from django.utils.translation import pgettext
+
 from mako import exceptions
 
 from openedx.core.djangolib.markup import HTML, Text
@@ -271,7 +273,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             <li class="list-title">
               <div class="icon-title">
                 <span class="fa fa-work-time fa-lg" aria-hidden="true"></span>
-                <span>${_('Average Length')}</span>
+                <span>${pgettext("Program", "Length")}:</span>
               </div>
               <div class="description">
                 ${Text(_('{weeks_to_complete} weeks per course')).format(
@@ -282,7 +284,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             <li class="list-title">
               <div class="icon-title">
                 <span class="fa fa-effort-time fa-lg" aria-hidden="true"></span>
-                <span>${_('Effort')}</span>
+                <span>${pgettext("Program", "Effort")}:</span>
               </div>
               <div class="description ">
                 ${Text(_('{min_hours_effort_per_week}-{max_hours_effort_per_week} hours per week, per course')).format(
@@ -294,7 +296,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             <li class="list-title">
               <div class="icon-title">
                 <span class="fa fa-catalog fa-lg" aria-hidden="true"></span>
-                <span>${_('Number of Courses')}</span>
+                <span>${pgettext("Program", "Courses")}:</span>
               </div>
               <div class="description ">
                 ${Text(_('{number_of_courses} courses in program')).format(
@@ -306,7 +308,8 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
               <div class="icon-title">
                 <span class="fa fa-money fa-lg" aria-hidden="true"></span>
                 <span>
-                  ${Text(_('Price ({currencyCode})')).format(currencyCode=course_currency.get('code'))}
+                  ${pgettext("Program", "Price")}:
+                  <!-- ${Text(_('Price ({currencyCode})')).format(currencyCode=course_currency.get('code'))} -->
                 </span>
               </div>
               <div class="description">
