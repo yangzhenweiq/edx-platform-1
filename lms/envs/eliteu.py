@@ -72,22 +72,3 @@ BAIDU_BRIDGE_URL = ENV_TOKENS.get('BAIDU_BRIDGE_URL', '')
 # Ministry of industry URL and  the record number
 ELITE_CASE_NUMBER = ENV_TOKENS.get('ELITE_CASE_NUMBER', "")
 ELITE_FILING_WEBSITE = ENV_TOKENS.get('ELITE_FILING_WEBSITE', "")
-
-# elitemba
-import imp
-HMM_ENABLED = ENV_FEATURES.get('HMM_ENABLED', False)
-try:
-    if HMM_ENABLED:
-        fp, elitemba_path, desc = imp.find_module('elitemba')
-        INSTALLED_APPS.append('elitemba')
-        MIDDLEWARE_CLASSES.append('elitemba.middleware.ElitembaDataMiddleware')
-        HMM_CONFIGS = ENV_FEATURES.get('HMM_CONFIGS', {
-            'HOST': 'https://openapi.myhbp.org.cn',
-            'APP_ID': '',
-            'SOURCE_ID': '',
-            'LHOST': 'https://myhbp.org.cn',
-        })
-except ImportError:
-    HMM_ENABLED = False
-    print "Warnning: missing package 'elitemba'"
-
