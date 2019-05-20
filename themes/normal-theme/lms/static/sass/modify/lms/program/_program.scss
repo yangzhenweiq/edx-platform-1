@@ -400,6 +400,7 @@
       box-shadow: 0px 0px 2px 0px #b6dcfe;
       border-radius: 3px;
       border:none;
+      margin-top: 20px;
       .advertise-message{
         font-size: 16px;
         color: $primary;
@@ -436,7 +437,8 @@
 @media screen and (max-width:1025px){
   .program-list-wrapper{
     .sidebar{
-      width:100%;
+      width:96%;
+      margin: 20px 2%;
     }
   }
 }
