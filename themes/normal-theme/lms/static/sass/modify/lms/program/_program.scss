@@ -438,7 +438,7 @@
     .enrolled{
       background:#57aa01;
     }
-    .not-enrolle{
+    .not-enrolled{
       background:#4f4f4f;
     }
   }
@@ -839,13 +839,13 @@
 
         .program-record{
           box-sizing: border-box;
-          padding: 20px 0px;
+          padding: 12px 0px;
           background-color: #ffffff;
           box-shadow: 0px 0px 3px  #b6dcfe;
           border-radius: 3px;
           margin-bottom:20px;
           .divider-heading{
-            padding-bottom: 15px;
+            padding-bottom: 12px;
             margin-bottom: 20px;
             margin-top: 0px;       
             border-bottom: 1px solid #e6e9ed;
@@ -875,13 +875,13 @@
             margin: 20px 0px;
           }
           .course-list-heading{
-            padding-bottom: 15px;
+            padding-bottom: 12px;
             margin-bottom: 20px;
             margin-top: 0px;       
             border-bottom: 1px solid #e6e9ed;
             font-size: 16px;
             color: #414141;
-            padding-top:20px;
+            padding-top:12px;
             padding-left: 15px;
           }
           .certificate-list{
@@ -890,6 +890,9 @@
             padding-left: 15px;
             .certificate{
               align-items: center;
+              .sample-cert{
+                border: none;
+              }
               .certificate-link{
                 font-size: 16px;
                 color: #4788c7;
