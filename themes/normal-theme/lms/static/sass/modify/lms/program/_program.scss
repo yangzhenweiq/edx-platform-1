@@ -13,6 +13,9 @@
     .row{
       position: relative;
       padding-top: 3%;
+      .logo-space{
+        height: auto;
+      }
       .my-video{
         position: absolute;
         top: 30%;
@@ -97,6 +100,11 @@
             p{
               color: $font;
               font-size: 14px;
+              margin-bottom: 35px;
+              color: #656D78;
+            }
+            p:nth-child(1){
+              margin-bottom: 20px;
             }
             li{
               color: $font;
@@ -130,9 +138,15 @@
         width: 100%;
         margin: 37px 0px;
         font-size: 14px;
+        .question{
+          font-size: 14px;
+        }
+        .answer{
+          color:#656D78;
+        }
       }
       .course{
-        margin: 35px 0px;
+        margin: 24px 0px 35px;
         // display: flex;
         // flex-direction: row;
         // justify-content: space-between;
@@ -192,18 +206,21 @@
     .desc-right{
       width: 32%;
       box-sizing: border-box;
-      padding: 15px;
+      padding: 20px;
       background-color: #ffffff;
       box-shadow: 0px 0px 3px  #b6dcfe;
       border-radius: 3px;
       color: $font;
       font-size: 14px;
+      .list-unstyled{
+        margin: 0px;
+      }
       .list-title{
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 12px 0px;
+        padding-bottom: 20px;
         .icon-title{
           width: 34%;
           display: flex;
@@ -213,8 +230,11 @@
           }
         }
         .description{
-          width: 59%;
+          width: 65%;
           color: $title;
+        }
+        &:last-child{
+          padding-bottom: 0px;
         }
       }
     }
@@ -835,8 +855,6 @@
             color: $primary;
           }
         }
-
-
         .program-record{
           box-sizing: border-box;
           padding: 12px 0px;
@@ -846,21 +864,23 @@
           margin-bottom:20px;
           .divider-heading{
             padding-bottom: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             margin-top: 0px;       
             border-bottom: 1px solid #e6e9ed;
             font-size: 16px;
             color: #414141;
-            padding-left: 15px;
+            padding-left: 26px;
           }
           .motivating-section{
             margin-left: 0px;
             font-size: 14px;
             color: #656d78;
-            padding: 0 15px;
+            padding: 0 26px;
             box-sizing: border-box;
+            margin-bottom: 13px;
             .motivating-message{
               color: #656d78;
+              margin: 0px;
             }
           }
         }
@@ -870,26 +890,27 @@
           background-color: #ffffff;
           box-shadow: 0px 0px 3px  #b6dcfe;
           border-radius: 3px;
-          margin-bottom:20px;
+          margin: 0 0 13px 0;
           .certificate-container{
             margin: 20px 0px;
           }
           .course-list-heading{
             padding-bottom: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             margin-top: 0px;       
             border-bottom: 1px solid #e6e9ed;
             font-size: 16px;
             color: #414141;
             padding-top:12px;
-            padding-left: 15px;
+            padding-left: 26px;
           }
           .certificate-list{
             margin:0px;
             padding:0px;
-            padding-left: 15px;
+            padding-left: 26px;
             .certificate{
               align-items: center;
+              padding-bottom: 15px;
               .sample-cert{
                 border: none;
               }
