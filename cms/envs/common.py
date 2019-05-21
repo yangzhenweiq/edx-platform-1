@@ -48,7 +48,7 @@ from datetime import timedelta
 
 import lms.envs.common
 # Although this module itself may not use these imported variables, other dependent modules may.
-from lms.envs.common import (
+from lms.envs.eliteu_common import (
     USE_TZ, TECH_SUPPORT_EMAIL, PLATFORM_NAME, PLATFORM_DESCRIPTION, BUGS_EMAIL, DOC_STORE_CONFIG, DATA_DIR,
     ALL_LANGUAGES, WIKI_ENABLED, update_module_store_settings, ASSET_IGNORE_REGEX,
     PARENTAL_CONSENT_AGE_LIMIT, REGISTRATION_EMAIL_PATTERNS_ALLOWED,
@@ -147,7 +147,6 @@ from lms.envs.common import (
     _make_mako_template_dirs,
     _make_locale_paths,
 )
-from lms.envs.eliteu_common import *
 from path import Path as path
 from django.core.urlresolvers import reverse_lazy
 
