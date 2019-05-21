@@ -7,6 +7,18 @@
     
 }
 .authorization-confirmation{
+    .agreeAuthorize{
+        color: $title;
+        height: 19px;
+       line-height: 19px; 
+    }
+    .ulDot{
+        li{        
+            height: 28px;
+            line-height: 28px;
+            color: $font
+        }
+    }
     .cancelAuthorize-btn{
         @extend %btn-my-white;
         background-color: #ffffff !important;
@@ -16,6 +28,7 @@
         border: solid 1px #346ca3 !important;
         font-size: 16px !important;
         margin-right: 12px;
+        margin-top: 18px;
     }
     .sureAuthorize-btn{
         @extend %btn-my-primary;
@@ -24,6 +37,7 @@
         background-image: inherit !important;
         font-size: 16px !important;
         background: #4788c7 !important;
+        margin-top: 18px;
     }
     .ulDot{
         list-style: none;
