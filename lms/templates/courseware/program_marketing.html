@@ -60,6 +60,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
     banner_image = program.get('banner_image', {}).get('large', {}).get('url', '')
     authoring_organizations = program['authoring_organizations']
     video_url = program['video'].get('src') if program['video'] else ''
+    tencent_video = program['tencent_video']
     faqs = program['faq']
     courses = program['courses']
     instructors = program['instructors']
