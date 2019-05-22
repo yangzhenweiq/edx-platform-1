@@ -60,6 +60,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
     banner_image = program.get('banner_image', {}).get('large', {}).get('url', '')
     authoring_organizations = program['authoring_organizations']
     video_url = program['video'].get('src') if program['video'] else ''
+    tencent_video = program['tencent_video']
     faqs = program['faq']
     courses = program['courses']
     instructors = program['instructors']
@@ -121,7 +122,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
           </div>
           <div class="col col-12 col-md-4">
             % if video_url:
-            <div id="program_video">
+            <div id="program_video">                
               <button type="button" class="btn" aria-label="${_('Play')}" onclick="playVideo('${video_url}')">
                 <span class="icon fa fa-4x fa-play-circle" aria-hidden="true"></span>
               </button>
