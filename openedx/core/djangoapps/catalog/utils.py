@@ -520,14 +520,13 @@ def get_course_run_details(course_run_key, fields):
 
 
 def get_program_extend(uuid):
-    """Retrieve program types from the catalog service.
+    """Retrieve program extend from the specific program object.
 
     Keyword Arguments:
-        name (string): Name identifying a specific program.
+        uuid (string): Name identifying a specific program.
 
-    Returns:
-        list of dict, representing program types.
-        dict, if a specific program type is requested.
+    Returns:        
+        dict, a program uuid is requested.
     """
     user, catalog_integration = check_catalog_integration_and_get_user(error_message_field='Program extend')
     if user:
