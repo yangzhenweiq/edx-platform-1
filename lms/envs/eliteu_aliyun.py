@@ -1,4 +1,4 @@
-from .aws import *
+from .production import *
 
 ALIPAY_INFO = AUTH_TOKENS.get('ALIPAY_INFO', ALIPAY_INFO)
 ALIPAY_APP_INFO = AUTH_TOKENS.get('ALIPAY_APP_INFO', ALIPAY_APP_INFO)
