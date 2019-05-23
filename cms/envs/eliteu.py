@@ -6,7 +6,7 @@ import logging
 import json
 import os
 from path import Path as path
-from .common import ENV_ROOT, FEATURES
+from .common import *
 
 log = logging.getLogger(__name__)
 
@@ -50,4 +50,6 @@ try:
         log.info("Sentry Start Up Success")
 except ImportError:
     log.info("Sentry Module Import Error")
+
+
 
