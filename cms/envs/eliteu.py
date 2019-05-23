@@ -6,7 +6,7 @@ import logging
 import json
 import os
 from path import Path as path
-from .common import *
+from .common import ENV_ROOT, FEATURES
 
 log = logging.getLogger(__name__)
 
