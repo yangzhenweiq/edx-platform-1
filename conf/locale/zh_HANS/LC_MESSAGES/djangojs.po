@@ -5,10 +5,6 @@
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
-# 嘉杰 李 <jj.li@eliteu.com.cn>, 2018
-# 微 李 <w.li@eliteu.com.cn>, 2018
-# 婕 高 <j.gao@eliteu.cn>, 2018
-# 家璧 刘 <jb.liu@eliteu.com.cn>, 2018
 # li ying <code@eliteu.cn>, 2019
 #
 # #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
@@ -27,8 +23,8 @@
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
-# 微 李 <w.li@eliteu.com.cn>, 2018
 # li ying <code@eliteu.cn>, 2019
+# Sushan Wu <ss.wu@eliteu.com.cn>, 2019
 #
 # #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)
@@ -53,7 +49,7 @@ msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2019-01-15 19:13+0800\n"
-"PO-Revision-Date: 2018-12-07 12:23+0000\n"
+"PO-Revision-Date: 2019-05-16 12:40+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
 "Language: zh_CN\n"
@@ -116,7 +112,6 @@ msgstr "删除"
 #: common/static/common/js/components/utils/view_utils.js
 #: lms/static/js/Markdown.Editor.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: lms/static/js/writable_gradebook.js
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: cms/templates/js/add-xblock-component-menu.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -239,7 +234,6 @@ msgstr "上传文件"
 #: cms/static/js/views/modals/base_modal.js
 #: cms/static/js/views/modals/course_outline_modals.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
-#: lms/static/js/writable_gradebook.js
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/content-group-editor.underscore
 #: cms/templates/js/course_info_handouts.underscore
@@ -3477,6 +3471,26 @@ msgid ""
 " cohorts are disabled. You must enable cohorts for the feature to work."
 msgstr "这门课程为要获取认证证书的学生自动分组，但是群组功能被禁止。为了使该功能正常运行，您必须启用群组功能，"
 
+#: lms/static/js/imgcache-qq-tcplayer-min.js
+msgid "span"
+msgstr ""
+
+#: lms/static/js/imgcache-qq-tcplayer-min.js
+msgid "div"
+msgstr ""
+
+#: lms/static/js/imgcache-qq-tcplayer-min.js
+msgid "p"
+msgstr ""
+
+#: lms/static/js/imgcache-qq-tcplayer-min.js
+msgid "img"
+msgstr ""
+
+#: lms/static/js/imgcache-qq-tcplayer-min.js
+msgid "li"
+msgstr ""
+
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Allow students to generate certificates for this course?"
 msgstr "是否允许学生生成该课程证书？"
@@ -3576,7 +3590,6 @@ msgstr "标记选课码为尚未使用的"
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: lms/static/js/writable_gradebook.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 #: cms/templates/js/transcript-organization-credentials.underscore
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
@@ -4272,11 +4285,6 @@ msgid "Could not override problem score for {user}."
 msgstr "无法覆盖{user}的题目得分。"
 
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Reset Your Password"
-msgstr "重置您的密码"
-
-#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Enter and confirm your new password."
 msgstr "输入并确认新密码"
 
@@ -4295,6 +4303,11 @@ msgstr "两次密码输入不一致"
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Reset My Password"
 msgstr "重置密码"
+
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Reset Your Password"
+msgstr "重置您的密码"
 
 #: lms/static/js/student_account/components/PasswordResetInput.jsx
 msgid "Error: "
@@ -4525,8 +4538,16 @@ msgstr "此邮箱地址用于接收来自{platform_name}和课程团队的信息
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
-"You have joined Harvard Learning Camp. Email Modification is not supported."
-msgstr "您参加了“哈佛学习营”，暂不支持修改邮箱。"
+"You have joined Harvard ManageMentor. Email Modification is not supported."
+msgstr "您参加了“哈佛管理导师”，暂不支持修改邮箱。"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Secondary Email Address"
+msgstr "备选邮箱"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "You may access your account when single-sign on is not available."
+msgstr "如果单点登录不可用，您可以访问自己的账号。"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
@@ -4611,6 +4632,12 @@ msgstr "出生年份"
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Preferred Language"
 msgstr "首选语言"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"We've sent a confirmation message to {new_secondary_email_address}. Click "
+"the link in the message to update your secondary email address."
+msgstr "我们已向{new_secondary_email_address}发送了确认消息。 点击邮件中的链接以更新辅助电子邮件地址。"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Social Media Links"
@@ -4929,37 +4956,6 @@ msgstr "KB"
 msgid "MB"
 msgstr "MB"
 
-#: lms/static/js/writable_gradebook.js
-#: lms/templates/commerce/receipt.underscore
-#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
-#: lms/templates/verify_student/payment_confirmation_step.underscore
-msgid "Total"
-msgstr "总计"
-
-#: lms/static/js/writable_gradebook.js
-msgid "The Assignment name is:"
-msgstr "任务名称为："
-
-#: lms/static/js/writable_gradebook.js
-msgid "Publish grades"
-msgstr "发布成绩"
-
-#: lms/static/js/writable_gradebook.js
-msgid "No matching records found"
-msgstr "找不到匹配记录"
-
-#: lms/static/js/writable_gradebook.js
-msgid "Student Name"
-msgstr "学生姓名"
-
-#: lms/static/js/writable_gradebook.js
-msgid "There are no student grades to adjust."
-msgstr "无可调整学生成绩"
-
-#: lms/static/js/writable_gradebook.js
-msgid "Update in progress, please wait..."
-msgstr "正在更新，请稍等"
-
 #: lms/static/lms/js/preview/preview_factory.js
 msgid "Course is not yet visible to students."
 msgstr "该课程尚未对学生公开"
@@ -5128,6 +5124,87 @@ msgstr "手机号码格式不正确"
 msgid "Cellphone number binding successfully"
 msgstr "手机号码绑定成功"
 
+#: themes/normal-theme/lms/static/js/manual.js
+msgid "To know more about courses"
+msgstr "如何了解课程？"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid ""
+"Click the course to view the course introduction video, browse the course "
+"introduction, instructor introduction and course outline, etc."
+msgstr "点击课程进入详情页，观看课程简介视频，浏览课程简介、导师简介及课程大纲等。"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid "To join as a member"
+msgstr "如何加入会员？"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Membership\" page, choose your learning duration and payment method."
+" After payment is completed, you can enjoy learning all courses on EliteMBA "
+"during the study period."
+msgstr "进入“会员资格”页，选择适合您的学习时长及支付方式，支付成功后便可在会员期限内享受所有课程的学习权益。"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid "To view the end-date of membership"
+msgstr "如何查看已购买的会员期限？"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid "Enter \"Membership\" page to view the VIP open date and remaining days."
+msgstr "进入“会员资格”页，可查看会员已开通时间及剩余时间。"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid "To enroll as a member"
+msgstr "会员如何选课？"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Free Enrollment for VIP\" button, "
+"then the enrollment is fulfilled."
+msgstr "进入“发现课程”页，直接选择或通过搜索关键字的方式选择您感兴趣的课程，点击“VIP会员免费选修此课程”，即为选课成功。"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid "To purchase a course"
+msgstr "非会员如何购买单课？"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Enroll\" button, then you can start "
+"learning after payment is completed."
+msgstr "进入“发现课程”页，直接选择或通过搜索关键字的方式选择您感兴趣的课程，点击“选修此课程”，支付成功后即可开始学习该门课程。"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid "To start a course"
+msgstr "如何开始学习？"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid ""
+"Click your avatar in the upper right corner of the page, enter \"Dashboard\""
+" to view the course introduction, watch videos and complete assignments."
+msgstr "点击网页右上角个人头像进入“课程面板-查看课程”，可浏览课程简介；点击“开始学习课程”，可观看课程视频，提交课后习题。"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid "To participate in discussion"
+msgstr "如何参与课程讨论？"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Dashboard - View Course\" page, click \"Discussion\". You can view "
+"discussions, engage with posts and receive updates."
+msgstr "进入“课程面板-查看课程”页，点击“讨论”，可以查看讨论帖、参与讨论及接收讨论帖更新。"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid "To view and download handouts"
+msgstr "如何查看和下载课程讲义？"
+
+#: themes/normal-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Dashboard - View Course\" page, find \"Course Handouts\" on the "
+"right side. You can view handout content and download."
+msgstr "进入“课程面板-查看课程”页，在右侧找到“课程讲义”，可查看讲义内容并下载。"
+
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 #: cms/static/js/views/video_transcripts.js
 msgid ""
@@ -5150,10 +5227,6 @@ msgstr "该链接将在新浏览器窗口/标签页中打开"
 #: cms/static/js/base.js
 msgid "This link will open in a modal window"
 msgstr "将在模式窗口中打开此链接"
-
-#: cms/static/js/certificates/collections/certificates.js
-msgid "Could not parse certificate JSON. %(message)s"
-msgstr "无法解析证书JSON. %(message)s"
 
 #: cms/static/js/certificates/models/certificate.js
 msgid "Certificate name is required."
@@ -5943,8 +6016,12 @@ msgstr "可见性"
 
 #. Translators: "title" is the name of the current component being edited.
 #: cms/static/js/views/modals/edit_xblock.js
-msgid "Editing: %(title)s"
-msgstr "编辑：%(title)s"
+msgid "Editing: {title}"
+msgstr "正在编辑：{title}"
+
+#: cms/static/js/views/modals/edit_xblock.js
+msgid "Plugins"
+msgstr "插件"
 
 #: cms/static/js/views/modals/edit_xblock.js
 #: lms/templates/ccx/schedule.underscore
@@ -7319,6 +7396,12 @@ msgid "Amount"
 msgstr "金额"
 
 #: lms/templates/commerce/receipt.underscore
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: lms/templates/verify_student/payment_confirmation_step.underscore
+msgid "Total"
+msgstr "总计"
+
+#: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Please Note"
 msgstr "请注意"
@@ -8055,6 +8138,20 @@ msgstr "更改我的电子邮件"
 #: lms/templates/student_account/account.underscore
 msgid "Reset Password"
 msgstr "重设密码"
+
+#: lms/templates/student_account/account_recovery.underscore
+msgid "Account Recovery"
+msgstr "验证账户"
+
+#: lms/templates/student_account/account_recovery.underscore
+msgid ""
+"Please enter your secondary email address below and we will send you "
+"instructions for recovering your account and setting a new password."
+msgstr "请在下面输入您的电子邮件以便我们给您发送如何设置新密码的说明。"
+
+#: lms/templates/student_account/account_recovery.underscore
+msgid "Recover my account"
+msgstr "删除我的账号"
 
 #: lms/templates/student_account/account_settings.underscore
 msgid "Account Settings"
@@ -9276,6 +9373,10 @@ msgid "Display Name"
 msgstr "显示名称"
 
 #: cms/templates/js/course-outline.underscore
+msgid "Proctoring Settings"
+msgstr "监考设置"
+
+#: cms/templates/js/course-outline.underscore
 msgid "Configure"
 msgstr "配置"
 
@@ -9953,6 +10054,10 @@ msgid ""
 "If the subsection does not have a due date, learners always see their scores"
 " when they submit answers to assessments."
 msgstr "如果节不设有截止日期，那么只要学员提交答案至评分，就可以查看自己的得分。"
+
+#: cms/templates/js/show-textbook.underscore
+msgid "PDF Chapters"
+msgstr "PDF各章节"
 
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/signatory-editor.underscore
