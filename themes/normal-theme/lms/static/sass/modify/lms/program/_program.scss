@@ -20,7 +20,7 @@
         position: absolute;
         top: 30%;
         right: 0px;
-        
+
       }
       .program-video-box{
         justify-content: center;
@@ -111,7 +111,7 @@
               font-size: 14px;
             }
           }
-        }  
+        }
       }
 
       .courses-title{
@@ -196,7 +196,7 @@
           bottom: 0;
         }
       }
-      
+
     }
 
     .faqs{
@@ -239,7 +239,7 @@
       }
     }
   }
-  
+
 }
 
 .program-btn{
@@ -297,8 +297,8 @@
           #program_video{
             display: flex;
             justify-content: center;
-            align-items: center; 
-            margin-bottom:40px; 
+            align-items: center;
+            margin-bottom:40px;
           }
         }
         div{
@@ -433,7 +433,7 @@
       line-height: inherit;
       font-size: 16px;
       min-height:0;
-      margin-bottom:9px; 
+      margin-bottom:9px;
     }
     .grid-container{
       position: relative;
@@ -577,6 +577,11 @@
 .program-details-wrapper .course-list > div:nth-of-type(even){
   background-color:#fff;
 }
+
+.program-details-wrapper .program-details-header .authoring-organizations .heading{
+    color: #4788C7;
+    font-weight: normal;
+}
 // @media screen and (min-width: 768px){
   .main-container{
     .program-details-wrapper{
@@ -603,7 +608,7 @@
           margin-bottom:20px;
           .program-heading-title{
             font-size: 18px;
-            
+
           }
           .program-heading-message{
             div{
@@ -671,7 +676,7 @@
                       color: #656d78;
                     }
                   }
-                  
+
                 }
                 .course-actions{
                   width:auto;
@@ -692,6 +697,19 @@
                     }
                   }
                 }
+                .upgrade-message{
+                    .certificate-status{
+                        .price{
+                            color: #57aa01;
+                        }
+                    }
+                }
+              }
+              .upgrade-message{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
               }
             }
           }
@@ -733,7 +751,7 @@
                   color:#656D78;
                 }
               }
-              
+
               .course-certificate{
                 .card-msg{
                   font-weight: normal;
@@ -743,6 +761,9 @@
                   color: #57aa01;
                   margin-left: 10px;
                 }
+              }
+              .action-msg-view{
+                  margin-bottom:0px;
               }
             }
             .course-list-heading{
@@ -761,7 +782,7 @@
                 color: #414141;
               }
             }
-            
+
           }
           .completed-group{
             padding: 12px 0px;
@@ -778,6 +799,9 @@
                 font-size: 16px;
                 font-weight: normal;
               }
+            }
+            .sidebar-button-wrapper{
+                display: none;
             }
             .program-course-card{
               .course-details{
@@ -865,7 +889,7 @@
           .divider-heading{
             padding-bottom: 12px;
             margin-bottom: 25px;
-            margin-top: 0px;       
+            margin-top: 0px;
             border-bottom: 1px solid #e6e9ed;
             font-size: 16px;
             color: #414141;
@@ -897,7 +921,7 @@
           .course-list-heading{
             padding-bottom: 12px;
             margin-bottom: 15px;
-            margin-top: 0px;       
+            margin-top: 0px;
             border-bottom: 1px solid #e6e9ed;
             font-size: 16px;
             color: #414141;
@@ -936,7 +960,7 @@
           fill:$primary;
         }
       }
-      
+
       .heading{
         color:$primary;
       }
@@ -994,7 +1018,7 @@
       }
       .authoring-organizations {
         width: 50%;
-        text-align: left; 
+        text-align: left;
       }
     }
     .program-details-wrapper{
@@ -1036,6 +1060,15 @@
                     text-align:right;
                   }
                 }
+
+                .upgrade-message{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .action{
+                        justify-content: flex-end;
+                        margin-top: 10px;
+                    }
+                }
               }
             }
           }
@@ -1076,7 +1109,7 @@
             }
           }
         }
-        
+
       }
 
       .program-sidebar{
