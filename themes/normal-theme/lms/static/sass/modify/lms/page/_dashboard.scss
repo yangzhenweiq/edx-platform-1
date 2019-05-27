@@ -46,7 +46,7 @@
       bottom: 10px;
       right: 0;
     }
-    
+
     .wrapper-course-details .wrapper-course-actions .enter-course{
       @extend %btn-my-primary;
     }
@@ -55,7 +55,7 @@
       @extend %btn-my-disable;
       margin-bottom: 5px;
     }
-    
+
   }
 
   .course-info{
@@ -64,6 +64,11 @@
 }
 
 .wrapper-messages-primary .message{
+  &.message-related-programs{
+    li{
+      border-right: none;
+    }
+  }
   &.message-status{
     font-weight: normal;
     color: $font;
@@ -170,7 +175,7 @@
   }
   .search-field{
     font-size: 14px;
-    border: 1px solid $primary;  
+    border: 1px solid $primary;
   }
 
   .search-field-wrapper .search-button, .cancel-button{
@@ -185,7 +190,7 @@
   .fa-search:before{
     vertical-align: top;
   }
-  
+
 }
 
 .dashboard-search-results{
@@ -260,7 +265,7 @@
 	border-radius: 4px;
   border: 1px solid $border;
   padding: 30px 0;
-  
+
   p{
     font-size: 14px;
     color: $font;
@@ -311,7 +316,7 @@
       margin-top: 0;
     }
   }
-} 
+}
 .dashboard .main-container .my-courses .course .details .course-actions .action{
   display: none;
 }
