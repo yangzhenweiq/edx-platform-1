@@ -773,7 +773,7 @@
                 }
                 .fa-check-circle {
                   color: #57aa01;
-                  margin-left: 10px;
+                  margin-left: 0px;
                 }
               }
               .action-msg-view{
@@ -786,7 +786,7 @@
               padding-bottom: 10px;
               border-bottom: 1px solid #e6e9ed;
               span{
-                margin-left: 26px;
+                margin-left: 10px;
                 font-size: 16px;
                 color: #414141;
               }
@@ -794,6 +794,7 @@
                 margin-left: 26px;
                 font-size: 16px;
                 color: #414141;
+                margin-right: 0px
               }
             }
 
@@ -974,6 +975,15 @@
       width: 1200px;
       margin: 20px auto;
       padding: 17px 25px 80px;
+      .meta-info{
+        .program-title{
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          word-wrap: break-word;
+        }
+      }
       .professional.certificate{
         display:block;
       }
@@ -1036,6 +1046,11 @@
       .meta-info{
         .program-title{
           margin-top:1.25rem;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          overflow: hidden;
+          word-wrap: break-word;
         }
       }
       .authoring-organizations {
@@ -1045,6 +1060,7 @@
         flex-direction: column;
         .org-logo{
           width: 18%;
+          height: auto;
         }
         .org-logo:nth-child(1){
           margin-left: 0px;
@@ -1157,6 +1173,7 @@
       margin-top: 0px;
     }
     .program-details-wrapper .program-details-header .authoring-organizations .orgs .org-logo{
-        width: 33%;
+      width: 33%;
+      height: auto;
     }
 }
