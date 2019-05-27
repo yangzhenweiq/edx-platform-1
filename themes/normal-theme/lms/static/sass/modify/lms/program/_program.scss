@@ -13,6 +13,11 @@
     .row{
       position: relative;
       padding-top: 3%;
+      .program-btn{
+        .original-price{
+          text-decoration: line-through;
+        }
+      }
       .logo-space{
         height: auto;
       }
@@ -232,6 +237,9 @@
         .description{
           width: 65%;
           color: $title;
+          .original-price{
+            text-decoration: line-through;
+          }
         }
         &:last-child{
           padding-bottom: 0px;
@@ -810,6 +818,13 @@
                 }
                 .course-actions{
                   margin-top: -45px;
+                  width: 85px;
+                  .grade-header{
+                    text-align: left;
+                  }
+                  .grade-display{
+                    text-align: left;
+                  }
                 }
                 .run-period{
                   color:#656D78;
@@ -874,6 +889,7 @@
           }
           .complete{
             color: $primary;
+            stroke: $primary;
           }
           .label{
             color: $primary;
@@ -1017,8 +1033,16 @@
         }
       }
       .authoring-organizations {
-        width: 50%;
+        width: 100%;
         text-align: left;
+        display: flex;
+        flex-direction: column;
+        .org-logo{
+          width: 18%;
+        }
+        .org-logo:nth-child(1){
+          margin-left: 0px;
+        }
       }
     }
     .program-details-wrapper{
@@ -1119,4 +1143,14 @@
       }
     }
   }
+}
+
+
+@media screen and (max-width:500px){
+    .main-container .program-details-wrapper .program-details-content .course-list-headings .completed-group .program-course-card .course-details .course-actions{
+      margin-top: 0px;
+    }
+    .program-details-wrapper .program-details-header .authoring-organizations .orgs .org-logo{
+        width: 33%;
+    }
 }
