@@ -166,8 +166,8 @@
 //头像样式
 @media screen and (min-width: 768px){
   .global-header .nav-links .secondary .dropdown-user-menu{
-    right:8px;
-    top: 49px;
+    right:8px !important;
+    top: 49px !important;
   }
 
 }
