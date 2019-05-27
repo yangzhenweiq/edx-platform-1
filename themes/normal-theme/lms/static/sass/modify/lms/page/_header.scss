@@ -13,7 +13,7 @@
     box-sizing: border-box;
     min-height: 60px;
   }
-  .header-logo a{ 
+  .header-logo a{
     margin-left: 0px;
   }
   .header-logo a .logo{
@@ -26,7 +26,7 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      height: 16px;
+      height: 20px;
     }
   }
   a.help-link{
@@ -35,7 +35,7 @@
 }
 
 .window-wrap .global-header .nav-links .secondary{
-  position: relative; 
+  position: relative;
 
   a.sign-in-btn, .nav-item a.shopping-cart{
     @extend %btn-my-primary;
@@ -60,14 +60,14 @@
     display: none;
   }
 }
-@media screen and (max-width:992px){ 
+@media screen and (max-width:992px){
   .window-wrap .global-header{
     padding: 0;
   }
-  .global-header .hamburger-menu{ 
+  .global-header .hamburger-menu{
     left: 5%;
   }
-  .window-wrap .global-header .header-logo a{ 
+  .window-wrap .global-header .header-logo a{
     position: relative;
     left: 50%;
   }
@@ -79,17 +79,17 @@
     .line{
       height: 3px;
     }
-  } 
-  
-  .mobile-menu{ 
+  }
+
+  .mobile-menu{
     margin-top: 0;
-    .mobile-nav-link{  
+    .mobile-nav-link{
       outline: none;
-      a{  
+      a{
         padding:8px 20px;
         font-size: 0.875rem;
         box-sizing: border-box;
-        &:hover{  
+        &:hover{
           background-color:$primary;
           color: #fff !important;
         }
@@ -98,14 +98,14 @@
         }
       }
     }
-  } 
-  
-   
+  }
+
+
 }
 
 
-@media screen and (min-width: 992px){ 
-  .window-wrap .global-header .nav-links .secondary{ 
+@media screen and (min-width: 992px){
+  .window-wrap .global-header .nav-links .secondary{
     margin: 0;
 
     .user-image-frame{
@@ -115,8 +115,8 @@
       padding: 5px 0 0 0;
       margin: 4px 0 0 5px;
     }
-    
-  } 
+
+  }
 
   .global-header .nav-links .main .nav-tab{
     a{
@@ -127,7 +127,7 @@
       border-bottom: none;
       color: $primary;
     }
-  } 
+  }
   .global-header .nav-links .secondary .dropdown-user-menu{
     border: 1px solid #e7e7e7;
   }
@@ -164,15 +164,15 @@
 
 
 //头像样式
-@media screen and (min-width: 768px){ 
-  .global-header .nav-links .secondary .dropdown-user-menu{ 
-    right:8px;
-    top: 49px;
+@media screen and (min-width: 768px){
+  .global-header .nav-links .secondary .dropdown-user-menu{
+    right:8px !important;
+    top: 49px !important;
   }
-  
+
 }
 
 
-.home>header .title .course-search .search-button{  
+.home>header .title .course-search .search-button{
   box-sizing: border-box;
 }
