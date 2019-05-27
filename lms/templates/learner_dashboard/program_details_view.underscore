@@ -5,7 +5,7 @@
             <% if (completedCount === totalCount) { %>
                 <h3 class="program-heading-title"><%- gettext('Congratulations!') %></h3>
                 <div class="program-heading-message">
-                    <div><%- interpolate(gettext(
+                    <div><%- StringUtils.interpolate(gettext(
                         'You have successfully completed all the requirements for the %(title)s %(type)s.'),
                         { title: title, type: type }, true) %>
                     </div>
@@ -14,7 +14,7 @@
                 <h3 class="program-heading-title"><%- gettext('Your Program Journey') %></h3>
                 <div class="program-heading-message">
                     <div>
-                        <%- interpolate(gettext(
+                        <%- StringUtils.interpolate(gettext(
                         'Track and plan your progress through the %(count)s courses in this program.'),
                         { count: totalCount }, true) %>
                     </div>
