@@ -178,6 +178,7 @@
             font-size: 14px;
             color: $font;
             word-wrap: break-word;
+            max-height: 45px;
           }
           div:nth-child(3){
             display: flex;
@@ -252,6 +253,7 @@
 
 .program-btn{
   @extend %btn-my-primary;
+  white-space: nowrap;
   &:not(.btn):hover{
     color: #fff !important;
   }
@@ -284,7 +286,7 @@
     .program-branner{
       width: 96%;
       max-width: 96%;
-      min-height: 250px;
+      min-height: 290px;
       padding:0;
       .row{
         position: relative;
@@ -347,7 +349,7 @@
             }
           }
           .course-right{
-            margin-left: 0px;
+            margin-left: 20px;
           }
         }
       }
@@ -589,7 +591,7 @@
 }
 
 .program-details-wrapper .course-list > div:nth-of-type(even){
-  background-color:#fff;
+  background-color:rgba(255,255,255,0)
 }
 
 .program-details-wrapper .program-details-header .authoring-organizations .heading{
@@ -743,7 +745,11 @@
             border-radius: 3px;
             margin-bottom:20px;
             .program-course-card{
+              .course-content{
+                overflow: inherit;
+              }
               .course-details{
+                  position: relative;
                 .course-title {
                   color: #4788C7;
                   font-size: 16px;
@@ -753,8 +759,10 @@
                 .course-actions{
                   width:auto;
                   right: 0px;
+                  position: absolute;
+                  top: 10%;
                   .course-enroll-view{
-                    margin-top:-32%;
+                    margin-top:0%;
                     .cta-primary{
                       @extend %btn-my-primary;
                       &:not(.btn):hover{
@@ -814,13 +822,15 @@
             box-sizing: border-box;
             border-radius: 3px;
             margin-bottom:20px;
+            .course-list-heading{
+                margin-bottom: 25px;
+            }
             .motivating-section{
               margin-left:25px;
-
               .motivating-heading{
-                color: $primary;
                 font-size: 16px;
                 font-weight: normal;
+                margin-bottom: 10px;
               }
             }
             .sidebar-button-wrapper{
@@ -1167,6 +1177,7 @@
                     width:100%;
                     margin-top:10px;
                     text-align:right;
+                    position: static;
                   }
                 }
               }
