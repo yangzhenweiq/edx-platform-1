@@ -96,7 +96,7 @@
     .post-context{
       color: $font;
     }
-  } 
+  }
 }
 
 @media screen and (max-width:1200px){
@@ -109,6 +109,7 @@
   vertical-align: bottom;
 }
 
+//修复按钮乱动
 .modefi-loading-animation {
   float: left;
   margin-top: 20px;
