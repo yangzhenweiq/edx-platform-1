@@ -454,6 +454,12 @@
       }
       .category{
         width: auto;
+        .professional-icon{
+            display:none;
+        }
+        .category-text{
+            margin-left:15px;
+        }
       }
     }
   }
@@ -596,7 +602,7 @@
       width: 1200px;
       margin: 0 auto;
       .program-course-card {
-        padding:13px 26px;
+        padding:13px 25px;
         .section{
           &:not(:first-child) {
             color: #656d87;
@@ -610,7 +616,7 @@
         .program-heading{
           background-color: #ffffff;
           box-shadow: 0px 0px 3px  #b6dcfe;
-          padding: 23px 26px;
+          padding: 23px 25px;
           box-sizing: border-box;
           border-radius: 3px;
           margin-bottom:20px;
@@ -627,7 +633,8 @@
             align-self: flex-start;
             background: #57aa01;
             border-color: #57aa01;
-            margin: 10px 15px 10px 0px;
+            margin: 20px 15px 10px 0px;
+            border-radius: 3px;
           }
         }
 
@@ -658,14 +665,15 @@
               padding-bottom: 10px;
               border-bottom: 1px solid #e6e9ed;
               span{
-                margin-left: 26px;
+                margin-left: 10px;
                 font-size: 16px;
                 color: #414141;
               }
               .status{
-                margin-left: 26px;
+                margin-left: 25px;
                 font-size: 16px;
                 color: #414141;
+                margin-right: 0;
               }
             }
             .course-list{
@@ -791,7 +799,7 @@
                 color: #414141;
               }
               .status{
-                margin-left: 26px;
+                margin-left: 25px;
                 font-size: 16px;
                 color: #414141;
                 margin-right: 0px
@@ -807,7 +815,7 @@
             border-radius: 3px;
             margin-bottom:20px;
             .motivating-section{
-              margin-left:26px;
+              margin-left:25px;
 
               .motivating-heading{
                 color: $primary;
@@ -844,7 +852,7 @@
                 }
                 .fa-check-circle {
                   color: #57aa01;
-                  margin-left: 10px;
+                  margin-left: 0px;
                 }
               }
             }
@@ -856,14 +864,15 @@
             padding-bottom: 10px;
             border-bottom: 1px solid #e6e9ed;
             span{
-              margin-left: 26px;
+              margin-left: 10px;
               font-size: 16px;
               color: #414141;
             }
             .status{
-              margin-left: 26px;
+              margin-left: 25px;
               font-size: 16px;
               color: #414141;
+              margin-right: 0;
             }
           }
         }
@@ -916,19 +925,22 @@
             border-bottom: 1px solid #e6e9ed;
             font-size: 16px;
             color: #414141;
-            padding-left: 26px;
+            padding-left: 25px;
           }
           .motivating-section{
             margin-left: 0px;
             font-size: 14px;
             color: #656d78;
-            padding: 0 26px;
+            padding: 0 25px;
             box-sizing: border-box;
             margin-bottom: 13px;
             .motivating-message{
               color: #656d78;
               margin: 0px;
             }
+          }
+          .sidebar-button-wrapper{
+            display: none;
           }
         }
 
@@ -949,12 +961,12 @@
             font-size: 16px;
             color: #414141;
             padding-top:12px;
-            padding-left: 26px;
+            padding-left: 25px;
           }
           .certificate-list{
             margin:0px;
             padding:0px;
-            padding-left: 26px;
+            padding-left: 25px;
             .certificate{
               align-items: center;
               padding-bottom: 15px;
@@ -975,6 +987,7 @@
       width: 1200px;
       margin: 20px auto;
       padding: 17px 25px 80px;
+      box-sizing: border-box;
       .meta-info{
         .program-title{
           display: -webkit-box;
@@ -1040,33 +1053,37 @@
 
 @media screen and (max-width:768px){
   .main-container{
-    .program-details-header{
-      display:flex;
-      flex-direction:column;
-      .meta-info{
-        .program-title{
-          margin-top:1.25rem;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 4;
-          overflow: hidden;
-          word-wrap: break-word;
+    .program-details-wrapper{
+        .program-details-header{
+            display:flex;
+            flex-direction:column;
+            .meta-info{
+                width: 100%;
+                .program-title{
+                    margin-top:1.25rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 4;
+                    overflow: hidden;
+                    word-wrap: break-word;
+                }
+            }
+            .authoring-organizations {
+                width: 100%;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                .org-logo{
+                    width: 18%;
+                    height: auto;
+                }
+                .org-logo:nth-child(1){
+                    margin-left: 0px;
+                }
+            }
         }
-      }
-      .authoring-organizations {
-        width: 100%;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        .org-logo{
-          width: 18%;
-          height: auto;
-        }
-        .org-logo:nth-child(1){
-          margin-left: 0px;
-        }
-      }
     }
+
     .program-details-wrapper{
       width:96%;
       margin: 0 auto;
@@ -1113,6 +1130,7 @@
                     .action{
                         justify-content: flex-end;
                         margin-top: 10px;
+                        display: flex;
                     }
                 }
               }
