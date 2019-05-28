@@ -383,12 +383,12 @@
     }
 
     .msg-icon {
-      width: flex-grid(1, 12);
+    //   width: flex-grid(1, 12);
 
       @extend %t-icon2;
 
-      @include margin-right(flex-gutter());
-
+    //   @include margin-right(flex-gutter());
+       margin: 15px 24px 12px 20px;
       text-align: center;
       color: $m-blue;
     }
@@ -401,6 +401,7 @@
 
     .msg-icon {
       color: $red;
+      color: $plumPurple;
     }
 
     .msg-content {
