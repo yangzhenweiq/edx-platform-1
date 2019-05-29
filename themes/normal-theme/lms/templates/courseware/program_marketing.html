@@ -117,10 +117,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
                       ${Text(_('${oldPrice}')).format(oldPrice=full_program_price_format.format(program['discount_data']['total_incl_tax_excl_discounts']))}
                     </span>
                     <span aria-label="${_('Discounted Price')}" class="discount">
-                        ${Text(_('${newPrice}')).format(newPrice=full_program_price,)}
-                    </span>
-                    <span>
-                      ${_(')')}
+                        ${Text(_('${newPrice})')).format(newPrice=full_program_price)}
                     </span>
                   % else:
                     <span>
