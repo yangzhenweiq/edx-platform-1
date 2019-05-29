@@ -119,16 +119,12 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
                     <span aria-label="${_('Discounted Price')}" class="discount">
                         ${Text(_('${newPrice}')).format(newPrice=full_program_price,)}
                     </span>
-                    <span class="savings">
-                      ${Text(_('{currency})')).format(
-                        discount_value=full_program_price_format.format(program['discount_data']['discount_value']),
-                        currency=program['discount_data']['currency']
-                      )}
+                    <span>
+                      ${_(')')}
                     </span>
                   % else:
                     <span>
-                      ${course_currency.get('symbol')}
-                      ${"{price})".format(price=full_program_price)}
+                      ${course_currency.get('symbol')}${"{price})".format(price=full_program_price)}
                     </span>
                   % endif
                 </a>
@@ -328,13 +324,12 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
                         newPrice=full_program_price,
                         htmlEnd=HTML('</span>')
                       )}
+                      <br>
                     <span class="savings green-highlight">
                       ${_('You save ')}
-                      ${course_currency.get('symbol')}
-                      ${Text(_('{discount_value} {currency}')).format(
-                        discount_value=full_program_price_format.format(program['discount_data']['discount_value']),
-                        currency=program['discount_data']['currency']
-                      )}
+                      ${course_currency.get('symbol')}${Text(_('{discount_value}')).format(
+                        discount_value=full_program_price_format.format(program['discount_data']['discount_value']))
+                      }
                     </span>
                   </span>
                 % else:
