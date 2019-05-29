@@ -33,7 +33,7 @@
     vertical-align: text-top;
     border-left: 1px dashed $border;
     padding-top: 22px;
-    h3{ 
+    h3{
       text-align: center;
     }
   }
@@ -157,7 +157,7 @@
   // 备案信息
   .footer-text{
     text-align: center;
-    margin-top: 22px; 
+    margin-top: 22px;
     padding: 0 20px;
   }
 }
@@ -184,7 +184,7 @@
       display: none;
     }
   }
-  
+
 }
 
 @media screen and (max-width:768px){
@@ -211,11 +211,11 @@
 }
 
 //尾部
-.wrapper-footer footer#footer-openedx{  
+.wrapper-footer footer#footer-openedx{
   max-width: 1200px;
 }
 
-.wrapper-footer{  
+.wrapper-footer{
   box-shadow: none;
   border-top: 1px solid #ccd1d9;
 }
@@ -241,7 +241,7 @@
   margin-left: -250px;
   margin-top: -125px;
   background-color: #ffffff;
-	box-shadow: 0px 3px 6px 0px 
+	box-shadow: 0px 3px 6px 0px
 		rgba(46, 49, 60, 0.41);
   border-radius: 3px;
   box-sizing: border-box;
@@ -310,7 +310,7 @@
     margin-right: 10px;
     border-radius: 2px;
     font-size: 14px;
-    line-height: 3;
+    line-height: 1;
     &.error{
       border: 1px solid #fe8c97;
     }
@@ -407,7 +407,7 @@
     margin-left: -250px;
     margin-top: -110px;
     background-color: #ffffff;
-    box-shadow: 0px 3px 6px 0px 
+    box-shadow: 0px 3px 6px 0px
       rgba(46, 49, 60, 0.41);
     border-radius: 3px;
     box-sizing: border-box;
@@ -419,7 +419,7 @@
     color: #2e313c;
     text-align: center;
     padding-bottom: 18px;
-    
+
   }
   .message-content{
     font-size: 14px;
@@ -499,7 +499,7 @@
     .error-text{
       visibility: visible;
       display: none;
-      
+
       &.active{
         display: block;
       }

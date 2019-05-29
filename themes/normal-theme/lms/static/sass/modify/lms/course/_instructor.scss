@@ -4,7 +4,7 @@ body.view-in-course .instructor-dashboard-wrapper-2{
 }
 .instructor-dashboard-content-2{
   padding: 0;
-  
+
   input[type="button"],
   .problem-browser .btn,
   section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
@@ -26,7 +26,7 @@ body.view-in-course .instructor-dashboard-wrapper-2{
       vertical-align: sub;
     }
   }
-  
+
   .instructor-dashboard-title{
     font-size: 18px;
     color: $title;
@@ -50,7 +50,7 @@ body.view-in-course .instructor-dashboard-wrapper-2{
     .member-lists-management .auth-list-container .member-list-widget .bottom-bar input{
       width: 250px;
     }
-  } 
+  }
 
   // cohorts
   section.idash-section#cohort_management .cohort-management-supplemental .icon{
@@ -67,8 +67,8 @@ body.view-in-course .instructor-dashboard-wrapper-2{
   .slick-header-column.ui-state-default{
     height: auto;
   }
-  
-  
+
+
 
   // certificates
   .customBrowseBtn{
@@ -91,12 +91,51 @@ body.view-in-course .instructor-dashboard-wrapper-2{
       vertical-align: bottom;
       margin-left: 200px;
     }
-    
+
   }
 }
+
+
+// special exams
+#special_exams{
+    .wrap{
+        margin-top: 6px;
+    }
+    .ui-accordion .ui-accordion-header{
+        padding: 10px 0;
+        font-size: 14px;
+        .ui-icon{
+            position: static;
+            margin: 0 10px;
+            display: inline-block;
+            vertical-align: sub;
+        }
+    }
+    .ui-accordion .ui-accordion-content{
+        padding: 0;
+    }
+    .proctoring-wrapper span.tip{
+        line-height: 35px;
+    }
+    .proctoring-wrapper span.tip .add{
+        @extend %btn-my-primary;
+    }
+    .student-proctored-exam-container .top-header .search-attempts .clear-search{
+        display: none;
+    }
+    .student-proctored-exam-container .top-header .search-attempts span{
+        background-color: $primary;
+        padding: 4px 12px;
+    }
+    .student-proctored-exam-container .pagination{
+        text-align: right;
+    }
+}
+
+
 @media screen and (max-width:767px){
   .instructor-dashboard-content-2{
-    
+
     .instructor-nav,
     .idash-section.active-section{
       margin: 20px 10px;
@@ -132,7 +171,7 @@ body.view-in-course .instructor-dashboard-wrapper-2{
           position: static !important;
         }
       }
-    } 
+    }
 
     // cohorts
     section.idash-section#cohort_management .cohort-management-nav{
@@ -154,10 +193,23 @@ body.view-in-course .instructor-dashboard-wrapper-2{
       text-overflow: ellipsis;
       overflow: hidden;
     }
-    
+
     // certificates
     .customBrowseBtn .file-browse .file_field{
       padding: 5px 0 0;
     }
+  }
+
+  // special exams
+  .student-proctored-exam-container .top-header{
+      padding: 10px;
+      input{
+          width: 200px;
+      }
+  }
+  #special_exams .student-proctored-exam-container .pagination{
+    float: unset;
+    width: 100%;
+    margin-top: 20px;
   }
 }
