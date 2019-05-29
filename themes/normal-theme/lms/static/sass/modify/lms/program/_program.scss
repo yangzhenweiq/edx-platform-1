@@ -587,6 +587,8 @@
     .program-cards-container{
       width: 100%;
       .program-card{
+        margin-left: 0px;
+        margin-right: 0px;
         width: 100%;
       }
     }
@@ -1000,6 +1002,7 @@
               padding-bottom: 15px;
               .sample-cert{
                 border: none;
+                border-radius: 0px;
               }
               .certificate-link{
                 font-size: 16px;
