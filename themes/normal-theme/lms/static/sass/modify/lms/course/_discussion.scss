@@ -303,11 +303,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.discussion-response .response-header-content .username{
   max-width: 180px;
   display: inline-block;
+  height: 20px;
 }
+
 
 // edit a disussion
 .edit-post-form {
