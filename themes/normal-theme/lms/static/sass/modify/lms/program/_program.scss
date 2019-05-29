@@ -13,6 +13,12 @@
     .row{
       position: relative;
       padding-top: 3%;
+      .program_title{
+        font-size: 32px;
+      }
+      .subtitle{
+        font-size: 20px;
+      }
       .program-btn{
         .original-price{
           text-decoration: line-through;
@@ -434,7 +440,7 @@
     }
   }
   .text-section{
-    min-height: 154px;
+    min-height: 95px;
     .hd-3{
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -637,6 +643,8 @@
             border-color: #57aa01;
             margin: 20px 15px 10px 0px;
             border-radius: 3px;
+            padding-left: 30px;
+            padding-right: 30px;
           }
         }
 
@@ -1200,6 +1208,10 @@
 @media screen and (max-width:500px){
     .main-container .program-details-wrapper .program-details-content .course-list-headings .completed-group .program-course-card .course-details .course-actions{
       margin-top: 0px;
+    }
+    .main-container .program-details-wrapper .program-details-content .program-heading .upgrade-button.complete-program{
+      padding-left:20px;
+      padding-right:20px;
     }
     .program-details-wrapper .program-details-header .authoring-organizations .orgs .org-logo{
       width: 33%;
