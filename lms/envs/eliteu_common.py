@@ -449,21 +449,3 @@ MOBILE_APP_USER_AGENT_REGEXES = ENV_TOKENS.get('MOBILE_APP_USER_AGENT_REGEXES', 
 # Baidu Bridge
 BAIDU_BRIDGE_URL = ENV_TOKENS.get('BAIDU_BRIDGE_URL', '')
 
-# elitemba
-import imp
-
-HMM_ENABLED = ENV_FEATURES.get('HMM_ENABLED', False)
-try:
-    if HMM_ENABLED:
-        fp, elitemba_path, desc = imp.find_module('elitemba')
-        INSTALLED_APPS.append('elitemba')
-        MIDDLEWARE_CLASSES.append('elitemba.middleware.ElitembaDataMiddleware')
-        HMM_CONFIGS = ENV_FEATURES.get('HMM_CONFIGS', {
-            'HOST': 'https://openapi.myhbp.org.cn',
-            'APP_ID': '',
-            'SOURCE_ID': '',
-            'LHOST': 'https://myhbp.org.cn',
-        })
-except ImportError:
-    HMM_ENABLED = False
-    print "Warnning: missing package 'elitemba'"
