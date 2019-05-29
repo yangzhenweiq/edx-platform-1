@@ -473,9 +473,15 @@
   }
   .status-text{
     margin-bottom: 20px;
+    .number-status{
+       font-size: 15px;
+    }
     .number-circle{
       line-height: 20px;
       margin-bottom: 7px;
+      .sr-only{
+          font-size: 15px;
+      }
     }
     .enrolled{
       background:#57aa01;
