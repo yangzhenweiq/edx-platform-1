@@ -39,8 +39,8 @@
                     </span>
                 <% } %>
                 <%- StringUtils.interpolate(
-                        gettext(' {price} {currency} )'),
-                        {price: full_program_price.toFixed(2), currency: discount_data.currency}
+                        gettext('{price})'),
+                        {price: full_program_price.toFixed(2)}
                     )
                 %>
             </a>
