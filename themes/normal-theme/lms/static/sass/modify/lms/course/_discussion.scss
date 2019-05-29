@@ -70,7 +70,7 @@
     overflow-x: hidden;
   }
   .forum-nav-browse-menu-wrapper{
-    border: none; 
+    border: none;
     background: none;
     padding: 10px;
   }
@@ -141,8 +141,8 @@
         label{
           margin-bottom: 0;
         }
-      } 
-    }    
+      }
+    }
   }
 }
 
@@ -176,16 +176,16 @@
         margin: 0;
       }
 
-    } 
+    }
     .page-header{
       padding: 10px;
     }
-  } 
+  }
 }
 
 
 
-// discussion other page 
+// discussion other page
 .discussion-board{
   .forum-nav-sort{
     width: 50%;
@@ -231,7 +231,7 @@
     text-align: center;
     margin-top: 20px;
   }
-  
+
   .search-alert-controls{
     text-align: center;
   }
@@ -296,7 +296,7 @@
     border: 1px solid #e6e9ed;
     border-top: 0;
   }
-} 
+}
 
 /*.discussion-post .post-header-content .post-title,*/
 .discussion-response .response-header-content .username{
@@ -319,5 +319,9 @@
   }
   .edit-post-body{
     width: 100%;
+  }
+  .form-row{
+      width: 100%;
+      display: block;
   }
 }
