@@ -13,6 +13,12 @@
     .row{
       position: relative;
       padding-top: 3%;
+      .program_title{
+        font-size: 32px;
+      }
+      .subtitle{
+        font-size: 20px;
+      }
       .program-btn{
         .original-price{
           text-decoration: line-through;
@@ -178,6 +184,7 @@
             font-size: 14px;
             color: $font;
             word-wrap: break-word;
+            max-height: 45px;
           }
           div:nth-child(3){
             display: flex;
@@ -252,6 +259,7 @@
 
 .program-btn{
   @extend %btn-my-primary;
+  white-space: nowrap;
   &:not(.btn):hover{
     color: #fff !important;
   }
@@ -284,7 +292,7 @@
     .program-branner{
       width: 96%;
       max-width: 96%;
-      min-height: 250px;
+      min-height: 290px;
       padding:0;
       .row{
         position: relative;
@@ -347,7 +355,7 @@
             }
           }
           .course-right{
-            margin-left: 0px;
+            margin-left: 20px;
           }
         }
       }
@@ -432,7 +440,7 @@
     }
   }
   .text-section{
-    min-height: 154px;
+    min-height: 95px;
     .hd-3{
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -465,9 +473,15 @@
   }
   .status-text{
     margin-bottom: 20px;
+    .number-status{
+       font-size: 15px;
+    }
     .number-circle{
       line-height: 20px;
       margin-bottom: 7px;
+      .sr-only{
+          font-size: 15px;
+      }
     }
     .enrolled{
       background:#57aa01;
@@ -589,7 +603,7 @@
 }
 
 .program-details-wrapper .course-list > div:nth-of-type(even){
-  background-color:#fff;
+  background-color:rgba(255,255,255,0)
 }
 
 .program-details-wrapper .program-details-header .authoring-organizations .heading{
@@ -635,6 +649,8 @@
             border-color: #57aa01;
             margin: 20px 15px 10px 0px;
             border-radius: 3px;
+            padding-left: 30px;
+            padding-right: 30px;
           }
         }
 
@@ -743,7 +759,11 @@
             border-radius: 3px;
             margin-bottom:20px;
             .program-course-card{
+              .course-content{
+                overflow: inherit;
+              }
               .course-details{
+                  position: relative;
                 .course-title {
                   color: #4788C7;
                   font-size: 16px;
@@ -753,8 +773,10 @@
                 .course-actions{
                   width:auto;
                   right: 0px;
+                  position: absolute;
+                  top: 10%;
                   .course-enroll-view{
-                    margin-top:-32%;
+                    margin-top:0%;
                     .cta-primary{
                       @extend %btn-my-primary;
                       &:not(.btn):hover{
@@ -814,13 +836,15 @@
             box-sizing: border-box;
             border-radius: 3px;
             margin-bottom:20px;
+            .course-list-heading{
+                margin-bottom: 25px;
+            }
             .motivating-section{
               margin-left:25px;
-
               .motivating-heading{
-                color: $primary;
                 font-size: 16px;
                 font-weight: normal;
+                margin-bottom: 10px;
               }
             }
             .sidebar-button-wrapper{
@@ -1167,6 +1191,7 @@
                     width:100%;
                     margin-top:10px;
                     text-align:right;
+                    position: static;
                   }
                 }
               }
@@ -1189,6 +1214,10 @@
 @media screen and (max-width:500px){
     .main-container .program-details-wrapper .program-details-content .course-list-headings .completed-group .program-course-card .course-details .course-actions{
       margin-top: 0px;
+    }
+    .main-container .program-details-wrapper .program-details-content .program-heading .upgrade-button.complete-program{
+      padding-left:20px;
+      padding-right:20px;
     }
     .program-details-wrapper .program-details-header .authoring-organizations .orgs .org-logo{
       width: 33%;

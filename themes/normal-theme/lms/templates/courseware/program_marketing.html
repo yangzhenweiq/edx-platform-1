@@ -102,7 +102,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
               <h1 class="program_title">${program['title']}</h1>
             </div>
             <div>
-              <h2>${program['subtitle']}</h2>
+              <h2 class="subtitle">${program['subtitle']}</h2>
             </div>
             <div>
 
@@ -139,7 +139,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
               % endif
             </div>
           </div>
-          
+
           % if tencent_video:
           <!-- video player-->
           <link href="${static.url('normal-theme/css/imgcache-qq-tcplayer.css')}" rel="stylesheet">
@@ -181,7 +181,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             </script>
           </div>
           % endif
-          
+
         </div>
       </div>
     </div>
@@ -265,7 +265,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             </div>
           </div>
         </div>
-        
+
       </div>
 
       <div class="desc-right">
@@ -370,7 +370,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             </div>
           % endfor
         </div>
-      </div> 
+      </div>
     </div>
     % endif
     % if courses:
@@ -454,7 +454,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
       </div>
     </div>
     % endif
-    
+
     % if instructors:
     <div class="my-program-content">
       <div class="tab-content">
@@ -510,14 +510,14 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
               </div>
             % endfor
           </div>
-      </div> 
+      </div>
     </div>
     % endif
-    
-          
-        
-        
-      
-    
+
+
+
+
+
+
   </div>
 </%block>
