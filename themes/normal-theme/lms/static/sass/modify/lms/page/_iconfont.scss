@@ -1,4 +1,4 @@
-// 1. 替换原有font awesome 
+// 1. 替换原有font awesome
 $icon-width: 18px;
 @function calcP($x, $y){
   @return ($icon-width * ( 1 - $x )) ( $icon-width * ( 1 - $y )) ;
@@ -9,7 +9,7 @@ $icon-width: 18px;
 }
 
 
-.fa-money:before, 
+.fa-money:before,
 .fa-twitter:before,
 .fa-eye:before,
 .fa-pencil:before,
@@ -242,10 +242,9 @@ $icon-width: 18px;
 }
 .fa-filter:before{
   background-position: calcP(7, 6);
-  transform: scale(0.8);
   position: relative;
-  top: -3px;
-  left: 3px;
+  top: -2px;
+  transform: scale(0.8);
 }
 .fa-newspaper-o:before{
   background-position: calcP(9, 3);
