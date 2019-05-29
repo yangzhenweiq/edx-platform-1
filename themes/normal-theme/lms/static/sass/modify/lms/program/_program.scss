@@ -13,6 +13,12 @@
     .row{
       position: relative;
       padding-top: 3%;
+      .program_title{
+        font-size: 32px;
+      }
+      .subtitle{
+        font-size: 20px;
+      }
       .program-btn{
         .original-price{
           text-decoration: line-through;
@@ -178,6 +184,7 @@
             font-size: 14px;
             color: $font;
             word-wrap: break-word;
+            max-height: 45px;
           }
           div:nth-child(3){
             display: flex;
@@ -252,6 +259,7 @@
 
 .program-btn{
   @extend %btn-my-primary;
+  white-space: nowrap;
   &:not(.btn):hover{
     color: #fff !important;
   }
@@ -284,7 +292,7 @@
     .program-branner{
       width: 96%;
       max-width: 96%;
-      min-height: 250px;
+      min-height: 290px;
       padding:0;
       .row{
         position: relative;
@@ -347,7 +355,7 @@
             }
           }
           .course-right{
-            margin-left: 0px;
+            margin-left: 20px;
           }
         }
       }
@@ -432,14 +440,14 @@
     }
   }
   .text-section{
-    min-height: 154px;
+    min-height: 95px;
     .hd-3{
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       overflow: hidden;
       line-height: inherit;
-      font-size: 16px;
+      font-size: 20px;
       min-height:0;
       margin-bottom:9px;
     }
@@ -454,14 +462,29 @@
       }
       .category{
         width: auto;
+        .professional-icon{
+            display:none;
+        }
+        .category-text{
+            margin-left:15px;
+        }
+        .category-icon{
+            display: none;
+        }
       }
     }
   }
   .status-text{
     margin-bottom: 20px;
+    .number-status{
+       font-size: 15px;
+    }
     .number-circle{
       line-height: 20px;
       margin-bottom: 7px;
+      .sr-only{
+          font-size: 15px;
+      }
     }
     .enrolled{
       background:#57aa01;
@@ -583,7 +606,7 @@
 }
 
 .program-details-wrapper .course-list > div:nth-of-type(even){
-  background-color:#fff;
+  background-color:rgba(255,255,255,0)
 }
 
 .program-details-wrapper .program-details-header .authoring-organizations .heading{
@@ -596,7 +619,7 @@
       width: 1200px;
       margin: 0 auto;
       .program-course-card {
-        padding:13px 26px;
+        padding:13px 25px;
         .section{
           &:not(:first-child) {
             color: #656d87;
@@ -610,7 +633,7 @@
         .program-heading{
           background-color: #ffffff;
           box-shadow: 0px 0px 3px  #b6dcfe;
-          padding: 23px 26px;
+          padding: 23px 25px;
           box-sizing: border-box;
           border-radius: 3px;
           margin-bottom:20px;
@@ -627,7 +650,10 @@
             align-self: flex-start;
             background: #57aa01;
             border-color: #57aa01;
-            margin: 10px 15px 10px 0px;
+            margin: 20px 15px 10px 0px;
+            border-radius: 3px;
+            padding-left: 30px;
+            padding-right: 30px;
           }
         }
 
@@ -658,14 +684,15 @@
               padding-bottom: 10px;
               border-bottom: 1px solid #e6e9ed;
               span{
-                margin-left: 26px;
+                margin-left: 10px;
                 font-size: 16px;
                 color: #414141;
               }
               .status{
-                margin-left: 26px;
+                margin-left: 25px;
                 font-size: 16px;
                 color: #414141;
+                margin-right: 0;
               }
             }
             .course-list{
@@ -735,7 +762,11 @@
             border-radius: 3px;
             margin-bottom:20px;
             .program-course-card{
+              .course-content{
+                overflow: inherit;
+              }
               .course-details{
+                  position: relative;
                 .course-title {
                   color: #4788C7;
                   font-size: 16px;
@@ -745,8 +776,10 @@
                 .course-actions{
                   width:auto;
                   right: 0px;
+                  position: absolute;
+                  top: 10%;
                   .course-enroll-view{
-                    margin-top:-32%;
+                    margin-top:0%;
                     .cta-primary{
                       @extend %btn-my-primary;
                       &:not(.btn):hover{
@@ -791,7 +824,7 @@
                 color: #414141;
               }
               .status{
-                margin-left: 26px;
+                margin-left: 25px;
                 font-size: 16px;
                 color: #414141;
                 margin-right: 0px
@@ -806,13 +839,15 @@
             box-sizing: border-box;
             border-radius: 3px;
             margin-bottom:20px;
+            .course-list-heading{
+                margin-bottom: 25px;
+            }
             .motivating-section{
-              margin-left:26px;
-
+              margin-left:25px;
               .motivating-heading{
-                color: $primary;
                 font-size: 16px;
                 font-weight: normal;
+                margin-bottom: 10px;
               }
             }
             .sidebar-button-wrapper{
@@ -844,7 +879,7 @@
                 }
                 .fa-check-circle {
                   color: #57aa01;
-                  margin-left: 10px;
+                  margin-left: 0px;
                 }
               }
             }
@@ -856,14 +891,15 @@
             padding-bottom: 10px;
             border-bottom: 1px solid #e6e9ed;
             span{
-              margin-left: 26px;
+              margin-left: 10px;
               font-size: 16px;
               color: #414141;
             }
             .status{
-              margin-left: 26px;
+              margin-left: 25px;
               font-size: 16px;
               color: #414141;
+              margin-right: 0;
             }
           }
         }
@@ -916,19 +952,23 @@
             border-bottom: 1px solid #e6e9ed;
             font-size: 16px;
             color: #414141;
-            padding-left: 26px;
+            padding-left: 25px;
           }
           .motivating-section{
             margin-left: 0px;
             font-size: 14px;
             color: #656d78;
-            padding: 0 26px;
+            padding: 0 25px;
             box-sizing: border-box;
             margin-bottom: 13px;
+            width: 100%;
             .motivating-message{
               color: #656d78;
               margin: 0px;
             }
+          }
+          .sidebar-button-wrapper{
+            display: none;
           }
         }
 
@@ -949,12 +989,12 @@
             font-size: 16px;
             color: #414141;
             padding-top:12px;
-            padding-left: 26px;
+            padding-left: 25px;
           }
           .certificate-list{
             margin:0px;
             padding:0px;
-            padding-left: 26px;
+            padding-left: 25px;
             .certificate{
               align-items: center;
               padding-bottom: 15px;
@@ -975,6 +1015,7 @@
       width: 1200px;
       margin: 20px auto;
       padding: 17px 25px 80px;
+      box-sizing: border-box;
       .meta-info{
         .program-title{
           display: -webkit-box;
@@ -1040,33 +1081,37 @@
 
 @media screen and (max-width:768px){
   .main-container{
-    .program-details-header{
-      display:flex;
-      flex-direction:column;
-      .meta-info{
-        .program-title{
-          margin-top:1.25rem;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 4;
-          overflow: hidden;
-          word-wrap: break-word;
+    .program-details-wrapper{
+        .program-details-header{
+            display:flex;
+            flex-direction:column;
+            .meta-info{
+                width: 100%;
+                .program-title{
+                    margin-top:1.25rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 4;
+                    overflow: hidden;
+                    word-wrap: break-word;
+                }
+            }
+            .authoring-organizations {
+                width: 100%;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                .org-logo{
+                    width: 18%;
+                    height: auto;
+                }
+                .org-logo:nth-child(1){
+                    margin-left: 0px;
+                }
+            }
         }
-      }
-      .authoring-organizations {
-        width: 100%;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        .org-logo{
-          width: 18%;
-          height: auto;
-        }
-        .org-logo:nth-child(1){
-          margin-left: 0px;
-        }
-      }
     }
+
     .program-details-wrapper{
       width:96%;
       margin: 0 auto;
@@ -1100,6 +1145,7 @@
                 .course-actions{
                   width:auto;
                   right: 0px;
+                  position: static;
                   .course-enroll-view{
                     width:100%;
                     margin-top:10px;
@@ -1113,6 +1159,7 @@
                     .action{
                         justify-content: flex-end;
                         margin-top: 10px;
+                        display: flex;
                     }
                 }
               }
@@ -1145,10 +1192,12 @@
                 .course-actions{
                   width:auto;
                   right: 0px;
+                  position: static;
                   .course-enroll-view{
                     width:100%;
                     margin-top:10px;
                     text-align:right;
+                    position: static;
                   }
                 }
               }
@@ -1171,6 +1220,10 @@
 @media screen and (max-width:500px){
     .main-container .program-details-wrapper .program-details-content .course-list-headings .completed-group .program-course-card .course-details .course-actions{
       margin-top: 0px;
+    }
+    .main-container .program-details-wrapper .program-details-content .program-heading .upgrade-button.complete-program{
+      padding-left:20px;
+      padding-right:20px;
     }
     .program-details-wrapper .program-details-header .authoring-organizations .orgs .org-logo{
       width: 33%;

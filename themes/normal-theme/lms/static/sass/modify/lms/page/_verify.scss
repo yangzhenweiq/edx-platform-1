@@ -4,7 +4,7 @@
 }
 .verification-process .carousel .requirements .requirement{
     background-color: #fffaf6;
-	box-shadow: 0px 1px 4px 0px 
+	box-shadow: 0px 1px 4px 0px
 		#ffe4d1;
 	border-radius: 3px;
     border: solid 1px #ffe4d1;
@@ -118,7 +118,7 @@
     }
 }
 .verification-process .pay-and-verify .nav-wizard .right, .verification-process .incourse-reverify .nav-wizard .right, .verification-process .reverify .nav-wizard .right{
-    padding: 6px 16px; 
+    padding: 6px 16px;
     &:focus{
         outline: none;
     }
@@ -201,7 +201,7 @@
     }
     .wrapper-content-main.enrollment-confirmation-step{
         background-color: #ffffff;
-        box-shadow: 0px 1px 4px 0px 
+        box-shadow: 0px 1px 4px 0px
             #b6dcfe;
         border-radius: 3px;
     }
@@ -263,7 +263,7 @@
     background: #f7fbfe;
     border-bottom: solid 1px #b6dcfe;
     color: #2e313c;
-    
+
 }
 @media screen and (max-width:768px){
     .verification-process .carousel .requirements .requirement{
@@ -271,7 +271,7 @@
     }
     .verification-process .carousel .wrapper-task{
         width: 100%;
-        
+
     }
     .facephoto.view .wrapper-task .wrapper-help{
         width: 100%;
@@ -299,4 +299,19 @@
             margin-top: -40px;
         }
     }
+}
+.verification-process .wrapper-msg .msg-icon{
+    width: auto;
+    color: #c2387d;
+    margin-right: 0;
+    margin: 15px 24px 12px 20px;
+}
+.verification-process .wrapper-msg-activate .msg-content .title{
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 0;
+}
+.verification-process .wrapper-msg-activate .msg-content .copy{
+    height: 32px;
+    line-height: 32px;
 }
