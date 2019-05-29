@@ -447,7 +447,7 @@
       -webkit-line-clamp: 2;
       overflow: hidden;
       line-height: inherit;
-      font-size: 16px;
+      font-size: 20px;
       min-height:0;
       margin-bottom:9px;
     }
@@ -467,6 +467,9 @@
         }
         .category-text{
             margin-left:15px;
+        }
+        .category-icon{
+            display: none;
         }
       }
     }
@@ -958,6 +961,7 @@
             padding: 0 25px;
             box-sizing: border-box;
             margin-bottom: 13px;
+            width: 100%;
             .motivating-message{
               color: #656d78;
               margin: 0px;
@@ -1141,6 +1145,7 @@
                 .course-actions{
                   width:auto;
                   right: 0px;
+                  position: static;
                   .course-enroll-view{
                     width:100%;
                     margin-top:10px;
@@ -1187,6 +1192,7 @@
                 .course-actions{
                   width:auto;
                   right: 0px;
+                  position: static;
                   .course-enroll-view{
                     width:100%;
                     margin-top:10px;
