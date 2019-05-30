@@ -130,6 +130,12 @@ body.view-in-course .instructor-dashboard-wrapper-2{
     .student-proctored-exam-container .pagination{
         text-align: right;
     }
+    .student-proctored-exam-container .top-header{
+        padding: 10px;
+    }
+}
+#addNewAllowance{
+    @extend %btn-my-primary;
 }
 
 
@@ -201,8 +207,7 @@ body.view-in-course .instructor-dashboard-wrapper-2{
   }
 
   // special exams
-  .student-proctored-exam-container .top-header{
-      padding: 10px;
+  .student-proctored-exam-container .top-header .search-attempts{
       input{
           width: 200px;
       }
