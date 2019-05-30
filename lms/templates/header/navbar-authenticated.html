@@ -93,7 +93,7 @@ from django.conf import settings
         </div>
       -->
     % endif
-    % if settings.HMM_ENABLED and hasattr(user, 'hmm_profile') and user.hmm_profile.remaining_days > 0:
+    % if getattr(settings, 'HMM_ENABLED', False) and hasattr(user, 'hmm_profile') and user.hmm_profile.remaining_days > 0:
          <script>
             // 哈商
             var hmm_url = '${reverse('elitemba:hmm_entry') + '?safari_return=' + reverse('elitemba:hmm')}';
