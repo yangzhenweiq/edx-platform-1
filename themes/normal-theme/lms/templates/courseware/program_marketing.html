@@ -103,7 +103,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             </div>
             <div>
               <h2 class="subtitle">${program['subtitle']}</h2>
-            </div>
+            </div> 
             <div>
 
               ## Note: Weird formatting to fix the inline spacing issue.
@@ -113,11 +113,11 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
                     ${_('Purchase the Program (')}
                   </span>
                   % if program.get('discount_data') and program['discount_data']['is_discounted']:
-                    <span aria-label="${_('Original Price')}" class="original-price">
-                      ${Text(_('${oldPrice}')).format(oldPrice=full_program_price_format.format(program['discount_data']['total_incl_tax_excl_discounts']))}
+                    <span aria-label="${_('Original Price')}" class="original-price">                       
+                      ${Text(_('{currencySymbol}{oldPrice}')).format(currencySymbol=course_currency.get('symbol'), oldPrice=full_program_price_format.format(program['discount_data']['total_incl_tax_excl_discounts']))}
                     </span>
                     <span aria-label="${_('Discounted Price')}" class="discount">
-                        ${Text(_('${newPrice})')).format(newPrice=full_program_price)}
+                        ${Text(_('{currencySymbol}{newPrice})')).format(currencySymbol=course_currency.get('symbol'), newPrice=full_program_price)}
                     </span>
                   % else:
                     <span>
@@ -205,7 +205,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
         </div> -->
         <div class="courses-title">
           <div class="icon-xian"></div>
-          <h2>${_('View Courses')}</h2>
+          <h2>${_('Course Description')}</h2>
         </div>
         <div id="program-details-page" class="container">
           <div class="row program-info">
@@ -316,8 +316,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
                       )}
                     </span>
                     <span aria-label="${_('Discounted Price')}" class="discount green-highlight">
-                      ${course_currency.get('symbol')}
-                      ${Text(_('{newPrice}{htmlEnd} for entire program')).format(
+                      ${course_currency.get('symbol')}${Text(_('{newPrice}{htmlEnd} for entire program')).format(
                         newPrice=full_program_price,
                         htmlEnd=HTML('</span>')
                       )}
