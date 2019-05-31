@@ -23,8 +23,8 @@
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
-# li ying <code@eliteu.cn>, 2019
 # Sushan Wu <ss.wu@eliteu.com.cn>, 2019
+# li ying <code@eliteu.cn>, 2019
 #
 # #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)
@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-23 15:56+0800\n"
+"POT-Creation-Date: 2019-05-27 16:25+0800\n"
 "PO-Revision-Date: 2019-05-16 12:40+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -372,7 +372,7 @@ msgstr[0] "%(num_points)s满分（不计入成绩）"
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "%(earned)s/%(possible)s point (graded)"
 msgid_plural "%(earned)s/%(possible)s points (graded)"
-msgstr[0] "%(earned)s/%(possible)s得分 (计入成绩)"
+msgstr[0] "%(earned)s/%(possible)s 得分 (计入成绩)"
 
 #. Translators: %(earned)s is the number of points earned. %(possible)s is the
 #. total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
@@ -2201,7 +2201,7 @@ msgstr "格式不正确"
 
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "%(field)s must have at least %(count)d characters."
-msgstr "%(field)s 至少要有 %(count)d 字符。"
+msgstr "%(field)s至少要有 %(count)d 字符。"
 
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "%(field)s can only contain up to %(count)d characters."
@@ -3594,11 +3594,14 @@ msgstr "标记选课码为尚未使用的"
 #: cms/templates/js/transcript-organization-credentials.underscore
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Username"
 msgstr "用户名"
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
 msgid "Email"
 msgstr "电子邮件"
 
@@ -5666,6 +5669,7 @@ msgstr "添加日期"
 
 #: cms/static/js/views/assets.js cms/templates/js/asset-library.underscore
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Type"
 msgstr "类型"
 
@@ -6517,6 +6521,7 @@ msgid "Video duration is {humanizeDuration}"
 msgstr "视频时长 {humanizeDuration}"
 
 #: cms/static/js/views/video_thumbnail.js
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
 msgid "minutes"
 msgstr "分"
 
@@ -6636,8 +6641,15 @@ msgstr "更新标签中"
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/basic-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Actions"
 msgstr "操作"
+
+#: cms/templates/js/course-outline.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Timed Exam"
+msgstr "计时测验"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
@@ -7076,6 +7088,7 @@ msgid "Course Key"
 msgstr "课程标识"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Status"
 msgstr "状态"
 
@@ -7947,7 +7960,7 @@ msgstr "挑选一个会话："
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Enroll Now"
-msgstr "现在选课"
+msgstr "现在加入"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Coming Soon"
@@ -7955,7 +7968,7 @@ msgstr "即将上线"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Enrollment Opens on"
-msgstr "开放注测"
+msgstr "开放注册"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Not Currently Available"
@@ -8000,6 +8013,12 @@ msgstr "您尚未注册任何课程。"
 #: lms/templates/learner_dashboard/empty_programs_list.underscore
 msgid "Explore Programs"
 msgstr "发现课程"
+
+#: lms/templates/learner_dashboard/expired_notification.underscore
+msgid ""
+"You enrolled in this course but did not earn the certificate required to "
+"complete this program."
+msgstr "您已注册此课程，但未获得完成此课程所需的证书。"
 
 #: lms/templates/learner_dashboard/explore_new_programs.underscore
 msgid ""
@@ -8073,8 +8092,18 @@ msgid "Congratulations!"
 msgstr "恭喜！"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+msgid ""
+"You have successfully completed all the requirements for the {title} {type}."
+msgstr "您已成功完成 {title} {type}专业的所有要求。"
+
+#: lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Your Program Journey"
 msgstr "您的课程学习之旅"
+
+#: lms/templates/learner_dashboard/program_details_view.underscore
+msgid ""
+"Track and plan your progress through the {count} courses in this program."
+msgstr "通过本系列的 {count} 门课程来跟踪和计划你的学习进度。"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
@@ -8091,8 +8120,8 @@ msgid "{listPrice}"
 msgstr "{listPrice}"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid " {price} {currency} )"
-msgstr "{price} {currency} )"
+msgid "{price})"
+msgstr "{price}）"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
 msgid "COURSES IN PROGRESS"
@@ -8814,6 +8843,75 @@ msgstr "重新拍照"
 msgid "Take Photo"
 msgstr "拍照"
 
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Add a New Allowance"
+msgstr "添加新的名额"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Special Exam"
+msgstr "专业测验"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+#, python-format
+msgid " %(exam_display_name)s "
+msgstr "%(exam_display_name)s"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Exam Type"
+msgstr "测试类别"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+msgid "Allowance Type"
+msgstr ""
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Additional Time (minutes)"
+msgstr "额外时间（分钟）"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Value"
+msgstr "值"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
+msgid "Username or Email"
+msgstr "用户名或邮箱"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+msgid "Allowances"
+msgstr ""
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+msgid "Add Allowance"
+msgstr "添加新的名额"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Exam Name"
+msgstr "测验名称"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
+msgid "Allowance Value"
+msgstr ""
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Time Limit"
+msgstr "时间限制"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Started At"
+msgstr "开始于"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Completed At"
+msgstr "完成于"
+
+#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
+#, python-format
+msgid " %(username)s "
+msgstr "%(username)s"
+
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 msgid "Bookmarked on"
 msgstr "标记书签"
@@ -9357,10 +9455,6 @@ msgstr "模拟监考"
 #: cms/templates/js/course-outline.underscore
 msgid "Proctored Exam"
 msgstr "监考下的测试"
-
-#: cms/templates/js/course-outline.underscore
-msgid "Timed Exam"
-msgstr "计时测验"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
