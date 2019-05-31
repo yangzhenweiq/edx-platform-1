@@ -907,4 +907,4 @@ def enroll_programs(request, user):
     course_enrollments = list(get_course_enrollments(user, site_org_whitelist, site_org_blacklist))
     meter = ProgramProgressMeter(request.site, user, enrollments=course_enrollments)
     inverted_programs = meter.invert_programs()
-    return inverted_programs is True
+    return len(inverted_programs) > 0

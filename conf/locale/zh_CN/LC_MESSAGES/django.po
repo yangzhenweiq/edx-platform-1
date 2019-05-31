@@ -15976,7 +15976,7 @@ msgstr "{discount_value} {currency}"
 
 #: lms/templates/courseware/program_marketing.html
 msgid "{full_program_price} for entire program"
-msgstr "整个项目{full_program_price} "
+msgstr "整个系列{full_program_price} "
 
 #: lms/templates/courseware/program_marketing.html
 #: themes/normal-theme/lms/templates/courseware/program_marketing.html
@@ -20836,7 +20836,7 @@ msgstr "{discount_value}"
 
 #: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "{currency}{full_program_price} for entire program"
-msgstr "整个系列 {currency}{full_program_price}"
+msgstr "整个系列{currency}{full_program_price}"
 
 #: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Enroll Now"
