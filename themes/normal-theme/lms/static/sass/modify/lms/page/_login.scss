@@ -35,7 +35,7 @@
 
   .form-field{
     margin: 20px 0 0 0;
-    
+
     label{
       font-size: 14px;
       color: $title;
@@ -78,7 +78,7 @@
       }
     }
     input.checkbox{
-      vertical-align: middle;
+      vertical-align: bottom;
       @extend %input-my-checkbox;
     }
     input.checkbox + label{
@@ -155,11 +155,11 @@
     border: 0 !important;
     color: $font !important;
     border-radius: 3px;
-    
+
     .message-title{
       font-size: 14px;
       margin: 0;
-      padding: 0;    
+      padding: 0;
       font-weight: normal;
     }
     .message-copy{
@@ -194,7 +194,7 @@
   // sign in other ways
   .section-title.lines{
     margin: 30px 0 0;
-    
+
     .text{
       font-size: 16px;
       color: $title;
@@ -221,7 +221,7 @@
         width: 50px;
       }
     }
-  } 
+  }
 
   .login-provider{
     width: 50px;
@@ -243,7 +243,7 @@
         max-width: 50px;
         max-height: 50px;
         margin-top: 0;
-    
+
       }
     }
     span{
@@ -290,7 +290,7 @@
     }
   }
 
-} 
+}
 
 @media screen and (max-width:768px){
   .login-register .button-oa2-weixin{
@@ -311,5 +311,5 @@
         margin: 20px 0 0;
       }
     }
-  } 
+  }
 }
