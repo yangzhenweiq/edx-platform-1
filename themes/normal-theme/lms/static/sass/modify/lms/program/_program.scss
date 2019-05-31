@@ -937,6 +937,9 @@
             color: $primary;
             font-weight: normal;
           }
+          .progress-label{
+            top: 100px;
+          }
           .complete{
             color: $primary;
             stroke: $primary;
