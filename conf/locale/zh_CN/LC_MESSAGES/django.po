@@ -7076,6 +7076,7 @@ msgstr "选课数据现已可通过{dashboard_link}查看。"
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Membership"
 msgstr "会员资格"
 
@@ -12421,6 +12422,7 @@ msgstr "课程长度："
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Courses"
 msgstr "课程"
 
@@ -12527,6 +12529,7 @@ msgstr "账号"
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/static_templates/help.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 #: wiki/plugins/help/wiki_plugin.py
 msgid "Help"
 msgstr "帮助"
@@ -15955,12 +15958,10 @@ msgid "Price ({currencyCode})"
 msgstr "价格 ({currencyCode})"
 
 #: lms/templates/courseware/program_marketing.html
-#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "{currencySymbol}{oldPrice}"
 msgstr "{currencySymbol}{oldPrice}"
 
 #: lms/templates/courseware/program_marketing.html
-#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "{newPrice}{htmlEnd} for entire program"
 msgstr "整个系列{newPrice}{htmlEnd} "
 
@@ -15974,7 +15975,6 @@ msgid "{discount_value} {currency}"
 msgstr "{discount_value} {currency}"
 
 #: lms/templates/courseware/program_marketing.html
-#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "{full_program_price} for entire program"
 msgstr "整个项目{full_program_price} "
 
@@ -16878,6 +16878,7 @@ msgstr "显示注释"
 
 #: lms/templates/elitemba/hmm.html
 #: lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Harvard ManageMentor"
 msgstr "哈佛管理导师"
 
@@ -17480,6 +17481,7 @@ msgstr ""
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Programs"
 msgstr "系列"
 
@@ -17487,6 +17489,7 @@ msgstr "系列"
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Journals"
 msgstr "文章"
 
@@ -17495,10 +17498,12 @@ msgstr "文章"
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Profile"
 msgstr "用户资料"
 
 #: lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Discover New"
 msgstr "发现课程"
 
@@ -17506,15 +17511,18 @@ msgstr "发现课程"
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Sysadmin"
 msgstr "系统管理员"
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Professors"
 msgstr "教授"
 
 #: lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Expiry: "
 msgstr "有效期至："
 
@@ -17523,6 +17531,7 @@ msgstr "有效期至："
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/shoppingcart/shopping_cart.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Shopping Cart"
 msgstr "购物车"
 
@@ -19152,10 +19161,6 @@ msgstr "我的课程"
 #: lms/templates/learner_dashboard/_dashboard_navigation_journals.html
 msgid "My Journals"
 msgstr "我的文章"
-
-#: lms/templates/learner_dashboard/program_details.html
-msgid "Program Details"
-msgstr "项目详情"
 
 #: lms/templates/learner_dashboard/text-me-fragment.html
 msgid "Get the {platform_name} Mobile App!"
@@ -20794,8 +20799,12 @@ msgid ""
 msgstr "点击屏幕右上角分享按钮"
 
 #: themes/normal-theme/lms/templates/courseware/program_marketing.html
-msgid "{currencySymbol}{newPrice})"
-msgstr "{currencySymbol}{newPrice}）"
+msgid "{currency}{oldPrice}"
+msgstr "{currency}{oldPrice}"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice})"
+msgstr "{currency}{newPrice}）"
 
 #: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgctxt "Program"
@@ -20818,8 +20827,16 @@ msgid "Price"
 msgstr "价格"
 
 #: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice}{htmlEnd} for entire program"
+msgstr "整个系列 {currency}{newPrice}{htmlEnd} "
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "{discount_value}"
 msgstr "{discount_value}"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{full_program_price} for entire program"
+msgstr "整个系列 {currency}{full_program_price}"
 
 #: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Enroll Now"
