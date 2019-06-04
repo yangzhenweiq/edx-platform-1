@@ -1,5 +1,9 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%!
+from django.urls import reverse
+from django.utils.translation import ugettext as _
+%>
 <%inherit file="../main.html" />
 <style>
     .window-wrap .content-wrapper{
@@ -12,9 +16,9 @@
     <div class="about-banner-title"></div>
 </div>
 
-<div class="about-dec">   
+<div class="about-dec">
     <div class="about-dec-box">
-        <div>  
+        <div>
             <div class="about-dec-write">
                 <h2>${_(u"EliteMBA")}</h2>
                 <p>${_(u"EliteMBA (www.EliteMBA.cn) is a sub-brand of Guangdong Elite International Education & Technology Co., Ltd. focusing on the development of MBA online classroom.")}</p>
@@ -23,16 +27,16 @@
                 <p>${_(u"For course cooperation, please contact: ")}<a href="mailto:course@elitemba.cn">course@elitemba.cn</a>${_(u".")}</p>
             </div>
             <div class="about-dec-img">
-                <img src="/static/images/abouts/about_dec_left.png" />
+                <img src="${static.url('images/abouts/about_dec_left.png')}" />
             </div>
         </div>
-        <div> 
+        <div>
             <div class="about-dec-write01">
                 <h2>${_(u"Education should guide and shape a society, not follow it")}</h2>
                 <p>${_(u"Mr. Cai Yuanpei said that education should guide the society, rather than follow it. Elite Education abandons the ideas of upholding the pursuit of society, and advocates learners' self-achievement and their ambition in leading the society. EliteMBA courses advocate, instead of the rote of knowledge input, the motivation for pursuing wisdom and solving practical problems.")}</p>
             </div>
             <div class="about-dec-img01">
-                <img src="/static/images/abouts/about_dec_right.png" />
+                <img src="${static.url('images/abouts/about_dec_right.png')}" />
             </div>
         </div>
     </div>
@@ -47,6 +51,6 @@
     </div>
 </div>
 <script>
-  var pic = document.getElementsByTagName('html')[0].lang == 'en' ? "/static/images/abouts/about_dec_left_en.png" : "/static/images/abouts/about_dec_left.png";
+  var pic = document.getElementsByTagName('html')[0].lang == 'en' ? "${static.url('images/abouts/about_dec_left_en.png')}" : "${static.url('images/abouts/about_dec_left.png')}";
   $('.about-dec-img img').attr('src', pic)
 </script>
