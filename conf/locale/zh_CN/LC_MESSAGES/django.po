@@ -5,9 +5,9 @@
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
-# li ying <code@eliteu.cn>, 2019
 # fengri <173770922@qq.com>, 2019
 # Sushan Wu <ss.wu@eliteu.com.cn>, 2019
+# li ying <code@eliteu.cn>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/).
@@ -26,9 +26,9 @@
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
-# li ying <code@eliteu.cn>, 2019
 # fengri <173770922@qq.com>, 2019
 # Sushan Wu <ss.wu@eliteu.com.cn>, 2019
+# li ying <code@eliteu.cn>, 2019
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)
@@ -5227,7 +5227,7 @@ msgstr "完成课程、测验及格，并荣获该{platform_name} {certificate_t
 msgid ""
 "{platform_name} acknowledges achievements through certificates, which are "
 "awarded for course activities that {platform_name} students complete."
-msgstr "{platform_name} 借由证书承认已完成修习课程，该课之修课证书证明学生完成 {platform_name} 课程活动。"
+msgstr "{platform_name}借由证书承认已完成修习课程，该课之修课证书证明学生完成 {platform_name}课程活动。"
 
 #. Translators:  'All rights reserved' is a legal term used in copyrighting to
 #. protect published content
@@ -5745,6 +5745,7 @@ msgstr "升级({upgrade_price})"
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/normal-theme/lms/templates/footer.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Learn More"
 msgstr "了解更多"
 
@@ -7075,6 +7076,7 @@ msgstr "选课数据现已可通过{dashboard_link}查看。"
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Membership"
 msgstr "会员资格"
 
@@ -8900,6 +8902,7 @@ msgid "Credit"
 msgstr "学分"
 
 #: lms/envs/eliteu_common.py lms/templates/certificates/verify.html
+#: lms/templates/provider/authorize.html
 #: themes/normal-theme/lms/templates/footer.html
 #: themes/normal-theme/lms/templates/static_templates/about.html
 #: membership/templates/membership/card.html
@@ -9287,6 +9290,7 @@ msgid "Skip to main content"
 msgstr "跳至主要内容"
 
 #: lms/templates/oauth2_provider/authorize.html
+#: lms/templates/provider/authorize.html
 msgid "Authorize"
 msgstr "授权"
 
@@ -12418,6 +12422,7 @@ msgstr "课程长度："
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Courses"
 msgstr "课程"
 
@@ -12467,7 +12472,13 @@ msgstr "例：JaneDoe"
 msgid "Course End Date"
 msgstr "课程结束日期"
 
+#: cms/templates/settings.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "Course Description"
+msgstr "课程简介"
+
 #: cms/templates/settings.html lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Instructors"
 msgstr "主讲教师"
 
@@ -12518,6 +12529,7 @@ msgstr "账号"
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/static_templates/help.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 #: wiki/plugins/help/wiki_plugin.py
 msgid "Help"
 msgstr "帮助"
@@ -15836,11 +15848,13 @@ msgid "Updates to Discussion Posts You Follow"
 msgstr "您关注的讨论帖的更新情况"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Purchase the Program ("
-msgstr "选购计划 ("
+msgstr "购买系列 ("
 
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/journals/templates/journals/bundle_about.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Original Price"
 msgstr "原价"
 
@@ -15850,6 +15864,7 @@ msgstr "${oldPrice}"
 
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/journals/templates/journals/bundle_about.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Discounted Price"
 msgstr "折扣价"
 
@@ -15859,43 +15874,52 @@ msgstr "${newPrice}"
 
 #: lms/templates/courseware/program_marketing.html
 msgid "{currency})"
-msgstr "{currency})"
+msgstr "{currency}） "
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Start Learning"
 msgstr "开始学习"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Play"
 msgstr "播放"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "YouTube Video"
 msgstr "YouTube 视频"
 
 #: lms/templates/courseware/program_marketing.html
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/shopping_cart.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "View Courses"
 msgstr "查看课程"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Meet the Instructors"
 msgstr "会面导师"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Frequently Asked Questions"
 msgstr "常见问题"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Job Outlook"
 msgstr "工作展望"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Real Career Impact"
 msgstr "职场冲击"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "What You'll Learn"
 msgstr "您将学到"
 
@@ -15904,6 +15928,7 @@ msgid "Average Length"
 msgstr "平均长度"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "{weeks_to_complete} weeks per course"
 msgstr "{weeks_to_complete} 周/课"
 
@@ -15912,6 +15937,7 @@ msgid "Effort"
 msgstr "课时"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid ""
 "{min_hours_effort_per_week}-{max_hours_effort_per_week} hours per week, per "
 "course"
@@ -15922,10 +15948,12 @@ msgid "Number of Courses"
 msgstr "课程数量"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "{number_of_courses} courses in program"
 msgstr "{number_of_courses} 专项课"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Price ({currencyCode})"
 msgstr "价格 ({currencyCode})"
 
@@ -15935,11 +15963,12 @@ msgstr "{currencySymbol}{oldPrice}"
 
 #: lms/templates/courseware/program_marketing.html
 msgid "{newPrice}{htmlEnd} for entire program"
-msgstr "整个项目{newPrice}{htmlEnd} "
+msgstr "整个系列{newPrice}{htmlEnd} "
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "You save "
-msgstr "保存"
+msgstr "您已省下"
 
 #: lms/templates/courseware/program_marketing.html
 msgid "{discount_value} {currency}"
@@ -15947,14 +15976,16 @@ msgstr "{discount_value} {currency}"
 
 #: lms/templates/courseware/program_marketing.html
 msgid "{full_program_price} for entire program"
-msgstr "整个项目{full_program_price} "
+msgstr "整个系列{full_program_price} "
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Courses in the {}"
 msgstr "{} 的课程"
 
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/journals/templates/journals/bundle_about.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Starts on {}"
 msgstr "开始 {}"
 
@@ -16456,7 +16487,7 @@ msgstr "您当前认证会在{days}天后过期，立即使用网络摄像头和
 msgid ""
 "Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
 "this course."
-msgstr "获取一个 {cert_name_long} 来突显您在此课程中获得的知识和技能。"
+msgstr "获取一个{cert_name_long}来突显您在此课程中获得的知识和技能。"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
@@ -16617,7 +16648,7 @@ msgstr "无法关联账号"
 msgid ""
 "The {provider_name} account you selected is already linked to another "
 "{platform_name} account."
-msgstr "您选择的 {provider_name}账号已经和{platform_name}账号相关联。"
+msgstr "您选择的{provider_name}账号已经和{platform_name}账号相关联。"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
@@ -16847,6 +16878,7 @@ msgstr "显示注释"
 
 #: lms/templates/elitemba/hmm.html
 #: lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Harvard ManageMentor"
 msgstr "哈佛管理导师"
 
@@ -17449,13 +17481,15 @@ msgstr ""
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Programs"
-msgstr "程式"
+msgstr "系列"
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Journals"
 msgstr "文章"
 
@@ -17464,10 +17498,12 @@ msgstr "文章"
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Profile"
 msgstr "用户资料"
 
 #: lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Discover New"
 msgstr "发现课程"
 
@@ -17475,15 +17511,18 @@ msgstr "发现课程"
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Sysadmin"
 msgstr "系统管理员"
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Professors"
 msgstr "教授"
 
 #: lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Expiry: "
 msgstr "有效期至："
 
@@ -17492,6 +17531,7 @@ msgstr "有效期至："
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/shoppingcart/shopping_cart.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Shopping Cart"
 msgstr "购物车"
 
@@ -19122,10 +19162,6 @@ msgstr "我的课程"
 msgid "My Journals"
 msgstr "我的文章"
 
-#: lms/templates/learner_dashboard/program_details.html
-msgid "Program Details"
-msgstr "项目详情"
-
 #: lms/templates/learner_dashboard/text-me-fragment.html
 msgid "Get the {platform_name} Mobile App!"
 msgstr "下载{platform_name}移动App！ "
@@ -19336,7 +19372,7 @@ msgstr "教授详情"
 #: lms/templates/professors/detail.html
 msgctxt "Professor"
 msgid "View Courses"
-msgstr "查看课程"
+msgstr "讲授课程"
 
 #: lms/templates/professors/index.html
 msgid "Professors List"
@@ -20761,6 +20797,54 @@ msgid ""
 "Share your experience by clicking the button on the above right corner of "
 "the screen"
 msgstr "点击屏幕右上角分享按钮"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{oldPrice}"
+msgstr "{currency}{oldPrice}"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice})"
+msgstr "{currency}{newPrice}）"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Length"
+msgstr "预计周数"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Effort"
+msgstr "课时"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Courses"
+msgstr "课程"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Price"
+msgstr "价格"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice}{htmlEnd} for entire program"
+msgstr "整个系列 {currency}{newPrice}{htmlEnd} "
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{discount_value}"
+msgstr "{discount_value}"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{full_program_price} for entire program"
+msgstr "整个系列{currency}{full_program_price}"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "Enroll Now"
+msgstr "现在选课"
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "Not Currently Available"
+msgstr "当前不可用"
 
 #: themes/normal-theme/lms/templates/static_templates/about.html
 msgid ""
@@ -24710,10 +24794,6 @@ msgid "Displayed on the course details page. Limit to 50 characters."
 msgstr "显示于课程详情页面，不超过50个字符。"
 
 #: cms/templates/settings.html
-msgid "Course Description"
-msgstr "课程描述"
-
-#: cms/templates/settings.html
 msgid "Displayed on the course details page. Limit to 1000 characters."
 msgstr "显示于课程详情页面，不超过1000个字符。"
 
@@ -26868,7 +26948,7 @@ msgstr "施建军 博士"
 
 #: membership/templates/membership/index.html
 msgid "Former President and Professor at UIBE"
-msgstr "原对外经济贸易大学校长、<br/>教授"
+msgstr "原对外经济贸易大学校长、教授"
 
 #: membership/templates/membership/index.html
 msgid ""

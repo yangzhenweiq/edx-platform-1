@@ -9,6 +9,7 @@ from django.urls import reverse
 from django.utils.translation import ugettext as _
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from django.conf import settings
+from student.views.dashboard import enroll_programs
 %>
 
 <%
@@ -18,6 +19,7 @@ from django.conf import settings
 
   support_link = configuration_helpers.get_value('SUPPORT_SITE_LINK', settings.SUPPORT_SITE_LINK)
   doc_link = get_online_help_info(online_help_token)['doc_url']
+  enrolled_programs = enroll_programs(request, user)
 
   if online_help_token == "instructor":
     help_link = doc_link
@@ -36,7 +38,7 @@ from django.conf import settings
              ${_("Courses")}
         </a>
       </div>
-      % if show_program_listing:
+      % if show_program_listing and enrolled_programs:
         <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
           <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}"
              aria-current="${'page' if reverse('program_listing_view') == request.path else 'false'}">

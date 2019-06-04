@@ -28,18 +28,18 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2019.
 #
-# #-#-#-#-#  membership.po (0.1a)  #-#-#-#-#
-# #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2019 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# #-#-#-#-#  membership.po (PROJECT VERSION)  #-#-#-#-#
+# #-#-#-#-#  django-partial.po (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# #-#-#-#-#  mako.po (0.1a)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2019 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# #-#-#-#-#  mako.po (PROJECT VERSION)  #-#-#-#-#
+# Translations template for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 # #-#-#-#-#  eliteu.po (0.1a)  #-#-#-#-#
 # edX translation file.
@@ -5649,6 +5649,7 @@ msgstr ""
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/normal-theme/lms/templates/footer.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Learn More"
 msgstr ""
 
@@ -6970,6 +6971,7 @@ msgstr ""
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Membership"
 msgstr ""
 
@@ -8723,13 +8725,15 @@ msgid "Credit"
 msgstr ""
 
 #: lms/envs/eliteu_common.py lms/templates/certificates/verify.html
+#: lms/templates/provider/authorize.html
 #: themes/normal-theme/lms/templates/footer.html
 #: themes/normal-theme/lms/templates/static_templates/about.html
+#: membership/templates/membership/card.html
 #: membership/templates/membership/index.html
 msgid "EliteMBA"
 msgstr ""
 
-#: lms/envs/eliteu_common.py membership/templates/membership/index.html
+#: lms/envs/eliteu_common.py
 msgid "Certificate"
 msgstr ""
 
@@ -9097,6 +9101,7 @@ msgid "Skip to main content"
 msgstr ""
 
 #: lms/templates/oauth2_provider/authorize.html
+#: lms/templates/provider/authorize.html
 msgid "Authorize"
 msgstr ""
 
@@ -11620,6 +11625,7 @@ msgid "HTML"
 msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py lms/templates/video.html
+#: membership/templates/membership/index.html
 msgid "Video"
 msgstr ""
 
@@ -12173,6 +12179,7 @@ msgstr ""
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Courses"
 msgstr ""
 
@@ -12222,7 +12229,13 @@ msgstr ""
 msgid "Course End Date"
 msgstr ""
 
+#: cms/templates/settings.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "Course Description"
+msgstr ""
+
 #: cms/templates/settings.html lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Instructors"
 msgstr ""
 
@@ -12273,6 +12286,7 @@ msgstr ""
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/static_templates/help.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 #: wiki/plugins/help/wiki_plugin.py
 msgid "Help"
 msgstr ""
@@ -15518,11 +15532,13 @@ msgid "Updates to Discussion Posts You Follow"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Purchase the Program ("
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/journals/templates/journals/bundle_about.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Original Price"
 msgstr ""
 
@@ -15532,6 +15548,7 @@ msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/journals/templates/journals/bundle_about.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Discounted Price"
 msgstr ""
 
@@ -15544,40 +15561,49 @@ msgid "{currency})"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Start Learning"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Play"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "YouTube Video"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/shopping_cart.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "View Courses"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Meet the Instructors"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Frequently Asked Questions"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Job Outlook"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Real Career Impact"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "What You'll Learn"
 msgstr ""
 
@@ -15586,6 +15612,7 @@ msgid "Average Length"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "{weeks_to_complete} weeks per course"
 msgstr ""
 
@@ -15594,6 +15621,7 @@ msgid "Effort"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid ""
 "{min_hours_effort_per_week}-{max_hours_effort_per_week} hours per week, per "
 "course"
@@ -15604,10 +15632,12 @@ msgid "Number of Courses"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "{number_of_courses} courses in program"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Price ({currencyCode})"
 msgstr ""
 
@@ -15620,6 +15650,7 @@ msgid "{newPrice}{htmlEnd} for entire program"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "You save "
 msgstr ""
 
@@ -15632,11 +15663,13 @@ msgid "{full_program_price} for entire program"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Courses in the {}"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/journals/templates/journals/bundle_about.html
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
 msgid "Starts on {}"
 msgstr ""
 
@@ -16518,6 +16551,7 @@ msgstr ""
 
 #: lms/templates/elitemba/hmm.html
 #: lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Harvard ManageMentor"
 msgstr ""
 
@@ -17098,6 +17132,7 @@ msgstr ""
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Programs"
 msgstr ""
 
@@ -17105,6 +17140,7 @@ msgstr ""
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Journals"
 msgstr ""
 
@@ -17113,10 +17149,12 @@ msgstr ""
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Profile"
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Discover New"
 msgstr ""
 
@@ -17124,15 +17162,18 @@ msgstr ""
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Sysadmin"
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Professors"
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Expiry: "
 msgstr ""
 
@@ -17141,6 +17182,7 @@ msgstr ""
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/shoppingcart/shopping_cart.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: themes/normal-theme/lms/templates/header/navbar-authenticated.html
 msgid "Shopping Cart"
 msgstr ""
 
@@ -18754,10 +18796,6 @@ msgstr ""
 
 #: lms/templates/learner_dashboard/_dashboard_navigation_journals.html
 msgid "My Journals"
-msgstr ""
-
-#: lms/templates/learner_dashboard/program_details.html
-msgid "Program Details"
 msgstr ""
 
 #: lms/templates/learner_dashboard/text-me-fragment.html
@@ -20375,6 +20413,54 @@ msgid ""
 "the screen"
 msgstr ""
 
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{oldPrice}"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice})"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Length"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Effort"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Courses"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Price"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice}{htmlEnd} for entire program"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{discount_value}"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{full_program_price} for entire program"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "Enroll Now"
+msgstr ""
+
+#: themes/normal-theme/lms/templates/courseware/program_marketing.html
+msgid "Not Currently Available"
+msgstr ""
+
 #: themes/normal-theme/lms/templates/static_templates/about.html
 msgid ""
 "EliteMBA (www.EliteMBA.cn) is a sub-brand of Guangdong Elite International "
@@ -20443,7 +20529,6 @@ msgid "To become a reputable brand of digital education in China."
 msgstr ""
 
 #: themes/normal-theme/lms/templates/static_templates/contact.html
-#: membership/templates/membership/card.html
 msgid "Elite Education"
 msgstr ""
 
@@ -24189,10 +24274,6 @@ msgid "Displayed on the course details page. Limit to 50 characters."
 msgstr ""
 
 #: cms/templates/settings.html
-msgid "Course Description"
-msgstr ""
-
-#: cms/templates/settings.html
 msgid "Displayed on the course details page. Limit to 1000 characters."
 msgstr ""
 
@@ -26016,6 +26097,26 @@ msgid ""
 msgstr ""
 
 #: membership/models.py
+msgid "1 Month"
+msgstr ""
+
+#: membership/models.py
+msgid "3 Months"
+msgstr ""
+
+#: membership/models.py
+msgid "6 Months"
+msgstr ""
+
+#: membership/models.py
+msgid "12 Months"
+msgstr ""
+
+#: membership/models.py
+msgid "24 Months"
+msgstr ""
+
+#: membership/models.py
 msgid "Awaiting for payment"
 msgstr ""
 
@@ -26078,7 +26179,7 @@ msgid "VIP membership"
 msgstr ""
 
 #: membership/templates/membership/card.html
-msgid "Elite MBA VIP membership"
+msgid "EliteMBA VIP Membership"
 msgstr ""
 
 #: membership/templates/membership/card.html
@@ -26086,7 +26187,7 @@ msgid "View Introduction"
 msgstr ""
 
 #: membership/templates/membership/card.html
-msgid "Select a course"
+msgid "Select a Course"
 msgstr ""
 
 #: membership/templates/membership/card.html
@@ -26098,49 +26199,53 @@ msgid "Membership Valid in "
 msgstr ""
 
 #: membership/templates/membership/card.html
-msgid "days"
+msgid " days"
 msgstr ""
 
 #: membership/templates/membership/card.html
-msgid "Tuition:"
+msgid "Tuition: "
+msgstr ""
+
+#: membership/templates/membership/card.html
+msgid "Go to Payment"
+msgstr ""
+
+#: membership/templates/membership/card.html
+msgid "Complete Payment in a New Page"
+msgstr ""
+
+#: membership/templates/membership/card.html
+msgid ""
+"{span_start}Please do not close the page.{span_end} Please click the button "
+"below accordingly after completing the payment."
+msgstr ""
+
+#: membership/templates/membership/card.html
+msgid "Choose Another Payment Method"
+msgstr ""
+
+#: membership/templates/membership/card.html
+msgid "Payment Completed"
+msgstr ""
+
+#: membership/templates/membership/card.html
+msgid "Encounter a problem?"
 msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Go to payment"
 msgstr ""
 
-#: membership/templates/membership/card.html
-msgid "Complete payment in a new page"
-msgstr ""
-
-#: membership/templates/membership/card.html
-msgid ""
-"{span_start}Please do not close the page {span_end}. Please click the button"
-" below accordingly after completing the payment."
-msgstr ""
-
-#: membership/templates/membership/card.html
-msgid "Choose another payment method"
-msgstr ""
-
-#: membership/templates/membership/card.html
-msgid "payment completed"
-msgstr ""
-
-#: membership/templates/membership/card.html
-msgid "Encounter a problem？"
+#: membership/templates/membership/index.html
+msgid "Membership of Prestige EMBA Courses in America"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Prestige EMBA courses in America"
+msgid "Six Main Areas for Administration Learning"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Six Course Specializations of Elite MBA School"
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid "Activate your all-round business gene, you alone are a team!"
+msgid "Activate your potential to become a versatile leader"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26152,7 +26257,7 @@ msgid "Innovation and Entrepreneurship"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Statistic Analysis"
+msgid "Statistical Analysis"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26160,7 +26265,7 @@ msgid "Information Technology"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Marketing and Sales"
+msgid "Sales and Marketing"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26168,7 +26273,7 @@ msgid "Retail Management"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "More courses coming soon"
+msgid "More Excellent Courses Coming Soon"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26184,7 +26289,7 @@ msgid "PhD in Management Information Systems, the University of Arizona, USA"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "J.D., Fordham University"
+msgid "J.D., Fordham University, USA"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26223,52 +26328,50 @@ msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
-"*All course updates reserved to EliteMBA and EliteMBA has the final "
-"interpretation."
+"*EliteMBA reserves the right of final interpretation for all course updates."
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Best faculties ---- Elite Education"
+msgid "World-Class Faculty"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Professor of American Famous Business Schools"
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid ""
-"To build the all-around business knowledge matrix, and systematic learning "
-"from zero to one"
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid "Dr. Bochun Xiao"
+msgid "Professors from leading Business Schools in America"
 msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
-"Lifetime Professor and Dean of Management Major in School of Business, Long "
-"Island University - C. W. Post, USA"
+"Learn systematically, create a full knowledge matrix of administration from "
+"zero to one"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Dr. Lloyd E. Shefsky"
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid ""
-"Clinical Professor, Founder and Co-director of the Center for Family "
-"Enterprises in Kellogg School of Management at Northwestern University, USA"
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid "Prof. Tim Smithe"
+msgid "Dr. Baichun Xiao"
 msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
-"Vice President & Chief Management Officer of International Finance Education"
-" Association (IFEA)"
+"Tenured Professor and Chairman of the Department of Management at LIU Post, "
+"USA"
+msgstr ""
+
+#: membership/templates/membership/index.html
+msgid "Lloyd Shefsky"
+msgstr ""
+
+#: membership/templates/membership/index.html
+msgid ""
+"Former Clinical Professor of Family Enterprises at Kellogg School of "
+"Management at NU, USA"
+msgstr ""
+
+#: membership/templates/membership/index.html
+msgid "Tim Smithe"
+msgstr ""
+
+#: membership/templates/membership/index.html
+msgid ""
+"Vice President & CMO of International Finance Education Association (IFEA)"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26276,9 +26379,7 @@ msgid "Dr. Wei Yang"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid ""
-"Lifetime Professor in School of Business,  Long Island University - C. W. "
-"Post, USA"
+msgid "Tenured Professor of the School of Business at LIU Post, USA"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26287,8 +26388,8 @@ msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
-"Prior Assistant Professor of School of Labor and Employment Relations, Penn "
-"State University Park, USA"
+"Former Assistant Professor of School of Labor and Employment Relations at "
+"Penn State, USA"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26296,17 +26397,11 @@ msgid "Dr. Jiamin Wang"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid ""
-"Lifetime Professor of Information Management & Technology, Long Island "
-"University - C. W. Post, USA"
-msgstr ""
-
-#: membership/templates/membership/index.html
 msgid "Dr. Tianning Li"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Associate Professor of Finance and Finance, Hood College, USA"
+msgid "Associate Professor of Finance at Hood College, USA"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26314,13 +26409,12 @@ msgid "Dr. Jianjun Shi"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid ""
-"Prior President and Professor of the University of International Business "
-"and Economics {br}"
+msgid "Former President and Professor at UIBE"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Professor of Economics in Davidson College"
+msgid ""
+"The Frontis W. Johnston Professor of Economics at Davidson College, USA"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26328,7 +26422,7 @@ msgid "Dr. Elia Kacapyr"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Professor of Economics, Ithaca College, USA"
+msgid "Professor of Economics at Ithaca College, USA"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26336,13 +26430,7 @@ msgid "Dr. Robert Graham"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Professor of Economics, Hanover College, USA"
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid ""
-"Prior President and Professor of the University of International Business "
-"and Economics"
+msgid "Professor of Economics at Hanover College, USA"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26350,17 +26438,17 @@ msgid "View More"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Become EliteMBA Member"
+msgid "Join EliteMBA Membership"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Choose appropriate learning duration according to your needs"
+msgid "Choose a membership plan that fits your needs"
 msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
-"Enjoy learning all courses in the EliteMBA MBA school during the study "
-"period，You can join the new class online now!"
+"Have unlimited access to all courses at EliteMBA during membership period, "
+"including newly released courses"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26373,7 +26461,8 @@ msgid "average per month"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Full-stack workplace practice"
+msgctxt "Membership"
+msgid "Professional"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26382,7 +26471,7 @@ msgid "Half-Year"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Improve Ability Efficiently"
+msgid "Senior"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26391,7 +26480,7 @@ msgid "Three-Month"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "A series of courses for learning"
+msgid "Explorer"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26400,23 +26489,13 @@ msgid "One-Month"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Multiple-Course Experience"
+msgid "Beginner"
 msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
-"*Now sign up to enjoy the above offers. Please go to the purchase page for "
-"details."
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid ""
-"Enjoy learning all courses in the EliteMBA MBA school during the study "
-"period"
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid "You can join the new class once online"
+"*Sign up NOW and get the most of your membership. More info on the payment "
+"page."
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26424,11 +26503,7 @@ msgid "Learning Feature"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Video Lesson"
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid "Interaction within Groups"
+msgid "Group Chat"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26436,7 +26511,11 @@ msgid "Live Lecture"
 msgstr ""
 
 #: membership/templates/membership/index.html
-msgid "Exercise Test"
+msgid "Exam"
+msgstr ""
+
+#: membership/templates/membership/index.html
+msgid "Credential"
 msgstr ""
 
 #: membership/templates/membership/index.html
@@ -26445,12 +26524,8 @@ msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
-"There is a gap called self-discipline outside of 8 hours. Start with the "
-"EliteMBA and become a self-disciplined full-stack workplace!"
-msgstr ""
-
-#: membership/templates/membership/index.html
-msgid "EliteMBA Theory"
+"Self-disciplined learning off work decides how competitive you are. Let’s "
+"discipline ourselves and gain advantage!"
 msgstr ""
 
 #: membership/templates/membership/result.html
@@ -26477,11 +26552,12 @@ msgid "Amount paid: "
 msgstr ""
 
 #: membership/templates/membership/wechat_paying.html
-msgid "Please complete the  payment within 2 hours, or the purchase may fail"
+msgid ""
+"Please complete the payment within 2 hours, otherwise the purchase may fail."
 msgstr ""
 
 #: membership/templates/membership/wechat_paying.html
-msgid "Scan QR code with WeChat"
+msgid "Please scan Wechat QR code"
 msgstr ""
 
 #: membership/templates/membership/wechat_paying.html

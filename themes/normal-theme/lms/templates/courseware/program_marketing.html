@@ -102,8 +102,8 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
               <h1 class="program_title">${program['title']}</h1>
             </div>
             <div>
-              <h2>${program['subtitle']}</h2>
-            </div>
+              <h2 class="subtitle">${program['subtitle']}</h2>
+            </div> 
             <div>
 
               ## Note: Weird formatting to fix the inline spacing issue.
@@ -113,22 +113,15 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
                     ${_('Purchase the Program (')}
                   </span>
                   % if program.get('discount_data') and program['discount_data']['is_discounted']:
-                    <span aria-label="${_('Original Price')}" class="original-price">
-                      ${Text(_('${oldPrice}')).format(oldPrice=full_program_price_format.format(program['discount_data']['total_incl_tax_excl_discounts']))}
+                    <span aria-label="${_('Original Price')}" class="original-price">                       
+                      ${Text(_('{currency}{oldPrice}')).format(currency=course_currency.get('symbol'), oldPrice=full_program_price_format.format(program['discount_data']['total_incl_tax_excl_discounts']))}
                     </span>
                     <span aria-label="${_('Discounted Price')}" class="discount">
-                        ${Text(_('${newPrice}')).format(newPrice=full_program_price,)}
-                    </span>
-                    <span class="savings">
-                      ${Text(_('{currency})')).format(
-                        discount_value=full_program_price_format.format(program['discount_data']['discount_value']),
-                        currency=program['discount_data']['currency']
-                      )}
+                        ${Text(_('{currency}{newPrice})')).format(currency=course_currency.get('symbol'), newPrice=full_program_price)}
                     </span>
                   % else:
                     <span>
-                      ${course_currency.get('symbol')}
-                      ${"{price})".format(price=full_program_price)}
+                      ${course_currency.get('symbol')}${"{price})".format(price=full_program_price)}
                     </span>
                   % endif
                 </a>
@@ -139,7 +132,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
               % endif
             </div>
           </div>
-          
+
           % if tencent_video:
           <!-- video player-->
           <link href="${static.url('normal-theme/css/imgcache-qq-tcplayer.css')}" rel="stylesheet">
@@ -181,7 +174,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             </script>
           </div>
           % endif
-          
+
         </div>
       </div>
     </div>
@@ -212,7 +205,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
         </div> -->
         <div class="courses-title">
           <div class="icon-xian"></div>
-          <h2>${_('View Courses')}</h2>
+          <h2>${_('Course Description')}</h2>
         </div>
         <div id="program-details-page" class="container">
           <div class="row program-info">
@@ -265,7 +258,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             </div>
           </div>
         </div>
-        
+
       </div>
 
       <div class="desc-right">
@@ -317,30 +310,29 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
                 % if program.get('discount_data') and program['discount_data']['is_discounted']:
                   <span class="price">
                     <span aria-label="${_('Original Price')}" class="original-price">
-                      ${Text(_('{currencySymbol}{oldPrice}')).format(
-                        currencySymbol=course_currency.get('symbol'),
+                      ${Text(_('{currency}{oldPrice}')).format(
+                        currency=course_currency.get('symbol'),
                         oldPrice=full_program_price_format.format(program['discount_data']['total_incl_tax_excl_discounts'])
                       )}
                     </span>
                     <span aria-label="${_('Discounted Price')}" class="discount green-highlight">
-                      ${course_currency.get('symbol')}
-                      ${Text(_('{newPrice}{htmlEnd} for entire program')).format(
+                      ${Text(_('{currency}{newPrice}{htmlEnd} for entire program')).format(
+                        currency=course_currency.get('symbol'),
                         newPrice=full_program_price,
                         htmlEnd=HTML('</span>')
                       )}
+                      <br>
                     <span class="savings green-highlight">
                       ${_('You save ')}
-                      ${course_currency.get('symbol')}
-                      ${Text(_('{discount_value} {currency}')).format(
-                        discount_value=full_program_price_format.format(program['discount_data']['discount_value']),
-                        currency=program['discount_data']['currency']
-                      )}
+                      ${course_currency.get('symbol')}${Text(_('{discount_value}')).format(
+                        discount_value=full_program_price_format.format(program['discount_data']['discount_value']))
+                      }
                     </span>
                   </span>
                 % else:
                   <span>
-                    ${course_currency.get('symbol')}
-                    ${Text(_('{full_program_price} for entire program')).format(
+                    ${Text(_('{currency}{full_program_price} for entire program')).format(
+                      currency=course_currency.get('symbol'),
                       full_program_price=full_program_price
                     )}
                   </span>
@@ -370,7 +362,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
             </div>
           % endfor
         </div>
-      </div> 
+      </div>
     </div>
     % endif
     % if courses:
@@ -419,11 +411,11 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
                   % if program.get('is_learner_eligible_for_one_click_purchase') != True:
                     % if course_run['is_enrollment_open'] and course_run['can_enroll'] and not course_run['is_course_ended']:
                       <div>
-                        <a class="program-btn" href="${course_purchase_url}">Enroll Now</a>
+                        <a class="program-btn" href="${course_purchase_url}">${_('Enroll Now')}</a>
                       </div>
                     % else:
                       <div>
-                        <a class="program-btn" href="#" >Not Currently Available</a>
+                        <a class="program-btn" href="#" >${_('Not Currently Available')}</a>
                       </div>
                     % endif
                   % endif
@@ -454,7 +446,7 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
       </div>
     </div>
     % endif
-    
+
     % if instructors:
     <div class="my-program-content">
       <div class="tab-content">
@@ -510,14 +502,14 @@ endorser_org = endorser_position.get('organization_name') or corporate_endorseme
               </div>
             % endfor
           </div>
-      </div> 
+      </div>
     </div>
     % endif
-    
-          
-        
-        
-      
-    
+
+
+
+
+
+
   </div>
 </%block>
