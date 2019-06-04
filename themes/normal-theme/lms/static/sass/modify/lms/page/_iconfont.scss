@@ -57,6 +57,7 @@ $icon-width: 18px;
 .fa-work-time,
 .fa-effort-time,
 .fa-catalog,
+.fa-play-circle-about,
 .paragon__alert-dismissible .paragon__close:before
 {
   content: '';
@@ -66,7 +67,9 @@ $icon-width: 18px;
   background-size: (600 / 40) * $icon-width;
   background-image: url("/static/normal-theme/images/iconfont.png");
 }
-
+.fa-play-circle-about{
+  background-position: calcP(10, 8)
+}
 .fa-money:before{
   background-position: calcP(1, 1)
 }

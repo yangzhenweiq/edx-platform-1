@@ -5,17 +5,19 @@
     border: none;
   }
   .program-branner{
-    width: 1200px;
-    max-width: 1200px;
+    width: 1152px;
+    max-width: 1152px;
     min-height: 308px;
     .row{
       position: relative;
       padding-top: 3%;
       .program_title{
         font-size: 32px;
+        font-weight: normal;
       }
       .subtitle{
         font-size: 20px;
+        font-weight: 100;
       }
       .program-btn{
         .original-price{
@@ -28,8 +30,11 @@
       .my-video{
         position: absolute;
         top: 30%;
-        right: 0px;
-
+        right: 15%;
+        .fa-play-circle-about{
+            transform: scale(4);
+            margin-top: 40px;
+        }
       }
       .program-video-box{
         justify-content: center;
