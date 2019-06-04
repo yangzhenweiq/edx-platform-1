@@ -383,9 +383,9 @@
     }
 
     .msg-icon {
-       width: flex-grid(1, 12);
+      width: flex-grid(1, 12);
 
-       @extend %t-icon2;
+      @extend %t-icon2;
 
       @include margin-right(flex-gutter());
 
@@ -417,10 +417,7 @@
 
     .msg-icon {
       color: $m-pink;
-      margin-top: 5px;
-      margin-bottom: 5px;
     }
-
 
     .msg-content {
       .title {
