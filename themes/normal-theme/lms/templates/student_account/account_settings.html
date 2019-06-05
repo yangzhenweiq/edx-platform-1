@@ -1,0 +1,116 @@
+<%page expression_filter="h"/>
+
+<%!
+import json
+
+from django.urls import reverse
+from django.conf import settings
+from django.utils.translation import ugettext as _
+
+from openedx.core.djangolib.js_utils import dump_js_escaped_json, js_escaped_string
+from openedx.core.djangolib.markup import HTML
+from webpack_loader.templatetags.webpack_loader import render_bundle
+from openedx.core.djangoapps.user_api.accounts.utils import is_secondary_email_feature_enabled_for_user
+
+%>
+
+<%inherit file="/main.html" />
+<%def name="online_help_token()"><% return "learneraccountsettings" %></%def>
+<%namespace name='static' file='/static_content.html'/>
+
+<%block name="pagetitle">${_("Account Settings")}</%block>
+
+% if duplicate_provider:
+    <section>
+        <%include file='/dashboard/_dashboard_third_party_error.html' />
+    </section>
+% endif
+
+<div class="wrapper-account-settings"></div>
+<%block name="headextra">
+    <%static:css group='style-course'/>
+    <link type="text/css" rel="stylesheet" href="${STATIC_URL}paragon/static/paragon.min.css">
+</%block>
+
+<%block name="js_extra">
+<%static:require_module module_name="js/student_account/views/account_settings_factory" class_name="AccountSettingsFactory">
+    var fieldsData = ${ fields | n, dump_js_escaped_json },
+        ordersHistoryData = ${ order_history | n, dump_js_escaped_json },
+        authData = ${ auth | n, dump_js_escaped_json },
+        platformName = '${ static.get_platform_name() | n, js_escaped_string }',
+        contactEmail = '${ static.get_contact_email_address() | n, js_escaped_string }',
+        allowEmailChange = ${ bool(settings.FEATURES['ALLOW_EMAIL_ADDRESS_CHANGE']) | n, dump_js_escaped_json },
+        hmmInEffect = ${ hasattr(user, 'hmm_profile') and user.hmm_profile.remaining_days > 0 | n, dump_js_escaped_json },
+        socialPlatforms = ${ settings.SOCIAL_PLATFORMS | n, dump_js_escaped_json },
+
+        syncLearnerProfileData = ${ bool(sync_learner_profile_data) | n, dump_js_escaped_json },
+        enterpriseName = '${ enterprise_name | n, js_escaped_string }',
+        enterpriseReadonlyAccountFields = ${ enterprise_readonly_account_fields | n, dump_js_escaped_json },
+        edxSupportUrl = '${ edx_support_url | n, js_escaped_string }',
+        extendedProfileFields = ${ extended_profile_fields | n, dump_js_escaped_json },
+        displayAccountDeletion = ${ enable_account_deletion | n, dump_js_escaped_json};
+
+        isSecondaryEmailFeatureEnabled = ${ bool(is_secondary_email_feature_enabled_for_user(user)) | n, dump_js_escaped_json },
+
+        currency = ${ currency | n, dump_js_escaped_json};
+
+
+    AccountSettingsFactory(
+        fieldsData,
+        ordersHistoryData,
+        authData,
+        '${ password_reset_support_link | n, js_escaped_string }',
+        '${ user_accounts_api_url | n, js_escaped_string }',
+        '${ user_preferences_api_url | n, js_escaped_string }',
+        ${ user.id | n, dump_js_escaped_json },
+        platformName,
+        contactEmail,
+        allowEmailChange,
+        hmmInEffect,
+        socialPlatforms,
+
+        syncLearnerProfileData,
+        enterpriseName,
+        enterpriseReadonlyAccountFields,
+        edxSupportUrl,
+        extendedProfileFields,
+        displayAccountDeletion,
+        isSecondaryEmailFeatureEnabled,
+        currency
+
+    );
+    var tmp = $('.phone-fileds').html();
+    $('.u-field-password').after(tmp);
+    $('.phone-fileds').html('');
+    $('#u-field-link-phone,.change-phone-btn').click(function(){
+    $('.phone-dialog').show();
+        phoneDialog();
+    });
+    $('.fa-message-close').click(function(){
+        window.location.reload()
+    });
+    
+</%static:require_module>
+<div class="phone-fileds" style="display:none">
+    <div class="u-field u-field-button u-field-phone"><div class="u-field-value field">
+        <span class="u-field-title field-label">${_(u"Mobile")}</span>
+        % if phone == 'null':
+        <button class="u-field-link u-field-link-title-phone " id="u-field-link-phone" aria-describedby="u-field-message-help-phone">${_(u"Bind Mobile")}</button>
+        % else:
+        <span class="phone-number">${_(u"Mobile Phone No.:")} ${ phone }</span> <span style="float:right; color:#346ca3; cursor: pointer;" class="change-phone-btn">${_(u"Change")}</span>
+        % endif
+    </div>
+    <span class="u-field-message" id="u-field-message-phone">
+        <span class="u-field-message-notification" aria-live="polite"></span>
+        <span class="u-field-message-help" id="u-field-message-help-phone">${_(u"Bind your EliteMBA account to your cellphone number.")}</span>
+    </span>
+    </div> 
+</div>
+<script type="text/javascript">
+     window.auth = ${ auth | n, dump_js_escaped_json };
+     window.isActive = ${ user.is_active | n, dump_js_escaped_json };
+     window.domainName = ${ settings.SESSION_COOKIE_DOMAIN | n, dump_js_escaped_json };
+</script>
+<%static:webpack entry="StudentAccountDeletionInitializer">
+</%static:webpack>
+</%block>
