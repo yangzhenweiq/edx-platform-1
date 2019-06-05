@@ -34,10 +34,8 @@ FEATURES.update({
 })
 
 MEMBERSHIP_ROOT = REPO_ROOT / "../edx-membership"
-# PAYMENTS_ROOT = REPO_ROOT / "../eliteu-payments"
 
 sys.path.append(MEMBERSHIP_ROOT)
-# sys.path.append(PAYMENTS_ROOT)
 
 OAUTH2_PROVIDER.update({
     'ACCESS_TOKEN_EXPIRE_SECONDS': 60 * 60 * 24 * 365,
