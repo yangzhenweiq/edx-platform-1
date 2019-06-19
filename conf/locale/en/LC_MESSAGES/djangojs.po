@@ -28,21 +28,33 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# #-#-#-#-#  theme-js.po (0.1a)  #-#-#-#-#
+# #-#-#-#-#  djangojs-theme.po (0.1a)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2019 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2019.
+#
+# #-#-#-#-#  underscore-theme.po (0.1a)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2019 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2019.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-19 10:39+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Project-Id-Version: 0.1a\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2019-06-19 03:34+0000\n"
+"PO-Revision-Date: 2019-06-19 03:34:49.344237\n"
+"Last-Translator: \n"
+"Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 1.3\n"
-"#-#-#-#-#  membership-js.po (PACKAGE VERSION)  #-#-#-#-#\n"
 
 #: cms/static/cms/js/xblock/cms.runtime.v1.js
 #: cms/static/js/certificates/views/signatory_details.js
@@ -10523,4 +10535,140 @@ msgstr ""
 #: membership/static/membership/js/result.js
 #, javascript-format
 msgid "Return to EliteMBA in %s seconds"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+#, javascript-format
+msgid "%s s"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+msgid "Get the verification code"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+msgid "Cell phone number cannot be blanked"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+msgid "incorrect cellphone number format"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+msgid "Cellphone number binding successfully"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To know more about courses"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Click the course to view the course introduction video, browse the course "
+"introduction, instructor introduction and course outline, etc."
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To join as a member"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Membership\" page, choose your learning duration and payment method."
+" After payment is completed, you can enjoy learning all courses on EliteMBA "
+"during the study period."
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To view the end-date of membership"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "Enter \"Membership\" page to view the VIP open date and remaining days."
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To enroll as a member"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Free Enrollment for VIP\" button, "
+"then the enrollment is fulfilled."
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To purchase a course"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Enroll\" button, then you can start "
+"learning after payment is completed."
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To start a course"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Click your avatar in the upper right corner of the page, enter \"Dashboard\""
+" to view the course introduction, watch videos and complete assignments."
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To participate in discussion"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Dashboard - View Course\" page, click \"Discussion\". You can view "
+"discussions, engage with posts and receive updates."
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To view and download handouts"
+msgstr ""
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Dashboard - View Course\" page, find \"Course Handouts\" on the "
+"right side. You can view handout content and download."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Certificate exceptions group selection"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/expired_notification.underscore
+msgid ""
+"You enrolled in this course but did not earn the certificate required to "
+"complete this program."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid ""
+"You have successfully completed all the requirements for the {title} {type}."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid ""
+"Track and plan your progress through the {count} courses in this program."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid "{listPrice}"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid "{price})"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
+msgid ""
+"You already have an EliteMBA account with your {enterprise_name} email "
+"address."
 msgstr ""

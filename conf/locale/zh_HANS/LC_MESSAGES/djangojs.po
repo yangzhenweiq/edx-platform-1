@@ -44,12 +44,31 @@
 # Translators:
 # li ying <code@eliteu.cn>, 2019
 #
+# #-#-#-#-#  theme-js.po (0.1a)  #-#-#-#-#
+# #-#-#-#-#  djangojs-theme.po (0.1a)  #-#-#-#-#
+# edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/).
+# Copyright (C) 2019 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2019.
+#
+# Translators:
+# li ying <code@eliteu.cn>, 2019
+#
+# #-#-#-#-#  underscore-theme.po (0.1a)  #-#-#-#-#
+# edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)
+# Copyright (C) 2019 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2019.
+#
+# Translators:
+# li ying <code@eliteu.cn>, 2019
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-19 10:39+0800\n"
-"PO-Revision-Date: 2019-05-16 12:40+0000\n"
+"Project-Id-Version: 0.1a\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2019-06-19 03:34+0000\n"
+"PO-Revision-Date: 2019-06-19 06:25+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
 "Language: zh_CN\n"
@@ -58,7 +77,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 1.3\n"
-"#-#-#-#-#  membership-js.po (PACKAGE VERSION)  #-#-#-#-#\n"
 
 #: cms/static/cms/js/xblock/cms.runtime.v1.js
 #: cms/static/js/certificates/views/signatory_details.js
@@ -10573,3 +10591,139 @@ msgstr "调起支付失败"
 #, javascript-format
 msgid "Return to EliteMBA in %s seconds"
 msgstr "%s 秒后返回英荔商学院"
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+#, javascript-format
+msgid "%s s"
+msgstr "%s秒"
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+msgid "Get the verification code"
+msgstr "获取验证码"
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+msgid "Cell phone number cannot be blanked"
+msgstr "手机号码不能为空"
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+msgid "incorrect cellphone number format"
+msgstr "手机号码格式不正确"
+
+#: themes/elitemba-theme/lms/static/js/binding.js
+msgid "Cellphone number binding successfully"
+msgstr "手机号码绑定成功"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To know more about courses"
+msgstr "如何了解课程？"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Click the course to view the course introduction video, browse the course "
+"introduction, instructor introduction and course outline, etc."
+msgstr "点击课程进入详情页，观看课程简介视频，浏览课程简介、导师简介及课程大纲等。"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To join as a member"
+msgstr "如何加入会员？"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Membership\" page, choose your learning duration and payment method."
+" After payment is completed, you can enjoy learning all courses on EliteMBA "
+"during the study period."
+msgstr "进入“会员资格”页，选择适合您的学习时长及支付方式，支付成功后便可在会员期限内享受所有课程的学习权益。"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To view the end-date of membership"
+msgstr "如何查看已购买的会员期限？"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "Enter \"Membership\" page to view the VIP open date and remaining days."
+msgstr "进入“会员资格”页，可查看会员已开通时间及剩余时间。"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To enroll as a member"
+msgstr "会员如何选课？"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Free Enrollment for VIP\" button, "
+"then the enrollment is fulfilled."
+msgstr "进入“发现课程”页，直接选择或通过搜索关键字的方式选择您感兴趣的课程，点击“VIP会员免费选修此课程”，即为选课成功。"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To purchase a course"
+msgstr "非会员如何购买单课？"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Enroll\" button, then you can start "
+"learning after payment is completed."
+msgstr "进入“发现课程”页，直接选择或通过搜索关键字的方式选择您感兴趣的课程，点击“选修此课程”，支付成功后即可开始学习该门课程。"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To start a course"
+msgstr "如何开始学习？"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Click your avatar in the upper right corner of the page, enter \"Dashboard\""
+" to view the course introduction, watch videos and complete assignments."
+msgstr "点击网页右上角个人头像进入“课程面板-查看课程”，可浏览课程简介；点击“开始学习课程”，可观看课程视频，提交课后习题。"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To participate in discussion"
+msgstr "如何参与课程讨论？"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Dashboard - View Course\" page, click \"Discussion\". You can view "
+"discussions, engage with posts and receive updates."
+msgstr "进入“课程面板-查看课程”页，点击“讨论”，可以查看讨论帖、参与讨论及接收讨论帖更新。"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid "To view and download handouts"
+msgstr "如何查看和下载课程讲义？"
+
+#: themes/elitemba-theme/lms/static/js/manual.js
+msgid ""
+"Enter \"Dashboard - View Course\" page, find \"Course Handouts\" on the "
+"right side. You can view handout content and download."
+msgstr "进入“课程面板-查看课程”页，在右侧找到“课程讲义”，可查看讲义内容并下载。"
+
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Certificate exceptions group selection"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/expired_notification.underscore
+msgid ""
+"You enrolled in this course but did not earn the certificate required to "
+"complete this program."
+msgstr "您已注册此课程，但未获得完成此课程所需的证书。"
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid ""
+"You have successfully completed all the requirements for the {title} {type}."
+msgstr "您已成功完成 {title} {type}专业的所有要求。"
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid ""
+"Track and plan your progress through the {count} courses in this program."
+msgstr "通过本系列的 {count} 门课程来跟踪和计划你的学习进度。"
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid "{listPrice}"
+msgstr "{listPrice}"
+
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid "{price})"
+msgstr "{price}）"
+
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
+msgid ""
+"You already have an EliteMBA account with your {enterprise_name} email "
+"address."
+msgstr "您已使用{enterprise_name}邮箱地址注册EliteMBA账号。"
