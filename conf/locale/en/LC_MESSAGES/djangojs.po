@@ -28,7 +28,6 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# #-#-#-#-#  theme-js.po (0.1a)  #-#-#-#-#
 # #-#-#-#-#  djangojs-theme.po (0.1a)  #-#-#-#-#
 # edX translation file.
 # Copyright (C) 2019 EdX

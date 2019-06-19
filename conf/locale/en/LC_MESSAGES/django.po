@@ -50,7 +50,6 @@
 # Translators:
 # li ying <code@eliteu.cn>, 2019
 #
-# #-#-#-#-#  theme.po (0.1a)  #-#-#-#-#
 # #-#-#-#-#  django-theme.po (0.1a)  #-#-#-#-#
 # edX translation file.
 # Copyright (C) 2019 EdX

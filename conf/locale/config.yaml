@@ -175,12 +175,6 @@ segment:
 
 # How should the generate step merge files?
 generate_merge:
-    theme.po:
-        - django-theme.po
-        - mako-theme.po
-    theme-js.po:
-        - djangojs-theme.po
-        - underscore-theme.po
     django.po:
         - django-partial.po
         - django-studio.po
@@ -189,12 +183,13 @@ generate_merge:
         - wiki.po
         - membership.po
         - eliteu.po
-        - theme.po
+        - django-theme.po
+        - mako-theme.po
     djangojs.po:
         - djangojs-partial.po
         - djangojs-studio.po
         - underscore.po
         - underscore-studio.po
         - membership-js.po
-        - theme-js.po
-        
+        - djangojs-theme.po
+        - underscore-theme.po
