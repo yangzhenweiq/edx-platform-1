@@ -183,15 +183,13 @@ generate_merge:
         - wiki.po
         - membership.po
         - eliteu.po
+        - django-theme.po
+        - mako-theme.po
     djangojs.po:
         - djangojs-partial.po
         - djangojs-studio.po
         - underscore.po
         - underscore-studio.po
         - membership-js.po
-    theme.po:
-        - django-theme.po
-        - mako-theme.po
-    theme-js.po:
         - djangojs-theme.po
         - underscore-theme.po
