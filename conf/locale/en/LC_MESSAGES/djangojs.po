@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-27 16:25+0800\n"
+"POT-Creation-Date: 2019-06-19 10:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,6 +152,7 @@ msgstr ""
 #: cms/templates/js/previous-video-upload-list.underscore
 #: cms/templates/js/signatory-details.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Name"
 msgstr ""
 
@@ -3465,22 +3466,27 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "span"
 msgstr ""
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "div"
 msgstr ""
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "p"
 msgstr ""
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "img"
 msgstr ""
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "li"
 msgstr ""
 
@@ -5085,108 +5091,6 @@ msgstr ""
 msgid "Profile"
 msgstr ""
 
-#: themes/normal-theme/lms/static/js/binding.js
-#, javascript-format
-msgid "%s s"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/binding.js
-msgid "Get the verification code"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/binding.js
-msgid "Cell phone number cannot be blanked"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/binding.js
-msgid "incorrect cellphone number format"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/binding.js
-msgid "Cellphone number binding successfully"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To know more about courses"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Click the course to view the course introduction video, browse the course "
-"introduction, instructor introduction and course outline, etc."
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To join as a member"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Membership\" page, choose your learning duration and payment method."
-" After payment is completed, you can enjoy learning all courses on EliteMBA "
-"during the study period."
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To view the end-date of membership"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "Enter \"Membership\" page to view the VIP open date and remaining days."
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To enroll as a member"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Discover New\" page, click the course or search key words to select "
-"courses you are interested in, click \"Free Enrollment for VIP\" button, "
-"then the enrollment is fulfilled."
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To purchase a course"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Discover New\" page, click the course or search key words to select "
-"courses you are interested in, click \"Enroll\" button, then you can start "
-"learning after payment is completed."
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To start a course"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Click your avatar in the upper right corner of the page, enter \"Dashboard\""
-" to view the course introduction, watch videos and complete assignments."
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To participate in discussion"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Dashboard - View Course\" page, click \"Discussion\". You can view "
-"discussions, engage with posts and receive updates."
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To view and download handouts"
-msgstr ""
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Dashboard - View Course\" page, find \"Course Handouts\" on the "
-"right side. You can view handout content and download."
-msgstr ""
-
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 #: cms/static/js/views/video_transcripts.js
 msgid ""
@@ -6643,6 +6547,7 @@ msgstr ""
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Action"
 msgstr ""
 
@@ -7049,6 +6954,7 @@ msgstr ""
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "No results"
 msgstr ""
 
@@ -7498,26 +7404,32 @@ msgid "Click to edit"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Order Number"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Date Placed"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Cost"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Order Details"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "for"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Product Name"
 msgstr ""
 
@@ -7618,6 +7530,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Notes"
 msgstr ""
 
@@ -7644,30 +7557,37 @@ msgid "Free text notes"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Generate Exception Certificates"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list who do not yet have a certificate"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "User Email"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Exception Granted"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Certificate Generated"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Remove from List"
 msgstr ""
 
@@ -7980,12 +7900,6 @@ msgstr ""
 msgid "Explore Programs"
 msgstr ""
 
-#: lms/templates/learner_dashboard/expired_notification.underscore
-msgid ""
-"You enrolled in this course but did not earn the certificate required to "
-"complete this program."
-msgstr ""
-
 #: lms/templates/learner_dashboard/explore_new_programs.underscore
 msgid ""
 "Browse recently launched courses and see what\\'s new in your favorite "
@@ -8054,58 +7968,57 @@ msgid "Additional Professional Opportunities"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Congratulations!"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid ""
-"You have successfully completed all the requirements for the {title} {type}."
-msgstr ""
-
-#: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Your Program Journey"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid ""
-"Track and plan your progress through the {count} courses in this program."
-msgstr ""
-
-#: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "To complete the program, you must earn a verified certificate for each "
 "course."
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Upgrade All Remaining Courses ("
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid "{listPrice}"
+msgid "${listPrice}"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid "{price})"
+msgid " ${price} {currency} )"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "COURSES IN PROGRESS"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "REMAINING COURSES"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "COMPLETED COURSES"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "As you complete courses, you will see them listed here."
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "Complete courses on your schedule to ensure you stand out in your field!"
 msgstr ""
@@ -8149,6 +8062,7 @@ msgid "Recover my account"
 msgstr ""
 
 #: lms/templates/student_account/account_settings.underscore
+#: themes/elitemba-theme/lms/templates/student_account/account_settings.underscore
 msgid "Account Settings"
 msgstr ""
 
@@ -8162,6 +8076,7 @@ msgstr ""
 
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign in"
 msgstr ""
 
@@ -8201,72 +8116,85 @@ msgid "Register through edX"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "First time here?"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Create an Account."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign in to continue learning as {email}"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign in to continue learning"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
 msgid ""
-"You already have an EliteMBA account with your {enterprise_name} email "
-"address."
+"You already have an edX account with your {enterprise_name} email address."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid ""
 "Going forward, your account information will be updated and maintained by "
 "{enterprise_name}."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid ""
 "You can view your information or unlink from {enterprise_name} anytime in "
 "your Account Settings."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "To continue learning with this account, sign in below."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign In"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid ""
 "Sign in here using your email address and password, or use one of the "
 "providers listed below."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign in here using your email address and password."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "If you do not yet have an account, use the button below to register."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "or sign in with"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 #, python-format
 msgid "Sign in with %(providerName)s"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
 #: lms/templates/student_account/register.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Use my institution/campus credentials"
 msgstr ""
 

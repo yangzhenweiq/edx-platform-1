@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-27 16:25+0800\n"
+"POT-Creation-Date: 2019-06-19 10:39+0800\n"
 "PO-Revision-Date: 2019-05-16 12:40+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -168,6 +168,7 @@ msgstr "关闭"
 #: cms/templates/js/previous-video-upload-list.underscore
 #: cms/templates/js/signatory-details.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Name"
 msgstr "姓名"
 
@@ -3472,22 +3473,27 @@ msgid ""
 msgstr "这门课程为要获取认证证书的学生自动分组，但是群组功能被禁止。为了使该功能正常运行，您必须启用群组功能，"
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "span"
 msgstr ""
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "div"
 msgstr ""
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "p"
 msgstr ""
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "img"
 msgstr ""
 
 #: lms/static/js/imgcache-qq-tcplayer-min.js
+#: themes/elitemba-theme/lms/static/js/imgcache-qq-tcplayer-min.js
 msgid "li"
 msgstr ""
 
@@ -5106,108 +5112,6 @@ msgstr "成绩"
 msgid "Profile"
 msgstr "个人主页"
 
-#: themes/normal-theme/lms/static/js/binding.js
-#, javascript-format
-msgid "%s s"
-msgstr "%s秒"
-
-#: themes/normal-theme/lms/static/js/binding.js
-msgid "Get the verification code"
-msgstr "获取验证码"
-
-#: themes/normal-theme/lms/static/js/binding.js
-msgid "Cell phone number cannot be blanked"
-msgstr "手机号码不能为空"
-
-#: themes/normal-theme/lms/static/js/binding.js
-msgid "incorrect cellphone number format"
-msgstr "手机号码格式不正确"
-
-#: themes/normal-theme/lms/static/js/binding.js
-msgid "Cellphone number binding successfully"
-msgstr "手机号码绑定成功"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To know more about courses"
-msgstr "如何了解课程？"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Click the course to view the course introduction video, browse the course "
-"introduction, instructor introduction and course outline, etc."
-msgstr "点击课程进入详情页，观看课程简介视频，浏览课程简介、导师简介及课程大纲等。"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To join as a member"
-msgstr "如何加入会员？"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Membership\" page, choose your learning duration and payment method."
-" After payment is completed, you can enjoy learning all courses on EliteMBA "
-"during the study period."
-msgstr "进入“会员资格”页，选择适合您的学习时长及支付方式，支付成功后便可在会员期限内享受所有课程的学习权益。"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To view the end-date of membership"
-msgstr "如何查看已购买的会员期限？"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "Enter \"Membership\" page to view the VIP open date and remaining days."
-msgstr "进入“会员资格”页，可查看会员已开通时间及剩余时间。"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To enroll as a member"
-msgstr "会员如何选课？"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Discover New\" page, click the course or search key words to select "
-"courses you are interested in, click \"Free Enrollment for VIP\" button, "
-"then the enrollment is fulfilled."
-msgstr "进入“发现课程”页，直接选择或通过搜索关键字的方式选择您感兴趣的课程，点击“VIP会员免费选修此课程”，即为选课成功。"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To purchase a course"
-msgstr "非会员如何购买单课？"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Discover New\" page, click the course or search key words to select "
-"courses you are interested in, click \"Enroll\" button, then you can start "
-"learning after payment is completed."
-msgstr "进入“发现课程”页，直接选择或通过搜索关键字的方式选择您感兴趣的课程，点击“选修此课程”，支付成功后即可开始学习该门课程。"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To start a course"
-msgstr "如何开始学习？"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Click your avatar in the upper right corner of the page, enter \"Dashboard\""
-" to view the course introduction, watch videos and complete assignments."
-msgstr "点击网页右上角个人头像进入“课程面板-查看课程”，可浏览课程简介；点击“开始学习课程”，可观看课程视频，提交课后习题。"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To participate in discussion"
-msgstr "如何参与课程讨论？"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Dashboard - View Course\" page, click \"Discussion\". You can view "
-"discussions, engage with posts and receive updates."
-msgstr "进入“课程面板-查看课程”页，点击“讨论”，可以查看讨论帖、参与讨论及接收讨论帖更新。"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid "To view and download handouts"
-msgstr "如何查看和下载课程讲义？"
-
-#: themes/normal-theme/lms/static/js/manual.js
-msgid ""
-"Enter \"Dashboard - View Course\" page, find \"Course Handouts\" on the "
-"right side. You can view handout content and download."
-msgstr "进入“课程面板-查看课程”页，在右侧找到“课程讲义”，可查看讲义内容并下载。"
-
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 #: cms/static/js/views/video_transcripts.js
 msgid ""
@@ -6673,6 +6577,7 @@ msgstr "上一步"
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Action"
 msgstr "操作"
 
@@ -7080,6 +6985,7 @@ msgstr "课程ID"
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "No results"
 msgstr "没有结果"
 
@@ -7529,26 +7435,32 @@ msgid "Click to edit"
 msgstr "点击以编辑"
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Order Number"
 msgstr "订单号"
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Date Placed"
 msgstr "已设置日期"
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Cost"
 msgstr "价格"
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Order Details"
 msgstr "订单细节"
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "for"
 msgstr "的"
 
 #: lms/templates/fields/field_order_history.underscore
+#: themes/elitemba-theme/lms/templates/fields/field_order_history.underscore
 msgid "Product Name"
 msgstr "产品名称"
 
@@ -7652,6 +7564,7 @@ msgstr "已设定为无效"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Notes"
 msgstr "笔记"
 
@@ -7678,30 +7591,37 @@ msgid "Free text notes"
 msgstr "自由文本注释"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Generate Exception Certificates"
 msgstr "生成特例证书"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list who do not yet have a certificate"
 msgstr "特殊处理列表中尚未获得证书的所有用户"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list"
 msgstr "特殊处理列表中的所有用户"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "User Email"
 msgstr "用户电子邮件"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Exception Granted"
 msgstr "特殊处理已批准"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Certificate Generated"
 msgstr "证书已生成"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Remove from List"
 msgstr "从列表中删除"
 
@@ -8014,12 +7934,6 @@ msgstr "您尚未注册任何课程。"
 msgid "Explore Programs"
 msgstr "发现课程"
 
-#: lms/templates/learner_dashboard/expired_notification.underscore
-msgid ""
-"You enrolled in this course but did not earn the certificate required to "
-"complete this program."
-msgstr "您已注册此课程，但未获得完成此课程所需的证书。"
-
 #: lms/templates/learner_dashboard/explore_new_programs.underscore
 msgid ""
 "Browse recently launched courses and see what\\'s new in your favorite "
@@ -8088,58 +8002,57 @@ msgid "Additional Professional Opportunities"
 msgstr "附加的职业机会"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Congratulations!"
 msgstr "恭喜！"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid ""
-"You have successfully completed all the requirements for the {title} {type}."
-msgstr "您已成功完成 {title} {type}专业的所有要求。"
-
-#: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Your Program Journey"
 msgstr "您的课程学习之旅"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid ""
-"Track and plan your progress through the {count} courses in this program."
-msgstr "通过本系列的 {count} 门课程来跟踪和计划你的学习进度。"
-
-#: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "To complete the program, you must earn a verified certificate for each "
 "course."
 msgstr "您必须每一门课程都获得一份证书，才可以完成此课程方案。"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Upgrade All Remaining Courses ("
 msgstr "升级所有剩余课程（"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid "{listPrice}"
+msgid "${listPrice}"
 msgstr "{listPrice}"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid "{price})"
-msgstr "{price}）"
+msgid " ${price} {currency} )"
+msgstr "{price} {currency} ）"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "COURSES IN PROGRESS"
 msgstr "课程学习中"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "REMAINING COURSES"
 msgstr "剩余课程"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "COMPLETED COURSES"
 msgstr "已完成课程"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "As you complete courses, you will see them listed here."
 msgstr "您已完成的课程将显示在这里。"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "Complete courses on your schedule to ensure you stand out in your field!"
 msgstr "准时完成课程学习，比别人先走一步。"
@@ -8183,6 +8096,7 @@ msgid "Recover my account"
 msgstr "删除我的账号"
 
 #: lms/templates/student_account/account_settings.underscore
+#: themes/elitemba-theme/lms/templates/student_account/account_settings.underscore
 msgid "Account Settings"
 msgstr "账号设置"
 
@@ -8196,6 +8110,7 @@ msgstr "忘记密码？"
 
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign in"
 msgstr "登录"
 
@@ -8235,72 +8150,85 @@ msgid "Register through edX"
 msgstr "通过edX注册"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "First time here?"
 msgstr "初次使用？"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Create an Account."
 msgstr "注册"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign in to continue learning as {email}"
 msgstr "使用{email}登录，继续学习"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign in to continue learning"
 msgstr "登录并继续学习"
 
 #: lms/templates/student_account/login.underscore
 msgid ""
-"You already have an EliteMBA account with your {enterprise_name} email "
-"address."
+"You already have an edX account with your {enterprise_name} email address."
 msgstr "您已使用{enterprise_name}邮箱地址注册EliteMBA账号。"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid ""
 "Going forward, your account information will be updated and maintained by "
 "{enterprise_name}."
 msgstr "下一步，由{enterprise_name}更新并维护您的账号信息。"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid ""
 "You can view your information or unlink from {enterprise_name} anytime in "
 "your Account Settings."
 msgstr "您可在账号设置中，随时查看账号信息或与{enterprise_name}解绑。"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "To continue learning with this account, sign in below."
 msgstr "如需继续使用此账号学习，请点击以下按钮登录。"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign In"
 msgstr "登录"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid ""
 "Sign in here using your email address and password, or use one of the "
 "providers listed below."
 msgstr "使用您的电子邮件和密码或使用以下列出的一个方式在此处登录。"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Sign in here using your email address and password."
 msgstr "在这里使用您的电子邮件和密码登录。"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "If you do not yet have an account, use the button below to register."
 msgstr "如果您尚无账号，请使用以下按钮进行注册。"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "or sign in with"
 msgstr "或者通过以下方式登录"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 #, python-format
 msgid "Sign in with %(providerName)s"
 msgstr "使用 %(providerName)s 登录"
 
 #: lms/templates/student_account/login.underscore
 #: lms/templates/student_account/register.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid "Use my institution/campus credentials"
 msgstr "使用我的机构/校园账号"
 
