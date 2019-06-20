@@ -66,8 +66,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-06-19 03:33+0000\n"
-"PO-Revision-Date: 2019-06-19 03:34:50.037791\n"
+"POT-Creation-Date: 2019-06-20 09:46+0000\n"
+"PO-Revision-Date: 2019-06-20 09:47:30.712212\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -26852,6 +26852,160 @@ msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/join_us.html
 msgid "directly or call 400-931-8118."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To know more about courses"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Click the course to view the course introduction video, browse the course "
+"introduction, instructor introduction and course outline, etc."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To join as a member"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Membership\" page, choose your learning duration and payment method."
+" After payment is completed, you can enjoy learning all courses on EliteMBA "
+"during the study period."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To view the end-date of membership"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "Enter \"Membership\" page to view the VIP open date and remaining days."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To enroll as a member"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Free Enrollment for VIP\" button, "
+"then the enrollment is fulfilled."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To purchase a course"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Enroll\" button, then you can start "
+"learning after payment is completed."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To start a course"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Click your avatar in the upper right corner of the page, enter \"Dashboard\""
+" to view the course introduction, watch videos and complete assignments."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To participate in discussion"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Dashboard - View Course\" page, click \"Discussion\". You can view "
+"discussions, engage with posts and receive updates."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To view and download handouts"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Dashboard - View Course\" page, find \"Course Handouts\" on the "
+"right side. You can view handout content and download."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "How do I change or reset my password?"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To change your password"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"1. At the top of any page, select the dropdown menu icon next to your "
+"username."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "2. Select \"Account\"."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "3. Select \"Reset Password\"."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"The system sends a confirmation message to the email address in the \"Email "
+"Address\" field."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "Passwords must contain:"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "At least 6 characters"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "How do I change my email address?"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"You can change your email address on any site page. You use your email "
+"address to sign in to your account. In addition, communications from your "
+"course teams are sent to this address."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To change your email address"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"1. At the top of any page, select the dropdown menu icon next to your "
+"username;"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "2. Select \"Account\";"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"3. In the \"Email Address\" field, select your current email address and "
+"replace it with the new address;"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"4. To save your changes, click anywhere on the page outside of the \"Email "
+"Address\" field, or navigate to a different page."
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/privacy.html
