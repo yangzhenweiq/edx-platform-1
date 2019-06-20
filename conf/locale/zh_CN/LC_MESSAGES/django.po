@@ -95,7 +95,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-06-19 03:33+0000\n"
+"POT-Creation-Date: 2019-06-20 09:46+0000\n"
 "PO-Revision-Date: 2019-06-19 06:25+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -25665,7 +25665,7 @@ msgstr "关于平台"
 #: themes/elitemba-theme/lms/templates/footer.html
 #: themes/elitemba-theme/lms/templates/static_templates/manual.html
 msgid "Manual"
-msgstr "手动"
+msgstr "使用手册"
 
 #: themes/elitemba-theme/lms/templates/footer.html
 #: themes/elitemba-theme/lms/templates/static_templates/help.html
@@ -27380,6 +27380,160 @@ msgstr "请直接邮件联系"
 #: themes/elitemba-theme/lms/templates/static_templates/join_us.html
 msgid "directly or call 400-931-8118."
 msgstr "或致电400-931-8118。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To know more about courses"
+msgstr "如何了解课程？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Click the course to view the course introduction video, browse the course "
+"introduction, instructor introduction and course outline, etc."
+msgstr "点击课程进入详情页，观看课程简介视频，浏览课程简介、导师简介及课程大纲等。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To join as a member"
+msgstr "如何加入会员？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Membership\" page, choose your learning duration and payment method."
+" After payment is completed, you can enjoy learning all courses on EliteMBA "
+"during the study period."
+msgstr "进入“会员资格”页，选择适合您的学习时长及支付方式，支付成功后便可在会员期限内享受所有课程的学习权益。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To view the end-date of membership"
+msgstr "如何查看已购买的会员期限？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "Enter \"Membership\" page to view the VIP open date and remaining days."
+msgstr "进入“会员资格”页，可查看会员已开通时间及剩余时间。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To enroll as a member"
+msgstr "会员如何选课？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Free Enrollment for VIP\" button, "
+"then the enrollment is fulfilled."
+msgstr "进入“发现课程”页，直接选择或通过搜索关键字的方式选择您感兴趣的课程，点击“VIP会员免费选修此课程”，即为选课成功。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To purchase a course"
+msgstr "非会员如何购买单课？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Discover New\" page, click the course or search key words to select "
+"courses you are interested in, click \"Enroll\" button, then you can start "
+"learning after payment is completed."
+msgstr "进入“发现课程”页，直接选择或通过搜索关键字的方式选择您感兴趣的课程，点击“选修此课程”，支付成功后即可开始学习该门课程。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To start a course"
+msgstr "如何开始学习？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Click your avatar in the upper right corner of the page, enter \"Dashboard\""
+" to view the course introduction, watch videos and complete assignments."
+msgstr "点击网页右上角个人头像进入“课程面板-查看课程”，可浏览课程简介；点击“开始学习课程”，可观看课程视频，提交课后习题。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To participate in discussion"
+msgstr "如何参与课程讨论？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Dashboard - View Course\" page, click \"Discussion\". You can view "
+"discussions, engage with posts and receive updates."
+msgstr "进入“课程面板-查看课程”页，点击“讨论”，可以查看讨论帖、参与讨论及接收讨论帖更新。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To view and download handouts"
+msgstr "如何查看和下载课程讲义？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"Enter \"Dashboard - View Course\" page, find \"Course Handouts\" on the "
+"right side. You can view handout content and download."
+msgstr "进入“课程面板-查看课程”页，在右侧找到“课程讲义”，可查看讲义内容并下载。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "How do I change or reset my password?"
+msgstr "如何更改或重置密码？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To change your password"
+msgstr "更改您的密码"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"1. At the top of any page, select the dropdown menu icon next to your "
+"username."
+msgstr "1. 在任意页面的顶部，选择用户名旁边的下拉菜单图标；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "2. Select \"Account\"."
+msgstr "2. 选择“帐户”；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "3. Select \"Reset Password\"."
+msgstr "3. 选择“重置密码”"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"The system sends a confirmation message to the email address in the \"Email "
+"Address\" field."
+msgstr "系统会向“电子邮件地址”框内的电子邮件地址发送确认消息；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "Passwords must contain:"
+msgstr "密码必须包含："
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "At least 6 characters"
+msgstr "至少6个字符"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "How do I change my email address?"
+msgstr "如何更改我的电子邮件地址？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"You can change your email address on any site page. You use your email "
+"address to sign in to your account. In addition, communications from your "
+"course teams are sent to this address."
+msgstr "您可以在任何网站页面上更改您的电子邮件地址。您使用此电子邮件地址登录自己的帐户。另外，您所加入的课程团队将把课程信息发送到此电子邮件地址。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "To change your email address"
+msgstr "如何更改我的电子邮件地址？"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"1. At the top of any page, select the dropdown menu icon next to your "
+"username;"
+msgstr "1. 在任意页面的顶部，选择用户名旁边的下拉菜单图标；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "2. Select \"Account\";"
+msgstr "2. 选择“帐户”；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"3. In the \"Email Address\" field, select your current email address and "
+"replace it with the new address;"
+msgstr "3. 在“电子邮件地址”的输入框中，选择您当前的电子邮件地址并将其替换为新的电子邮件地址；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid ""
+"4. To save your changes, click anywhere on the page outside of the \"Email "
+"Address\" field, or navigate to a different page."
+msgstr "4. 最后要保存更改，请单击“电子邮件地址”字段外部页面上的任意位置，或导航至其他页面。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
