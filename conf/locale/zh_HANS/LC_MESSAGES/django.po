@@ -95,7 +95,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-06-20 09:46+0000\n"
+"POT-Creation-Date: 2019-06-21 04:25+0000\n"
 "PO-Revision-Date: 2019-06-19 06:25+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -27489,6 +27489,10 @@ msgid ""
 "The system sends a confirmation message to the email address in the \"Email "
 "Address\" field."
 msgstr "系统会向“电子邮件地址”框内的电子邮件地址发送确认消息；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/manual.html
+msgid "4. Select the confirmation link in the email message."
+msgstr "4. 打开电子邮件中的确认链接以确认密码修改。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/manual.html
 msgid "Passwords must contain:"
