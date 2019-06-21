@@ -3055,7 +3055,8 @@ FIELD_OVERRIDE_PROVIDERS = ()
 
 # Modulestore-level field override providers. These field override providers don't
 # require student context.
-MODULESTORE_FIELD_OVERRIDE_PROVIDERS = ('openedx.features.content_type_gating.field_override.ContentTypeGatingFieldOverride',)  # pylint: disable=line-too-long
+MODULESTORE_FIELD_OVERRIDE_PROVIDERS = ()
+#MODULESTORE_FIELD_OVERRIDE_PROVIDERS = ('openedx.features.content_type_gating.field_override.ContentTypeGatingFieldOverride',)  # pylint: disable=line-too-long
 
 # PROFILE IMAGE CONFIG
 # WARNING: Certain django storage backends do not support atomic
