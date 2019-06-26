@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-06-21 09:19+0000\n"
+"POT-Creation-Date: 2019-06-26 06:53+0000\n"
 "PO-Revision-Date: 2019-06-19 06:25+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -7951,6 +7951,13 @@ msgstr "您尚未注册任何课程。"
 msgid "Explore Programs"
 msgstr "发现课程"
 
+#: lms/templates/learner_dashboard/expired_notification.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/expired_notification.underscore
+msgid ""
+"You enrolled in this course but did not earn the certificate required to "
+"complete this program."
+msgstr ""
+
 #: lms/templates/learner_dashboard/explore_new_programs.underscore
 msgid ""
 "Browse recently launched courses and see what\\'s new in your favorite "
@@ -8025,8 +8032,20 @@ msgstr "恭喜！"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
 #: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid ""
+"You have successfully completed all the requirements for the {title} {type}."
+msgstr ""
+
+#: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Your Program Journey"
 msgstr "您的课程学习之旅"
+
+#: lms/templates/learner_dashboard/program_details_view.underscore
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid ""
+"Track and plan your progress through the {count} courses in this program."
+msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
 #: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
@@ -8041,12 +8060,14 @@ msgid "Upgrade All Remaining Courses ("
 msgstr "升级所有剩余课程（"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid "${listPrice}"
-msgstr "{listPrice}"
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid "{listPrice}"
+msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-msgid " ${price} {currency} )"
-msgstr "{price} {currency} ）"
+#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
+msgid "{price})"
+msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
 #: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
@@ -10615,30 +10636,6 @@ msgstr "手机号码绑定成功"
 #: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Certificate exceptions group selection"
 msgstr "选择群体"
-
-#: themes/elitemba-theme/lms/templates/learner_dashboard/expired_notification.underscore
-msgid ""
-"You enrolled in this course but did not earn the certificate required to "
-"complete this program."
-msgstr "您已注册此课程，但未获得完成此课程所需的证书。"
-
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
-msgid ""
-"You have successfully completed all the requirements for the {title} {type}."
-msgstr "您已成功完成 {title} {type}专业的所有要求。"
-
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
-msgid ""
-"Track and plan your progress through the {count} courses in this program."
-msgstr "通过本系列的 {count} 门课程来跟踪和计划你的学习进度。"
-
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
-msgid "{listPrice}"
-msgstr "{listPrice}"
-
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
-msgid "{price})"
-msgstr "{price}）"
 
 #: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid ""
