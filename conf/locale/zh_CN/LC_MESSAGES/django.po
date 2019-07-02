@@ -95,7 +95,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-06-21 09:18+0000\n"
+"POT-Creation-Date: 2019-06-26 06:53+0000\n"
 "PO-Revision-Date: 2019-06-19 06:25+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -12920,7 +12920,7 @@ msgstr "课时"
 msgid "Displayed on the course details page. Limit to 50 characters."
 msgstr "显示于课程详情页面，不超过50个字符。"
 
-#: cms/templates/settings.html
+#: cms/templates/settings.html lms/templates/courseware/program_marketing.html
 #: themes/elitemba-theme/cms/templates/settings.html
 #: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
 msgid "Course Description"
@@ -16565,8 +16565,9 @@ msgid "Original Price"
 msgstr "原价"
 
 #: lms/templates/courseware/program_marketing.html
-msgid "${oldPrice}"
-msgstr "${oldPrice}"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{oldPrice}"
+msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/journals/templates/journals/bundle_about.html
@@ -16575,12 +16576,9 @@ msgid "Discounted Price"
 msgstr "折扣价"
 
 #: lms/templates/courseware/program_marketing.html
-msgid "${newPrice}"
-msgstr "${newPrice}"
-
-#: lms/templates/courseware/program_marketing.html
-msgid "{currency})"
-msgstr "{currency}） "
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice})"
+msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
@@ -16630,8 +16628,10 @@ msgid "What You'll Learn"
 msgstr "您将学到"
 
 #: lms/templates/courseware/program_marketing.html
-msgid "Average Length"
-msgstr "平均长度"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Length"
+msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
@@ -16639,8 +16639,10 @@ msgid "{weeks_to_complete} weeks per course"
 msgstr "{weeks_to_complete} 周/课"
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
 msgid "Effort"
-msgstr "课时"
+msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
@@ -16650,8 +16652,10 @@ msgid ""
 msgstr "{min_hours_effort_per_week}-{max_hours_effort_per_week} 小时 / 周 / 课"
 
 #: lms/templates/courseware/program_marketing.html
-msgid "Number of Courses"
-msgstr "课程数量"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Courses"
+msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
@@ -16659,20 +16663,35 @@ msgid "{number_of_courses} courses in program"
 msgstr "{number_of_courses} 专项课"
 
 #: lms/templates/courseware/program_marketing.html
-msgid "Price (USD)"
-msgstr "价格（USD）"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Price"
+msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "${newPrice}{htmlEnd} for entire program"
-msgstr "整个系列{newPrice}{htmlEnd} "
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "Price ({currencyCode})"
+msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "You save ${discount_value} {currency}"
-msgstr "你节省了${discount_value} {currency}"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice}{htmlEnd} for entire program"
+msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "${full_program_price} for entire program"
-msgstr "整个系列${full_program_price} "
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "You save "
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{discount_value}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{full_program_price} for entire program"
+msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 #: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
@@ -16684,6 +16703,16 @@ msgstr "{} 的课程"
 #: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
 msgid "Starts on {}"
 msgstr "开始 {}"
+
+#: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "Enroll Now"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "Not Currently Available"
+msgstr ""
 
 #: lms/templates/courseware/progress.html
 msgid "{course_number} Progress"
@@ -25857,62 +25886,6 @@ msgid ""
 "the screen"
 msgstr "点击屏幕右上角分享按钮"
 
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{currency}{oldPrice}"
-msgstr "{currency}{oldPrice}"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{currency}{newPrice})"
-msgstr "{currency}{newPrice}）"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgctxt "Program"
-msgid "Length"
-msgstr "预计周数"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgctxt "Program"
-msgid "Effort"
-msgstr "课时"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgctxt "Program"
-msgid "Courses"
-msgstr "课程"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgctxt "Program"
-msgid "Price"
-msgstr "价格"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "Price ({currencyCode})"
-msgstr "价格 ({currencyCode})"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{currency}{newPrice}{htmlEnd} for entire program"
-msgstr "整个系列 {currency}{newPrice}{htmlEnd} "
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "You save "
-msgstr "您已省下"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{discount_value}"
-msgstr "{discount_value}"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{currency}{full_program_price} for entire program"
-msgstr "整个系列{currency}{full_program_price}"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "Enroll Now"
-msgstr "现在选课"
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "Not Currently Available"
-msgstr "当前不可用"
-
 #: themes/elitemba-theme/lms/templates/dashboard/_dashboard_certificate_information.html
 msgid ". "
 msgstr ""
@@ -27515,7 +27488,7 @@ msgstr "您可以在任何网站页面上更改您的电子邮件地址。您使
 
 #: themes/elitemba-theme/lms/templates/static_templates/manual.html
 msgid "To change your email address"
-msgstr "如何更改我的电子邮件地址？"
+msgstr "更改您的电子邮件地址"
 
 #: themes/elitemba-theme/lms/templates/static_templates/manual.html
 msgid ""
@@ -27525,7 +27498,7 @@ msgstr "1. 在任意页面的顶部，选择用户名旁边的下拉菜单图标
 
 #: themes/elitemba-theme/lms/templates/static_templates/manual.html
 msgid "2. Select \"Account\";"
-msgstr "2. 选择“帐户”；"
+msgstr "2. 选择“账号”；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/manual.html
 msgid ""

@@ -66,8 +66,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-06-21 09:18+0000\n"
-"PO-Revision-Date: 2019-06-21 09:19:39.612817\n"
+"POT-Creation-Date: 2019-06-26 06:53+0000\n"
+"PO-Revision-Date: 2019-06-26 06:53:44.234862\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -12671,7 +12671,7 @@ msgstr ""
 msgid "Displayed on the course details page. Limit to 50 characters."
 msgstr ""
 
-#: cms/templates/settings.html
+#: cms/templates/settings.html lms/templates/courseware/program_marketing.html
 #: themes/elitemba-theme/cms/templates/settings.html
 #: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
 msgid "Course Description"
@@ -16241,7 +16241,8 @@ msgid "Original Price"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "${oldPrice}"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{oldPrice}"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
@@ -16251,11 +16252,8 @@ msgid "Discounted Price"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "${newPrice}"
-msgstr ""
-
-#: lms/templates/courseware/program_marketing.html
-msgid "{currency})"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice})"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
@@ -16306,7 +16304,9 @@ msgid "What You'll Learn"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "Average Length"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Length"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
@@ -16315,6 +16315,8 @@ msgid "{weeks_to_complete} weeks per course"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
 msgid "Effort"
 msgstr ""
 
@@ -16326,7 +16328,9 @@ msgid ""
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "Number of Courses"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Courses"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
@@ -16335,19 +16339,34 @@ msgid "{number_of_courses} courses in program"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "Price (USD)"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgctxt "Program"
+msgid "Price"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "${newPrice}{htmlEnd} for entire program"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "Price ({currencyCode})"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "You save ${discount_value} {currency}"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{newPrice}{htmlEnd} for entire program"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
-msgid "${full_program_price} for entire program"
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "You save "
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{discount_value}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "{currency}{full_program_price} for entire program"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
@@ -16359,6 +16378,16 @@ msgstr ""
 #: openedx/features/journals/templates/journals/bundle_about.html
 #: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
 msgid "Starts on {}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "Enroll Now"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
+msgid "Not Currently Available"
 msgstr ""
 
 #: lms/templates/courseware/progress.html
@@ -25393,62 +25422,6 @@ msgstr ""
 msgid ""
 "Share your experience by clicking the button on the above right corner of "
 "the screen"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{currency}{oldPrice}"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{currency}{newPrice})"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgctxt "Program"
-msgid "Length"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgctxt "Program"
-msgid "Effort"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgctxt "Program"
-msgid "Courses"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgctxt "Program"
-msgid "Price"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "Price ({currencyCode})"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{currency}{newPrice}{htmlEnd} for entire program"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "You save "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{discount_value}"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "{currency}{full_program_price} for entire program"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "Enroll Now"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/courseware/program_marketing.html
-msgid "Not Currently Available"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/dashboard/_dashboard_certificate_information.html
