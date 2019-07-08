@@ -636,7 +636,18 @@ def activate_account(request, key):
                 ),
                 extra_tags='account-activation aa-icon',
             )
+    try:
+        import requests
+        import time
+        cn = time.strftime('%Y%m%d', time.localtime(time.time()))
+        google_analytics = 'http://www.google-analytics.com/collect?v=1&tid={}&cid={}&t=event&ec=email&ea=open&el=activate&cs=email&cm=email&cn={}&cm1=1'.format(
+            settings.GOOGLE_ANALYTICS_ACCOUNT, key, cn
+        )
+        log.info(google_analytics)
+        r = requests.get(google_analytics)
 
+    except Exception as ex:
+        log.error(ex)
     return redirect('dashboard')
 
 
