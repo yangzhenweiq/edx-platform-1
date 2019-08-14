@@ -75,7 +75,7 @@ from student.helpers import (
     generate_activation_email_context,
 )
 from student.message_types import EmailChange, PasswordReset
-from student.models import (/VIPInfo
+from student.models import (
     AccountRecovery,
     CourseEnrollment,
     PendingEmailChange,
