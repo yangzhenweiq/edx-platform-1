@@ -7,6 +7,9 @@ import logging
 import uuid
 from collections import namedtuple
 
+import pytz
+from dateutil.relativedelta import relativedelta
+
 from bulk_email.models import Optout
 from courseware.courses import get_courses, sort_by_announcement, sort_by_start_date
 from django.conf import settings
@@ -72,7 +75,7 @@ from student.helpers import (
     generate_activation_email_context,
 )
 from student.message_types import EmailChange, PasswordReset
-from student.models import (
+from student.models import (/VIPInfo
     AccountRecovery,
     CourseEnrollment,
     PendingEmailChange,
@@ -645,9 +648,15 @@ def activate_account(request, key):
         )
         log.info(google_analytics)
         r = requests.get(google_analytics)
-
     except Exception as ex:
         log.error(ex)
+
+    if registration.user.email.split('@')[-1] in settings.EMAIL_ACCESS_LIST:
+        from membership.models import VIPInfo 
+        expired_at = datetime.datetime.now(pytz.utc) + \
+        relativedelta(days=+int(settings.EMAIL_ACCESS_DATE))
+        VIPInfo.objects.create(user=registration.user, expired_at=expired_at)        
+               
     return redirect('dashboard')
 
 
