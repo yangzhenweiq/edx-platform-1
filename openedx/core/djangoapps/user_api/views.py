@@ -1,11 +1,6 @@
 """HTTP end-points for the User API. """
 
-import pytz
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
-
 from django.contrib.auth.models import User
-from django.conf import settings
 from django.core.exceptions import NON_FIELD_ERRORS, PermissionDenied, ValidationError
 from django.db import transaction
 from django.http import HttpResponse, HttpResponseForbidden
@@ -157,12 +152,6 @@ class RegistrationView(APIView):
 
         try:
             user = create_account_with_params(request, data)
-            if email.split('@')[-1] in settings.EMAIL_ACCESS_LIST:
-                from membership.models import VIPInfo
-                expired_at = datetime.now(pytz.utc) + \
-                relativedelta(days=+int(settings.EMAIL_ACCESS_DATE))
-                VIPInfo.objects.create(user=user, expired_at=expired_at)
-
         except AccountValidationError as err:
             errors = {
                 err.field: [{"user_message": text_type(err)}]
