@@ -655,7 +655,9 @@ def activate_account(request, key):
         from membership.models import VIPInfo 
         expired_at = datetime.datetime.now(pytz.utc) + \
         relativedelta(days=+int(settings.EMAIL_ACCESS_DATE))
-        VIPInfo.objects.create(user=registration.user, expired_at=expired_at)        
+        vip_info = VIPInfo.objects.filter(user=registration.user)
+        if not vip_info:
+            VIPInfo.objects.create(user=registration.user, expired_at=expired_at)        
                
     return redirect('dashboard')
 
