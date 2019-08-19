@@ -6,8 +6,8 @@
 #
 # Translators:
 # fengri <173770922@qq.com>, 2019
-# Sushan Wu <ss.wu@eliteu.com.cn>, 2019
 # li ying <code@eliteu.cn>, 2019
+# Sushan Wu <ss.wu@eliteu.com.cn>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/).
@@ -2693,7 +2693,7 @@ msgstr "显示计算器"
 msgid ""
 "Enter true or false. When true, students can see the calculator in the "
 "course."
-msgstr "输入对或错。当输入为对时，学生可以造课程中看到计算器。"
+msgstr "输入true或false。当输入为true时，学生可以造课程中看到计算器。"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2777,7 +2777,7 @@ msgid ""
 "Enter true or false. If true, discussion categories and subcategories are "
 "sorted alphabetically. If false, they are sorted chronologically by creation"
 " date and time."
-msgstr "请输入\"true\"或\"false\"。当输入\"true\"时，讨论类別和子类別会依字母排序。否则按时间顺序排序。"
+msgstr "请输入true或false。如果为true，讨论类別和子类別会依字母排序。否则按时间顺序排序。"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Announcement Date"
@@ -2818,7 +2818,7 @@ msgstr "手机端可见的课程"
 msgid ""
 "Enter true or false. If true, the course will be available to mobile "
 "devices."
-msgstr "请输入真或者假,如果为真,这门课程将支持移动设备上学习"
+msgstr "请输入true或false，如果为true，这门课程将支持移动设备上学习"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Video Upload Credentials"
@@ -2919,7 +2919,7 @@ msgstr "允许匿名讨论帖"
 msgid ""
 "Enter true or false. If true, students can create discussion posts that are "
 "anonymous to all users."
-msgstr "输入真或假。如果是真的，学生可以匿名创建讨论的帖子。"
+msgstr "输入true或false。如果是true，学生可以匿名创建讨论的帖子。"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Allow Anonymous Discussion Posts to Peers"
@@ -3342,7 +3342,7 @@ msgstr "对有作弊嫌疑的考试创建Zendesk记录"
 msgid ""
 "Enter true or false. If this value is true, a Zendesk ticket will be created"
 " for suspicious attempts."
-msgstr "输入“true”或“false”。如果输入“true”，那么会对有作弊嫌疑的考试创建Zendesk记录。"
+msgstr "请输入true或false。如果输入true，那么会对有作弊嫌疑的考试创建Zendesk记录。"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enable Timed Exams"
@@ -3455,7 +3455,7 @@ msgstr "启用消息通知重点内容"
 msgid ""
 "Enter true or false. If true, any highlights associated with content in the "
 "course will be messaged to learners at their scheduled time."
-msgstr "请输入“true”或“false”，如果输入“true”，那么任何与课程内容有关的标亮内容都将会在学员的规定时间内被发送给学员。"
+msgstr "请输入true或false，如果输入true，那么任何与课程内容有关的标亮内容都将会在学员的规定时间内被发送给学员。"
 
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/certificates.html
 #: cms/templates/group_configurations.html cms/templates/settings.html
@@ -3942,7 +3942,7 @@ msgstr "启用 LaTeX 编译器"
 msgid ""
 "Enter true or false. If true, you can use the LaTeX templates for HTML "
 "components and advanced Problem components."
-msgstr "请输入 true 或者 false ，当输入为 true 时，您可以使用 LaTeX 编辑器，编辑 HTML 模块和问题模块。"
+msgstr "请输入true或false，当输入为true时，您可以使用LaTeX编辑器，编辑HTML模块和问题模块。"
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid ""
