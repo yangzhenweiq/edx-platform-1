@@ -344,7 +344,7 @@ class AccountViewSet(ViewSet):
                         else:
                             vip_info_emb['vip_status'] = NOT_PURCHASED
                     vip_info_emb['vip_remain_days'] = vip_info['vip_remain_days']
-                    account_settings[0].update(vip_info_emb)
+                    account_settings.update(vip_info_emb)
                 except Exception as exc:
                     log.exception('Unable to get user:{} VIP info'.format(request.user.username))
             
