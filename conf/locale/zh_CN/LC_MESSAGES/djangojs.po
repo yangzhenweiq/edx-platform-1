@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-06-26 06:53+0000\n"
+"POT-Creation-Date: 2019-08-19 18:55+0800\n"
 "PO-Revision-Date: 2019-06-19 06:25+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -3617,14 +3617,11 @@ msgstr "标记选课码为尚未使用的"
 #: cms/templates/js/transcript-organization-credentials.underscore
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Username"
 msgstr "用户名"
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
 msgid "Email"
 msgstr "电子邮件"
 
@@ -5590,7 +5587,6 @@ msgstr "添加日期"
 
 #: cms/static/js/views/assets.js cms/templates/js/asset-library.underscore
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Type"
 msgstr "类型"
 
@@ -6442,7 +6438,6 @@ msgid "Video duration is {humanizeDuration}"
 msgstr "视频时长 {humanizeDuration}"
 
 #: cms/static/js/views/video_thumbnail.js
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
 msgid "minutes"
 msgstr "分"
 
@@ -6562,15 +6557,8 @@ msgstr "更新标签中"
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/basic-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Actions"
 msgstr "操作"
-
-#: cms/templates/js/course-outline.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Timed Exam"
-msgstr "计时测验"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
@@ -7011,7 +6999,6 @@ msgid "Course Key"
 msgstr "课程标识"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Status"
 msgstr "状态"
 
@@ -7952,7 +7939,6 @@ msgid "Explore Programs"
 msgstr "发现课程"
 
 #: lms/templates/learner_dashboard/expired_notification.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/expired_notification.underscore
 msgid ""
 "You enrolled in this course but did not earn the certificate required to "
 "complete this program."
@@ -8026,71 +8012,58 @@ msgid "Additional Professional Opportunities"
 msgstr "附加的职业机会"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Congratulations!"
 msgstr "恭喜！"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "You have successfully completed all the requirements for the {title} {type}."
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Your Program Journey"
 msgstr "您的课程学习之旅"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "Track and plan your progress through the {count} courses in this program."
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "To complete the program, you must earn a verified certificate for each "
 "course."
 msgstr "您必须每一门课程都获得一份证书，才可以完成此课程方案。"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Upgrade All Remaining Courses ("
 msgstr "升级所有剩余课程（"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "{listPrice}"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "{price})"
 msgstr ""
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "COURSES IN PROGRESS"
 msgstr "课程学习中"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "REMAINING COURSES"
 msgstr "剩余课程"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "COMPLETED COURSES"
 msgstr "已完成课程"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid "As you complete courses, you will see them listed here."
 msgstr "您已完成的课程将显示在这里。"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
-#: themes/elitemba-theme/lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "Complete courses on your schedule to ensure you stand out in your field!"
 msgstr "准时完成课程学习，比别人先走一步。"
@@ -8208,9 +8181,11 @@ msgid "Sign in to continue learning"
 msgstr "登录并继续学习"
 
 #: lms/templates/student_account/login.underscore
+#: themes/elitemba-theme/lms/templates/student_account/login.underscore
 msgid ""
-"You already have an edX account with your {enterprise_name} email address."
-msgstr "您已使用{enterprise_name}邮箱地址注册EliteMBA账号。"
+"You already have an EliteMBA account with your {enterprise_name} email "
+"address."
+msgstr ""
 
 #: lms/templates/student_account/login.underscore
 #: themes/elitemba-theme/lms/templates/student_account/login.underscore
@@ -8809,75 +8784,6 @@ msgstr "重新拍照"
 msgid "Take Photo"
 msgstr "拍照"
 
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Add a New Allowance"
-msgstr "添加新的名额"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Special Exam"
-msgstr "专业测验"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-#, python-format
-msgid " %(exam_display_name)s "
-msgstr "%(exam_display_name)s"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Exam Type"
-msgstr "测试类别"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-msgid "Allowance Type"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Additional Time (minutes)"
-msgstr "额外时间（分钟）"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Value"
-msgstr "值"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Username or Email"
-msgstr "用户名或邮箱"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-msgid "Allowances"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-msgid "Add Allowance"
-msgstr "添加新的名额"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Exam Name"
-msgstr "测验名称"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-msgid "Allowance Value"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Time Limit"
-msgstr "时间限制"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Started At"
-msgstr "开始于"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Completed At"
-msgstr "完成于"
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-#, python-format
-msgid " %(username)s "
-msgstr "%(username)s"
-
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 msgid "Bookmarked on"
 msgstr "标记书签"
@@ -9421,6 +9327,10 @@ msgstr "模拟监考"
 #: cms/templates/js/course-outline.underscore
 msgid "Proctored Exam"
 msgstr "监考下的测试"
+
+#: cms/templates/js/course-outline.underscore
+msgid "Timed Exam"
+msgstr ""
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
@@ -10636,9 +10546,3 @@ msgstr "手机号码绑定成功"
 #: themes/elitemba-theme/lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Certificate exceptions group selection"
 msgstr "选择群体"
-
-#: themes/elitemba-theme/lms/templates/student_account/login.underscore
-msgid ""
-"You already have an EliteMBA account with your {enterprise_name} email "
-"address."
-msgstr "您已使用{enterprise_name}邮箱地址注册EliteMBA账号。"
