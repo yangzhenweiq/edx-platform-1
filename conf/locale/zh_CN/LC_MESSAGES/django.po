@@ -8,6 +8,7 @@
 # fengri <173770922@qq.com>, 2019
 # li ying <code@eliteu.cn>, 2019
 # Sushan Wu <ss.wu@eliteu.com.cn>, 2019
+# 健超 张 <jc.zhang@eliteu.com.cn>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/).
@@ -95,7 +96,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-08-19 18:54+0800\n"
+"POT-Creation-Date: 2019-09-16 17:19+0800\n"
 "PO-Revision-Date: 2019-06-19 06:25+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -4565,7 +4566,7 @@ msgstr "指定是否限制为只有浏览器才能访问该视频，或可以再
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Video Available on Web Only"
-msgstr "视频只在网页板提供"
+msgstr "视频只在网页版提供"
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid ""
@@ -25683,6 +25684,10 @@ msgstr "网易云课堂"
 #: themes/elitemba-theme/lms/templates/footer.html
 msgid "Tencent Classroom"
 msgstr "腾讯课堂"
+
+#: themes/elitemba-theme/lms/templates/footer.html
+msgid "iQIYI Knowledge"
+msgstr "爱奇艺知识"
 
 #: themes/elitemba-theme/lms/templates/footer.html
 msgid "Scan WeChat QR Code"

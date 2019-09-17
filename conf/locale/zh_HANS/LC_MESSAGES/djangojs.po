@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-08-19 18:55+0800\n"
+"POT-Creation-Date: 2019-09-16 17:20+0800\n"
 "PO-Revision-Date: 2019-06-19 06:25+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -7942,7 +7942,7 @@ msgstr "发现课程"
 msgid ""
 "You enrolled in this course but did not earn the certificate required to "
 "complete this program."
-msgstr ""
+msgstr "您已注册此课程，但未获得完成此课程所需的证书。"
 
 #: lms/templates/learner_dashboard/explore_new_programs.underscore
 msgid ""
@@ -8018,7 +8018,7 @@ msgstr "恭喜！"
 #: lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "You have successfully completed all the requirements for the {title} {type}."
-msgstr ""
+msgstr "您已成功完成 {title} {type}专业的所有要求。"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
 msgid "Your Program Journey"
@@ -8027,7 +8027,7 @@ msgstr "您的课程学习之旅"
 #: lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
 "Track and plan your progress through the {count} courses in this program."
-msgstr ""
+msgstr "通过本系列的 {count} 门课程来跟踪和计划你的学习进度。"
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
 msgid ""
@@ -8185,7 +8185,7 @@ msgstr "登录并继续学习"
 msgid ""
 "You already have an EliteMBA account with your {enterprise_name} email "
 "address."
-msgstr ""
+msgstr "您已使用{enterprise_name}邮箱地址注册EliteMBA账号。"
 
 #: lms/templates/student_account/login.underscore
 #: themes/elitemba-theme/lms/templates/student_account/login.underscore
@@ -9330,7 +9330,7 @@ msgstr "监考下的测试"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Timed Exam"
-msgstr ""
+msgstr "计时测验"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
