@@ -66,8 +66,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-09-16 17:19+0800\n"
-"PO-Revision-Date: 2019-09-16 09:20:35.862485\n"
+"POT-Creation-Date: 2019-12-13 06:01+0000\n"
+"PO-Revision-Date: 2019-12-13 06:02:08.884747\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -7756,9 +7756,9 @@ msgstr ""
 msgid "Payment Received"
 msgstr ""
 
-#: lms/djangoapps/shoppingcart/pdf.py membership/models.py
+#: membership/models.py
 msgid "Balance"
-msgstr ""
+msgstr "Balance"
 
 #: lms/djangoapps/shoppingcart/pdf.py
 msgid "Billing Address"
@@ -8749,14 +8749,10 @@ msgstr ""
 msgid "Credit"
 msgstr ""
 
-#: lms/envs/eliteu_common.py membership/templates/membership/card.html
+#: membership/templates/membership/card.html
 #: membership/templates/membership/index.html
-#: themes/elitemba-theme/lms/templates/footer.html
-#: themes/elitemba-theme/lms/templates/certificates/verify.html
-#: themes/elitemba-theme/lms/templates/provider/authorize.html
-#: themes/elitemba-theme/lms/templates/static_templates/about.html
 msgid "EliteMBA"
-msgstr ""
+msgstr "EliteMBA"
 
 #: lms/envs/eliteu_common.py
 msgid "Certificate"
@@ -10880,9 +10876,15 @@ msgid "You must agree to the {platform_name} {terms_of_service}"
 msgstr ""
 
 #: openedx/core/djangoapps/user_api/api.py
+msgid ""
+"Account can only be created after you agree to our User Agreement, "
+"Disclaimer and Privacy Policy."
+msgstr ""
+
+#: openedx/core/djangoapps/user_api/api.py
 #, python-brace-format
 msgid ""
-"By creating an account, you agree                   to abide by EliteMBA's"
+"By checking this box, you agree                   to abide by EliteMBA's"
 "                   "
 "{user_agreement_link_start}{user_agreement}{user_agreement_link_end}, "
 "{disclaimer_link_start}{disclaimer}{disclaimer_link_end}                   "
@@ -11640,10 +11642,9 @@ msgstr ""
 msgid "HTML"
 msgstr ""
 
-#: cms/djangoapps/contentstore/views/component.py lms/templates/video.html
 #: membership/templates/membership/index.html
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Blank"
@@ -11939,12 +11940,9 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
-#. #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
-#. Translators: This is the status for a video that is cancelled during upload
-#. by user
-#: cms/djangoapps/contentstore/views/videos.py membership/models.py
+#: membership/models.py
 msgid "Cancelled"
-msgstr ""
+msgstr "Cancelled"
 
 #. Translators: This is the status for a video which has failed
 #. due to being flagged as a duplicate by an external or internal CMS
@@ -19615,10 +19613,9 @@ msgid ""
 "translator!{link_end}"
 msgstr ""
 
-#: lms/templates/navigation/navbar-not-authenticated.html
 #: membership/templates/membership/index.html
 msgid "Explore Courses"
-msgstr ""
+msgstr "Explore Courses"
 
 #: lms/templates/navigation/navigation.html
 msgid "Global"
@@ -24498,475 +24495,497 @@ msgstr ""
 
 #: membership/models.py
 msgid "1 Month"
-msgstr ""
+msgstr "1 Month"
 
 #: membership/models.py
 msgid "3 Months"
-msgstr ""
+msgstr "3 Months"
 
 #: membership/models.py
 msgid "6 Months"
-msgstr ""
+msgstr "6 Months"
 
 #: membership/models.py
 msgid "12 Months"
-msgstr ""
+msgstr "12 Months"
 
 #: membership/models.py
 msgid "24 Months"
-msgstr ""
+msgstr "24 Months"
 
 #: membership/models.py
 msgid "Awaiting for payment"
-msgstr ""
+msgstr "Awaiting for payment"
 
 #: membership/models.py
 msgid "Paid"
-msgstr ""
+msgstr "Paid"
 
 #: membership/models.py
 msgid "Refunded"
-msgstr ""
+msgstr "Refunded"
 
 #: membership/models.py
 msgid "Offline"
-msgstr ""
+msgstr "Offline"
 
 #: membership/models.py membership/templates/membership/card.html
 #: membership/templates/membership/result.html
 #: membership/templates/membership/wechat_paying.html
 msgid "WeChat"
-msgstr ""
+msgstr "WeChat"
 
 #: membership/models.py membership/templates/membership/card.html
 msgid "Alipay"
-msgstr ""
+msgstr "Alipay"
 
 #: membership/models.py
 msgid "Union pay"
-msgstr ""
+msgstr "Union pay"
 
 #: membership/models.py
 msgid "Apple Pay"
-msgstr ""
+msgstr "Apple Pay"
 
 #: membership/models.py
 msgid "Apple Inpurasing"
-msgstr ""
+msgstr "Apple Inpurasing"
 
 #: membership/models.py
 msgid "WeChat App"
-msgstr ""
+msgstr "WeChat App"
 
 #: membership/models.py
 msgid "WeChat H5"
-msgstr ""
+msgstr "WeChat H5"
 
 #: membership/models.py
 msgid "Alipay App"
-msgstr ""
+msgstr "Alipay App"
 
 #: membership/models.py
 msgid "subscribe normal"
-msgstr ""
+msgstr "subscribe normal"
 
 #: membership/models.py
 msgid "subscribe pay"
-msgstr ""
+msgstr "subscribe pay"
 
 #: membership/templates/membership/card.html
 msgid "VIP membership"
-msgstr ""
+msgstr "VIP membership"
 
 #: membership/templates/membership/card.html
 msgid "EliteMBA VIP Membership"
-msgstr ""
+msgstr "EliteMBA VIP Membership"
 
 #: membership/templates/membership/card.html
 msgid "View Introduction"
-msgstr ""
+msgstr "View Introduction"
 
 #: membership/templates/membership/card.html
 msgid "Select a Course"
-msgstr ""
+msgstr "Select a Course"
 
 #: membership/templates/membership/card.html
 msgid "Choose a payment method"
-msgstr ""
+msgstr "Choose a payment method"
 
 #: membership/templates/membership/card.html
 msgid "Membership Valid in "
-msgstr ""
+msgstr "Membership Valid in "
 
 #: membership/templates/membership/card.html
 msgid " days"
-msgstr ""
+msgstr " days"
 
 #: membership/templates/membership/card.html
 msgid "Tuition: "
-msgstr ""
+msgstr "Tuition: "
 
 #: membership/templates/membership/card.html
 msgid "Go to Payment"
-msgstr ""
+msgstr "Go to Payment"
 
 #: membership/templates/membership/card.html
 msgid "Complete Payment in a New Page"
-msgstr ""
+msgstr "Complete Payment in a New Page"
 
 #: membership/templates/membership/card.html
 msgid ""
 "{span_start}Please do not close the page.{span_end} Please click the button "
 "below accordingly after completing the payment."
 msgstr ""
+"{span_start}Please do not close the page.{span_end} Please click the button "
+"below accordingly after completing the payment."
 
 #: membership/templates/membership/card.html
 msgid "Choose Another Payment Method"
-msgstr ""
+msgstr "Choose Another Payment Method"
 
 #: membership/templates/membership/card.html
 msgid "Payment Completed"
-msgstr ""
+msgstr "Payment Completed"
 
 #: membership/templates/membership/card.html
 msgid "Encounter a problem?"
-msgstr ""
+msgstr "Encounter a problem?"
 
 #: membership/templates/membership/card.html
 msgid "Go to payment"
-msgstr ""
+msgstr "Go to payment"
 
 #: membership/templates/membership/index.html
 msgid "Membership of Prestige EMBA Courses in America"
-msgstr ""
+msgstr "Membership of Prestige EMBA Courses in America"
 
 #: membership/templates/membership/index.html
 msgid "Six Main Areas for Administration Learning"
-msgstr ""
+msgstr "Six Main Areas for Administration Learning"
 
 #: membership/templates/membership/index.html
 msgid "Activate your potential to become a versatile leader"
-msgstr ""
+msgstr "Activate your potential to become a versatile leader"
 
 #: membership/templates/membership/index.html
 msgid "Business Administration"
-msgstr ""
+msgstr "Business Administration"
 
 #: membership/templates/membership/index.html
 msgid "Innovation and Entrepreneurship"
-msgstr ""
+msgstr "Innovation and Entrepreneurship"
 
 #: membership/templates/membership/index.html
 msgid "Statistical Analysis"
-msgstr ""
+msgstr "Statistical Analysis"
 
 #: membership/templates/membership/index.html
 msgid "Information Technology"
-msgstr ""
+msgstr "Information Technology"
 
 #: membership/templates/membership/index.html
 msgid "Sales and Marketing"
-msgstr ""
+msgstr "Sales and Marketing"
 
 #: membership/templates/membership/index.html
 msgid "Retail Management"
-msgstr ""
+msgstr "Retail Management"
 
 #: membership/templates/membership/index.html
 msgid "More Excellent Courses Coming Soon"
-msgstr ""
+msgstr "More Excellent Courses Coming Soon"
 
 #: membership/templates/membership/index.html
 msgid "International Business Law"
-msgstr ""
+msgstr "International Business Law"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Ling Zhu"
-msgstr ""
+msgstr "Dr. Ling Zhu"
 
 #: membership/templates/membership/index.html
 msgid "PhD in Management Information Systems, the University of Arizona, USA"
-msgstr ""
+msgstr "PhD in Management Information Systems, the University of Arizona, USA"
 
 #: membership/templates/membership/index.html
 msgid "J.D., Fordham University, USA"
-msgstr ""
+msgstr "J.D., Fordham University, USA"
 
 #: membership/templates/membership/index.html
 msgid "Marketing Management and Applications"
-msgstr ""
+msgstr "Marketing Management and Applications"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Tung-lung Steven Chang"
-msgstr ""
+msgstr "Dr. Tung-lung Steven Chang"
 
 #: membership/templates/membership/index.html
 msgid ""
 "PhD. in International Business/Marketing, the George Washington University, "
 "USA"
 msgstr ""
+"PhD. in International Business/Marketing, the George Washington University, "
+"USA"
 
 #: membership/templates/membership/index.html
 msgid "PhD. in Management, National Chengchi University, Taiwan"
-msgstr ""
+msgstr "PhD. in Management, National Chengchi University, Taiwan"
 
 #: membership/templates/membership/index.html
 msgid "Macroeconomics"
-msgstr ""
+msgstr "Macroeconomics"
 
 #: membership/templates/membership/index.html
 msgid "(Davidson College)"
-msgstr ""
+msgstr "(Davidson College)"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Clark Ross"
-msgstr ""
+msgstr "Dr. Clark Ross"
 
 #: membership/templates/membership/index.html
 msgid "PhD. in Economics, Boston College, USA"
-msgstr ""
+msgstr "PhD. in Economics, Boston College, USA"
 
 #: membership/templates/membership/index.html
 msgid ""
 "*EliteMBA reserves the right of final interpretation for all course updates."
 msgstr ""
+"*EliteMBA reserves the right of final interpretation for all course updates."
 
 #: membership/templates/membership/index.html
 msgid "World-Class Faculty"
-msgstr ""
+msgstr "World-Class Faculty"
 
 #: membership/templates/membership/index.html
 msgid "Professors from leading Business Schools in America"
-msgstr ""
+msgstr "Professors from leading Business Schools in America"
 
 #: membership/templates/membership/index.html
 msgid ""
 "Learn systematically, create a full knowledge matrix of administration from "
 "zero to one"
 msgstr ""
+"Learn systematically, create a full knowledge matrix of administration from "
+"zero to one"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Baichun Xiao"
-msgstr ""
+msgstr "Dr. Baichun Xiao"
 
 #: membership/templates/membership/index.html
 msgid ""
 "Tenured Professor and Chairman of the Department of Management at LIU Post, "
 "USA"
 msgstr ""
+"Tenured Professor and Chairman of the Department of Management at LIU Post, "
+"USA"
 
 #: membership/templates/membership/index.html
 msgid "Lloyd Shefsky"
-msgstr ""
+msgstr "Lloyd Shefsky"
 
 #: membership/templates/membership/index.html
 msgid ""
 "Former Clinical Professor of Family Enterprises at Kellogg School of "
 "Management at NU, USA"
 msgstr ""
+"Former Clinical Professor of Family Enterprises at Kellogg School of "
+"Management at NU, USA"
 
 #: membership/templates/membership/index.html
 msgid "Tim Smithe"
-msgstr ""
+msgstr "Tim Smithe"
 
 #: membership/templates/membership/index.html
 msgid ""
 "Vice President & CMO of International Finance Education Association (IFEA)"
 msgstr ""
+"Vice President & CMO of International Finance Education Association (IFEA)"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Wei Yang"
-msgstr ""
+msgstr "Dr. Wei Yang"
 
 #: membership/templates/membership/index.html
 msgid "Tenured Professor of the School of Business at LIU Post, USA"
-msgstr ""
+msgstr "Tenured Professor of the School of Business at LIU Post, USA"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Weichun Zhu"
-msgstr ""
+msgstr "Dr. Weichun Zhu"
 
 #: membership/templates/membership/index.html
 msgid ""
 "Former Assistant Professor of School of Labor and Employment Relations at "
 "Penn State, USA"
 msgstr ""
+"Former Assistant Professor of School of Labor and Employment Relations at "
+"Penn State, USA"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Jiamin Wang"
-msgstr ""
+msgstr "Dr. Jiamin Wang"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Tianning Li"
-msgstr ""
+msgstr "Dr. Tianning Li"
 
 #: membership/templates/membership/index.html
 msgid "Associate Professor of Finance at Hood College, USA"
-msgstr ""
+msgstr "Associate Professor of Finance at Hood College, USA"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Jianjun Shi"
-msgstr ""
+msgstr "Dr. Jianjun Shi"
 
 #: membership/templates/membership/index.html
 msgid "Former President and Professor at UIBE"
-msgstr ""
+msgstr "Former President and Professor at UIBE"
 
 #: membership/templates/membership/index.html
 msgid ""
 "The Frontis W. Johnston Professor of Economics at Davidson College, USA"
 msgstr ""
+"The Frontis W. Johnston Professor of Economics at Davidson College, USA"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Elia Kacapyr"
-msgstr ""
+msgstr "Dr. Elia Kacapyr"
 
 #: membership/templates/membership/index.html
 msgid "Professor of Economics at Ithaca College, USA"
-msgstr ""
+msgstr "Professor of Economics at Ithaca College, USA"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Robert Graham"
-msgstr ""
+msgstr "Dr. Robert Graham"
 
 #: membership/templates/membership/index.html
 msgid "Professor of Economics at Hanover College, USA"
-msgstr ""
+msgstr "Professor of Economics at Hanover College, USA"
 
 #: membership/templates/membership/index.html
 msgid "View More"
-msgstr ""
+msgstr "View More"
 
 #: membership/templates/membership/index.html
 msgid "Join EliteMBA Membership"
-msgstr ""
+msgstr "Join EliteMBA Membership"
 
 #: membership/templates/membership/index.html
 msgid "Choose a membership plan that fits your needs"
-msgstr ""
+msgstr "Choose a membership plan that fits your needs"
 
 #: membership/templates/membership/index.html
 msgid ""
 "Have unlimited access to all courses at EliteMBA during membership period, "
 "including newly released courses"
 msgstr ""
+"Have unlimited access to all courses at EliteMBA during membership period, "
+"including newly released courses"
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "Full Year"
-msgstr ""
+msgstr "Full Year"
 
 #: membership/templates/membership/index.html
 msgid "average per month"
-msgstr ""
+msgstr "average per month"
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "Professional"
-msgstr ""
+msgstr "Professional"
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "Half-Year"
-msgstr ""
+msgstr "Half-Year"
 
 #: membership/templates/membership/index.html
 msgid "Senior"
-msgstr ""
+msgstr "Senior"
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "Three-Month"
-msgstr ""
+msgstr "Three-Month"
 
 #: membership/templates/membership/index.html
 msgid "Explorer"
-msgstr ""
+msgstr "Explorer"
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "One-Month"
-msgstr ""
+msgstr "One-Month"
 
 #: membership/templates/membership/index.html
 msgid "Beginner"
-msgstr ""
+msgstr "Beginner"
 
 #: membership/templates/membership/index.html
 msgid ""
 "*Sign up NOW and get the most of your membership. More info on the payment "
 "page."
 msgstr ""
+"*Sign up NOW and get the most of your membership. More info on the payment "
+"page."
 
 #: membership/templates/membership/index.html
 msgid "Learning Feature"
-msgstr ""
+msgstr "Learning Feature"
 
 #: membership/templates/membership/index.html
 msgid "Group Chat"
-msgstr ""
+msgstr "Group Chat"
 
 #: membership/templates/membership/index.html
 msgid "Live Lecture"
-msgstr ""
+msgstr "Live Lecture"
 
 #: membership/templates/membership/index.html
 msgid "Exam"
-msgstr ""
+msgstr "Exam"
 
 #: membership/templates/membership/index.html
 msgid "Credential"
-msgstr ""
+msgstr "Credential"
 
 #: membership/templates/membership/index.html
 msgid "Become a Member"
-msgstr ""
+msgstr "Become a Member"
 
 #: membership/templates/membership/index.html
 msgid ""
 "Self-disciplined learning off work decides how competitive you are. Let’s "
 "discipline ourselves and gain advantage!"
 msgstr ""
+"Self-disciplined learning off work decides how competitive you are. Let’s "
+"discipline ourselves and gain advantage!"
 
 #: membership/templates/membership/result.html
 #: membership/templates/membership/wechat_paying.html
 msgid "EliteMBA school cashier"
-msgstr ""
+msgstr "EliteMBA school cashier"
 
 #: membership/templates/membership/result.html
 msgid "EliteMBA school cashier payment success"
-msgstr ""
+msgstr "EliteMBA school cashier payment success"
 
 #: membership/templates/membership/result.html
 #: membership/templates/membership/wechat_paying.html
 msgid "Return to EliteMBA school in 3 seconds"
-msgstr ""
+msgstr "Return to EliteMBA school in 3 seconds"
 
 #: membership/templates/membership/result.html
 #: membership/templates/membership/wechat_paying.html
 msgid "Return Now"
-msgstr ""
+msgstr "Return Now"
 
 #: membership/templates/membership/wechat_paying.html
 msgid "Amount paid: "
-msgstr ""
+msgstr "Amount paid: "
 
 #: membership/templates/membership/wechat_paying.html
 msgid ""
 "Please complete the payment within 2 hours, otherwise the purchase may fail."
 msgstr ""
+"Please complete the payment within 2 hours, otherwise the purchase may fail."
 
 #: membership/templates/membership/wechat_paying.html
 msgid "Please scan Wechat QR code"
-msgstr ""
+msgstr "Please scan Wechat QR code"
 
 #: membership/templates/membership/wechat_paying.html
 msgid "to complete payment"
-msgstr ""
+msgstr "to complete payment"
 
 #: membership/templates/membership/wechat_paying.html
 msgid "Payment Success"
-msgstr ""
+msgstr "Payment Success"
 
 msgid "email address"
 msgstr ""
@@ -25646,169 +25665,11 @@ msgstr ""
 msgid "System Bugs"
 msgstr ""
 
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid "General Terms"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-msgid ""
-"The products and services of Elite Education (www.elitemba.cn) are provided "
-"by Guangdong Elite International Education & Technology Co., Ltd. "
-"(hereinafter referred to as \"EliteMBA\" or \"we\"). This Disclaimer "
-"Statement(hereinafter referred to as \"Disclaimer\") applies to EliteMBA "
-"website, other applications  used on computers, mobile phones/tablets or "
-"other devices and other products and services. EliteMBA User (hereinafter "
-"referred to as \"User\") must carefully read these terms and agree to this "
-"statement before accepting EliteMBA service."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"User who directly or (such as off-site API references, etc.) indirectly uses"
-" EliteMBA services and data through various means will be regarded as having"
-" unconditionally accepted all the contents involved in this Disclaimer; if "
-"user objects any of the terms in this Disclaimer, please stop using all "
-"services provided by EliteMBA. "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"This disclaimer may be amended or changed at any time by EliteMBA. The "
-"EliteMBA will announce and updated the effective date. The updated "
-"disclaimer will effectively replace the original statement once it is "
-"published. By continuing to use EliteMBA service, the user agrees to and "
-"accepts this statement and any updated versions thereof."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid "Article 1"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"Users may not use EliteMBA to directly or indirectly engage in breaches of "
-"EliteMBA services and data (including but not limited to publication, "
-"promotion, reprint, browsing, and use of EliteMBA or its users) in various "
-"ways. Laws and regulations of the People's Republic of China, as well as the"
-" behavior of social morality. Users should abide by the following "
-"commitments:"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"1. Content published, reprinted or provided should comply with Chinese laws "
-"and regulations and social morality;"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"2. Cannot interfere with, damage or violate the various legal rights and "
-"interests of Elite Education;"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"3. Shall not interfere with, damage and infringe upon the various legal "
-"rights and interests of other EliteMBA users;"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"4. Compliance with the rules and guidelines, management rules, etc. of Elite"
-" Education website and other network related services;"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"5. Elite Education has the right to remove content that violates the above "
-"commitments."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid "Article 2"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"1. EliteMBA only provides storage space for content posted by users. "
-"EliteMBA does not provide any form of guarantee for the content posted or "
-"reprinted by the User: there is no guarantee that the content will meet the "
-"requirements of users, and there is no guarantee that the services of "
-"EliteMBA will not be interrupted. EliteMBA does not assume any legal "
-"responsibility for any reason that the user cannot use the website due to "
-"any conditions such as network conditions, communication lines, third-party "
-"websites or management requirements."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"2. The content published by Elite User (including but not limited to the "
-"contents of the current product features of Elite) only indicates their "
-"personal position and views, and does not represent the position or opinion "
-"of Elite. As the content publisher, it is the responsibility of the content "
-"to be published. All the disputes arising from the published content shall "
-"be the legal and joint responsibility of the publisher of the content. "
-"EliteMBA does not assume any legal and joint responsibility. "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"3. if the user publishes content suspected of infringing on the intellectual"
-" property rights or other legitimate rights and interests of others through "
-"EliteMBA, after the relevant parties provide prima facie evidence, EliteMBA "
-"has the right to delete it first and retain the right to transfer it to the "
-"judicial authorities. Referring to the investigation results of the relevant"
-" judicial authorities, EliteMBA has the final decision on the disposal of "
-"the content posted on the website. "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"4. User should inform Elite when he/she discovers any violation of this "
-"Service Agreement, the terms of service of any other individual service, and"
-" various announcements made by Elite Education. "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid "Supplementary"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"EliteMBA reserves the rights to interpret, modify and update the Disclaimer."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "Effective on Nov 30th, 2018"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Ⅰ. Terms of Service"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The products and services of Elite Education (www.elitemba.cn)  are provided"
 " by Guangdong Elite International Education & Technology Co., Ltd "
@@ -25831,7 +25692,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "You should read this User Agreement carefully before using the services "
 "provided by EliteMBA. If you do not agree to the User Agreement and/or "
@@ -25843,12 +25703,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Ⅱ. Service Description"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "EliteMBA currently offers users a range of course services (including but "
 "not limited to course videos, test questions, exams, course materials, notes"
@@ -25864,7 +25722,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Ⅲ. Abidance by Law"
 msgstr ""
 
@@ -25888,12 +25745,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Ⅳ. User Registration Obligation"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "In order to use the service, the User agrees to provide correct registered "
 "account (email address and/or mobile phone number) and password according to"
@@ -25915,12 +25770,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "V. User Accounts, Passwords and Security"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "After completing the registration process for this service and successfully "
 "registered, the User can log in to the account of EliteMBA (hereinafter "
@@ -25930,7 +25783,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The user is solely responsible for all passwords used and the activities of "
 "the account. User agrees:"
@@ -25943,7 +25795,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "2. If the user does not keep his/her own account number and password, and "
 "therefore any loss or damage caused by the User, EliteMBA cannot and will "
@@ -25951,7 +25802,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "3. User is solely responsible for all the activities and issues that occur "
 "in their account. Upon the occurrence of any loss or damage to other Users, "
@@ -25961,12 +25811,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "VI. Privacy Policy of Elite Education "
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The registration information provided by the User and certain other "
 "information about the User retained by the company will be subject to the "
@@ -25974,12 +25822,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "VII. Responsibility of the Provider/User"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "In accordance with relevant laws and regulations, EliteMBA hereby notify all"
 " Users solemnly that, the Provider of any content released or sent either "
@@ -26000,19 +25846,16 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "VIII. User Behavior"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The User agrees that the Service will not be used for any illegal or "
 "improper activities, including but not limited to the following:"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "1. Publish or otherwise transmit information that contains one of the "
 "following:"
@@ -26023,45 +25866,38 @@ msgid "Opposing to the basic principles established by the Constitution;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Endanger national security, disclose state secrets, subvert state power or "
 "sabotage state unification; "
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Damage to national honours and interests;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Inciting national hatred, ethnic discrimination, and undermining national "
 "unity;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Destroy the national religious policy and promote cults and feudal "
 "superstitions;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Spread rumors, disrupting social order or endanger social stability;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Spreading obscenity, eroticism, gambling, violence, murder and terrorism or "
 "instigating others to commit crime;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Insulting or slandering others, infringing on the legal rights of others;"
 msgstr ""
@@ -26074,7 +25910,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Contains other content restricted or prohibited by Chinese laws, "
 "regulations, rules, regulations, and any legally binding norm;"
@@ -26091,14 +25926,12 @@ msgid "2. Harm the legitimate rights and interests of others in any way;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "3. Pretend to be any other person or institution, or to make a false "
 "statement about or lied to any person or institution;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "4. Any content that is known but not authorized to be transmitted, sent by "
 "e-mail or otherwise in accordance with any law or contract or legal "
@@ -26108,7 +25941,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "5. Publish or otherwise transmit the content of copyrights, patents, "
 "trademarks, trade secrets, or other proprietary rights (hereinafter referred"
@@ -26116,7 +25948,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "6. Publish, send or otherwise transmit any advertising letter, promotional "
 "material, \"spam\", \"spamming\", \"chain mail\", \"direct sales\" or any "
@@ -26124,7 +25955,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "7. Publishing, sending or by any other means transmitting computer viruses "
 "(hereinafter referred to as \"Viruses\"), including but not limited to "
@@ -26141,19 +25971,16 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "9. Tracking, cyber manhunting or harassing others in any other ways;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "10. Deliberate or unintentional violate any applicable local and/or national"
 " law and any legally binding rules;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "11. Intercept, tamper with, collect, store or delete personal information, "
 "on-site mail or other data  without legal authorization, or use such "
@@ -26172,7 +25999,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "User understands and agrees that EliteMBA might save or disclose contents in"
 " adherence of the requirements of laws and regulations, integrity or the "
@@ -26180,12 +26006,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "1. Comply with legal procedures;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "3. Execute the implementation of this agreement;"
 msgstr ""
 
@@ -26194,7 +26018,6 @@ msgid "3. Respond to any claims made by third parties;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "4. Protect the rights, property or personal safety of Elite Education, its "
 "users and the public;"
@@ -26205,12 +26028,10 @@ msgid "5. Other conditions that EliteMBA deems necessary."
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "IX. Special Warning for International Use"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Users are aware of the borderless nature of the Internet and agree to abide "
 "by all local laws and regulations regarding online conduct and content. The "
@@ -26220,7 +26041,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "X. Public information published on EliteMBA"
 msgstr ""
 
@@ -26231,7 +26051,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "2. For the content uploaded or published by the user in EliteMBA, the user "
 "shall guarantee that he or she is the copyright owner or has obtained legal "
@@ -26244,12 +26063,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XI. Compensation"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Any third party's claim or request, including a reasonable attorney fee, due"
 " to the content provided, posted or transmitted by the User, the User's "
@@ -26261,12 +26078,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XII. About Use"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The User agrees not to copy, copy, sell, resell or use it for any other "
 "commercial purpose for the use or acquisition of any part of the Service or "
@@ -26274,12 +26089,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XIII. About Storage"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The User agrees that EliteMBA shall be liable for any information, "
 "communication materials and other content posted or transmitted through the "
@@ -26287,12 +26100,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XIV. Modification of Service"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "EliteMBA reserves the right to modify or terminate the Service (or any part "
 "thereof) temporarily or permanently at any time, with or without notice. The"
@@ -26301,12 +26112,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XV. Termination of Service"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "User agrees that EliteMBA can, in its sole discretion, terminate the User "
 "account or the use of this service (or any part thereof) for any reason "
@@ -26324,12 +26133,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XVI. Dealing with Advertisers and Other Third Parties"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Users engage in any form of communication or business dealings with "
 "advertisers and other third parties through this website, or participate in "
@@ -26343,12 +26150,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XVII. Exclusive Rights of EliteMBA"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The User also understands and agrees that the content of the sponsored "
 "advertisements or information presented to the User via the Service or the "
@@ -26369,17 +26174,14 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XVIII. Guarantee and Warranty"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "The User clearly understands and agrees:"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "1. No provision of this agreement will relieve EliteMBA of any liability for"
 " the User's personal injury or damage or property loss resulting from "
@@ -26387,7 +26189,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "2. The use of the Service is at the User's own risk. The Service is provided"
 " on the basis of \"status quo\" and \"existing\". EliteMBA does not provide "
@@ -26397,19 +26198,16 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "3. Any statement or conduct by any third party in the Service;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "4. Other matters related to the Service, except as explicitely provided in "
 "this Agreement of Use;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "5. Elite Education does not accept any responsibility for the posting or "
 "delivery of fraudulent information by any third party or for inducing users "
@@ -26417,7 +26215,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "ⅩⅨ. EliteMBA Trademarks Information"
 msgstr ""
 
@@ -26432,19 +26229,16 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XX. Exclusive User Rights"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Elite Education respects the intellectual property rights of others and "
 "calls on users to respect intellectual property rights as well."
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The services and materials of EliteMBA are provided on an \"as is\" basis "
 "and expressly disclaims any express or implied warranties of \"service\", "
@@ -26455,7 +26249,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "If the User infringes upon the intellectual property rights of others, "
 "EliteMBA will, according to the provisions of the national laws and "
@@ -26465,7 +26258,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "EliteMBA respects any rights (including intellectual property rights) of "
 "others and also requires our users to respect the rights of others. In the "
@@ -26489,7 +26281,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XXI. General Terms"
 msgstr ""
 
@@ -26502,7 +26293,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "2. The User Agreement and the relationship between the User and EliteMBA are"
 " governed by the laws of the People's Republic of China. The dispute between"
@@ -26514,14 +26304,12 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "3. The failure of EliteMBA to exercise or enforce any rights or provisions "
 "of this agreement shall not constitute the waiver of aforementioned rights;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "4. If any provision of this Terms of Use is ineffective due to conflicts "
 "with the laws of the People's Republic of China, the User agrees that, in "
@@ -26531,14 +26319,12 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "5. The title of this User Agreement is for convenience only and does not "
 "have any legal or contractual effect;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "6. Elite Education has the final interpretation of this User Agreement."
 msgstr ""
@@ -26550,7 +26336,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
+msgid "Effective on Nov 30th, 2018"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
 msgid ""
 "The Products and services of EliteMBA（www.elitemba.cn）are provided by "
 "Guangzhou Elite Education & Technology Co., Ltd (hereinafter referred to as "
@@ -26564,7 +26353,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "This policy applies to all relevant services in EliteMBA. As the scope of "
 "the EliteMBA services expands, the content of the policy may be amended or "
@@ -26576,12 +26364,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "Ⅰ. The Information that We Collect"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "Normally, you can visit EliteMBA and browse the information anonymously. "
 "When your Personally Identifiable Information or contact details are needed,"
@@ -26592,12 +26378,10 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "Ⅱ. About User's Personal Information"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA strictly protects the security of Users' personal information. We "
 "use a variety of security technologies and procedures to protect our "
@@ -26605,7 +26389,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA will not disclose the personal information of the User to third "
 "parties without the User's permission. The following conditions are listed "
@@ -26615,7 +26398,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "(a) Meet the requirements of laws or administrative regulations that are "
 "explicitely listed, or comply with applicable legal procedures to Elite "
@@ -26629,31 +26411,26 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "(c) Protection of the rights or property of EliteMBA;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "(d) Under urgent emergencies, ensure the safety of EliteMBA employees, "
 "product or service users, or the public."
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "This information will not be shared with third parties by EliteMBA without "
 "the user's permission, except as outlined above in this statement."
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "III.Use of Cookie"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "Using cookies helps users personalize their online experience. Users can "
 "accept or reject cookies. Most web browsers automatically accept cookies, "
@@ -26662,7 +26439,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA will use cookies sometimes to capture the websites to learn which "
 "websites are popular in order to provide better services to User when they "
@@ -26670,7 +26446,6 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA cookie is also used when the user registers for EliteMBA. In this "
 "case, EliteMBA collects and stores useful information, and when the user "
@@ -26679,26 +26454,22 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "If the User's browser is set to reject cookies, the User will still be able "
 "to access most of the web pages of EliteMBA."
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "IV. About Disclaimer"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA does not assume any legal responsibility for the occurrence of the "
 "following related matters:"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "1. The leakage of any personal information caused by the User's notification"
 " of the User's password or sharing the registered account with others, or "
@@ -26707,14 +26478,12 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "2. According to the provisions of the law or relevant government policy "
 "requirements, Elitemba providing User's personal information;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "3. Disputes caused by any third party using User's personal information "
 "under various circumstances listed in the terms of service and the "
@@ -26722,22 +26491,23 @@ msgid ""
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "4. Any temporary website closure due to hacking, computer virus intrusion or"
 " government regulation;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "5. Any consequences caused by force majeure;"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "6. Ways of use or disclaimer circumstances listed by EliteMBA in terms of "
 "service and this Disclaimer."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid "General Terms"
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
@@ -26750,6 +26520,122 @@ msgid ""
 "other devices and other products and services. EliteMBA User (hereinafter "
 "referred to as \"User\") must carefully read these terms and agree to this "
 "statement before accepting EliteMBA service."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"User who directly or (such as off-site API references, etc.) indirectly uses"
+" EliteMBA services and data through various means will be regarded as having"
+" unconditionally accepted all the contents involved in this Disclaimer; if "
+"user objects any of the terms in this Disclaimer, please stop using all "
+"services provided by EliteMBA. "
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"This disclaimer may be amended or changed at any time by EliteMBA. The "
+"EliteMBA will announce and updated the effective date. The updated "
+"disclaimer will effectively replace the original statement once it is "
+"published. By continuing to use EliteMBA service, the user agrees to and "
+"accepts this statement and any updated versions thereof."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid "Article 1"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"Users may not use EliteMBA to directly or indirectly engage in breaches of "
+"EliteMBA services and data (including but not limited to publication, "
+"promotion, reprint, browsing, and use of EliteMBA or its users) in various "
+"ways. Laws and regulations of the People's Republic of China, as well as the"
+" behavior of social morality. Users should abide by the following "
+"commitments:"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"1. Content published, reprinted or provided should comply with Chinese laws "
+"and regulations and social morality;"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"2. Cannot interfere with, damage or violate the various legal rights and "
+"interests of Elite Education;"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"3. Shall not interfere with, damage and infringe upon the various legal "
+"rights and interests of other EliteMBA users;"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"4. Compliance with the rules and guidelines, management rules, etc. of Elite"
+" Education website and other network related services;"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"5. Elite Education has the right to remove content that violates the above "
+"commitments."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid "Article 2"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"1. EliteMBA only provides storage space for content posted by users. "
+"EliteMBA does not provide any form of guarantee for the content posted or "
+"reprinted by the User: there is no guarantee that the content will meet the "
+"requirements of users, and there is no guarantee that the services of "
+"EliteMBA will not be interrupted. EliteMBA does not assume any legal "
+"responsibility for any reason that the user cannot use the website due to "
+"any conditions such as network conditions, communication lines, third-party "
+"websites or management requirements."
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"2. The content published by Elite User (including but not limited to the "
+"contents of the current product features of Elite) only indicates their "
+"personal position and views, and does not represent the position or opinion "
+"of Elite. As the content publisher, it is the responsibility of the content "
+"to be published. All the disputes arising from the published content shall "
+"be the legal and joint responsibility of the publisher of the content. "
+"EliteMBA does not assume any legal and joint responsibility. "
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"3. if the user publishes content suspected of infringing on the intellectual"
+" property rights or other legitimate rights and interests of others through "
+"EliteMBA, after the relevant parties provide prima facie evidence, EliteMBA "
+"has the right to delete it first and retain the right to transfer it to the "
+"judicial authorities. Referring to the investigation results of the relevant"
+" judicial authorities, EliteMBA has the final decision on the disposal of "
+"the content posted on the website. "
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"4. User should inform Elite when he/she discovers any violation of this "
+"Service Agreement, the terms of service of any other individual service, and"
+" various announcements made by Elite Education. "
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid "Supplementary"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"EliteMBA reserves the rights to interpret, modify and update the Disclaimer."
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/static_templates/join_us.html
@@ -26954,131 +26840,6 @@ msgstr ""
 msgid ""
 "4. To save your changes, click anywhere on the page outside of the \"Email "
 "Address\" field, or navigate to a different page."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
-msgid ""
-"(b) An agreement that complies with the relevant EliteMBA Terms of Service "
-"and the Software License Agreement;"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"The User agrees to abide by all the provisions of the relevant laws and "
-"regulations of the People's Republic of China and assumes full "
-"responsibility for any actions and results of the use of the Service by any "
-"means and password. If the User behavior violates any provisions of national"
-" laws and regulations and may constitute a crime, he will be held criminally"
-" liable and the user shall bear full legal responsibility."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"At the same time, if EliteMBA has reason to believe that any of the user's "
-"actions, including but not limited to any of the user's statements and other"
-" acts, violates or may violate any of the provisions of national laws and "
-"regulations, EliteMBA may terminate the offer to the User at any time "
-"without prior notice service."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"EliteMBA is not responsible for any registration of any User, including but "
-"not limited to the identification, verification of the authenticity, "
-"correctness, completeness, suitability and/or responsibility of any "
-"registration information."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"1. Upon the occurrence of noticing any unauthorized account activity or "
-"other security issue, User shall contact and notify E-ducation immediately; "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "Oppose the basic principles established by the Constitution;"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"Content containing false, fraudulent, harmful, coercive, infringing on the "
-"privacy of others, harassment, infringement, slander, vulgarity, jealousy, "
-"or other morally offensive content;"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "Contains content that is not suitable for display in EliteMBA;"
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "2. Harm the legal rights of others in any way; "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"8. Interfere with or disrupt the server or network connected to the Service "
-"or the Service, or violate any rules, procedures, policies or specifications"
-" regarding the Service Connection Network; "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"Users are advised to notify the Company of any violation of the Terms of "
-"Service and any other announcements in EliteMBA and other content that "
-"contradicts EliteMBA's rights and interests. "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "3. Respond to any claims made by third parties; "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "5. Other situations that the EliteMBA considers necessary."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"1. In this User Agreement, \"the area in which the service is used "
-"publicly\" means the area that the general public can use; "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"EliteMBA, Elite Education and other Eliteu registered trademarks, logos and "
-"products and service names are trademarks of Eliteu Company (hereinafter "
-"referred to as \"Elite Trademark\"). The User agrees not to display or use "
-"or otherwise process the Trademark in any manner without the prior written "
-"consent of Elite, or to indicate that the User has the right to display, use"
-" or otherwise process the Trademark."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"If the User believes that the copyright of his work has been infringed or "
-"the User's intellectual property rights have been violated, according to the"
-" Regulations on the Protection of Information Network Communication Rights, "
-"Users should contact EliteMBA and provide detailed evidence. Or please go to"
-" the National Copyright Administration of the People's Republic of China to "
-"download the \"Notice of Deleting or Disconnecting the Infringing Web "
-"Content\" (hereinafter referred to as the \"Delete Notice\"). If the user "
-"does not understand the content of the \"Delete Notice\", please log in to "
-"the National Copyright Administration of the People's Republic of China to "
-"look for the instructions in \"Notice to delete or disconnect the infringing"
-" web content\"."
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"1. This User Agreement and the Privacy Policy and Disclaimer constitute the "
-"entire agreement between the User and the Company and regof the Service. "
-"Additional terms and conditions apply when users use related services and "
-"use content or software provided by third parties; "
-msgstr ""
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"Users are advised to notify the Company of any violation of the Terms of "
-"Service and any other announcements in EliteMBA and other related notices. "
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/student_account/account_settings.html
