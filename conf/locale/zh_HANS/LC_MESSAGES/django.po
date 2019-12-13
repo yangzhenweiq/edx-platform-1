@@ -6,9 +6,9 @@
 #
 # Translators:
 # fengri <173770922@qq.com>, 2019
-# li ying <code@eliteu.cn>, 2019
 # Sushan Wu <ss.wu@eliteu.com.cn>, 2019
 # 健超 张 <jc.zhang@eliteu.com.cn>, 2019
+# li ying <code@eliteu.cn>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/).
@@ -96,7 +96,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-09-16 17:19+0800\n"
+"POT-Creation-Date: 2019-12-13 06:01+0000\n"
 "PO-Revision-Date: 2019-06-19 06:25+0000\n"
 "Last-Translator: li ying <code@eliteu.cn>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
@@ -11098,15 +11098,21 @@ msgid "You must agree to the {platform_name} {terms_of_service}"
 msgstr "您必须同意接受{platform_name}的{terms_of_service}"
 
 #: openedx/core/djangoapps/user_api/api.py
+msgid ""
+"Account can only be created after you agree to our User Agreement, "
+"Disclaimer and Privacy Policy."
+msgstr "只有同意遵守英荔商学院的用户协议、免责声明和隐私政策，才能创建账号。"
+
+#: openedx/core/djangoapps/user_api/api.py
 #, python-brace-format
 msgid ""
-"By creating an account, you agree                   to abide by EliteMBA's"
+"By checking this box, you agree                   to abide by EliteMBA's"
 "                   "
 "{user_agreement_link_start}{user_agreement}{user_agreement_link_end}, "
 "{disclaimer_link_start}{disclaimer}{disclaimer_link_end}                   "
 "and {privacy_policy_link_start}Privacy Policy{privacy_policy_link_end}."
 msgstr ""
-"注册即表示同意遵守英荔商学院的{user_agreement_link_start}{user_agreement}{user_agreement_link_end}、{disclaimer_link_start}{disclaimer}{disclaimer_link_end}和{privacy_policy_link_start}隐私政策{privacy_policy_link_end}"
+"勾选即表示同意遵守英荔商学院的{user_agreement_link_start}{user_agreement}{user_agreement_link_end}、{disclaimer_link_start}{disclaimer}{disclaimer_link_end}和{privacy_policy_link_start}隐私政策{privacy_policy_link_end}"
 
 #: openedx/core/djangoapps/user_api/api.py
 #: themes/elitemba-theme/lms/templates/footer.html
@@ -26117,179 +26123,11 @@ msgstr "联系人：廖小姐"
 msgid "System Bugs"
 msgstr "系统漏洞"
 
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid "General Terms"
-msgstr "总则"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-msgid ""
-"The products and services of Elite Education (www.elitemba.cn) are provided "
-"by Guangdong Elite International Education & Technology Co., Ltd. "
-"(hereinafter referred to as \"EliteMBA\" or \"we\"). This Disclaimer "
-"Statement(hereinafter referred to as \"Disclaimer\") applies to EliteMBA "
-"website, other applications  used on computers, mobile phones/tablets or "
-"other devices and other products and services. EliteMBA User (hereinafter "
-"referred to as \"User\") must carefully read these terms and agree to this "
-"statement before accepting EliteMBA service."
-msgstr ""
-"英荔商学院（www.EliteMBA.cn）的产品及服务由广东英荔国际教育科技有限公司（以下简称“英荔”或“我们”）提供。本免责声明（以下简称“本声明”）适用于英荔的网站、在计算机/手机/平板电脑或其他设备上使用的英荔的应用程序和其他产品及服务。英荔用户（以下简称“用户”）在接受英荔服务之前，请务必仔细阅读本条款并同意本声明"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"User who directly or (such as off-site API references, etc.) indirectly uses"
-" EliteMBA services and data through various means will be regarded as having"
-" unconditionally accepted all the contents involved in this Disclaimer; if "
-"user objects any of the terms in this Disclaimer, please stop using all "
-"services provided by EliteMBA. "
-msgstr ""
-"用户直接或通过各类方式（如站外API引用等）间接使用英荔服务和数据的行为，都将被视作已无条件接受本声明所涉全部内容；若用户对本声明的任何条款有异议，请停止使用英荔所提供的全部服务。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"This disclaimer may be amended or changed at any time by EliteMBA. The "
-"EliteMBA will announce and updated the effective date. The updated "
-"disclaimer will effectively replace the original statement once it is "
-"published. By continuing to use EliteMBA service, the user agrees to and "
-"accepts this statement and any updated versions thereof."
-msgstr ""
-"本免责声明可由英荔随时修正或更改，英荔将公布并更新生效日期。更新后的免责声明一旦公布即有效代替原来的声明，用户继续使用英荔服务即表示用户同意并接受本声明及其任何更新版本。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid "Article 1"
-msgstr "第一条"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"Users may not use EliteMBA to directly or indirectly engage in breaches of "
-"EliteMBA services and data (including but not limited to publication, "
-"promotion, reprint, browsing, and use of EliteMBA or its users) in various "
-"ways. Laws and regulations of the People's Republic of China, as well as the"
-" behavior of social morality. Users should abide by the following "
-"commitments:"
-msgstr ""
-"用户以各种方式使用英荔服务和数据（包括但不限于发表、宣传介绍、转载、浏览及利用英荔或其用户发布内容）的过程中，不得以任何方式利用英荔直接或间接从事违反中华人民共和国法律法规，以及社会公德的行为。用户应当恪守下述承诺："
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"1. Content published, reprinted or provided should comply with Chinese laws "
-"and regulations and social morality;"
-msgstr "1. 发布、转载或提供的内容符合中国法律法规、社会公德；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"2. Cannot interfere with, damage or violate the various legal rights and "
-"interests of Elite Education;"
-msgstr "2. 不得干扰、损害和侵犯英荔的各种合法权利与利益；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"3. Shall not interfere with, damage and infringe upon the various legal "
-"rights and interests of other EliteMBA users;"
-msgstr "3. 不得干扰、损害和侵犯其他英荔用户的各种合法权利与利益；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"4. Compliance with the rules and guidelines, management rules, etc. of Elite"
-" Education website and other network related services;"
-msgstr "4. 遵守英荔以及与之相关的网络服务的协议、指导原则、管理细则等；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"5. Elite Education has the right to remove content that violates the above "
-"commitments."
-msgstr "5. 英荔有权对违反上述承诺的内容予以删除。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid "Article 2"
-msgstr "第二条"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"1. EliteMBA only provides storage space for content posted by users. "
-"EliteMBA does not provide any form of guarantee for the content posted or "
-"reprinted by the User: there is no guarantee that the content will meet the "
-"requirements of users, and there is no guarantee that the services of "
-"EliteMBA will not be interrupted. EliteMBA does not assume any legal "
-"responsibility for any reason that the user cannot use the website due to "
-"any conditions such as network conditions, communication lines, third-party "
-"websites or management requirements."
-msgstr ""
-"1. "
-"英荔仅为用户发布的内容提供存储空间，英荔不对用户发表、转载的内容提供任何形式的保证：不保证内容满足用户的要求，不保证英荔的服务不会中断。因网络状况、通讯线路、第三方网站或管理部门的要求等任何原因而导致用户不能正常使用本网站，英荔不承担任何法律责任。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"2. The content published by Elite User (including but not limited to the "
-"contents of the current product features of Elite) only indicates their "
-"personal position and views, and does not represent the position or opinion "
-"of Elite. As the content publisher, it is the responsibility of the content "
-"to be published. All the disputes arising from the published content shall "
-"be the legal and joint responsibility of the publisher of the content. "
-"EliteMBA does not assume any legal and joint responsibility. "
-msgstr ""
-"2. "
-"用户在英荔发表的内容（包含但不限于英荔目前各产品功能里的内容）仅表明其个人的立场和观点，并不代表英荔的立场或观点。作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。英荔不承担任何法律及连带责任。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"3. if the user publishes content suspected of infringing on the intellectual"
-" property rights or other legitimate rights and interests of others through "
-"EliteMBA, after the relevant parties provide prima facie evidence, EliteMBA "
-"has the right to delete it first and retain the right to transfer it to the "
-"judicial authorities. Referring to the investigation results of the relevant"
-" judicial authorities, EliteMBA has the final decision on the disposal of "
-"the content posted on the website. "
-msgstr ""
-"3. "
-"用户在英荔发布涉嫌侵犯他人知识产权或其他合法权益的内容，经相关方提供初步证据，英荔有权先行予以删除，并保留移交司法机关查处的权利。参照相应司法机关的查处结果，英荔对于网站发布内容的处置具有最终决定权。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"4. User should inform Elite when he/she discovers any violation of this "
-"Service Agreement, the terms of service of any other individual service, and"
-" various announcements made by Elite Education. "
-msgstr "4. 个人或单位如认为英荔存在侵犯自身合法权益的内容，应准备好具有法律效应的证明材料，及时与英荔取得联系，以便英荔迅速做出处理。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid "Supplementary"
-msgstr "附则"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-msgid ""
-"EliteMBA reserves the rights to interpret, modify and update the Disclaimer."
-msgstr "对免责声明的解释、修改及更新权均属于英荔所有。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/disclaimer.html
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "Effective on Nov 30th, 2018"
-msgstr "协议生效日期：2018年11月30日"
-
-#: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Ⅰ. Terms of Service"
 msgstr "一、服务条款"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The products and services of Elite Education (www.elitemba.cn)  are provided"
 " by Guangdong Elite International Education & Technology Co., Ltd "
@@ -26313,7 +26151,6 @@ msgstr ""
 "英荔商学院（www.EliteMBA.cn）的产品及服务由广东英荔国际教育科技有限公司（以下简称“英荔”或“我们”）提供。本使用协议（以下简称“使用协议”）适用于英荔的网站、在计算机/手机/平板电脑或其他设备上使用的英荔的应用程序和其他产品及服务。使用协议的内容可由英荔不定期修改、变更。一旦变动产生，我们将随即于使用协议上公布并更新生效日期。修改后的使用协议一旦公布即有效代替原来的使用协议。您应定期查看以了解更新后的服务条款，若您继续使用我们的服务即构成您对本服务条款及其任何更新版本的同意。此外，当英荔用户使用英荔特殊服务（包括但不限于除网站基本服务外的其他具时效性的市场活动服务）时，英荔用户应遵守英荔随时公布的与该服务相关的指引和规则。前述所有的指引和规则，均构成本使用协议的一部分。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "You should read this User Agreement carefully before using the services "
 "provided by EliteMBA. If you do not agree to the User Agreement and/or "
@@ -26326,12 +26163,10 @@ msgstr ""
 "您在使用英荔提供的各项服务之前，应仔细阅读本使用协议。如您不同意本使用协议及/或随时对其的修改，请立即停止使用英荔所提供的全部服务；您一旦使用英荔服务，即视为已了解并完全同意本使用协议各项内容，包括英荔对使用协议随时所做的任何修改，并成为英荔用户（以下简称“用户”）。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Ⅱ. Service Description"
 msgstr "二、服务说明"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "EliteMBA currently offers users a range of course services (including but "
 "not limited to course videos, test questions, exams, course materials, notes"
@@ -26348,7 +26183,6 @@ msgstr ""
 "英荔目前向用户提供英荔自主制作的一系列课程服务（包括但不限于课程视频、测验题目、考试、课程资料、笔记以及助教服务）。除非本使用协议另有其他明示规定，英荔增加或强化此服务的任何新功能，包括所推出的新产品，均受到本使用协议之规范。用户了解并同意，本服务仅依其当前所呈现的状况提供，对于任何用户信息或个人化设定之失效、删除、传递错误、未予储存或其他任何问题，英荔均不承担任何责任。英荔保留不经事先通知因维修保养、升级或其他目的而暂停本服务任何部分的权利。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Ⅲ. Abidance by Law"
 msgstr "三、遵守法律"
 
@@ -26374,12 +26208,10 @@ msgstr ""
 "同时，如果英荔有理由认为用户的任何行为，包括但不限于用户的任何言论和其他行为违反或可能违反国家法律和法规的任何规定，英荔可在任何时候不经任何事先通知终止向用户提供服务。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Ⅳ. User Registration Obligation"
 msgstr "四、用户的注册义务"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "In order to use the service, the User agrees to provide correct registered "
 "account (email address and/or mobile phone number) and password according to"
@@ -26403,12 +26235,10 @@ msgstr ""
 "英荔无须对任何用户的任何登记资料承担任何责任，包括但不限于鉴别、核实任何登记资料的真实性、正确性、完整性、适用性及/或是否为最新资料的责任。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "V. User Accounts, Passwords and Security"
 msgstr "五、用户账号、密码及安全"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "After completing the registration process for this service and successfully "
 "registered, the User can log in to the account of EliteMBA (hereinafter "
@@ -26419,7 +26249,6 @@ msgstr ""
 "完成本服务的注册程序并成功注册之后，用户可使用其邮箱地址及/或手机号码和密码，登录到用户在英荔的账号（以下简称“账号”）。用户须承担保障自己账号安全的责任。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The user is solely responsible for all passwords used and the activities of "
 "the account. User agrees:"
@@ -26432,7 +26261,6 @@ msgid ""
 msgstr "1. 用户的英荔账号遭到未获授权的使用，或者发生其他任何安全问题时，用户将立即通知英荔；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "2. If the user does not keep his/her own account number and password, and "
 "therefore any loss or damage caused by the User, EliteMBA cannot and will "
@@ -26440,7 +26268,6 @@ msgid ""
 msgstr "2. 如果用户未保管好自己的账号和密码，因此而产生的任何损失或损害，英荔无法也不承担任何责任；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "3. User is solely responsible for all the activities and issues that occur "
 "in their account. Upon the occurrence of any loss or damage to other Users, "
@@ -26450,12 +26277,10 @@ msgid ""
 msgstr "3. 每个用户都要对其账号中的所有行为和事件负全责。如果用户未保管好自己的账号和密码而对用户、英荔或第三方造成的损害，用户将负全部责任。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "VI. Privacy Policy of Elite Education "
 msgstr "六、英荔隐私权政策"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The registration information provided by the User and certain other "
 "information about the User retained by the company will be subject to the "
@@ -26463,12 +26288,10 @@ msgid ""
 msgstr "用户提供的登记资料及英荔保留的有关用户的若干其他资料将受到中国有关隐私的法律和本公司《隐私政策》之规范。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "VII. Responsibility of the Provider/User"
 msgstr "七、提供者之责任"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "In accordance with relevant laws and regulations, EliteMBA hereby notify all"
 " Users solemnly that, the Provider of any content released or sent either "
@@ -26490,19 +26313,16 @@ msgstr ""
 "根据有关法律法规，英荔在此郑重提醒用户注意，任何经由本服务而发布、上传的文字、资讯、资料、照片、图形、视讯、信息或其他资料（以下简称“内容”），无论系公开还是私下传送，均由内容提供者承担责任。英荔仅为用户提供内容存储空间，无法控制经由本服务传送之内容，因此不保证内容的正确性、完整性或品质。用户已预知使用本服务时，可能会接触到令人不快、不适当或令人厌恶之内容。在任何情况下，英荔均不为任何内容负责，但英荔有权依法停止传输任何前述内容并采取相应行动，包括但不限于暂停用户使用本服务的全部或部分，保存有关记录，并向有关机关报告。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "VIII. User Behavior"
 msgstr "八、用户行为"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The User agrees that the Service will not be used for any illegal or "
 "improper activities, including but not limited to the following:"
 msgstr "用户同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为："
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "1. Publish or otherwise transmit information that contains one of the "
 "following:"
@@ -26513,45 +26333,38 @@ msgid "Opposing to the basic principles established by the Constitution;"
 msgstr "反对宪法所确定的基本原则的；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Endanger national security, disclose state secrets, subvert state power or "
 "sabotage state unification; "
 msgstr "危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Damage to national honours and interests;"
 msgstr "损害国家荣誉和利益的；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Inciting national hatred, ethnic discrimination, and undermining national "
 "unity;"
 msgstr "煽动民族仇恨、民族歧视、破坏民族团结的；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Destroy the national religious policy and promote cults and feudal "
 "superstitions;"
 msgstr "破坏国家宗教政策，宣扬邪教和封建迷信的；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "Spread rumors, disrupting social order or endanger social stability;"
 msgstr "散布谣言，扰乱社会秩序，破坏社会稳定的；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Spreading obscenity, eroticism, gambling, violence, murder and terrorism or "
 "instigating others to commit crime;"
 msgstr "散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Insulting or slandering others, infringing on the legal rights of others;"
 msgstr "侮辱或者诽谤他人，侵害他人合法权利的；"
@@ -26564,7 +26377,6 @@ msgid ""
 msgstr "含有虚假、诈骗、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其他道德上令人反感的内容；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Contains other content restricted or prohibited by Chinese laws, "
 "regulations, rules, regulations, and any legally binding norm;"
@@ -26581,14 +26393,12 @@ msgid "2. Harm the legitimate rights and interests of others in any way;"
 msgstr "2. 以任何方式危害他人的合法权益；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "3. Pretend to be any other person or institution, or to make a false "
 "statement about or lied to any person or institution;"
 msgstr "3. 冒充其他任何人或机构，或以虚伪不实的方式陈述或谎称与任何人或机构有关；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "4. Any content that is known but not authorized to be transmitted, sent by "
 "e-mail or otherwise in accordance with any law or contract or legal "
@@ -26600,7 +26410,6 @@ msgstr ""
 "将依据任何法律或合约或法定关系（例如由于雇佣关系和依据保密合约所得知或揭露之内部资料、专属及机密资料）知悉但无权传送之任何内容加以发布、发送电子邮件或以其他方式传送；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "5. Publish or otherwise transmit the content of copyrights, patents, "
 "trademarks, trade secrets, or other proprietary rights (hereinafter referred"
@@ -26608,7 +26417,6 @@ msgid ""
 msgstr "5. 将侵害他人著作权、专利权、商标权、商业秘密、或其他专属权利（以下简称“专属权利”）之内容加以发布或以其他方式传送；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "6. Publish, send or otherwise transmit any advertising letter, promotional "
 "material, \"spam\", \"spamming\", \"chain mail\", \"direct sales\" or any "
@@ -26616,7 +26424,6 @@ msgid ""
 msgstr "6. 将任何广告信函、促销资料、“垃圾邮件”、“滥发信件”、“连锁信件”、“直销”或其他任何形式的劝诱资料加以发布、发送或以其他方式传送；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "7. Publishing, sending or by any other means transmitting computer viruses "
 "(hereinafter referred to as \"Viruses\"), including but not limited to "
@@ -26635,19 +26442,16 @@ msgid ""
 msgstr "8. 干扰或破坏本服务或与本服务相连线之服务器和网络，或违反任何关于本服务连线网络之规定、程序、政策或规范；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "9. Tracking, cyber manhunting or harassing others in any other ways;"
 msgstr "9. 跟踪、人肉搜索或以其他方式骚扰他人；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "10. Deliberate or unintentional violate any applicable local and/or national"
 " law and any legally binding rules;"
 msgstr "10. 故意或非故意地违反任何适用的当地、国家法律，以及任何具有法律效力的规则；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "11. Intercept, tamper with, collect, store or delete personal information, "
 "on-site mail or other data  without legal authorization, or use such "
@@ -26667,7 +26471,6 @@ msgstr ""
 "用户已认可英荔未对用户的使用行为进行全面控制，用户使用任何内容时，包括依赖前述内容之正确性、完整性或实用性时，用户同意将自行加以判断并承担所有风险，而不依赖于英荔。但英荔依其自行之考虑，可拒绝和删除经由本服务提供之违反本条款的或其他引起英荔异议的任何内容。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "User understands and agrees that EliteMBA might save or disclose contents in"
 " adherence of the requirements of laws and regulations, integrity or the "
@@ -26675,12 +26478,10 @@ msgid ""
 msgstr "用户了解并同意，英荔依据法律法规要求、基于诚信或出于以下目的，可能对部分内容加以保存或揭露："
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "1. Comply with legal procedures;"
 msgstr "1. 遵守法律程序；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "3. Execute the implementation of this agreement;"
 msgstr "3. 执行本使用协议；"
 
@@ -26689,7 +26490,6 @@ msgid "3. Respond to any claims made by third parties;"
 msgstr "3. 回应任何第三人提出的权利主张；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "4. Protect the rights, property or personal safety of Elite Education, its "
 "users and the public;"
@@ -26700,12 +26500,10 @@ msgid "5. Other conditions that EliteMBA deems necessary."
 msgstr "5. 其他英荔认为有必要的情况。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "IX. Special Warning for International Use"
 msgstr "九、国际使用之特别警告"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Users are aware of the borderless nature of the Internet and agree to abide "
 "by all local laws and regulations regarding online conduct and content. The "
@@ -26716,7 +26514,6 @@ msgstr ""
 "用户已了解国际互联网的无国界性，同意遵守当地所有关于网上行为及内容之法律法规。用户特别同意遵守有关从中国或用户所在国家或地区输出信息之传输的所有适用法律法规。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "X. Public information published on EliteMBA"
 msgstr "十、在英荔发布的公开信息"
 
@@ -26727,7 +26524,6 @@ msgid ""
 msgstr "1. 在本使用协议中，“本服务公开使用区域”系指一般公众可以使用的区域；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "2. For the content uploaded or published by the user in EliteMBA, the user "
 "shall guarantee that he or she is the copyright owner or has obtained legal "
@@ -26742,12 +26538,10 @@ msgstr ""
 "用户在英荔上传或发布的内容，用户应保证其为著作权人或已取得合法授权，并且该内容不会侵犯任何第三方的合法权益，用户同意授予英荔所有前述内容在全球范围内的免费、不可撤销的、永久的、可再许可或转让的独家使用权许可，据该许可英荔将有权以展示、推广及其他不为我国法律所禁止的方式使用前述内容。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XI. Compensation"
 msgstr "十一、赔偿"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Any third party's claim or request, including a reasonable attorney fee, due"
 " to the content provided, posted or transmitted by the User, the User's "
@@ -26761,12 +26555,10 @@ msgstr ""
 " 并承担由此引发的全部法律责任。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XII. About Use"
 msgstr "十二、关于使用"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The User agrees not to copy, copy, sell, resell or use it for any other "
 "commercial purpose for the use or acquisition of any part of the Service or "
@@ -26774,12 +26566,10 @@ msgid ""
 msgstr "用户同意不对本服务任何部分或本服务之使用或获得，进行复制、拷贝、出售、转售或用于任何其他商业目的。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XIII. About Storage"
 msgstr "十三、关于储存"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The User agrees that EliteMBA shall be liable for any information, "
 "communication materials and other content posted or transmitted through the "
@@ -26787,12 +26577,10 @@ msgid ""
 msgstr "通过本服务发布或传送之任何信息、通讯资料和其他内容，如被删除或未予储存，用户同意英荔毋须承担任何责任。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XIV. Modification of Service"
 msgstr "十四、服务之修改"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "EliteMBA reserves the right to modify or terminate the Service (or any part "
 "thereof) temporarily or permanently at any time, with or without notice. The"
@@ -26802,12 +26590,10 @@ msgstr ""
 "英荔有权于任何时间暂时或永久修改或终止本服务（或其任何部分），且无论通知与否。用户同意对于本服务所作的任何修改、暂停或终止，英荔对用户和任何第三人均无需承担任何责任。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XV. Termination of Service"
 msgstr "十五、终止服务"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "User agrees that EliteMBA can, in its sole discretion, terminate the User "
 "account or the use of this service (or any part thereof) for any reason "
@@ -26826,12 +26612,10 @@ msgstr ""
 "用户同意英荔基于其自行之考虑，因任何理由（包含但不限于长期对账号无任何操作，或英荔认为用户已经违反本使用协议的文字及精神）终止用户的账号或本服务之使用（或服务之任何部分），并将用户在本服务内任何内容加以移除并删除。用户同意依本使用协议任何规定提供之本服务，无需进行事先通知即可中断或终止，用户承认并同意，英荔可立即关闭或删除用户的账号及用户账号中所有相关信息及文件，及/或禁止继续使用前述文件或本服务。此外，用户同意若本服务之使用被中断或终止或用户的账号及相关信息和文件被关闭或删除，英荔对用户或任何第三人均不承担任何责任。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XVI. Dealing with Advertisers and Other Third Parties"
 msgstr "十六、与广告商及其他第三方进行交易"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Users engage in any form of communication or business dealings with "
 "advertisers and other third parties through this website, or participate in "
@@ -26846,12 +26630,10 @@ msgstr ""
 "用户通过本网站与广告商及其他第三方进行任何形式的通讯或商业往来，或参与促销活动，包含相关商品或服务之付款及交付，以及达成的其他任何相关条款、条件、保证或声明，完全为用户与广告商及其他第三方之间之行为。用户因前述任何交易或前述广告商及其他第三方而遭受的任何性质的损失或损害，英荔对此不负任何法律责任。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XVII. Exclusive Rights of EliteMBA"
 msgstr "十七、英荔之专属权利"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The User also understands and agrees that the content of the sponsored "
 "advertisements or information presented to the User via the Service or the "
@@ -26873,17 +26655,14 @@ msgstr ""
 "用户也了解并同意，经由本服务或广告商向用户呈现之赞助广告或信息所包含之内容，亦受到著作权、商标权、服务商标、专利权或其他专属权利之法律保护。未经英荔或广告商明示授权，用户不得修改、出租、出借、出售、散布本服务或软件之任何部份或全部，或据以制作衍生著作，或使用擅自修改后的软件，包括但不限于为了未经授权而使用本服务之目的。英荔仅授予用户个人、不可移转及非专属之使用权，使用户得于单机计算机使用其软件之目的码，但用户不得（并不得允许任何第三人）复制、修改、创作衍生著作、进行还原工程、反向组译，或以其他方式发现原始码，或出售、转让、再授权或提供软件设定担保，或以其他方式移转软件之任何权利。用户同意将通过由英荔所提供的界面而非任何其他途径使用本服务。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XVIII. Guarantee and Warranty"
 msgstr "十八、担保与保证"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "The User clearly understands and agrees:"
 msgstr "用户明确了解并同意∶"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "1. No provision of this agreement will relieve EliteMBA of any liability for"
 " the User's personal injury or damage or property loss resulting from "
@@ -26891,7 +26670,6 @@ msgid ""
 msgstr "1. 本使用协议的任何规定不会免除英荔对造成用户人身伤害的、或因故意或重大过失造成用户财产损失的任何责任；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "2. The use of the Service is at the User's own risk. The Service is provided"
 " on the basis of \"status quo\" and \"existing\". EliteMBA does not provide "
@@ -26903,19 +26681,16 @@ msgstr ""
 "使用该服务是由用户自担风险。该服务是在“现状”和“现有”的基础上提供的。英荔不提供任何明示或暗示的担保或保证，包括但不限于商业适销性，针对特定用途的适用性和不侵犯他人权利等;"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "3. Any statement or conduct by any third party in the Service;"
 msgstr "3. 任何第三方在本服务中所作之声明或行为；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "4. Other matters related to the Service, except as explicitely provided in "
 "this Agreement of Use;"
 msgstr "4. 与本服务相关的其他事宜，但本使用协议有明确规定的除外；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "5. Elite Education does not accept any responsibility for the posting or "
 "delivery of fraudulent information by any third party or for inducing users "
@@ -26923,7 +26698,6 @@ msgid ""
 msgstr "5. 第三方以任何方式发布或投递欺诈性信息，或诱导用户受到经济损失，英荔不承担任何责任。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "ⅩⅨ. EliteMBA Trademarks Information"
 msgstr "十九、英荔商标信息"
 
@@ -26939,19 +26713,16 @@ msgstr ""
 "英荔教育、英荔商学院、英荔以及其他英荔注册商标、标志及产品、服务名称，均为英荔公司之商标（以下简称“英荔标记”）。未经英荔事先书面同意，用户同意不将英荔标记以任何方式展示或使用或作其他处理，或表示用户有权展示、使用或另行处理英荔标记。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XX. Exclusive User Rights"
 msgstr "二十、用户专属权利"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "Elite Education respects the intellectual property rights of others and "
 "calls on users to respect intellectual property rights as well."
 msgstr "英荔尊重他人知识产权，呼吁用户也要同样尊重知识产权。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "The services and materials of EliteMBA are provided on an \"as is\" basis "
 "and expressly disclaims any express or implied warranties of \"service\", "
@@ -26963,7 +26734,6 @@ msgstr ""
 "英荔之服务与资料是基于“现状”提供，而且英荔明确地表示拒绝对于“服务”、“资料”或“产品”给予任何明示或暗示之保证，包括但不限于，为商业使用或适合于特定目的之保证。英荔对于因“服务”、“资料”或“产品”所产生之任何直接、间接、附带的或因此而导致之衍生性损失概不负责。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "If the User infringes upon the intellectual property rights of others, "
 "EliteMBA will, according to the provisions of the national laws and "
@@ -26974,7 +26744,6 @@ msgstr ""
 "如果用户对他人的知识产权造成了侵害，英荔将依国家法律法规的规定，或在适当的情形下，将依其服务条款或其相关规范性规定，删除特定内容或以至终止用户对账号的使用。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "EliteMBA respects any rights (including intellectual property rights) of "
 "others and also requires our users to respect the rights of others. In the "
@@ -27000,7 +26769,6 @@ msgstr ""
 "若用户认为自己的作品著作权遭到侵害或用户的知识产权被侵犯，根据《信息网络传播权保护条例》的规定，用户需及时向英荔联系并提供详实的举证材料。或请到中华人民共和国国家版权局下载《要求删除或断开链接侵权网络内容的通知》（下称“删除通知”）的示范格式，如果用户不明白“删除通知”的内容，请登录中华人民共和国国家版权局查看《要求删除或断开链接侵权网络内容的通知》填写说明。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid "XXI. General Terms"
 msgstr "二十一、一般条款"
 
@@ -27015,7 +26783,6 @@ msgstr ""
 "本使用协议和隐私政策及免责声明构成用户与英荔之全部协议，并规范用户对于本服务之使用行为。在用户使用相关服务、使用第三方提供的内容或软件时，亦应遵从所适用之附加条款及条件；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "2. The User Agreement and the relationship between the User and EliteMBA are"
 " governed by the laws of the People's Republic of China. The dispute between"
@@ -27029,14 +26796,12 @@ msgstr ""
 "本使用协议及用户与英荔之关系，均受到中华人民共和国法律管辖。用户与英荔就本服务、本使用协议或其他有关事项发生的争议，应首先友好协商解决，协商不成时应提请中国国际经济贸易仲裁委员会仲裁，仲裁裁决是终局性的，对双方均有约束力；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "3. The failure of EliteMBA to exercise or enforce any rights or provisions "
 "of this agreement shall not constitute the waiver of aforementioned rights;"
 msgstr "3. 英荔未行使或执行本使用协议任何权利或规定，不构成对前述权利或权利之放弃；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "4. If any provision of this Terms of Use is ineffective due to conflicts "
 "with the laws of the People's Republic of China, the User agrees that, in "
@@ -27048,14 +26813,12 @@ msgstr ""
 "倘本使用协议之任何规定因与中华人民共和国法律抵触而无效，用户依然同意应依照法律，努力使该规定所反映之当事人意向具备效力，且本使用协议其他规定仍应具有完整的效力；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "5. The title of this User Agreement is for convenience only and does not "
 "have any legal or contractual effect;"
 msgstr "5. 本使用协议之标题仅供方便而设，不具任何法律或契约效果；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
 msgid ""
 "6. Elite Education has the final interpretation of this User Agreement."
 msgstr "6. 英荔对本使用协议享有最终解释权。"
@@ -27067,7 +26830,10 @@ msgid ""
 msgstr "请用户在发现任何违反本服务协议以及其他任何单项服务的服务条款、英荔各类公告之情形时，通知英荔。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
+msgid "Effective on Nov 30th, 2018"
+msgstr "协议生效日期：2018年11月30日"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
 msgid ""
 "The Products and services of EliteMBA（www.elitemba.cn）are provided by "
 "Guangzhou Elite Education & Technology Co., Ltd (hereinafter referred to as "
@@ -27082,7 +26848,6 @@ msgstr ""
 "英荔商学院（www.EliteMBA.cn）的产品及服务由广东英荔国际教育科技有限公司（以下简称“英荔”或“我们”）提供。本隐私政策（以下简称“本政策”）适用于英荔的网站、在计算机/手机/平板电脑或其他设备上使用的英荔的应用程序和其他产品及服务。英荔非常重视对英荔用户（以下简称“用户”）个人隐私的保护，有时候我们需要某些信息才能为用户提供请求的服务，本政策解释了这些情况下的数据收集和使用情况。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "This policy applies to all relevant services in EliteMBA. As the scope of "
 "the EliteMBA services expands, the content of the policy may be amended or "
@@ -27095,12 +26860,10 @@ msgstr ""
 "本政策适用于英荔的所有相关服务，随着英荔服务范围的扩大，政策的内容可由英荔随时修正或更改，英荔将公布并更新生效日期。更新后的隐私政策一旦公布即有效代替原来的隐私政策，用户继续使用英荔服务即表示用户同意并接受本政策及其任何更新版本。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "Ⅰ. The Information that We Collect"
 msgstr "一、我们收集哪些信息"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "Normally, you can visit EliteMBA and browse the information anonymously. "
 "When your Personally Identifiable Information or contact details are needed,"
@@ -27112,12 +26875,10 @@ msgstr ""
 "通常，用户能在匿名的状态下访问英荔并获取信息。当我们需要能识别用户个人信息或者可以与用户联系的信息时，我们会征求用户的同意。通常，在用户注册英荔或申请开通新的功能时，我们可能收集这些信息：姓名、邮箱地址、住址和电话号码，并征求用户的确认。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "Ⅱ. About User's Personal Information"
 msgstr "二、关于您的个人信息"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA strictly protects the security of Users' personal information. We "
 "use a variety of security technologies and procedures to protect our "
@@ -27125,7 +26886,6 @@ msgid ""
 msgstr "英荔严格保护用户个人信息的安全。我们使用各种安全技术和程序来保护用户的个人信息不被未经授权的访问、使用或泄漏。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA will not disclose the personal information of the User to third "
 "parties without the User's permission. The following conditions are listed "
@@ -27136,7 +26896,6 @@ msgstr ""
 "未经用户本人允许，英荔不会向第三方透露用户的个人信息，本声明列出的以下情况除外：法律要求或用户违反英荔的相关服务条款、软件许可使用协议约定，或者英荔有充分理由相信必须这样做才能："
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "(a) Meet the requirements of laws or administrative regulations that are "
 "explicitely listed, or comply with applicable legal procedures to Elite "
@@ -27150,31 +26909,26 @@ msgid ""
 msgstr "(b)符合英荔相关服务条款、软件许可使用协议的约定；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "(c) Protection of the rights or property of EliteMBA;"
 msgstr "(c)保护英荔的权利或财产；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "(d) Under urgent emergencies, ensure the safety of EliteMBA employees, "
 "product or service users, or the public."
 msgstr "(d)在紧急情况下保护英荔员工、英荔产品或服务的用户或大众的个人安全。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "This information will not be shared with third parties by EliteMBA without "
 "the user's permission, except as outlined above in this statement."
 msgstr "英荔不会未经用户的允许将这些信息与第三方共享，本声明已经列出的上述情况除外。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "III.Use of Cookie"
 msgstr "三、COOKIE 的使用"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "Using cookies helps users personalize their online experience. Users can "
 "accept or reject cookies. Most web browsers automatically accept cookies, "
@@ -27185,7 +26939,6 @@ msgstr ""
 "Cookie，但用户通常可根据自己的需要来修改浏览器的设置以拒绝 Cookie。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA will use cookies sometimes to capture the websites to learn which "
 "websites are popular in order to provide better services to User when they "
@@ -27193,7 +26946,6 @@ msgid ""
 msgstr "英荔有时会使用 Cookie 以便知道哪些网页受欢迎，使用户在访问英荔时能得到更好的服务。Cookie 不会跟踪个人信息。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA cookie is also used when the user registers for EliteMBA. In this "
 "case, EliteMBA collects and stores useful information, and when the user "
@@ -27204,26 +26956,22 @@ msgstr ""
 "Cookie 只能被英荔读取。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "If the User's browser is set to reject cookies, the User will still be able "
 "to access most of the web pages of EliteMBA."
 msgstr "如果用户的浏览器被设置为拒绝 Cookie，用户仍然能够访问英荔的大多数网页。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "IV. About Disclaimer"
 msgstr "四、关于免责说明"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "EliteMBA does not assume any legal responsibility for the occurrence of the "
 "following related matters:"
 msgstr "就下列相关事宜的发生，英荔不承担任何法律责任："
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "1. The leakage of any personal information caused by the User's notification"
 " of the User's password or sharing the registered account with others, or "
@@ -27232,14 +26980,12 @@ msgid ""
 msgstr "1. 由于用户将用户密码告知他人或与他人共享注册账号，由此导致的任何个人信息的泄漏，或其他非因英荔原因导致的个人信息的泄漏；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "2. According to the provisions of the law or relevant government policy "
 "requirements, Elitemba providing User's personal information;"
 msgstr "2. 英荔根据法律规定或政府相关政策要求提供用户的个人信息；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "3. Disputes caused by any third party using User's personal information "
 "under various circumstances listed in the terms of service and the "
@@ -27247,23 +26993,24 @@ msgid ""
 msgstr "3. 任何第三方根据英荔各服务条款及声明中所列明的情况使用用户的个人信息，由此所产生的纠纷；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "4. Any temporary website closure due to hacking, computer virus intrusion or"
 " government regulation;"
 msgstr "4. 任何由于黑客攻击、电脑病毒侵入或政府管制而造成的暂时性网站关闭；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid "5. Any consequences caused by force majeure;"
 msgstr "5. 因不可抗力导致的任何后果；"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
 msgid ""
 "6. Ways of use or disclaimer circumstances listed by EliteMBA in terms of "
 "service and this Disclaimer."
 msgstr "6. 英荔在各服务条款及声明中列明的使用方式或免责情形。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid "General Terms"
+msgstr "总则"
 
 #: themes/elitemba-theme/lms/templates/static_templates/honor.html
 msgid ""
@@ -27277,6 +27024,131 @@ msgid ""
 "statement before accepting EliteMBA service."
 msgstr ""
 "英荔商学院（www.EliteMBA.cn）的产品及服务由广东英荔国际教育科技有限公司（以下简称“英荔”或“我们”）提供。本免责声明（以下简称“本声明”）适用于英荔的网站、在计算机/手机/平板电脑或其他设备上使用的英荔的应用程序和其他产品及服务。英荔用户（以下简称“用户”）在接受英荔服务之前，请务必仔细阅读本条款并同意本声明"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"User who directly or (such as off-site API references, etc.) indirectly uses"
+" EliteMBA services and data through various means will be regarded as having"
+" unconditionally accepted all the contents involved in this Disclaimer; if "
+"user objects any of the terms in this Disclaimer, please stop using all "
+"services provided by EliteMBA. "
+msgstr ""
+"用户直接或通过各类方式（如站外API引用等）间接使用英荔服务和数据的行为，都将被视作已无条件接受本声明所涉全部内容；若用户对本声明的任何条款有异议，请停止使用英荔所提供的全部服务。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"This disclaimer may be amended or changed at any time by EliteMBA. The "
+"EliteMBA will announce and updated the effective date. The updated "
+"disclaimer will effectively replace the original statement once it is "
+"published. By continuing to use EliteMBA service, the user agrees to and "
+"accepts this statement and any updated versions thereof."
+msgstr ""
+"本免责声明可由英荔随时修正或更改，英荔将公布并更新生效日期。更新后的免责声明一旦公布即有效代替原来的声明，用户继续使用英荔服务即表示用户同意并接受本声明及其任何更新版本。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid "Article 1"
+msgstr "第一条"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"Users may not use EliteMBA to directly or indirectly engage in breaches of "
+"EliteMBA services and data (including but not limited to publication, "
+"promotion, reprint, browsing, and use of EliteMBA or its users) in various "
+"ways. Laws and regulations of the People's Republic of China, as well as the"
+" behavior of social morality. Users should abide by the following "
+"commitments:"
+msgstr ""
+"用户以各种方式使用英荔服务和数据（包括但不限于发表、宣传介绍、转载、浏览及利用英荔或其用户发布内容）的过程中，不得以任何方式利用英荔直接或间接从事违反中华人民共和国法律法规，以及社会公德的行为。用户应当恪守下述承诺："
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"1. Content published, reprinted or provided should comply with Chinese laws "
+"and regulations and social morality;"
+msgstr "1. 发布、转载或提供的内容符合中国法律法规、社会公德；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"2. Cannot interfere with, damage or violate the various legal rights and "
+"interests of Elite Education;"
+msgstr "2. 不得干扰、损害和侵犯英荔的各种合法权利与利益；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"3. Shall not interfere with, damage and infringe upon the various legal "
+"rights and interests of other EliteMBA users;"
+msgstr "3. 不得干扰、损害和侵犯其他英荔用户的各种合法权利与利益；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"4. Compliance with the rules and guidelines, management rules, etc. of Elite"
+" Education website and other network related services;"
+msgstr "4. 遵守英荔以及与之相关的网络服务的协议、指导原则、管理细则等；"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"5. Elite Education has the right to remove content that violates the above "
+"commitments."
+msgstr "5. 英荔有权对违反上述承诺的内容予以删除。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid "Article 2"
+msgstr "第二条"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"1. EliteMBA only provides storage space for content posted by users. "
+"EliteMBA does not provide any form of guarantee for the content posted or "
+"reprinted by the User: there is no guarantee that the content will meet the "
+"requirements of users, and there is no guarantee that the services of "
+"EliteMBA will not be interrupted. EliteMBA does not assume any legal "
+"responsibility for any reason that the user cannot use the website due to "
+"any conditions such as network conditions, communication lines, third-party "
+"websites or management requirements."
+msgstr ""
+"1. "
+"英荔仅为用户发布的内容提供存储空间，英荔不对用户发表、转载的内容提供任何形式的保证：不保证内容满足用户的要求，不保证英荔的服务不会中断。因网络状况、通讯线路、第三方网站或管理部门的要求等任何原因而导致用户不能正常使用本网站，英荔不承担任何法律责任。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"2. The content published by Elite User (including but not limited to the "
+"contents of the current product features of Elite) only indicates their "
+"personal position and views, and does not represent the position or opinion "
+"of Elite. As the content publisher, it is the responsibility of the content "
+"to be published. All the disputes arising from the published content shall "
+"be the legal and joint responsibility of the publisher of the content. "
+"EliteMBA does not assume any legal and joint responsibility. "
+msgstr ""
+"2. "
+"用户在英荔发表的内容（包含但不限于英荔目前各产品功能里的内容）仅表明其个人的立场和观点，并不代表英荔的立场或观点。作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。英荔不承担任何法律及连带责任。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"3. if the user publishes content suspected of infringing on the intellectual"
+" property rights or other legitimate rights and interests of others through "
+"EliteMBA, after the relevant parties provide prima facie evidence, EliteMBA "
+"has the right to delete it first and retain the right to transfer it to the "
+"judicial authorities. Referring to the investigation results of the relevant"
+" judicial authorities, EliteMBA has the final decision on the disposal of "
+"the content posted on the website. "
+msgstr ""
+"3. "
+"用户在英荔发布涉嫌侵犯他人知识产权或其他合法权益的内容，经相关方提供初步证据，英荔有权先行予以删除，并保留移交司法机关查处的权利。参照相应司法机关的查处结果，英荔对于网站发布内容的处置具有最终决定权。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"4. User should inform Elite when he/she discovers any violation of this "
+"Service Agreement, the terms of service of any other individual service, and"
+" various announcements made by Elite Education. "
+msgstr "4. 个人或单位如认为英荔存在侵犯自身合法权益的内容，应准备好具有法律效应的证明材料，及时与英荔取得联系，以便英荔迅速做出处理。"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid "Supplementary"
+msgstr "附则"
+
+#: themes/elitemba-theme/lms/templates/static_templates/honor.html
+msgid ""
+"EliteMBA reserves the rights to interpret, modify and update the Disclaimer."
+msgstr "对免责声明的解释、修改及更新权均属于英荔所有。"
 
 #: themes/elitemba-theme/lms/templates/static_templates/join_us.html
 msgid "Join us"
@@ -27483,139 +27355,6 @@ msgid ""
 "4. To save your changes, click anywhere on the page outside of the \"Email "
 "Address\" field, or navigate to a different page."
 msgstr "4. 最后要保存更改，请单击“电子邮件地址”字段外部页面上的任意位置，或导航至其他页面。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/privacy.html
-msgid ""
-"(b) An agreement that complies with the relevant EliteMBA Terms of Service "
-"and the Software License Agreement;"
-msgstr "(b)符合英荔相关服务条款、软件许可使用协议的约定；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"The User agrees to abide by all the provisions of the relevant laws and "
-"regulations of the People's Republic of China and assumes full "
-"responsibility for any actions and results of the use of the Service by any "
-"means and password. If the User behavior violates any provisions of national"
-" laws and regulations and may constitute a crime, he will be held criminally"
-" liable and the user shall bear full legal responsibility."
-msgstr ""
-"用户同意遵守中华人民共和国相关法律法规的所有规定，并对以任何方式通过本人的账号和密码使用本服务的任何行为及其结果承担全部责任。如用户的行为违反国家法律和法规的任何规定，有可能构成犯罪的，将被追究刑事责任，并由用户承担全部法律责任。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"At the same time, if EliteMBA has reason to believe that any of the user's "
-"actions, including but not limited to any of the user's statements and other"
-" acts, violates or may violate any of the provisions of national laws and "
-"regulations, EliteMBA may terminate the offer to the User at any time "
-"without prior notice service."
-msgstr ""
-"同时，如果英荔有理由认为用户的任何行为，包括但不限于用户的任何言论和其他行为违反或可能违反国家法律和法规的任何规定，英荔可在任何时候不经任何事先通知终止向用户提供服务。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"EliteMBA is not responsible for any registration of any User, including but "
-"not limited to the identification, verification of the authenticity, "
-"correctness, completeness, suitability and/or responsibility of any "
-"registration information."
-msgstr ""
-"英荔无须对任何用户的任何登记资料承担任何责任，包括但不限于鉴别、核实任何登记资料的真实性、正确性、完整性、适用性及/或是否为最新资料的责任。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"1. Upon the occurrence of noticing any unauthorized account activity or "
-"other security issue, User shall contact and notify E-ducation immediately; "
-msgstr "1. 用户的英荔账号遭到未获授权的使用，或者发生其他任何安全问题时，用户将立即通知英荔；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "Oppose the basic principles established by the Constitution;"
-msgstr "反对宪法所确定的基本原则的；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"Content containing false, fraudulent, harmful, coercive, infringing on the "
-"privacy of others, harassment, infringement, slander, vulgarity, jealousy, "
-"or other morally offensive content;"
-msgstr "含有虚假、诈骗、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其他道德上令人反感的内容；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "Contains content that is not suitable for display in EliteMBA;"
-msgstr "含有英荔认为不适合在英荔展示的内容；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "2. Harm the legal rights of others in any way; "
-msgstr "2. 以任何方式危害他人的合法权益；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"8. Interfere with or disrupt the server or network connected to the Service "
-"or the Service, or violate any rules, procedures, policies or specifications"
-" regarding the Service Connection Network; "
-msgstr "8. 干扰或破坏本服务或与本服务相连线之服务器和网络，或违反任何关于本服务连线网络之规定、程序、政策或规范；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"Users are advised to notify the Company of any violation of the Terms of "
-"Service and any other announcements in EliteMBA and other content that "
-"contradicts EliteMBA's rights and interests. "
-msgstr ""
-"用户已认可英荔未对用户的使用行为进行全面控制，用户使用任何内容时，包括依赖前述内容之正确性、完整性或实用性时，用户同意将自行加以判断并承担所有风险，而不依赖于英荔。但英荔依其自行之考虑，可拒绝和删除经由本服务提供之违反本条款的或其他引起英荔异议的任何内容。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "3. Respond to any claims made by third parties; "
-msgstr "3. 回应任何第三人提出的权利主张；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid "5. Other situations that the EliteMBA considers necessary."
-msgstr "5. 其他英荔认为有必要的情况。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"1. In this User Agreement, \"the area in which the service is used "
-"publicly\" means the area that the general public can use; "
-msgstr "1. 在本使用协议中，“本服务公开使用区域”系指一般公众可以使用的区域；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"EliteMBA, Elite Education and other Eliteu registered trademarks, logos and "
-"products and service names are trademarks of Eliteu Company (hereinafter "
-"referred to as \"Elite Trademark\"). The User agrees not to display or use "
-"or otherwise process the Trademark in any manner without the prior written "
-"consent of Elite, or to indicate that the User has the right to display, use"
-" or otherwise process the Trademark."
-msgstr ""
-"英荔教育、英荔商学院、英荔以及其他英荔注册商标、标志及产品、服务名称，均为英荔公司之商标（以下简称“英荔标记”）。未经英荔事先书面同意，用户同意不将英荔标记以任何方式展示或使用或作其他处理，或表示用户有权展示、使用或另行处理英荔标记。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"If the User believes that the copyright of his work has been infringed or "
-"the User's intellectual property rights have been violated, according to the"
-" Regulations on the Protection of Information Network Communication Rights, "
-"Users should contact EliteMBA and provide detailed evidence. Or please go to"
-" the National Copyright Administration of the People's Republic of China to "
-"download the \"Notice of Deleting or Disconnecting the Infringing Web "
-"Content\" (hereinafter referred to as the \"Delete Notice\"). If the user "
-"does not understand the content of the \"Delete Notice\", please log in to "
-"the National Copyright Administration of the People's Republic of China to "
-"look for the instructions in \"Notice to delete or disconnect the infringing"
-" web content\"."
-msgstr ""
-"若用户认为自己的作品著作权遭到侵害或用户的知识产权被侵犯，根据《信息网络传播权保护条例》的规定，用户需及时向英荔联系并提供详实的举证材料。或请到中华人民共和国国家版权局下载《要求删除或断开链接侵权网络内容的通知》（下称“删除通知”）的示范格式，如果用户不明白“删除通知”的内容，请登录中华人民共和国国家版权局查看《要求删除或断开链接侵权网络内容的通知》填写说明。"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"1. This User Agreement and the Privacy Policy and Disclaimer constitute the "
-"entire agreement between the User and the Company and regof the Service. "
-"Additional terms and conditions apply when users use related services and "
-"use content or software provided by third parties; "
-msgstr ""
-"1. "
-"本使用协议和隐私政策及免责声明构成用户与英荔之全部协议，并规范用户对于本服务之使用行为。在用户使用相关服务、使用第三方提供的内容或软件时，亦应遵从所适用之附加条款及条件；"
-
-#: themes/elitemba-theme/lms/templates/static_templates/user_agreement.html
-msgid ""
-"Users are advised to notify the Company of any violation of the Terms of "
-"Service and any other announcements in EliteMBA and other related notices. "
-msgstr "请用户在发现任何违反本服务协议以及其他任何单项服务的服务条款、英荔各类公告之情形时，通知英荔。"
 
 #: themes/elitemba-theme/lms/templates/student_account/account_settings.html
 msgid "Mobile"
