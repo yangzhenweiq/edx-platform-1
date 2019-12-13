@@ -3472,5 +3472,5 @@ INSTALLED_APPS.extend(plugin_apps.get_apps(plugin_constants.ProjectType.LMS))
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_constants.SettingsType.COMMON)
 
 ############### Settings for AES Encryption/Decryption  ##################
-AES_KEY = '3i@PwZ5Ckm*F1+O84yTS1n0f'
-AES_IV = 'Q\x92\xa0\x16\x07\xa3r62\x1b\xd1%\xbdp@A'
+AES_KEY = AUTH_TOKENS.get('AES_KEY', '')
+AES_IV = AUTH_TOKENS.get('AES_IV', '')
