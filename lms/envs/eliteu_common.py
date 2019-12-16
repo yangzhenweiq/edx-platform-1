@@ -348,3 +348,6 @@ MOBILE_APP_USER_AGENT_REGEXES = ENV_TOKENS.get('MOBILE_APP_USER_AGENT_REGEXES', 
 # Baidu Bridge
 BAIDU_BRIDGE_URL = ENV_TOKENS.get('BAIDU_BRIDGE_URL', '')
 
+############### Settings for AES Encryption/Decryption  ##################
+AES_KEY = AUTH_TOKENS.get('AES_KEY', '')
+AES_IV = AUTH_TOKENS.get('AES_IV', '')
