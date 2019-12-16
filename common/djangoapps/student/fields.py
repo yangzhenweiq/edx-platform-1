@@ -20,7 +20,7 @@ class AESCharField(CharField):
         else:
             self.prefix = "aes_str:::"
 
-        self.cipher = AESCipher(settings.SECRET_KEY)
+        self.cipher = AESCipher(settings.AES_KEY)
         super(AESCharField, self).__init__(*args, **kwargs)
 
     def deconstruct(self):
