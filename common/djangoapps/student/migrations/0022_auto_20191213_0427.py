@@ -10,7 +10,7 @@ import student.hasher
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('student', '0021_hash_userprofile'),
+        ('student', '0021_hash_userprofile_phone'),
     ]
 
     operations = [
