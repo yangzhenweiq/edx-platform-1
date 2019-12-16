@@ -16,7 +16,7 @@ def forwards_func(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('student', '0020_merge_20190510_0217'),
+        ('student', '0021_auto_20191216_0429'),
     ]
 
     operations = [
