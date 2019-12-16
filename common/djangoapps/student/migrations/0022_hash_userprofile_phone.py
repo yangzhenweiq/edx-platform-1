@@ -9,9 +9,8 @@ from student.hasher import AESCipher
 def forwards_func(apps, schema_editor):
     users = UserProfile.objects.all()
     hasher = AESCipher
-    for profile in users:        
-        profile.phone = hasher.encrypt(profile.phone)
-        profile.save(update_fields=['phone'])
+    for profile in users:
+        profile.save()
 
 
 class Migration(migrations.Migration):
