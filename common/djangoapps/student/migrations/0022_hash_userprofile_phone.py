@@ -4,14 +4,18 @@ from __future__ import unicode_literals
 
 from django.db import migrations
 from django.contrib.auth.models import User
+from student.models import UserProfile
 from student.hasher import AESCipher
+
 
 def forwards_func(apps, schema_editor):
     users = User.objects.all()
+    profiles = UserProfile.objects.all()
     hasher = AESCipher
     for user in users:
-        user.save()
-        user.profile.save()
+        user.save(update_fields=["email"])
+    for profile in profiles:
+        profile.save(update_fields=["phone"])
 
 
 class Migration(migrations.Migration):
