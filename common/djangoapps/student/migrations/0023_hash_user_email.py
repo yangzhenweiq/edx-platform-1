@@ -3,19 +3,19 @@
 from __future__ import unicode_literals
 
 from django.db import migrations
-from student.models import UserProfile
+from django.contrib.auth.models import User
 
 
-def forwards_func(apps, schema_editor):    
-    profiles = UserProfile.objects.all()
-    for profile in profiles:
-        profile.save(update_fields=["phone"])
+def forwards_func(apps, schema_editor):
+    users = User.objects.all()        
+    for user in users:
+        user.save(update_fields=["email"])
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('student', '0021_auto_20191216_0429'),
+        ('student', '0022_hash_userprofile_phone'),
     ]
 
     operations = [
