@@ -6,9 +6,9 @@ from django.db import migrations
 from student.models import UserProfile
 
 
-def forwards_func(apps, schema_editor):    
-    profiles = UserProfile.objects.all()
-    for profile in profiles:
+def forwards_func(apps, schema_editor):
+    users = UserProfile.objects.all()
+    for profile in users:
         profile.save(update_fields=["phone"])
 
 
