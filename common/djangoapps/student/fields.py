@@ -62,12 +62,3 @@ class AESCharField(CharField):
             raise TypeError(str(value)+" is not a valid value for AESCharField")
 
         return value
-
-    def get_prep_lookup(self, lookup_type, value):
-        # TODO: maybe more lookup type, need to check
-        if lookup_type == 'exact':
-            return self.get_prep_value(value)
-        elif lookup_type == 'in':
-            return [self.get_prep_value(v) for v in value]
-        else:
-            raise TypeError('Lookup type %r not supported.' % lookup_type)
