@@ -1,26 +1,26 @@
 # #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2019 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2019 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  underscore.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  membership-js.po (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
@@ -30,22 +30,22 @@
 #
 # #-#-#-#-#  djangojs-theme.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2019 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  underscore-theme.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-12-13 06:01+0000\n"
-"PO-Revision-Date: 2019-12-13 06:02:08.303635\n"
+"POT-Creation-Date: 2020-01-10 17:58+0800\n"
+"PO-Revision-Date: 2020-01-10 09:58:51.361097\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -3604,14 +3604,11 @@ msgstr ""
 #: cms/templates/js/transcript-organization-credentials.underscore
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Username"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
 msgid "Email"
 msgstr ""
 
@@ -5559,7 +5556,6 @@ msgstr ""
 
 #: cms/static/js/views/assets.js cms/templates/js/asset-library.underscore
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Type"
 msgstr ""
 
@@ -6406,7 +6402,6 @@ msgid "Video duration is {humanizeDuration}"
 msgstr ""
 
 #: cms/static/js/views/video_thumbnail.js
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
 msgid "minutes"
 msgstr ""
 
@@ -6526,14 +6521,7 @@ msgstr ""
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/basic-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Actions"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Timed Exam"
 msgstr ""
 
 #: cms/templates/js/course-outline.underscore
@@ -6974,7 +6962,6 @@ msgid "Course Key"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Status"
 msgstr ""
 
@@ -8752,75 +8739,6 @@ msgstr ""
 msgid "Take Photo"
 msgstr ""
 
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Add a New Allowance"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Special Exam"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-#, python-format
-msgid " %(exam_display_name)s "
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Exam Type"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-msgid "Allowance Type"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Additional Time (minutes)"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Value"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/add-new-allowance.underscore
-msgid "Username or Email"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-msgid "Allowances"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-msgid "Add Allowance"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Exam Name"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/course_allowances.underscore
-msgid "Allowance Value"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Time Limit"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Started At"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Completed At"
-msgstr ""
-
-#: node_modules/@edx/edx-proctoring/edx_proctoring/static/proctoring/templates/student-proctored-exam-attempts.underscore
-#, python-format
-msgid " %(username)s "
-msgstr ""
-
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 msgid "Bookmarked on"
 msgstr ""
@@ -9361,6 +9279,10 @@ msgstr ""
 
 #: cms/templates/js/course-outline.underscore
 msgid "Proctored Exam"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore
+msgid "Timed Exam"
 msgstr ""
 
 #: cms/templates/js/course-outline.underscore
@@ -10510,40 +10432,40 @@ msgstr ""
 
 #: membership/static/membership/js/card.js
 msgid "Join"
-msgstr "Join"
+msgstr ""
 
 #: membership/static/membership/js/card.js
 msgid "Become a VIP member and watch all EliteMBA courses for free"
-msgstr "Become a VIP member and watch all EliteMBA courses for free"
+msgstr ""
 
 #: membership/static/membership/js/card.js
 msgid "YYYY-MM-DD"
-msgstr "YYYY-MM-DD"
+msgstr ""
 
 #: membership/static/membership/js/card.js
 msgid "Open date: "
-msgstr "Open date: "
+msgstr ""
 
 #: membership/static/membership/js/card.js
 msgid "Expire: "
-msgstr "Expire: "
+msgstr ""
 
 #: membership/static/membership/js/card.js
 msgid "Renew"
-msgstr "Renew"
+msgstr ""
 
 #: membership/static/membership/js/index.js
 msgid "/M"
-msgstr "/M"
+msgstr ""
 
 #: membership/static/membership/js/pay.js
 msgid "Failed to pay the payment"
-msgstr "Failed to pay the payment"
+msgstr ""
 
 #: membership/static/membership/js/result.js
 #, javascript-format
 msgid "Return to EliteMBA in %s seconds"
-msgstr "Return to EliteMBA in %s seconds"
+msgstr ""
 
 #: themes/elitemba-theme/lms/static/js/binding.js
 #, javascript-format

@@ -1,32 +1,32 @@
 # #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2019 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2019 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  mako.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  wiki.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  membership.po (PROJECT VERSION)  #-#-#-#-#
 # #-#-#-#-#  django-partial.po (PACKAGE VERSION)  #-#-#-#-#
@@ -52,22 +52,22 @@
 #
 # #-#-#-#-#  django-theme.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2019 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  mako-theme.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-12-13 06:01+0000\n"
-"PO-Revision-Date: 2019-12-13 06:02:08.884747\n"
+"POT-Creation-Date: 2020-01-10 17:58+0800\n"
+"PO-Revision-Date: 2020-01-10 09:58:51.717760\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -678,10 +678,6 @@ msgstr ""
 #. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py
 msgid "Other education"
-msgstr ""
-
-#: common/djangoapps/student/models.py
-msgid "Phone"
 msgstr ""
 
 #: common/djangoapps/student/models.py
@@ -7756,9 +7752,9 @@ msgstr ""
 msgid "Payment Received"
 msgstr ""
 
-#: membership/models.py
+#: lms/djangoapps/shoppingcart/pdf.py membership/models.py
 msgid "Balance"
-msgstr "Balance"
+msgstr ""
 
 #: lms/djangoapps/shoppingcart/pdf.py
 msgid "Billing Address"
@@ -8749,10 +8745,14 @@ msgstr ""
 msgid "Credit"
 msgstr ""
 
-#: membership/templates/membership/card.html
+#: lms/envs/eliteu_common.py membership/templates/membership/card.html
 #: membership/templates/membership/index.html
+#: themes/elitemba-theme/lms/templates/footer.html
+#: themes/elitemba-theme/lms/templates/certificates/verify.html
+#: themes/elitemba-theme/lms/templates/provider/authorize.html
+#: themes/elitemba-theme/lms/templates/static_templates/about.html
 msgid "EliteMBA"
-msgstr "EliteMBA"
+msgstr ""
 
 #: lms/envs/eliteu_common.py
 msgid "Certificate"
@@ -11642,9 +11642,10 @@ msgstr ""
 msgid "HTML"
 msgstr ""
 
+#: cms/djangoapps/contentstore/views/component.py lms/templates/video.html
 #: membership/templates/membership/index.html
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Blank"
@@ -11940,9 +11941,12 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
-#: membership/models.py
+#. #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
+#. Translators: This is the status for a video that is cancelled during upload
+#. by user
+#: cms/djangoapps/contentstore/views/videos.py membership/models.py
 msgid "Cancelled"
-msgstr "Cancelled"
+msgstr ""
 
 #. Translators: This is the status for a video which has failed
 #. due to being flagged as a duplicate by an external or internal CMS
@@ -19613,9 +19617,10 @@ msgid ""
 "translator!{link_end}"
 msgstr ""
 
+#: lms/templates/navigation/navbar-not-authenticated.html
 #: membership/templates/membership/index.html
 msgid "Explore Courses"
-msgstr "Explore Courses"
+msgstr ""
 
 #: lms/templates/navigation/navigation.html
 msgid "Global"
@@ -24495,497 +24500,475 @@ msgstr ""
 
 #: membership/models.py
 msgid "1 Month"
-msgstr "1 Month"
+msgstr ""
 
 #: membership/models.py
 msgid "3 Months"
-msgstr "3 Months"
+msgstr ""
 
 #: membership/models.py
 msgid "6 Months"
-msgstr "6 Months"
+msgstr ""
 
 #: membership/models.py
 msgid "12 Months"
-msgstr "12 Months"
+msgstr ""
 
 #: membership/models.py
 msgid "24 Months"
-msgstr "24 Months"
+msgstr ""
 
 #: membership/models.py
 msgid "Awaiting for payment"
-msgstr "Awaiting for payment"
+msgstr ""
 
 #: membership/models.py
 msgid "Paid"
-msgstr "Paid"
+msgstr ""
 
 #: membership/models.py
 msgid "Refunded"
-msgstr "Refunded"
+msgstr ""
 
 #: membership/models.py
 msgid "Offline"
-msgstr "Offline"
+msgstr ""
 
 #: membership/models.py membership/templates/membership/card.html
 #: membership/templates/membership/result.html
 #: membership/templates/membership/wechat_paying.html
 msgid "WeChat"
-msgstr "WeChat"
+msgstr ""
 
 #: membership/models.py membership/templates/membership/card.html
 msgid "Alipay"
-msgstr "Alipay"
+msgstr ""
 
 #: membership/models.py
 msgid "Union pay"
-msgstr "Union pay"
+msgstr ""
 
 #: membership/models.py
 msgid "Apple Pay"
-msgstr "Apple Pay"
+msgstr ""
 
 #: membership/models.py
 msgid "Apple Inpurasing"
-msgstr "Apple Inpurasing"
+msgstr ""
 
 #: membership/models.py
 msgid "WeChat App"
-msgstr "WeChat App"
+msgstr ""
 
 #: membership/models.py
 msgid "WeChat H5"
-msgstr "WeChat H5"
+msgstr ""
 
 #: membership/models.py
 msgid "Alipay App"
-msgstr "Alipay App"
+msgstr ""
 
 #: membership/models.py
 msgid "subscribe normal"
-msgstr "subscribe normal"
+msgstr ""
 
 #: membership/models.py
 msgid "subscribe pay"
-msgstr "subscribe pay"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "VIP membership"
-msgstr "VIP membership"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "EliteMBA VIP Membership"
-msgstr "EliteMBA VIP Membership"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "View Introduction"
-msgstr "View Introduction"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Select a Course"
-msgstr "Select a Course"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Choose a payment method"
-msgstr "Choose a payment method"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Membership Valid in "
-msgstr "Membership Valid in "
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid " days"
-msgstr " days"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Tuition: "
-msgstr "Tuition: "
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Go to Payment"
-msgstr "Go to Payment"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Complete Payment in a New Page"
-msgstr "Complete Payment in a New Page"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid ""
 "{span_start}Please do not close the page.{span_end} Please click the button "
 "below accordingly after completing the payment."
 msgstr ""
-"{span_start}Please do not close the page.{span_end} Please click the button "
-"below accordingly after completing the payment."
 
 #: membership/templates/membership/card.html
 msgid "Choose Another Payment Method"
-msgstr "Choose Another Payment Method"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Payment Completed"
-msgstr "Payment Completed"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Encounter a problem?"
-msgstr "Encounter a problem?"
+msgstr ""
 
 #: membership/templates/membership/card.html
 msgid "Go to payment"
-msgstr "Go to payment"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Membership of Prestige EMBA Courses in America"
-msgstr "Membership of Prestige EMBA Courses in America"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Six Main Areas for Administration Learning"
-msgstr "Six Main Areas for Administration Learning"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Activate your potential to become a versatile leader"
-msgstr "Activate your potential to become a versatile leader"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Business Administration"
-msgstr "Business Administration"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Innovation and Entrepreneurship"
-msgstr "Innovation and Entrepreneurship"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Statistical Analysis"
-msgstr "Statistical Analysis"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Information Technology"
-msgstr "Information Technology"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Sales and Marketing"
-msgstr "Sales and Marketing"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Retail Management"
-msgstr "Retail Management"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "More Excellent Courses Coming Soon"
-msgstr "More Excellent Courses Coming Soon"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "International Business Law"
-msgstr "International Business Law"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Dr. Ling Zhu"
-msgstr "Dr. Ling Zhu"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "PhD in Management Information Systems, the University of Arizona, USA"
-msgstr "PhD in Management Information Systems, the University of Arizona, USA"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "J.D., Fordham University, USA"
-msgstr "J.D., Fordham University, USA"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Marketing Management and Applications"
-msgstr "Marketing Management and Applications"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Dr. Tung-lung Steven Chang"
-msgstr "Dr. Tung-lung Steven Chang"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "PhD. in International Business/Marketing, the George Washington University, "
 "USA"
 msgstr ""
-"PhD. in International Business/Marketing, the George Washington University, "
-"USA"
 
 #: membership/templates/membership/index.html
 msgid "PhD. in Management, National Chengchi University, Taiwan"
-msgstr "PhD. in Management, National Chengchi University, Taiwan"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Macroeconomics"
-msgstr "Macroeconomics"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "(Davidson College)"
-msgstr "(Davidson College)"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Dr. Clark Ross"
-msgstr "Dr. Clark Ross"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "PhD. in Economics, Boston College, USA"
-msgstr "PhD. in Economics, Boston College, USA"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "*EliteMBA reserves the right of final interpretation for all course updates."
 msgstr ""
-"*EliteMBA reserves the right of final interpretation for all course updates."
 
 #: membership/templates/membership/index.html
 msgid "World-Class Faculty"
-msgstr "World-Class Faculty"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Professors from leading Business Schools in America"
-msgstr "Professors from leading Business Schools in America"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "Learn systematically, create a full knowledge matrix of administration from "
 "zero to one"
 msgstr ""
-"Learn systematically, create a full knowledge matrix of administration from "
-"zero to one"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Baichun Xiao"
-msgstr "Dr. Baichun Xiao"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "Tenured Professor and Chairman of the Department of Management at LIU Post, "
 "USA"
 msgstr ""
-"Tenured Professor and Chairman of the Department of Management at LIU Post, "
-"USA"
 
 #: membership/templates/membership/index.html
 msgid "Lloyd Shefsky"
-msgstr "Lloyd Shefsky"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "Former Clinical Professor of Family Enterprises at Kellogg School of "
 "Management at NU, USA"
 msgstr ""
-"Former Clinical Professor of Family Enterprises at Kellogg School of "
-"Management at NU, USA"
 
 #: membership/templates/membership/index.html
 msgid "Tim Smithe"
-msgstr "Tim Smithe"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "Vice President & CMO of International Finance Education Association (IFEA)"
 msgstr ""
-"Vice President & CMO of International Finance Education Association (IFEA)"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Wei Yang"
-msgstr "Dr. Wei Yang"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Tenured Professor of the School of Business at LIU Post, USA"
-msgstr "Tenured Professor of the School of Business at LIU Post, USA"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Dr. Weichun Zhu"
-msgstr "Dr. Weichun Zhu"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "Former Assistant Professor of School of Labor and Employment Relations at "
 "Penn State, USA"
 msgstr ""
-"Former Assistant Professor of School of Labor and Employment Relations at "
-"Penn State, USA"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Jiamin Wang"
-msgstr "Dr. Jiamin Wang"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Dr. Tianning Li"
-msgstr "Dr. Tianning Li"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Associate Professor of Finance at Hood College, USA"
-msgstr "Associate Professor of Finance at Hood College, USA"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Dr. Jianjun Shi"
-msgstr "Dr. Jianjun Shi"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Former President and Professor at UIBE"
-msgstr "Former President and Professor at UIBE"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "The Frontis W. Johnston Professor of Economics at Davidson College, USA"
 msgstr ""
-"The Frontis W. Johnston Professor of Economics at Davidson College, USA"
 
 #: membership/templates/membership/index.html
 msgid "Dr. Elia Kacapyr"
-msgstr "Dr. Elia Kacapyr"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Professor of Economics at Ithaca College, USA"
-msgstr "Professor of Economics at Ithaca College, USA"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Dr. Robert Graham"
-msgstr "Dr. Robert Graham"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Professor of Economics at Hanover College, USA"
-msgstr "Professor of Economics at Hanover College, USA"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "View More"
-msgstr "View More"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Join EliteMBA Membership"
-msgstr "Join EliteMBA Membership"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Choose a membership plan that fits your needs"
-msgstr "Choose a membership plan that fits your needs"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "Have unlimited access to all courses at EliteMBA during membership period, "
 "including newly released courses"
 msgstr ""
-"Have unlimited access to all courses at EliteMBA during membership period, "
-"including newly released courses"
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "Full Year"
-msgstr "Full Year"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "average per month"
-msgstr "average per month"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "Professional"
-msgstr "Professional"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "Half-Year"
-msgstr "Half-Year"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Senior"
-msgstr "Senior"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "Three-Month"
-msgstr "Three-Month"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Explorer"
-msgstr "Explorer"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgctxt "Membership"
 msgid "One-Month"
-msgstr "One-Month"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Beginner"
-msgstr "Beginner"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "*Sign up NOW and get the most of your membership. More info on the payment "
 "page."
 msgstr ""
-"*Sign up NOW and get the most of your membership. More info on the payment "
-"page."
 
 #: membership/templates/membership/index.html
 msgid "Learning Feature"
-msgstr "Learning Feature"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Group Chat"
-msgstr "Group Chat"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Live Lecture"
-msgstr "Live Lecture"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Exam"
-msgstr "Exam"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Credential"
-msgstr "Credential"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid "Become a Member"
-msgstr "Become a Member"
+msgstr ""
 
 #: membership/templates/membership/index.html
 msgid ""
 "Self-disciplined learning off work decides how competitive you are. Let’s "
 "discipline ourselves and gain advantage!"
 msgstr ""
-"Self-disciplined learning off work decides how competitive you are. Let’s "
-"discipline ourselves and gain advantage!"
 
 #: membership/templates/membership/result.html
 #: membership/templates/membership/wechat_paying.html
 msgid "EliteMBA school cashier"
-msgstr "EliteMBA school cashier"
+msgstr ""
 
 #: membership/templates/membership/result.html
 msgid "EliteMBA school cashier payment success"
-msgstr "EliteMBA school cashier payment success"
+msgstr ""
 
 #: membership/templates/membership/result.html
 #: membership/templates/membership/wechat_paying.html
 msgid "Return to EliteMBA school in 3 seconds"
-msgstr "Return to EliteMBA school in 3 seconds"
+msgstr ""
 
 #: membership/templates/membership/result.html
 #: membership/templates/membership/wechat_paying.html
 msgid "Return Now"
-msgstr "Return Now"
+msgstr ""
 
 #: membership/templates/membership/wechat_paying.html
 msgid "Amount paid: "
-msgstr "Amount paid: "
+msgstr ""
 
 #: membership/templates/membership/wechat_paying.html
 msgid ""
 "Please complete the payment within 2 hours, otherwise the purchase may fail."
 msgstr ""
-"Please complete the payment within 2 hours, otherwise the purchase may fail."
 
 #: membership/templates/membership/wechat_paying.html
 msgid "Please scan Wechat QR code"
-msgstr "Please scan Wechat QR code"
+msgstr ""
 
 #: membership/templates/membership/wechat_paying.html
 msgid "to complete payment"
-msgstr "to complete payment"
+msgstr ""
 
 #: membership/templates/membership/wechat_paying.html
 msgid "Payment Success"
-msgstr "Payment Success"
+msgstr ""
 
 msgid "email address"
 msgstr ""
@@ -25251,6 +25234,11 @@ msgstr ""
 
 #: themes/elitemba-theme/lms/templates/footer.html
 msgid "to find out more"
+msgstr ""
+
+#: themes/elitemba-theme/lms/templates/footer.html
+msgid ""
+"edX and Open edX are registered trademarks of edX Inc. All Rights Reserved."
 msgstr ""
 
 #: themes/elitemba-theme/lms/templates/footer.html

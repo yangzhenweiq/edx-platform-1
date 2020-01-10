@@ -1,8 +1,8 @@
 # #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/).
-# Copyright (C) 2019 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # Translators:
 # fengri <173770922@qq.com>, 2019
@@ -12,9 +12,9 @@
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/).
-# Copyright (C) 2019 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # Translators:
 # li ying <code@eliteu.cn>, 2019
@@ -22,9 +22,9 @@
 #
 # #-#-#-#-#  mako.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # Translators:
 # Sushan Wu <ss.wu@eliteu.com.cn>, 2019
@@ -32,18 +32,18 @@
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # Translators:
 # li ying <code@eliteu.cn>, 2019
 #
 # #-#-#-#-#  wiki.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # Translators:
 # li ying <code@eliteu.cn>, 2019
@@ -76,29 +76,29 @@
 #
 # #-#-#-#-#  django-theme.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/).
-# Copyright (C) 2019 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # Translators:
 # li ying <code@eliteu.cn>, 2019
 #
 # #-#-#-#-#  mako-theme.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)
-# Copyright (C) 2019 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2019.
+# EdX Team <info@edx.org>, 2020.
 #
 # Translators:
-# li ying <code@eliteu.cn>, 2019
+# li ying <code@eliteu.cn>, 2020
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-12-13 06:01+0000\n"
+"POT-Creation-Date: 2020-01-10 17:58+0800\n"
 "PO-Revision-Date: 2019-06-19 06:25+0000\n"
-"Last-Translator: li ying <code@eliteu.cn>, 2019\n"
+"Last-Translator: li ying <code@eliteu.cn>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/e-ducation/teams/93939/zh_CN/)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -709,10 +709,6 @@ msgstr "未受正规教育"
 #: common/djangoapps/student/models.py
 msgid "Other education"
 msgstr "其他教育程度"
-
-#: common/djangoapps/student/models.py
-msgid "Phone"
-msgstr "电话"
 
 #: common/djangoapps/student/models.py
 #, python-brace-format
@@ -25702,6 +25698,11 @@ msgstr "微信扫一扫"
 #: themes/elitemba-theme/lms/templates/footer.html
 msgid "to find out more"
 msgstr "关注名师开课动态"
+
+#: themes/elitemba-theme/lms/templates/footer.html
+msgid ""
+"edX and Open edX are registered trademarks of edX Inc. All Rights Reserved."
+msgstr "edX 和 Open edX 为 edX Inc. 的注册商标，版权所有。"
 
 #: themes/elitemba-theme/lms/templates/footer.html
 msgid "Bind Your Account to Your Mobile Number"
