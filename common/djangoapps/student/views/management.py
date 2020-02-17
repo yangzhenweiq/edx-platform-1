@@ -96,7 +96,7 @@ from util.bad_request_rate_limiter import BadRequestRateLimiter
 from util.db import outer_atomic
 from util.json_request import JsonResponse
 from util.password_policy_validators import normalize_password, validate_password
-import elitemba
+from elitemba.models import create_by_activate
 
 log = logging.getLogger("edx.student")
 
@@ -661,7 +661,7 @@ def activate_account(request, key):
             VIPInfo.objects.create(user=registration.user, expired_at=expired_at)
 
         if registration.user.email.split('@')[-1] in settings.HMM_CONFIGS.get('ACCESS_LIST', {}).keys():
-            elitemba.create_by_activate(registration.user)
+            create_by_activate(registration.user)
                
     return redirect('dashboard')
 
