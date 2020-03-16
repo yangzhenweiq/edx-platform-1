@@ -9,6 +9,7 @@ from rest_framework.views import APIView
 
 from .models import AppVersionConfig
 
+from django.contrib.auth import authenticate, get_user_model, logout
 
 class APPLastVersionView(APIView):
     """
