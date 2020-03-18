@@ -14,6 +14,7 @@ from django.utils import dateparse
 from django.contrib.sites.models import Site
 from django.contrib.auth import authenticate, get_user_model, logout
 from django.db import transaction
+from django.utils.translation import ugettext as _
 
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import UsageKey
@@ -45,7 +46,7 @@ from openedx.core.djangolib.oauth2_retirement_utils import retire_dot_oauth2_mod
 from openedx.core.djangoapps.ace_common.template_context import get_base_template_context
 from openedx.core.djangoapps.user_authn.exceptions import AuthFailedError
 
-from student.models import CourseEnrollment, User, get_retired_email_by_email, Registration
+from student.models import CourseEnrollment, User, get_retired_email_by_email, Registration, LoginFailures
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.exceptions import ItemNotFoundError
 
@@ -415,6 +416,7 @@ class UserDeactivateLogoutView(views.APIView):
         POST /api/mobile/v1/users/deactivate_logout/
         
     """ 
+    http_method_names = ["post",]
     permission_classes = (permissions.IsAuthenticated,)
 
     def post(self, request):
@@ -429,7 +431,11 @@ class UserDeactivateLogoutView(views.APIView):
             # Get the username from the request and check that it exists
             verify_user_password_response = self._verify_user_password(request)
             if verify_user_password_response.status_code != status.HTTP_204_NO_CONTENT:
-                return verify_user_password_response
+                return Response(
+                    data={
+                        'msg': "密码验证出错",
+                        'code': status.HTTP_403_FORBIDDEN
+                    })
             with transaction.atomic():
                 UserRetirementStatus.create_retirement(request.user)
                 # Unlink LMS social auth accounts
@@ -465,15 +471,29 @@ class UserDeactivateLogoutView(views.APIView):
                 # Log the user out.
                 # TODO app获取接口成功后 退出登录，和WEB端不一样
                 #logout(request)
-            return Response(status=status.HTTP_204_NO_CONTENT)
+            return Response(
+                data={
+                    'msg': u"操作成功",
+                    'code': status.HTTP_204_NO_CONTENT
+                })
         except KeyError:
-            return Response(u'Username not specified.', status=status.HTTP_404_NOT_FOUND)
+            return Response(
+                data={
+                    'msg': _('Username not specified.'),
+                    'code': status.HTTP_404_NOT_FOUND
+                })
         except user_model.DoesNotExist:
             return Response(
-                u'The user "{}" does not exist.'.format(request.user.username), status=status.HTTP_404_NOT_FOUND
-            )
+                data={
+                    'msg': u'The user "{}" does not exist.'.format(request.user.username),
+                    'code': status.HTTP_404_NOT_FOUND
+                })
         except Exception as exc:  # pylint: disable=broad-except
-            return Response(text_type(exc), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response(
+                data={
+                    'msg': text_type(exc),
+                    'code': status.HTTP_500_INTERNAL_SERVER_ERROR
+                })
 
     def _verify_user_password(self, request):
         """

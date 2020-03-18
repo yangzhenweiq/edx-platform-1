@@ -18,7 +18,7 @@ urlpatterns = [
         UserCourseStatus.as_view(),
         name='user-course-status'),
     url(
-        '^/deactivate_logout/$',
+        '^' + settings.USERNAME_PATTERN + 'deactivate_logout/$',
         UserDeactivateLogoutView.as_view(),
         name='user-deactivate-logout'
     ),    
