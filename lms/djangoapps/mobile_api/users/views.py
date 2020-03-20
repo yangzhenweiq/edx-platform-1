@@ -411,9 +411,10 @@ def my_user_info(request, api_version):
     return redirect("user-detail", api_version=api_version, username=request.user.username)
 
 
+@mobile_view(is_user=True)
 class UserDeactivateLogoutView(views.APIView):
     """
-        POST /api/mobile/v1/users/deactivate_logout/
+        POST /api/mobile/v1/users/{username}/deactivate_logout/
         
     """ 
     http_method_names = ["post",]
@@ -421,10 +422,10 @@ class UserDeactivateLogoutView(views.APIView):
 
     def post(self, request):
         """
-        POST /api/mobile/v1/users/deactivate_logout/
+        POST /api/mobile/v1/users/{username}/deactivate_logout/
 
         Marks the user as having no password set for deactivation purposes,
-        and logs the user out.
+        and logs te user out.
         """    
         user_model = get_user_model()
         try:
@@ -433,7 +434,7 @@ class UserDeactivateLogoutView(views.APIView):
             if verify_user_password_response.status_code != status.HTTP_204_NO_CONTENT:
                 return Response(
                     data={
-                        'msg': "密码验证出错",
+                        'msg': "密码异常",
                         'code': status.HTTP_403_FORBIDDEN
                     })
             with transaction.atomic():
@@ -473,7 +474,7 @@ class UserDeactivateLogoutView(views.APIView):
                 #logout(request)
             return Response(
                 data={
-                    'msg': u"操作成功",
+                    'msg': _('操作成功'),
                     'code': status.HTTP_204_NO_CONTENT
                 })
         except KeyError:
